@@ -14,8 +14,9 @@
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- custom css -->
-    <link href="css/global.css" rel="stylesheet">
-    <link href="css/index-main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index-main.css">
+    <link rel="stylesheet" href="css/pop-up.css">
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- tailwind js -->
@@ -224,8 +225,7 @@
         <img src="images/product/bg-gradient.svg" alt="" class="w-full">
     </div>
 
-    <!-- banner -->
-    <!-- 20220620 -->
+    <!-- 頁首形象圖 & 主標 -->
     <div class="animation-banner">
         <!-- 20220628 -->
         <div data-aos="fade-up" data-aos-delay="100" class="animation-wrap">
@@ -237,7 +237,7 @@
         <main data-aos="fade-up" data-aos-delay="100">
             <h2>遊戲完蛋了<span>邊玩邊賺</span> !</h2>
             <p>簡單的敘述告訴玩家怎麼 paly to earn 這個好好玩的鏈遊平台。簡單的敘述告訴玩家怎麼 paly to earn 這個好好玩的鏈好玩的鏈遊平台。簡單的敘述告訴玩家怎麼 paly to earn 這個好好玩的鏈遊平台。</p>
-            <button class="btn-outline">下載遊戲</button>
+            <button id="download--open" class="btn-outline">下載遊戲</button>
             <button class="btn-gradient">購買GAMEFI PASS</button>
             <ul>
                 <li>
@@ -450,8 +450,6 @@
         </ul>
     </div>
 
-
-
     <!-- 購買GAMEFI PASS -->
     <div data-aos="fade-up" class="buy-pass">
         <h2>馬上購買GAMEFI PASS</h2>
@@ -506,7 +504,6 @@
             </li>
         </ul>
     </div>
-
 
     <!-- roadmap -->
     <div data-aos="fade-up" class="roadmap">
@@ -634,6 +631,32 @@
         </a>
     </div>    
 
+
+    <!-- pop up 下載遊戲 -->
+    <div id="download--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="download--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>下載遊戲</h2>
+            <!-- <div class="web"> -->
+                <p class="desc web">馬上拿起手機掃描QR Code下載遊戲吧！</p>
+                <p class="desc mobile">馬上點擊下載遊戲吧！</p>
+                <img class="qrc web" src="images/QRC.png" alt="">
+                <div class="btns">
+                    <button id="iOS" class="web">iOS 下載</button>
+                    <button id="android" class="web">Android 下載</button>
+                    <button id="app-store" class="mobile">iOS / Android 下載</button>
+                    <button id="apk">APK 下載</button>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="mobile">
+                <p class="desc">馬上點擊下載遊戲吧！</p>
+                <div class="btns">
+                    <button id="app-store">iOS / Android 下載</button>
+                    <button id="apk-m">APK 下載</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
 </body>
 
 
@@ -706,6 +729,14 @@
 </div>
 
 <script>
+    // pop up 下載遊戲
+    $('#download--open').click(function(){
+        $('#download--popUp').addClass('active')
+    })
+    $('#download--close').click(function () {
+        $('#download--popUp').removeClass('active')
+    })
+
     // 排行榜篩選區間切換
     $('#ranking-basis button').click(function(){
         $('#ranking-basis button').removeClass('active')

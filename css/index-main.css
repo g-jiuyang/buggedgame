@@ -528,6 +528,40 @@
   max-width: 160px;
 }
 
+#download--popUp .popUp--container {
+  min-width: 512px;
+}
+#download--popUp .popUp--container .mobile {
+  display: none;
+}
+#download--popUp .popUp--container p.desc {
+  font-size: 14px;
+  color: #BDBDBD;
+}
+#download--popUp .popUp--container .qrc {
+  max-width: 120px;
+  margin: 28px auto;
+}
+#download--popUp .popUp--container .btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+#download--popUp .popUp--container .btns button {
+  flex: 100%;
+  max-width: 280px;
+  height: 44px;
+  background-color: #8AA3FF;
+  transition: all 0.5s;
+  font-size: 14px;
+  font-weight: 700;
+}
+#download--popUp .popUp--container .btns button:hover {
+  background-color: #718fff;
+}
+
 @media screen and (max-width: 1200px) {
   .animation-banner {
     max-width: 90vw;
@@ -834,5 +868,17 @@
   }
   .coworker h3 {
     margin-bottom: 24px;
+  }
+  #download--popUp .popUp--container {
+    min-width: auto;
+  }
+  #download--popUp .popUp--container .web {
+    display: none;
+  }
+  #download--popUp .popUp--container .mobile {
+    display: inline;
+  }
+  #download--popUp .popUp--container #app-store {
+    margin-top: 28px;
   }
 }

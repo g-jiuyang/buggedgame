@@ -545,6 +545,42 @@
     }
 }
 
+#download--popUp{
+    .popUp--container{
+        min-width: 512px;
+        .mobile{
+            display: none;
+        }
+        p.desc{
+            font-size: calc($fontSize * 1.4);
+            color: $lighter;
+        }
+        .qrc{
+            max-width: 120px;
+            margin: 28px auto;
+        }
+        .btns{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            button{
+                flex: 100%;
+                max-width: 280px;
+                height: 44px;
+                background-color: $primaryC;
+                transition: all .5s;
+                font-size: calc($fontSize * 1.4);
+                font-weight: $UltraBold;
+                &:hover{
+                    background-color: darken($primaryC,5%);
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .animation-banner{
         max-width: 90vw;
@@ -903,6 +939,20 @@
     .coworker{
         h3{
             margin-bottom: 24px;
+        }
+    }
+    #download--popUp{
+        .popUp--container{
+            min-width: auto;
+            .web{
+                display: none;
+            }
+            .mobile{
+                display: inline;
+            }
+            #app-store{
+                margin-top: 28px;
+            }
         }
     }
 } // mobile
