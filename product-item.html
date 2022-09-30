@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲完蛋了</title>
+    <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-animation.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- tailwind js -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    <script src="js/cookie.js"></script>
+    <script src="js/step.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-wallet.js"></script>
+    <script src="js/wallet-text-change.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/table-show.js"></script>
+    <script src="js/nav-blur.js"></script>
+    <script src="js/quantity-add-min.js"></script>
+    <script src="js/btn-state-higlight.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+<body class="font-sans overflow-x-hidden bg-121212">
+
+    <!-- header -->
+    <div class="min-h-full">
+        <!-- 20220620 -->
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-10">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220628 20220629-->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="index.html">
+                                <img src="images/product/logo.png" alt="">
+                            </a>
+                        </div>
+                        <!-- pc and mobile menu -->
+                        <div class="flex items-center">
+                            <ul class="items-center text-base text-white font-bold hidden lg:flex">
+                                <!-- pc -->
+                                <li class="-ty-3">
+                                    <a href="shop.html" class="block px-5">商城</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">白皮書</a>
+                                </li>
+                                <li class="text-center color-a8a8a8">
+                                    <a href="##" class="block px-5 cursor-not-allowed">DEX <br> <span class="text-xs">(coming soon)</span></a>
+                                </li>
+                                <li class="relative font-bold">
+                                    <a href="##" class="px-5 flex items-center space-x-1 btn-language">
+                                        <img src="images/icon/icon-language.svg" alt=""> 
+                                        <span class="text-sm">繁體中文</span>
+                                        <img src="images/icon/icon-arrow-bottom.svg" alt="" class="icon-arrow-bottom">
+                                    </a>
+                                    <ul class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">繁體中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">简体中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">English</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">한국어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hidden mr-10 relative font-normal coin-box">
+                                    <span class="flex space-x-2">
+                                        <span><img src="images/icon/icon-coin.svg" alt=""></span>
+                                        <span class="coin">300,000.00</span>
+                                    </span>
+                                    <div class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
+                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle"></div>
+                                        <div class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html" class="font-bold color-7e97f0">我想賺幣！</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center sm:flex lg:hidden">
+                                <!-- mobile -->
+                                <!-- 20220621 -->
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 block">
+                                    <a href="##" class="block w-full" target="_blank">
+                                        <img src="images/icon/icon-discord.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 btn-hamburger">
+                                    <a href="##" class="block w-full">
+                                        <img src="images/icon/icon-menu.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-11 h-11 mx-1 mr-0 hidden">
+                                    <a href="##" class="w-full">
+                                        <img src="images/icon/personal.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- pc btn wallet -->
+                            <div class="relative">
+                                <a href="##" id="btn-change" class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
+                                <ul class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
+                                    <li class="">
+                                        <a href="personal.html" onclick="textChange1()" class="block p-2 text-white whitespace-nowrap">個人資產</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="record.html" class="block p-2 text-white whitespace-nowrap">歷史紀錄</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="##" onclick="textChange2()" class="block p-2 hover:text-white whitespace-nowrap">登出</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- mobile btn wallet -->
+                            <div>
+                                <!-- 20220629 -->
+                                <a href="##" target="_blank" class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- mobile menu -->
+        <div class="hidden w-full h-full text-lg fixed top-0 left-0 z-30 bg-121212 m-menu lg:hidden">
+            <ul class="text-center relative font-bold top-24 color-efefef">
+                <li class="py-4">
+                    <a href="shop.html" class="block">商城</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">白皮書</a>
+                </li>
+                <li class="py-4 text-center color-a8a8a8">
+                    <a href="##" class="cursor-not-allowed">DEX<br>(coming soon)</a>
+                </li>
+                <li class="py-4 relative top-60">
+                    <a href="##" class="block space-x-1  btn-m-language">
+                        <img src="images/icon/icon-language.svg" alt="" class="inline-block align-middle"> 
+                        <span class="inline-block align-middle text-sm">繁體中文</span>
+                        <img src="images/icon/icon-arrow-top.svg" alt="" class="inline-block align-middle">
+                    </a>
+                    <ul class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">繁體中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">简体中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">English</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">한국어</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="absolute top-4 right-4 btn-close">
+                <img src="images/icon/icon-close.svg" alt="">
+            </button>
+        </div>
+
+        <!-- mobile wallet -->
+        <div class="hidden w-full h-full fixed top-0 left-0 z-30 bg-353535 bg-353535-80 m-bg-wallet lg:hidden">
+            <div class="w-full p-6 absolute bottom-0 z-20 rounded-t-2xl bg-1f1f1f m-panel-wallet">
+                <div class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
+                    <div class="w-full flex items-center space-x-3 mb-2">
+                        <div><img src="images/icon/icon-account.svg" alt=""></div>
+                        <div class="text-base font-bold">0x130...123D</div>
+                    </div>
+                    <div class="w-full flex flex-row-reverse space-x-2">
+                        <div class="flex">
+                            <div class="mr-2"><img src="images/icon/icon-coin.svg" alt=""></div>
+                            <div class="text-base font-bold">300,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="personal.html" class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
+                </div>
+                <div class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="record.html" class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
+                </div>
+                <div class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
+                    <a href="##" class="w-full flex items-center justify-center py-3 px-6">登出</a>
+                </div>
+                <button class="absolute top-4 right-4 btn-wallet-close">
+                    <img src="images/icon/icon-close.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景漸層色 -->
+    <div class="w-full fixed top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" alt="" class="w-full">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="flex items-center space-x-1 pt-24 mb-5 text-sm static top-0 lg:text-xs lg:mb-11 md:sticky">
+            <a href="index.html" class="font-normal color-898989">首頁</a>
+            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <a href="shop.html" class="font-normal color-898989">商城</a>
+            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <a href="##" class="font-bold color-898989">我是道具</a>
+        </div>
+
+
+        
+        <div class="block w-full md:flex md:items-start md:justify-center">
+            <!-- 左邊 小圖 20220630-->
+            <div class="static top-auto md:sticky md:top-40 lg:w-1/3 lg:mr-12">
+                <div class="w-full lg:w-64">
+                    <div class="flex justify-center items-center w-44 h-44 mx-auto mb-6 relative rounded-lg overflow-hidden">
+                        <img src="images/product/tool.svg" alt="" class="max-w-full h-auto">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div><img src="images/icon/icon-a.svg" alt=""></div>
+                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
+                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
+                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 左邊 大圖 20220630 -->
+            <div class="hidden static top-auto md:sticky md:top-40 lg:w-1/3 lg:mr-12 product-lg">
+                <div class="w-full product-lg">
+                    <div class="flex justify-center items-center mx-auto mb-6 relative rounded-lg overflow-hidden product-lg">
+                        <img src="images/product/tool-lg.png" alt="" class="max-w-full h-auto">
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <div><img src="images/icon/icon-a.svg" alt=""></div>
+                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
+                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
+                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右邊 -->
+            <div class="w-full mt-6 lg:w-5/12 lg:mt-3">
+                <!-- 20220622 -->
+                <div class="product-r-h">
+                    <div class="text-lg font-bold mb-8 color-efefef">商品名稱可以好長好長依據寬度超過會點點</div>
+                    <!-- sprint? 會顯示 -->
+                    <div class="hidden mb-3 text-sm font-bold color-efefef">
+                        效期天數：<span class="color-7e97f0">30天</span>
+                    </div>
+                    <div class="mb-9 text-sm leading-relaxed color-bdbdbd">（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述<a href="##" class="font-bold color-7e97f0">可以點的連結</a></div>
+                    <div>
+                        <div class="mb-3 text-sm font-bold color-efefef">注意事項</div>
+                        <div class="text-sm font-normal leading-relaxed color-bdbdbd">一經購買，無法退貨。可以斷行。（營運會編輯資料<a href="##" class="font-bold color-7e97f0">可以點的連結</a>入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹 可以點的連結 （營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。</div>
+                    </div>
+                </div>
+                <div class="py-4 sticky bottom-0 bg-121212 lg:pb-9 lg:pt-6">
+                    <div class="flex items-center mb-1">
+                        <div class="flex w-3/6 items-center lg:w-2/5">
+                            <button id="add" class="cursor-pointer"><img src="images/icon/icon-minus.svg" alt=""></button>
+                            <input id="quantity" type="text" value="1" class="block w-10 mx-4 text-sm font-bold text-center bg-transparent color-efefef lg:mx-10">
+                            <button id="min" class="cursor-pointer"><img src="images/icon/icon-plus.svg" alt=""></button>
+                        </div>
+                        <div class="flex w-5/6 ml-4 lg:w-4/6 items-center justify-center rounded-full color-898989 bg-353535 border border-solid color-7e97f0 border-color-7e97f0 bg-7e97f0-20">
+                            <a href="##" class="block w-full py-3 text-sm font-bold text-center lg:text-xs">
+                                <span class="inline-block align-middle">
+                                    <img src="images/icon/icon-coin-20px.svg" alt="">
+                                </span>
+                                <span class="inline-block mx-1 align-middle">1,500</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 20220630 -->
+                    <div class="text-xs font-normal color-bdbdbd">*每個帳號限購1個</div>
+                    <div>
+                        <div class="hidden w-full mt-4">
+                            <a href="##" class="block text-sm rounded-full py-3 px-6 text-white font-bold text-center bg-from-e63eb6-to-749ff5 lg:text-xs"><span>兌換</span></a>
+                        </div>
+                        <!-- 20220629 新增 6/29 進入此頁按鈕顯示 coming soon  -->
+                        <div class="w-full mt-4">
+                            <a href="##" class="block text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap text-center cursor-not-allowed color-898989 bg-353535 lg:text-xs"><span>coming soon</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>         
+    </div>
+
+
+
+    <!-- social link -->
+    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
+        <a href="##" class="block" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg" alt="">
+        </a>
+    </div>    
+      
+</body>
+
+
+<!-- popup bg-->
+<!-- 20220704 -->
+<div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
+
+<!-- 連接錢包 8-1 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">連接錢包</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">請先連結Metamask錢包。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<!-- 功能維護中 8-2-11 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能維護中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能維護中，暫時關閉。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 系統發生問題 8-2-13 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">系統發生問題</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##" target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 功能建置中 8-2-16 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能建置中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能建置中，敬請期待！</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
+    </div>
+</div>
+
+<!-- 等待確認中 8-3-1 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">等待確認中</div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待Metamask錢包確認中，請稍候。</div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載Metamask錢包? <a href="##" target="_blank" class="font-bold color-7e97f0">前往下載</a></div>
+    </div>
+</div>
+
+<!-- 重要提醒 8-1-3 -->
+<!-- 按鈕規則：使用者須滿足條件，此按鈕才能active： 1.勾選我同意後出現倒數3秒  2.倒數3秒後，按鈕換顏色後才可點擊確認兌換 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">重要提醒</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">您即將兌換<span class="font-bold color-7e97f0">「XXXXX(商品名稱)」x3</span>，一旦兌換成功將扣除帳戶內的蟲蟲幣<span class="font-bold color-7e97f0">4,500顆</span>。</div>
+        <a href="##" class="block w-full py-3 px-6 relative border-transparent rounded-full text-sm font-bold color-898989 bg-353535">
+            確認兌換
+            <span class="absolute right-5 font-bold color-7e97f0">3秒</span>
+        </a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<!-- 此帳號已超過可兌換道具數量上限 8-2-1 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">此帳號已超過可兌換道具數量上限</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">此道具數量可兌換的次數已達上限，無法兌換。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 蟲蟲幣不足 8-2-2 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">蟲蟲幣不足</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">您的蟲蟲幣不足，無法兌換。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 錯誤的網路 8-2-7 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">錯誤的網路</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">請連接平台支援的幣安智能鏈網路</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">轉換至幣安智能鏈</a>
+    </div>
+</div>
+
+<!-- 錢包位址鎖定 8-2-8 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">錢包位址鎖定</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">您所連接的錢包位址已被鎖定，無法進行交易。 <a href="##" target="_blank" class="font-bold color-7e97f0">請洽客服</a></div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 入場券資格不符 8-2-9 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">入場券資格不符</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">此商品需持有特定的入場券資格方可兌換，請確認您的入場券資格。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 商品已兌換完畢 8-2-14 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">商品已兌換完畢</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">商品已全數兌換完畢。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+</html>

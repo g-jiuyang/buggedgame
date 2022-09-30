@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲完蛋了</title>
+    <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/custom-animation.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- tailwind js -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    <script src="js/cookie.js"></script>
+    <script src="js/step.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/switch.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/mobile-wallet.js"></script>
+    <script src="js/wallet-text-change.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/table-show.js"></script>
+    <script src="js/nav-blur.js"></script>
+    <script src="js/popup.js"></script>
+</head>
+<body class="font-sans overflow-x-hidden bg-121212">
+
+    <!-- header -->
+    <div class="min-h-full">
+        <!-- 20220620 -->
+        <nav id="navH" class="bg-opacity-0 w-full fixed top-0 z-10">
+            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+                <div class="flex items-center h-20">
+                    <div class="flex items-center justify-between w-full">
+                        <!-- 20220628 20220629-->
+                        <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
+                            <a href="index.html">
+                                <img src="images/product/logo.png" alt="">
+                            </a>
+                        </div>
+                        <!-- pc and mobile menu -->
+                        <div class="flex items-center">
+                            <ul class="items-center text-base text-white font-bold hidden lg:flex">
+                                <!-- pc -->
+                                <li class="-ty-3">
+                                    <a href="shop.html" class="block px-5">商城</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">白皮書</a>
+                                </li>
+                                <li class="text-center color-a8a8a8">
+                                    <a href="##" class="block px-5 cursor-not-allowed">DEX <br> <span class="text-xs">(coming soon)</span></a>
+                                </li>
+                                <li class="relative font-bold">
+                                    <a href="##" class="px-5 flex items-center space-x-1 btn-language">
+                                        <img src="images/icon/icon-language.svg" alt=""> 
+                                        <span class="text-sm">繁體中文</span>
+                                        <img src="images/icon/icon-arrow-bottom.svg" alt="" class="icon-arrow-bottom">
+                                    </a>
+                                    <ul class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">繁體中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">简体中文</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">English</a>
+                                        </li>
+                                        <li>
+                                            <a href="##" class="block p-2 text-white">한국어</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="hidden mr-10 relative font-normal coin-box">
+                                    <span class="flex space-x-2">
+                                        <span><img src="images/icon/icon-coin.svg" alt=""></span>
+                                        <span class="coin">300,000.00</span>
+                                    </span>
+                                    <div class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
+                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle"></div>
+                                        <div class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html" class="font-bold color-7e97f0">我想賺幣！</a></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="flex items-center sm:flex lg:hidden">
+                                <!-- mobile -->
+                                <!-- 20220621 -->
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 block">
+                                    <a href="##" class="block w-full" target="_blank">
+                                        <img src="images/icon/icon-discord.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-10 h-10 mx-1 btn-hamburger">
+                                    <a href="##" class="block w-full">
+                                        <img src="images/icon/icon-menu.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                                <li class="flex justify-center items-center w-11 h-11 mx-1 mr-0 hidden">
+                                    <a href="##" class="w-full">
+                                        <img src="images/icon/personal.svg" alt="" class="w-full">
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- pc btn wallet -->
+                            <div class="relative">
+                                <a href="##" id="btn-change" class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
+                                <ul class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
+                                    <li class="">
+                                        <a href="personal.html" onclick="textChange1()" class="block p-2 text-white whitespace-nowrap">個人資產</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="record.html" class="block p-2 text-white whitespace-nowrap">歷史紀錄</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="##" onclick="textChange2()" class="block p-2 hover:text-white whitespace-nowrap">登出</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- mobile btn wallet -->
+                            <div>
+                                <!-- 20220629 -->
+                                <a href="##" target="_blank" class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- mobile menu -->
+        <div class="hidden w-full h-full text-lg fixed top-0 left-0 z-30 bg-121212 m-menu lg:hidden">
+            <ul class="text-center relative font-bold top-24 color-efefef">
+                <li class="py-4">
+                    <a href="shop.html" class="block">商城</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">白皮書</a>
+                </li>
+                <li class="py-4 text-center color-a8a8a8">
+                    <a href="##" class="cursor-not-allowed">DEX<br>(coming soon)</a>
+                </li>
+                <li class="py-4 relative top-60">
+                    <a href="##" class="block space-x-1  btn-m-language">
+                        <img src="images/icon/icon-language.svg" alt="" class="inline-block align-middle"> 
+                        <span class="inline-block align-middle text-sm">繁體中文</span>
+                        <img src="images/icon/icon-arrow-top.svg" alt="" class="inline-block align-middle">
+                    </a>
+                    <ul class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">繁體中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">简体中文</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">English</a>
+                        </li>
+                        <li class="">
+                            <a href="##" class="block p-2 color-898989 focus:text-white">한국어</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="absolute top-4 right-4 btn-close">
+                <img src="images/icon/icon-close.svg" alt="">
+            </button>
+        </div>
+
+        <!-- mobile wallet -->
+        <div class="hidden w-full h-full fixed top-0 left-0 z-30 bg-353535 bg-353535-80 m-bg-wallet lg:hidden">
+            <div class="w-full p-6 absolute bottom-0 z-20 rounded-t-2xl bg-1f1f1f m-panel-wallet">
+                <div class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
+                    <div class="w-full flex items-center space-x-3 mb-2">
+                        <div><img src="images/icon/icon-account.svg" alt=""></div>
+                        <div class="text-base font-bold">0x130...123D</div>
+                    </div>
+                    <div class="w-full flex flex-row-reverse space-x-2">
+                        <div class="flex">
+                            <div class="mr-2"><img src="images/icon/icon-coin.svg" alt=""></div>
+                            <div class="text-base font-bold">300,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="personal.html" class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
+                </div>
+                <div class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="record.html" class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
+                </div>
+                <div class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
+                    <a href="##" class="w-full flex items-center justify-center py-3 px-6">登出</a>
+                </div>
+                <button class="absolute top-4 right-4 btn-wallet-close">
+                    <img src="images/icon/icon-close.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景漸層色 -->
+    <div class="w-full absolute top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" alt="" class="w-full">
+    </div>
+
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        
+        <div class="flex items-center space-x-1 pt-24 mb-5 sm:mb-11">
+            <a href="index.html" class="text-sm font-normal sm:text-xs color-898989">首頁</a>
+            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <a href="##" class="text-sm font-bold sm:text-xs color-898989">歷史紀錄</a>
+        </div>
+
+        <div class="block justify-between items-center items-stretch max-w-2xl mx-auto mb-8 sm:mb-20 sm:flex">   
+            <div class="w-full px-4 py-5 mx-0 mb-5 rounded-3xl border border-solid relative border-color-353535 sm:w-1/2 sm:mx-3 sm:mb-0">
+                <div class="px-2 pb-4 border-b border-solid border-color-353535">
+                    <div>
+                        <div class="inline-block align-middle mr-3"><img src="images/icon/icon-account.svg" alt=""></div>
+                        <div class="inline-block align-middle text-base font-bold color-efefef sm:text-sm">0x130...123D</div>
+                    </div>
+                    <div class="hidden mt-4 text-sm font-normal color-898989 sm:text-xs">*帳號已鎖定，如有問題 <a href="mailto:" class="font-bold color-7e97f0">請洽客服</a></div>
+                </div>
+                <div class="px-2 pt-4">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="mr-2 text-sm color-898989 lg:text-xs">入場券等級</div>
+                            <a href="##"><img src="images/icon/icon-info.svg" alt=""></a>
+                        </div>
+                        <div class="text-base font-bold color-efefef lg:text-sm">免費試玩</div>
+                    </div>
+                    <div class="text-sm font-normal mb-3 color-bdbdbd sm:text-xs">
+                        <div class="mb-1">蟲蟲幣加成 110%、擁有彩金活動資格(JP)</div>
+                        <div>到期日：2022/05/21 23:00(UTC+8)</div>
+                    </div>
+                </div>
+                <div>
+                    <a href="##" class="w-full flex items-center justify-center py-3 px-6 border-transparent rounded-full text-sm font-bold whitespace-nowrap color-efefef bg-from-e63eb6-to-749ff5 lg:text-xs">購買入場券</a>
+                </div>
+            </div>
+
+            <div class="w-full px-4 py-5 mx-0 rounded-3xl border border-solid relative border-color-353535 sm:w-1/2 sm:mx-3">
+                <div>    
+                    <div class="flex items-center justify-between px-2 pt-1 pb-4">
+                        <div class="flex items-center">
+                            <div class="mr-3"><img src="images/icon/icon-coin.svg" alt=""></div>
+                            <div class="sm:text-xs text-sm font-normal color-898989">蟲蟲幣</div>
+                        </div>
+                        <div class="text-base font-bold color-efefef lg:text-sm">300,000.00</div>
+                    </div>
+                    <div class="">
+                        <div class="px-2 pb-1 text-sm font-normal mb-3 color-bdbdbd sm:mb-0 sm:text-xs">
+                            <div>*如果有需要一些注意事項可在這，沒的話隱藏起來，沒的話隱藏起來。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex items-center justify-between static bottom-5 left-auto transform-none sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
+                    <!-- <button class="w-1/2 py-3 sm:ml-4 ml-0 mr-2 rounded-full font-bold text-sm border border-solid border-transparent border-linear-gradient-121212-e63eb6-749ff5 color-efefef lg:text-xs">提領</button>
+                    <button class="w-1/2 py-3 ml-2 sm:mr-4 mr-0 rounded-full font-bold text-sm border border-solid border-transparent border-linear-gradient-121212-e63eb6-749ff5 color-efefef lg:text-xs">存入</button> -->
+                    
+                    <!-- 20220629 -->
+                    <div class="relative w-1/2 ml-0 mr-2 md:ml-4">
+                        <a href="##" class="w-full flex items-center justify-center py-3 px-6 text-center text-sm font-bold whitespace-nowrap color-efefef md:text-xs border-linear-gradient-121212-e63eb6-749ff5">提領</a>
+                    </div>
+                    <div class="relative w-1/2 ml-2 mr-0 md:mr-4">
+                        <a href="##" class="w-full flex items-center justify-center py-3 px-6 text-center text-sm font-bold whitespace-nowrap color-efefef md:text-xs border-linear-gradient-121212-e63eb6-749ff5">存入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 歷史紀錄 -->
+        <div class="mx-auto mb-20 color-efefef">
+            <div class="mb-5 sm:mb-12">
+                <div class="text-lg font-bold sm:text-2xl">歷史紀錄</div>
+            </div>
+            
+            <!-- 個人資產、蟲蟲幣獲得 Tabs -->
+            <ul class="w-full mb-4 text-base font-bold border-b border-solid space-x-3 sm:space-x-6 border-color-353535 tabs">
+                <li id="r1" class="inline-block px-4 py-3 align-middle btn-tab">
+                    <a href="##" id="default-tab" class="mx-auto text-sm font-bold color-898989">資產兌換</a>
+                </li>
+                <li id="r2" class="inline-block px-4 py-3 align-middle color-efefef">
+                    <a href="##" class="mx-auto text-sm font-bold color-898989">蟲蟲幣獲得/提領</a>
+                </li>
+                <li id="r3" class="inline-block px-4 py-3 align-middle color-efefef">
+                    <a href="##" class="mx-auto text-sm font-bold color-898989">NFT</a>
+                </li>
+            </ul>
+
+
+            <!-- 空白狀態 沒有資料會顯示的狀態-->
+            <div class="hidden w-40 mx-auto text-center">
+                <div class="font-bold text-lg mb-3">沒有紀錄</div>
+                <div class="font-noraml text-sm mb-3 color-898989">快前往商城兌換入場券或道具，一起邊玩邊轉吧！</div>
+                <div>
+                    <a href="shop.html" class="text-sm font-bold rounded-full py-3 px-6 text-white bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">前往商城</a>
+                </div>
+            </div>
+
+
+            <!-- table 個人資產-->
+            <div id="t1" class="max-w-full overflow-x-auto md:overflow-x-auto lg:overflow-x-visible">
+                <!-- 篩選 目前隱藏 sprint6 顯示-->
+                <div class="mb-4 flex lg:justify-end md:justify-start">
+                    <div class="flex items-center">
+                        <div class="relative filter-box">
+                            <div class="hidden flex items-center mr-7">
+                                <span class="mr-3 text-sm sm:text-xs">篩選</span>
+                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
+                                    <span class="mr-3 text-base font-normal">30天</span>
+                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
+                                </button>
+                            </div>
+                            <!-- 20220620 加 px-2 -->
+                            <div class="hidden w-36 px-2 py-2 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 filter-menu">
+                                <button class="w-full px-4 py-2 text-sm font-bold text-white">30天</button>
+                                <button class="w-full px-4 py-2 text-sm font-bold text-white">3個月</button>
+                                <button class="w-full px-4 py-2 text-sm font-bold text-white">6個月</button>
+                            </div>
+                        </div>
+
+                        <div class="relative filter-box">
+                            <div class="flex items-center">
+                                <span class="mr-3 text-sm sm:text-xs">頁數</span>
+                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
+                                    <span class="mr-3 text-base font-normal">1</span>
+                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
+                                </button>
+                            </div>
+                            <div class="hidden filter-menu w-36 px-2 max-h-52 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 ">
+                                <div class="max-h-44 my-4 overflow-y-auto scroll-style">    
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">1</button>
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">2</button>
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">3</button>
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">4</button>
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">5</button>
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">6</button> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table-auto w-full">
+                    <thead class="text-left bg-1f1f1f color-bdbdbd">
+                        <tr>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 pl-5 rounded-tl-xl rounded-bl-xl color-bdbdbd min-w-178">時間</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">交易單號</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-200">兌換商品</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">單價</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-80">數量</th> 
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">總價</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 rounded-tr-xl rounded-br-xl color-bdbdbd min-w-80">
+                                <span class="inline-block align-middle">狀態</span>
+                                <a href="##" class="inline-block align-middle"><img src="images/icon/icon-info-2.svg" alt=""></a>
+                            </th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle">10000</span>
+                                <span class="inline-block align-middle">TWD</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle">10000</span>
+                                <span class="inline-block align-middle">NTD</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>
+                                <span class="inline-block align-middle">成功</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">入場券</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle">99.9999</span>
+                                <span class="inline-block align-middle">BNB</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block align-middle">99.9999</span>
+                                <span class="inline-block align-middle">BNB</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>
+                                <span class="inline-block align-middle">失敗</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">道具名稱</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
+                                <span class="inline-block align-middle">99.9999</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">10</td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
+                                <span class="inline-block align-middle">990.9999</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
+                                <span class="inline-block align-middle">存入中</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">入場券</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle">99.9999</span>
+                                <span class="inline-block align-middle">BNB</span> 
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block align-middle">99.9999</span>
+                                <span class="inline-block align-middle">BNB</span> 
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>
+                                <span class="inline-block align-middle">失敗</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">入場券</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle">99.9999</span>
+                                <span class="inline-block align-middle">BNB</span> 
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block align-middle">99.9999</span>
+                                <span class="inline-block align-middle">BNB</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>
+                                <span class="inline-block align-middle">失敗</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- table 蟲蟲幣獲得提領 -->
+            <div id="t2" class="hidden max-w-full overflow-x-auto md:overflow-x-auto lg:overflow-x-visible">
+                <!-- 篩選 目前隱藏 sprint？ 顯示-->
+                <div class="mb-4 flex lg:justify-end md:justify-start">
+                    <div class="flex items-center">
+                        <div class="relative filter-box">
+                            <div class="hidden flex items-center mr-7">
+                                <span class="mr-3 text-sm sm:text-xs">篩選</span>
+                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
+                                    <span class="mr-3 text-base font-normal">30天</span>
+                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
+                                </button>
+                            </div>
+                            <!-- 20220616 加 px-2 -->
+                            <div class="hidden w-36 px-2 py-2 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 filter-menu">
+                                <button class="w-full px-4 py-2 text-sm font-bold text-white">30天</button>
+                                <button class="w-full px-4 py-2 text-sm font-bold text-white">3個月</button>
+                                <button class="w-full px-4 py-2 text-sm font-bold text-white">6個月</button>
+                            </div>
+                        </div>
+
+                        <div class="relative filter-box">
+                            <div class="flex items-center">
+                                <span class="mr-3 text-sm sm:text-xs">頁數</span>
+                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
+                                    <span class="mr-3 text-base font-normal">1</span>
+                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
+                                </button>
+                            </div>
+                            
+                            <div class="hidden filter-menu w-36 px-2 max-h-52 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 ">
+                                <div class="max-h-44 my-4 overflow-y-auto scroll-style">    
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">1</button>
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">2</button>
+                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">3</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table-auto w-full">
+                    <thead class="text-left bg-1f1f1f color-bdbdbd">
+                        <tr>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 pl-5 rounded-tl-xl rounded-bl-xl color-bdbdbd min-w-178">時間</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">交易單號</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-200">活動名稱</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">單價(加乘)</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-80">手續費</th> 
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">總價</th>
+                            <th class="w-1/12 font-normal text-sm py-2 px-2 rounded-tr-xl rounded-br-xl color-bdbdbd min-w-80">
+                                <span class="inline-block align-middle">狀態</span>
+                                <a href="##" class="inline-block align-middle"><img src="images/icon/icon-info-2.svg" alt=""></a>
+                            </th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">+9999.0000(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="hidden inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">-</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
+                                <span class="inline-block align-middle">+9999.9999 (+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
+                                <span class="inline-block align-middle">存入中</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">-1060.4000(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">0.99</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
+                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
+                                <span class="inline-block align-middle">提領中</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">+1000.0000(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">0.99</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
+                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
+                                <span class="inline-block align-middle">提領中</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">0.99</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
+                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
+                                <span class="inline-block align-middle">提領中</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">+9999.99(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
+                                <span class="inline-block align-middle">0.99</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
+                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
+                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
+                            </td>
+                            <td class="py-4 px-2 font-normal text-sm color-efefef">
+                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
+                                <span class="inline-block align-middle">提領中</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            
+            
+        </div>
+
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="max-w-7xl mx-auto mt-28 px-5 text-white color-898989 lg:mt-60">
+        <div class="py-7 text-xs text-center border-t border-color-898989">© 2022 GASH POINT Co., Ltd. All right reserved</div>
+    </div>
+
+    <!-- social link -->
+    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
+        <a href="##" class="block" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg" alt="">
+        </a>
+    </div>
+    
+
+
+</body>
+
+
+<!-- popup bg-->
+<!-- 20220704 -->
+<div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
+
+<!-- 連接錢包 8-1 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">連接錢包</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">請先連結Metamask錢包。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<!-- 功能維護中 8-2-11 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能維護中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能維護中，暫時關閉。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 系統發生問題 8-2-13 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">系統發生問題</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##" target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 功能建置中 8-2-16 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">功能建置中</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">功能建置中，敬請期待！</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
+    </div>
+</div>
+
+<!-- 等待確認中 8-3-1 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">等待確認中</div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待Metamask錢包確認中，請稍候。</div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載Metamask錢包? <a href="##" target="_blank" class="font-bold color-7e97f0">前往下載</a></div>
+    </div>
+</div>
+
+<!-- 個人資產的table 3-1-2-->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">狀態說明</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>成功 - Are you sure you want to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>失敗 - Are you sure you want to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>提領中 - Are you sure you want to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>存入中 - Are you sure you want to deactivate your account</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+<!-- 右邊蟲蟲幣的提領按鈕 8-2-15 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">提醒</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">免費試玩等級不開放提領功能。<a href="##" target="_blank" class="font-bold color-7e97f0">購買入場券</a></div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
+</div>
+
+<!-- 入場券等級 8-2-12 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">入場券等級</div>
+        <div class="text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">待營運確認中</div>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg" alt="">
+    </button>
+</div>
+
+</html>

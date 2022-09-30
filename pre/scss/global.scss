@@ -1,0 +1,220 @@
+@import "variable";
+
+body {
+    color: $lightGray;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 文字設定 */
+h1 {
+    font-weight: $Black;
+    font-size: calc($fontSize * 4);
+    line-height: 1.4em;
+}
+h2 {
+    font-weight: $UltraBold;
+    font-size: calc($fontSize * 2.4);
+    line-height: 1.4em;
+}
+h4 {
+    font-weight: $Medium;
+    font-size: calc($fontSize * 1.8);
+    line-height: 1.6em;
+}
+p, span {
+    font-weight: $Regular;
+    font-size: calc($fontSize * 1.4);
+    line-height: 1.6em;
+
+    &.title {
+        font-size: calc($fontSize * 1.6);
+    }
+
+    &.note {
+        font-size: calc($fontSize * 1.2);
+        color: $lighter;
+    }
+
+    &.bold {
+        font-weight: $UltraBold;
+    }
+}
+@media screen and (max-width: 515px) { //mobile
+    h1 {
+        font-size: calc($fontSize * 2.4);
+    }
+
+    h2 {
+        font-size: calc($fontSize * 1.8);
+    }
+
+    h4 {
+        font-size: calc($fontSize * 1.4);
+    }
+
+    p, span {
+        font-size: calc($fontSize * 1.6);
+
+        &.title {
+            font-size: calc($fontSize * 1.8);
+        }
+
+        &.note {
+            font-size: calc($fontSize * 1.4);
+        }
+    }
+}
+
+/* 色彩設定 */
+.white { color: $white; }
+.lightGray { color: $lightGray; }
+.lighter { color: $lighter; }
+.gray { color: $gray; }
+.dark { color: $dark; }
+.frameBg { color: $frameBg; }
+.darkBg { color: $darkBg; }
+
+.primaryA { color: $primaryA; }
+.primaryB { color: $primaryB; }
+.primaryC { color: $primaryC; }
+.neutral { color: $neutral; }
+.success { color: $success; }
+.error { color: $error; }
+.warning { color: $warning; }
+
+/* 按鈕設定 */
+button, input[type=submit], a.button {
+    cursor: pointer;
+    border-radius: 24px;
+
+    &[disabled] {
+        cursor: default !important;
+        background-color: $dark !important;
+        background: $dark !important;
+        color: $lighter !important;
+    }
+
+    &.btn-gradient {
+        background: $gradient;
+        text-shadow: 0 0 12px rgba(black, .4);
+        font-weight: $UltraBold;
+
+        &:hover {
+            background: $gradient-hover;
+        }
+    }
+
+    &.btn-outline {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            left: 1px;
+            z-index: -1;
+            border-radius: 9999px;
+            background-color: $darkBg;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -2;
+            border-radius: 9999px;
+            background-image: $gradient;
+        }
+
+        &:hover {
+            background: $gradient;
+        }
+    }
+}
+
+/* 表單設定 */
+input {
+    &:focus {
+        border-color: $primaryC !important;
+        outline: none;
+    }
+
+    &[type=checkbox] {
+        display: none;
+
+        + span {
+            display: inline-block;
+            padding-left: 26px;
+            line-height: 20px;
+            background: url(../images/icon/icon-checkbox-normal.svg) no-repeat left top;
+            background-size: 20px;
+        }
+
+        &:checked + span {
+            background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
+            background-size: 20px;
+        }
+    }
+
+    &[warning] {
+        border-color: $warning !important;
+    }
+}
+
+/* 頁尾設定 */
+footer{
+    width: 85vw;
+    margin: 228px auto 170px;
+    text-align: center;
+    color: gray;
+    ul{
+        border-bottom: 0.5px solid $gray;
+        margin-bottom: 28px;
+        padding-bottom: 30px;
+        display: flex;
+        gap: 120px;
+        justify-content: center;
+        font-size: calc($fontSize * 1.4);
+        li{
+            a{
+                transition: all .3s;
+                &:hover{
+                    color: $primaryC;
+                }
+            }
+        }
+    }
+    .copyright{
+        font-size: calc($fontSize * 1.2);
+    }
+}
+
+@media screen and (max-width: 831px) {
+    footer{
+        ul{
+            gap: 40px;
+        }
+    }
+} // max-width: 831px
+
+@media screen and (max-width: 515px) {
+    footer{
+        margin-top: 120px;
+        margin-bottom: 24px;
+        ul{
+            flex-wrap: wrap;
+            gap: 16px 0;
+            li{
+                flex: 50%;
+                text-align: left;
+            }
+        }
+    }
+} // max-width: 515px

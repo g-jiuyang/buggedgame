@@ -1,0 +1,802 @@
+@import "../variable";
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 70px;
+
+    li {
+        flex: 1;
+        margin-right: 16px;
+        padding: 20px;
+        border: 1px solid $dark;
+        border-radius: 24px;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            > p {
+                display: flex;
+                align-items: center;
+                color: $lightGray;
+
+                img {
+                    margin-right: 8px;
+                }
+
+                a {
+                    margin-left: 8px;
+                }
+
+                &:last-child {
+                    font-size: calc($fontSize * 1.8);
+                    font-weight: $UltraBold;
+                }
+            }
+        }
+
+        .desc {
+            margin: 12px 0;
+            color: $lighter;
+            font-size: calc($fontSize * 1.2);
+            margin-bottom: 90px;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 20px;
+            width: calc(100% - 40px);
+            margin-top: 12px;
+        }
+
+        .btns {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+
+            a {
+                display: inline-block;
+                flex: 1;
+                height: 44px;
+                line-height: 44px;
+                font-size: 14px;
+                font-weight: $UltraBold;
+                text-align: center;
+            }
+        }
+        
+        &.account {
+            min-height: 210px;
+
+            .account {
+                &__info {
+                    padding-bottom: 12px;
+                    margin-bottom: 12px;
+                    border-bottom: 1px solid $dark;
+
+                    > div {
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 12px;
+                        color: $lightGray;
+                        font-size: calc($fontSize * 1.6);
+                        font-weight: $UltraBold;
+                    }
+
+                    > span {
+                        display: block;
+                        font-size: calc($fontSize * 1.4);
+                        color: $lighter;
+                        margin-top: 16px;
+                    }
+
+                    a {
+                        color: $primaryC;
+                        font-weight: $UltraBold;
+                        transition: all .15s ease;
+
+                        &:hover {
+                            color: darken($primaryC,5%);
+                        }
+                    }
+                }
+
+                &__gamepass {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+        
+                    &--title {
+                        display: flex;
+                        align-items: center;
+                        font-size: calc($fontSize * 1.6);
+                        font-weight: $UltraBold;
+                        color: $lighter;
+
+                        a {
+                            margin-left: 4px;
+                        }
+                    }
+        
+                    &--repair {
+                        a {
+                            display: inline-block;
+                            background-color: $primaryA;
+                            padding: 4px 12px;
+                            border-radius: 24px;
+                            height: 30px;
+                            line-height: 22px;
+                            transition: all .15s ease;
+                            font-size: calc($fontSize * 1.4);
+                        
+                            &:hover {
+                                background-color: darken($primaryA, 3%);
+                            }
+                        
+                            > * {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                color: $lighter;
+                display: inline;
+                
+                .bar {
+                    position: relative;
+                    width: 100%;
+                    height: 6px;
+                    border-radius: 10px;
+                    background-color: $dark;
+                    margin: 6px 0;
+            
+                    > div {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 6px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+        &.bugCoin {
+            .info {
+                a {
+                    transition: all .15s ease;
+
+                    &:hover {
+                        filter: brightness(120%);
+                    }
+                }
+            }
+
+            .bugCoin--password {
+                display: block;
+                font-size: calc($fontSize * 1.2);
+                line-height: 20px;
+                font-weight: 400;
+                padding-bottom: 12px;
+
+                a {
+                    color: $lighter;
+                    text-decoration: underline;
+                    transition: all .15s ease;
+
+                    &:hover {
+                        color: lighten($lighter, 10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.myNft {
+    margin-bottom: 70px;
+    
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 15px;
+        margin-top: 40px;
+
+        li {
+            flex: 25%;
+            max-width: calc((100% - 45px) / 4);
+            border-radius: 20px;
+            border: 1px solid $dark;
+            padding: 20px;
+
+            .img {
+                position: relative;
+                background-color: $frameBg;
+                border-radius: 8px;
+            }
+
+            .desc {
+                margin-top: 12px;
+                overflow: hidden;
+
+                .nft--name {
+                    color: $lightGray;
+                    font-weight: $UltraBold;
+                    font-size: calc($fontSize * 1.6);
+                }
+
+                .nft--id {
+                    color: $gray;
+                }
+            }
+
+            &.pledging {
+                .img {
+                    &:before {
+                        position: absolute;
+                        content: '質押中';
+                        padding: 4px 12px;
+                        border-radius: 8px;
+                        background-color: rgba(#7E97F0, .85);
+                        color: $lightGray;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $UltraBold;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gamepass--open {
+    transition: all .15s ease;
+
+    &:hover {
+        filter: brightness(120%);
+    }
+}
+
+#gamepass--popUp {
+    color: $lighter;
+
+    h2 {
+        color: $lightGray;
+    }
+
+    .content {
+        color: $lighter;
+
+        > * {
+            margin-bottom: 28px;
+        }
+    }
+
+    p {
+        text-align: left;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 2em;
+        font-size: calc($fontSize * 1.6);
+        line-height: 1.6em;
+
+        li {
+            text-align: left;
+        }
+    }
+
+    .mission {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px 28px 20px;
+        flex-wrap: wrap;
+        font-size: calc($fontSize * 1.2);
+
+        p {
+            display: inline-block;
+            text-align: left;
+            flex: 5em;
+            max-width: 5em;
+        }
+
+        .bar {
+            flex: calc(100% - 6em);
+            height: 8px;
+            border-radius: 4px;
+            background-color: $dark;
+            position: relative;
+
+            .progress {
+                position: absolute;
+                left: 0;
+                height: 8px;
+
+                &:before {
+                    position: absolute;
+                    top: -24px;
+                    right: 0;
+                    transform: translateX(50%);
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -2px;
+                    right: -2px;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 6px;
+                }
+
+                &-100 {
+                    width: 100%;
+                    background-color: $success;
+
+                    &:before {
+                        content: '100';
+                        color: $success;
+                        transform: translateX(30%);
+                    }
+
+                    &:after {
+                        background-color: $success;
+                    }
+                }
+
+                &-51 {
+                    width: 75%;
+                    background-color: $neutral;
+
+                    &:before {
+                        content: '51';
+                        color: $neutral;
+                    }
+
+                    &:after {
+                        background-color: $neutral;
+                    }
+                }
+
+                &-11 {
+                    width: 25%;
+                    background-color: $error;
+
+                    &:before {
+                        content: '11';
+                        color: $error;
+                    }
+
+                    &:after {
+                        background-color: $error;
+                    }
+                }
+
+                &-0 {
+                    width: 0;
+
+                    &:before {
+                        content: '0';
+                        color: $gray;
+                    }
+
+                    &:after {
+                        background-color: $dark;
+                    }
+                }
+            }
+
+            &.longterm {
+                .progress {
+                    &:before {
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        .earn {
+            flex: calc(100% - 5em);
+            margin-left: 5em;
+            position: relative;
+
+            &-100, &-51, &-11 {
+                font-size: calc($fontSize * 1.2);
+                position: absolute;
+                transform: translateX(-50%);
+            }
+
+            &-100 {
+                color: $success;
+                left: 87%;
+            }
+
+            &-51 {
+                color: $neutral;
+                left: 50%;
+            }
+
+            &-11 {
+                color: $error;
+                left: 16%;
+            }
+
+            &.longterm {
+                .earn-100 {
+                    left: 55%;
+                }
+
+                .earn-11 {
+                    color: $success;
+                    left: 6%;
+                }
+            }
+        }
+
+        &:last-child {
+            padding-top: 0;
+        }
+    }
+}
+
+#repair--popUp {
+    .popUp--container {
+        min-width: 430px;
+    }
+
+    .repair {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 28px;
+
+        #level {
+            flex: 50%;
+            text-align: left;
+            font-size: calc($fontSize * 1.4);
+            color: $lighter;
+
+            span {
+                font-weight: $UltraBold;
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+
+        #reset {
+            flex: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 4px;
+            color: $lighter;
+            transition: all .15s ease;
+
+            &:hover {
+                filter: brightness(110%);
+            }
+        }
+
+        .bar {
+            flex: 100%;
+            width: 100%;
+            height: 10px;
+            border-radius: 10px;
+            background-color: $dark;
+            margin: 6px 0;
+            position: relative;
+
+            #bar--new, #bar--origin {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 10px;
+                border-radius: 10px;
+            }
+
+            #bar--new {
+                background-color: $success;
+                max-width: 100%;
+                transition: all .1s ease;
+            }
+
+            #bar--origin {
+                background-color: $neutral;
+            }
+        }
+
+        .btns {
+            flex: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-align: center;
+            margin-top: 8px;
+
+            button {
+                flex: 1;
+                height: 38px;
+                border-radius: 20px;
+                border: 1px solid $lightGray;
+                font-weight: $UltraBold;
+                color: $lightGray;
+                font-size: calc($fontSize * 1.4);
+                transition: all .15s ease;
+
+                &:hover {
+                    background-color: $lightGray;
+                    color: $dark;
+                }
+            }
+        }
+    }
+
+    .desc {
+        background-color: $dark;
+        border-radius: 16px;
+        padding: 16px 20px;
+        color: $lightGray;
+        font-size: calc($fontSize * 1.4);
+        text-align: left;
+        margin-bottom: 8px;
+        
+        .color {
+            font-weight: $UltraBold;
+            font-size: calc($fontSize * 1.4);
+
+            #cost-bug {
+                font-weight: $UltraBold;
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+    }
+
+    #warning {
+        display: none;
+        text-align: left;
+        width: 100%;
+        color: $warning;
+        font-size: calc($fontSize * 1.4);
+        margin-bottom: 8px;
+    }
+
+    #repair--submit {
+        display: inline-block;
+        margin: 8px 0;
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        font-size: calc($fontSize * 1.4);
+        font-weight: $UltraBold;
+    }
+}
+
+#bugCoin--popUp {
+    .popUp--container {
+        p {
+            text-align: left !important;
+            margin-top: 28px;
+        }
+    }
+}
+
+@media screen and (max-width:1069px) {
+    .dashboard {
+        li {
+            &.bugCoin {
+                min-height: 150px;
+
+                .info {
+                    flex-wrap: wrap;
+
+                    p {
+                        flex: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .dashboard {
+        li {
+            &.account {
+                min-height: 240px;
+
+                .account__gamepass {
+                    flex-wrap: wrap;
+    
+                    &--title, &--repair {
+                        flex: 100%;
+                    }
+    
+                    &--repair {
+                        margin-top: 12px;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .dashboard {
+        flex-wrap: wrap;
+
+        li {
+            flex: 100%;
+            margin: 0;
+            margin-bottom: 22px;
+
+            &.account {
+                .account {
+                    &__gamepass {
+                        flex-wrap: nowrap;
+        
+                        &--title, &--repair {
+                            flex: auto;
+                        }
+        
+                        &--title {
+                            word-break: break-all;
+                            padding-right: 12px;
+                        }
+        
+                        &--repair {
+                            margin-top: 0;
+                            min-width: max-content;
+                        }
+                    }
+                }
+
+                .bottom {
+                    p {
+                        font-size: calc($fontSize * 1.4);
+                    }
+                }
+            } 
+
+            &.bugCoin {
+                .info {
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+
+                    p {
+                        flex: unset;
+
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            &.pledge {
+                min-height: 150px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:515px) {
+    .dashboard {
+        li {
+            .desc {
+                font-size: calc($fontSize * 1.4);
+            }
+
+            &.bugCoin {
+                .info {
+                    p {
+                        span {
+                            font-size: calc($fontSize * 1.4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .myNft {
+        ul {
+            li {
+                flex: calc(50% - 8px);
+                max-width: calc(50% - 8px);
+            }
+        }
+    }
+
+    #gamepass--popUp {
+        .mission {
+            padding: 0;
+            margin-bottom: 56px;
+
+            .bar {
+                flex: 100%;
+                margin: 32px 20px 4px 20px;
+
+                &.longterm {
+                    margin-top: 16px;
+                }
+            }
+
+            .earn {
+                flex: 100%;
+                margin-left: 0;
+
+                &-100 {
+                    left: 82%;
+                }
+            }
+        }
+    }
+
+    #repair--popUp {
+        .popUp--container {
+            min-width: auto;
+        }
+
+        .repair {
+            #reset {
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+
+        .desc {
+            #own-bug {
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    .dashboard {
+        li {
+            &.account {
+                .account__gamepass {
+                    flex-wrap: wrap;
+
+                    &--title, &--repair {
+                        flex: 100%;
+                    }
+
+                    &--repair {
+                        margin: 8px 0;
+                    }
+                }
+            }
+
+            &.bugCoin {
+                min-height: 200px;
+
+                .info {
+                    flex-wrap: wrap;
+
+                    p {
+                        flex: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

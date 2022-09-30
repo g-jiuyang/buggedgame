@@ -1,0 +1,612 @@
+@charset "UTF-8";
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-bottom: 70px;
+}
+.dashboard li {
+  flex: 1;
+  margin-right: 16px;
+  padding: 20px;
+  border: 1px solid #353535;
+  border-radius: 24px;
+  position: relative;
+}
+.dashboard li:last-child {
+  margin-right: 0;
+}
+.dashboard li .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard li .info > p {
+  display: flex;
+  align-items: center;
+  color: #EFEFEF;
+}
+.dashboard li .info > p img {
+  margin-right: 8px;
+}
+.dashboard li .info > p a {
+  margin-left: 8px;
+}
+.dashboard li .info > p:last-child {
+  font-size: 18px;
+  font-weight: 700;
+}
+.dashboard li .desc {
+  margin: 12px 0;
+  color: #BDBDBD;
+  font-size: 12px;
+  margin-bottom: 90px;
+}
+.dashboard li .bottom {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  margin-top: 12px;
+}
+.dashboard li .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.dashboard li .btns a {
+  display: inline-block;
+  flex: 1;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.dashboard li.account {
+  min-height: 210px;
+}
+.dashboard li.account .account__info {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #353535;
+}
+.dashboard li.account .account__info > div {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  color: #EFEFEF;
+  font-size: 16px;
+  font-weight: 700;
+}
+.dashboard li.account .account__info > span {
+  display: block;
+  font-size: 14px;
+  color: #BDBDBD;
+  margin-top: 16px;
+}
+.dashboard li.account .account__info a {
+  color: #8AA3FF;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+.dashboard li.account .account__info a:hover {
+  color: #718fff;
+}
+.dashboard li.account .account__gamepass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard li.account .account__gamepass--title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #BDBDBD;
+}
+.dashboard li.account .account__gamepass--title a {
+  margin-left: 4px;
+}
+.dashboard li.account .account__gamepass--repair a {
+  display: inline-block;
+  background-color: #7B61FF;
+  padding: 4px 12px;
+  border-radius: 24px;
+  height: 30px;
+  line-height: 22px;
+  transition: all 0.15s ease;
+  font-size: 14px;
+}
+.dashboard li.account .account__gamepass--repair a:hover {
+  background-color: #6e52ff;
+}
+.dashboard li.account .account__gamepass--repair a > * {
+  display: inline-block;
+}
+.dashboard li.account .bottom {
+  color: #BDBDBD;
+  display: inline;
+}
+.dashboard li.account .bottom .bar {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #353535;
+  margin: 6px 0;
+}
+.dashboard li.account .bottom .bar > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  border-radius: 10px;
+}
+.dashboard li.bugCoin .info a {
+  transition: all 0.15s ease;
+}
+.dashboard li.bugCoin .info a:hover {
+  filter: brightness(120%);
+}
+.dashboard li.bugCoin .bugCoin--password {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+.dashboard li.bugCoin .bugCoin--password a {
+  color: #BDBDBD;
+  text-decoration: underline;
+  transition: all 0.15s ease;
+}
+.dashboard li.bugCoin .bugCoin--password a:hover {
+  color: #d7d7d7;
+}
+
+.myNft {
+  margin-bottom: 70px;
+}
+.myNft ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 15px;
+  margin-top: 40px;
+}
+.myNft ul li {
+  flex: 25%;
+  max-width: calc((100% - 45px) / 4);
+  border-radius: 20px;
+  border: 1px solid #353535;
+  padding: 20px;
+}
+.myNft ul li .img {
+  position: relative;
+  background-color: #1F1F1F;
+  border-radius: 8px;
+}
+.myNft ul li .desc {
+  margin-top: 12px;
+  overflow: hidden;
+}
+.myNft ul li .desc .nft--name {
+  color: #EFEFEF;
+  font-weight: 700;
+  font-size: 16px;
+}
+.myNft ul li .desc .nft--id {
+  color: #898989;
+}
+.myNft ul li.pledging .img:before {
+  position: absolute;
+  content: "質押中";
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: rgba(126, 151, 240, 0.85);
+  color: #EFEFEF;
+  font-size: 14px;
+  font-weight: 700;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#gamepass--open {
+  transition: all 0.15s ease;
+}
+#gamepass--open:hover {
+  filter: brightness(120%);
+}
+
+#gamepass--popUp {
+  color: #BDBDBD;
+}
+#gamepass--popUp h2 {
+  color: #EFEFEF;
+}
+#gamepass--popUp .content {
+  color: #BDBDBD;
+}
+#gamepass--popUp .content > * {
+  margin-bottom: 28px;
+}
+#gamepass--popUp p {
+  text-align: left;
+}
+#gamepass--popUp ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+#gamepass--popUp ul li {
+  text-align: left;
+}
+#gamepass--popUp .mission {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px 28px 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+#gamepass--popUp .mission p {
+  display: inline-block;
+  text-align: left;
+  flex: 5em;
+  max-width: 5em;
+}
+#gamepass--popUp .mission .bar {
+  flex: calc(100% - 6em);
+  height: 8px;
+  border-radius: 4px;
+  background-color: #353535;
+  position: relative;
+}
+#gamepass--popUp .mission .bar .progress {
+  position: absolute;
+  left: 0;
+  height: 8px;
+}
+#gamepass--popUp .mission .bar .progress:before {
+  position: absolute;
+  top: -24px;
+  right: 0;
+  transform: translateX(50%);
+}
+#gamepass--popUp .mission .bar .progress:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+#gamepass--popUp .mission .bar .progress-100 {
+  width: 100%;
+  background-color: #7EF09E;
+}
+#gamepass--popUp .mission .bar .progress-100:before {
+  content: "100";
+  color: #7EF09E;
+  transform: translateX(30%);
+}
+#gamepass--popUp .mission .bar .progress-100:after {
+  background-color: #7EF09E;
+}
+#gamepass--popUp .mission .bar .progress-51 {
+  width: 75%;
+  background-color: #D8B42C;
+}
+#gamepass--popUp .mission .bar .progress-51:before {
+  content: "51";
+  color: #D8B42C;
+}
+#gamepass--popUp .mission .bar .progress-51:after {
+  background-color: #D8B42C;
+}
+#gamepass--popUp .mission .bar .progress-11 {
+  width: 25%;
+  background-color: #CC47A6;
+}
+#gamepass--popUp .mission .bar .progress-11:before {
+  content: "11";
+  color: #CC47A6;
+}
+#gamepass--popUp .mission .bar .progress-11:after {
+  background-color: #CC47A6;
+}
+#gamepass--popUp .mission .bar .progress-0 {
+  width: 0;
+}
+#gamepass--popUp .mission .bar .progress-0:before {
+  content: "0";
+  color: #898989;
+}
+#gamepass--popUp .mission .bar .progress-0:after {
+  background-color: #353535;
+}
+#gamepass--popUp .mission .bar.longterm .progress:before {
+  content: "";
+}
+#gamepass--popUp .mission .earn {
+  flex: calc(100% - 5em);
+  margin-left: 5em;
+  position: relative;
+}
+#gamepass--popUp .mission .earn-100, #gamepass--popUp .mission .earn-51, #gamepass--popUp .mission .earn-11 {
+  font-size: 12px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+#gamepass--popUp .mission .earn-100 {
+  color: #7EF09E;
+  left: 87%;
+}
+#gamepass--popUp .mission .earn-51 {
+  color: #D8B42C;
+  left: 50%;
+}
+#gamepass--popUp .mission .earn-11 {
+  color: #CC47A6;
+  left: 16%;
+}
+#gamepass--popUp .mission .earn.longterm .earn-100 {
+  left: 55%;
+}
+#gamepass--popUp .mission .earn.longterm .earn-11 {
+  color: #7EF09E;
+  left: 6%;
+}
+#gamepass--popUp .mission:last-child {
+  padding-top: 0;
+}
+
+#repair--popUp .popUp--container {
+  min-width: 430px;
+}
+#repair--popUp .repair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+#repair--popUp .repair #level {
+  flex: 50%;
+  text-align: left;
+  font-size: 14px;
+  color: #BDBDBD;
+}
+#repair--popUp .repair #level span {
+  font-weight: 700;
+  font-size: 14px;
+}
+#repair--popUp .repair #reset {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  color: #BDBDBD;
+  transition: all 0.15s ease;
+}
+#repair--popUp .repair #reset:hover {
+  filter: brightness(110%);
+}
+#repair--popUp .repair .bar {
+  flex: 100%;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #353535;
+  margin: 6px 0;
+  position: relative;
+}
+#repair--popUp .repair .bar #bar--new, #repair--popUp .repair .bar #bar--origin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  border-radius: 10px;
+}
+#repair--popUp .repair .bar #bar--new {
+  background-color: #7EF09E;
+  max-width: 100%;
+  transition: all 0.1s ease;
+}
+#repair--popUp .repair .bar #bar--origin {
+  background-color: #D8B42C;
+}
+#repair--popUp .repair .btns {
+  flex: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: center;
+  margin-top: 8px;
+}
+#repair--popUp .repair .btns button {
+  flex: 1;
+  height: 38px;
+  border-radius: 20px;
+  border: 1px solid #EFEFEF;
+  font-weight: 700;
+  color: #EFEFEF;
+  font-size: 14px;
+  transition: all 0.15s ease;
+}
+#repair--popUp .repair .btns button:hover {
+  background-color: #EFEFEF;
+  color: #353535;
+}
+#repair--popUp .desc {
+  background-color: #353535;
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: #EFEFEF;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+#repair--popUp .desc .color {
+  font-weight: 700;
+  font-size: 14px;
+}
+#repair--popUp .desc .color #cost-bug {
+  font-weight: 700;
+  font-size: 14px;
+}
+#repair--popUp #warning {
+  display: none;
+  text-align: left;
+  width: 100%;
+  color: #E08083;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+#repair--popUp #repair--submit {
+  display: inline-block;
+  margin: 8px 0;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#bugCoin--popUp .popUp--container p {
+  text-align: left !important;
+  margin-top: 28px;
+}
+
+@media screen and (max-width: 1069px) {
+  .dashboard li.bugCoin {
+    min-height: 150px;
+  }
+  .dashboard li.bugCoin .info {
+    flex-wrap: wrap;
+  }
+  .dashboard li.bugCoin .info p {
+    flex: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .dashboard li.account {
+    min-height: 240px;
+  }
+  .dashboard li.account .account__gamepass {
+    flex-wrap: wrap;
+  }
+  .dashboard li.account .account__gamepass--title, .dashboard li.account .account__gamepass--repair {
+    flex: 100%;
+  }
+  .dashboard li.account .account__gamepass--repair {
+    margin-top: 12px;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard {
+    flex-wrap: wrap;
+  }
+  .dashboard li {
+    flex: 100%;
+    margin: 0;
+    margin-bottom: 22px;
+  }
+  .dashboard li.account .account__gamepass {
+    flex-wrap: nowrap;
+  }
+  .dashboard li.account .account__gamepass--title, .dashboard li.account .account__gamepass--repair {
+    flex: auto;
+  }
+  .dashboard li.account .account__gamepass--title {
+    word-break: break-all;
+    padding-right: 12px;
+  }
+  .dashboard li.account .account__gamepass--repair {
+    margin-top: 0;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+  }
+  .dashboard li.account .bottom p {
+    font-size: 14px;
+  }
+  .dashboard li.bugCoin .info {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .dashboard li.bugCoin .info p {
+    flex: unset;
+  }
+  .dashboard li.bugCoin .info p:last-child {
+    text-align: right;
+  }
+  .dashboard li.pledge {
+    min-height: 150px;
+  }
+}
+@media screen and (max-width: 515px) {
+  .dashboard li .desc {
+    font-size: 14px;
+  }
+  .dashboard li.bugCoin .info p span {
+    font-size: 14px;
+  }
+  .myNft ul li {
+    flex: calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+  #gamepass--popUp .mission {
+    padding: 0;
+    margin-bottom: 56px;
+  }
+  #gamepass--popUp .mission .bar {
+    flex: 100%;
+    margin: 32px 20px 4px 20px;
+  }
+  #gamepass--popUp .mission .bar.longterm {
+    margin-top: 16px;
+  }
+  #gamepass--popUp .mission .earn {
+    flex: 100%;
+    margin-left: 0;
+  }
+  #gamepass--popUp .mission .earn-100 {
+    left: 82%;
+  }
+  #repair--popUp .popUp--container {
+    min-width: auto;
+  }
+  #repair--popUp .repair #reset {
+    font-size: 14px;
+  }
+  #repair--popUp .desc #own-bug {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dashboard li.account .account__gamepass {
+    flex-wrap: wrap;
+  }
+  .dashboard li.account .account__gamepass--title, .dashboard li.account .account__gamepass--repair {
+    flex: 100%;
+  }
+  .dashboard li.account .account__gamepass--repair {
+    margin: 8px 0;
+  }
+  .dashboard li.bugCoin {
+    min-height: 200px;
+  }
+  .dashboard li.bugCoin .info {
+    flex-wrap: wrap;
+  }
+  .dashboard li.bugCoin .info p {
+    flex: 100%;
+  }
+}

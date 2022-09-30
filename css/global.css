@@ -1,0 +1,236 @@
+@charset "UTF-8";
+body {
+  color: #EFEFEF;
+  font-family: "Roboto", sans-serif;
+}
+
+/* 文字設定 */
+h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.4em;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6em;
+}
+
+p, span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+p.title, span.title {
+  font-size: 16px;
+}
+p.note, span.note {
+  font-size: 12px;
+  color: #BDBDBD;
+}
+p.bold, span.bold {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 515px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  p, span {
+    font-size: 16px;
+  }
+  p.title, span.title {
+    font-size: 18px;
+  }
+  p.note, span.note {
+    font-size: 14px;
+  }
+}
+/* 色彩設定 */
+.white {
+  color: #ffffff;
+}
+
+.lightGray {
+  color: #EFEFEF;
+}
+
+.lighter {
+  color: #BDBDBD;
+}
+
+.gray {
+  color: #898989;
+}
+
+.dark {
+  color: #353535;
+}
+
+.frameBg {
+  color: #1F1F1F;
+}
+
+.darkBg {
+  color: #121212;
+}
+
+.primaryA {
+  color: #7B61FF;
+}
+
+.primaryB {
+  color: #E142B9;
+}
+
+.primaryC {
+  color: #8AA3FF;
+}
+
+.neutral {
+  color: #D8B42C;
+}
+
+.success {
+  color: #7EF09E;
+}
+
+.error {
+  color: #CC47A6;
+}
+
+.warning {
+  color: #E08083;
+}
+
+/* 按鈕設定 */
+button, input[type=submit], a.button {
+  cursor: pointer;
+  border-radius: 24px;
+}
+button[disabled], input[type=submit][disabled], a.button[disabled] {
+  cursor: default !important;
+  background-color: #353535 !important;
+  background: #353535 !important;
+  color: #BDBDBD !important;
+}
+button.btn-gradient, input[type=submit].btn-gradient, a.button.btn-gradient {
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+}
+button.btn-gradient:hover, input[type=submit].btn-gradient:hover, a.button.btn-gradient:hover {
+  background: linear-gradient(to right, #cf36a3, #658ad6);
+}
+button.btn-outline, input[type=submit].btn-outline, a.button.btn-outline {
+  position: relative;
+}
+button.btn-outline:before, input[type=submit].btn-outline:before, a.button.btn-outline:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  z-index: -1;
+  border-radius: 9999px;
+  background-color: #121212;
+}
+button.btn-outline:after, input[type=submit].btn-outline:after, a.button.btn-outline:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  border-radius: 9999px;
+  background-image: linear-gradient(to right, #E63EB6, #749FF5);
+}
+button.btn-outline:hover, input[type=submit].btn-outline:hover, a.button.btn-outline:hover {
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+}
+
+/* 表單設定 */
+input:focus {
+  border-color: #8AA3FF !important;
+  outline: none;
+}
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] + span {
+  display: inline-block;
+  padding-left: 26px;
+  line-height: 20px;
+  background: url(../images/icon/icon-checkbox-normal.svg) no-repeat left top;
+  background-size: 20px;
+}
+input[type=checkbox]:checked + span {
+  background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
+  background-size: 20px;
+}
+input[warning] {
+  border-color: #E08083 !important;
+}
+
+/* 頁尾設定 */
+footer {
+  width: 85vw;
+  margin: 228px auto 170px;
+  text-align: center;
+  color: gray;
+}
+footer ul {
+  border-bottom: 0.5px solid #898989;
+  margin-bottom: 28px;
+  padding-bottom: 30px;
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+  font-size: 14px;
+}
+footer ul li a {
+  transition: all 0.3s;
+}
+footer ul li a:hover {
+  color: #8AA3FF;
+}
+footer .copyright {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 831px) {
+  footer ul {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 515px) {
+  footer {
+    margin-top: 120px;
+    margin-bottom: 24px;
+  }
+  footer ul {
+    flex-wrap: wrap;
+    gap: 16px 0;
+  }
+  footer ul li {
+    flex: 50%;
+    text-align: left;
+  }
+}
