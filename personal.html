@@ -7,8 +7,11 @@
     <title>遊戲完蛋了</title>
     <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    
     <!-- tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    
+    <!-- Custom styles -->
     <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="css/custom-animation.css">
     <link rel="stylesheet" href="css/global.css">
@@ -16,9 +19,12 @@
     <link rel="stylesheet" href="css/toast.css">
     <link rel="stylesheet" href="css/pop-up.css">
 
+    <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
+    
     <!-- tailwind js -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    
     <script src="js/cookie.js"></script>
     <script src="js/step.js"></script>
     <script src="js/tabs.js"></script>
@@ -58,7 +64,7 @@
                                     <a href="##" class="block px-5">白皮書</a>
                                 </li>
                                 <li class="-ty-3">
-                                    <a href="##" class="block px-5">質押</a>
+                                    <a href="pledge.html" class="block px-5">質押</a>
                                 </li>
                                 <li class="-ty-3">
                                     <a href="##" class="block px-5">DEX</a>
@@ -150,7 +156,7 @@
                     <a href="##" class="block">白皮書</a>
                 </li>
                 <li class="py-4">
-                    <a href="##" class="block">質押</a>
+                    <a href="pledge.html" class="block">質押</a>
                 </li>
                 <li class="py-4">
                     <a href="##" class="block">DEX</a>
@@ -229,7 +235,10 @@
         <ul class="dashboard">
             <li class="account">
                 <div class="account__info">
-                    <div><img src="images/icon/personal.svg"></div>
+                    <div>
+                        <!-- <img src="images/icon/personal.svg"> --><!-- 當使用者未持有GameFi Pass時顯示此icon -->
+                        <img src="images/icon/icon-pass.svg"><!-- 當使用者擁有GameFi Pass時顯示此icon -->
+                    </div>
                     <div>0x130...123D</div>
                     <!-- <span>* 帳號已鎖定，如有問題 <a href="#">請洽客服</a></span> -->
                 </div>
@@ -273,7 +282,10 @@
                 </div>
                 <!-- <div class="desc">*如果有需要一些注意事項可在這，沒的話隱藏起來，沒的話隱藏起來。</div> -->
                 <div class="bottom">
-                    <div class="bugCoin--password"><a href="password-enable.html">啟用提領密碼</a></div><!-- 提領密碼已啟用的用戶，文字改為「修改提領密碼」 -->
+                    <div class="bugCoin--password">
+                        <a href="password-enable.html">啟用提領密碼</a><!-- 提領密碼已啟用的用戶，文字改為「修改提領密碼」 -->
+                    </div>
+                    <div class="bugCoin--password"><a href="#">新增至Metamask</a></div>
                     <div class="btns">
                         <a href="withdraw.html" class="button btn-outline">提領</a>
                         <a href="deposit-processing.html" class="button btn-outline">存入</a>

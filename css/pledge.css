@@ -22,7 +22,9 @@
   border: 1px solid #353535;
 }
 .dashboard ul li p {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   color: #BDBDBD;
 }
@@ -40,8 +42,8 @@
   filter: brightness(120%);
 }
 .dashboard ul li p a#apr--open, .dashboard ul li p a#daily--open {
-  position: absolute;
-  transform: translateY(-6%) translateX(4px);
+  margin-left: 4px;
+  transform: translateY(-6%);
 }
 
 .project .mainTitle {
@@ -63,6 +65,7 @@
   flex: 1;
   list-style-type: none;
   text-align: left;
+  align-items: flex-start;
 }
 .project .borderCard .project__info__item li {
   display: inline-flex;
@@ -105,6 +108,9 @@
 .project .borderCard .project__info__item li p.roi a#roi--open {
   position: absolute;
   transform: translateY(-6%) translateX(4px);
+}
+.project .borderCard .project__info__item li p.roi + p {
+  color: #EFEFEF;
 }
 .project .borderCard .project__info__item div span {
   font-size: 16px;

@@ -150,7 +150,8 @@
   filter: brightness(120%);
 }
 .dashboard li.bugCoin .bugCoin--password {
-  display: block;
+  display: inline-block;
+  margin-right: 16px;
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;

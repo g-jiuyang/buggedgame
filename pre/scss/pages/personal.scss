@@ -185,7 +185,8 @@
             }
 
             .bugCoin--password {
-                display: block;
+                display: inline-block;
+                margin-right: 16px;
                 font-size: calc($fontSize * 1.2);
                 line-height: 20px;
                 font-weight: 400;

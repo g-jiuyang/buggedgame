@@ -23,7 +23,9 @@
             border: 1px solid $dark;
 
             p {
-                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-size: calc($fontSize * 1.4);
                 color: $lighter;
 
@@ -44,8 +46,8 @@
                     }
 
                     &#apr--open, &#daily--open {
-                        position: absolute;
-                        transform: translateY(-6%) translateX(4px);
+                        margin-left: 4px;
+                        transform: translateY(-6%);
                     }
                 }
             }
@@ -74,6 +76,7 @@
                 flex: 1;
                 list-style-type: none;
                 text-align: left;
+                align-items: flex-start;
     
                 li {
                     display: inline-flex;
@@ -123,6 +126,9 @@
                                     position: absolute;
                                     transform: translateY(-6%) translateX(4px);
                                 }
+                            }
+                            +p{
+                                color: $lightGray;
                             }
                         }
                     }
