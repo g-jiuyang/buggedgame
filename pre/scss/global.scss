@@ -39,31 +39,6 @@ p, span {
         font-weight: $UltraBold;
     }
 }
-@media screen and (max-width: 515px) { //mobile
-    h1 {
-        font-size: calc($fontSize * 2.4);
-    }
-
-    h2 {
-        font-size: calc($fontSize * 1.8);
-    }
-
-    h4 {
-        font-size: calc($fontSize * 1.4);
-    }
-
-    p, span {
-        font-size: calc($fontSize * 1.6);
-
-        &.title {
-            font-size: calc($fontSize * 1.8);
-        }
-
-        &.note {
-            font-size: calc($fontSize * 1.4);
-        }
-    }
-}
 
 /* 色彩設定 */
 .white { color: $white; }
@@ -171,13 +146,10 @@ input {
 /* 頁尾設定 */
 footer{
     width: 85vw;
-    margin: 228px auto 170px;
+    margin: 228px auto 44px;
     text-align: center;
     color: gray;
     ul{
-        border-bottom: 0.5px solid $gray;
-        margin-bottom: 28px;
-        padding-bottom: 30px;
         display: flex;
         gap: 120px;
         justify-content: center;
@@ -192,6 +164,9 @@ footer{
         }
     }
     .copyright{
+        margin-top: 30px;
+        padding-top: 28px;
+        border-top: 0.5px solid $gray;
         font-size: calc($fontSize * 1.2);
     }
 }
@@ -205,6 +180,30 @@ footer{
 } // max-width: 831px
 
 @media screen and (max-width: 515px) {
+    h1 {
+        font-size: calc($fontSize * 2.4);
+    }
+
+    h2 {
+        font-size: calc($fontSize * 1.8);
+    }
+
+    h4 {
+        font-size: calc($fontSize * 1.4);
+    }
+
+    p, span {
+        font-size: calc($fontSize * 1.6);
+
+        &.title {
+            font-size: calc($fontSize * 1.8);
+        }
+
+        &.note {
+            font-size: calc($fontSize * 1.4);
+        }
+    }
+
     footer{
         margin-top: 120px;
         margin-bottom: 24px;

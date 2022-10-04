@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +7,28 @@
     <title>遊戲完蛋了</title>
     <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    
     <!-- tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/shop.css">
+
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="css/custom-animation.css">
 
+    <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
+
     <!-- tailwind js -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    
     <!-- aos js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="js/cookie.js"></script>
     <script src="js/step.js"></script>
     <script src="js/tabs.js"></script>
@@ -57,8 +67,11 @@
                                 <li class="-ty-3">
                                     <a href="##" class="block px-5">白皮書</a>
                                 </li>
-                                <li class="text-center color-a8a8a8">
-                                    <a href="##" class="block px-5 cursor-not-allowed">DEX <br> <span class="text-xs">(coming soon)</span></a>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
                                 </li>
                                 <li class="relative font-bold">
                                     <a href="##" class="px-5 flex items-center space-x-1 btn-language">
@@ -146,8 +159,11 @@
                 <li class="py-4">
                     <a href="##" class="block">白皮書</a>
                 </li>
-                <li class="py-4 text-center color-a8a8a8">
-                    <a href="##" class="cursor-not-allowed">DEX<br>(coming soon)</a>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
                 </li>
                 <li class="py-4 relative top-60">
                     <a href="##" class="block space-x-1  btn-m-language">
@@ -213,275 +229,221 @@
     </div>
 
     <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- 麵包屑 -->
         <div class="flex items-center space-x-1 pt-24 mb-5 sm:mb-11">
             <a href="index.html" class="text-sm font-normal sm:text-xs color-898989">首頁</a>
             <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
             <a href="##" class="text-sm font-bold sm:text-xs color-898989">商城</a>
         </div>
 
-
-        <!-- 入場券 -->
-        <div class="mx-auto mb-8 sm:mb-20 color-efefef">
-            <div class="mb-5 sm:mb-12">
-                <div class="text-lg font-bold sm:text-2xl">入場券</div>
-            </div>
-            
-            <div class="flex items-center flex-wrap md:justify-center lg:justify-start">
-                <!-- 20220608 新增入場券連結 -->
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 lg:ml-0 -ty-8">
-                    <div class="invisible flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                        <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">入場券的名稱</div>
-                    <div>
-                        <div class="text-xs font-bold color-7e97f0">
-                            <span class="text-sm">3,000 TWD</span> / <span class="text-sm">300 BNB</span>
-                        </div>
-                        <div class="text-xs font-bold color-898989">(≈30 USDT)</div>
-                    </div>
-                </a>
-          
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 -ty-8">
-                    <div class="invisible flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                        <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">入場券的名稱</div>
-                    <div>
-                        <div class="text-xs font-bold color-7e97f0">
-                            <span class="text-sm">3,000 TWD</span> / <span class="text-sm">300 BNB</span>
-                        </div>
-                        <div class="text-xs font-bold color-898989">(≈30 USDT)</div>
-                    </div>
-                </a>
-          
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 -ty-8">
-                    <div class="invisible flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                        <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">入場券的名稱</div>
-                    <div>
-                        <div class="text-xs font-bold color-7e97f0">
-                            <span class="text-sm">3,000 TWD</span> / <span class="text-sm">300 BNB</span>
-                        </div>
-                        <div class="text-xs font-bold color-898989">(≈30 USDT)</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        
-
-        <!-- 道具 -->
-        <div class="mx-auto mb-8 color-efefef">
-            <div class="mb-6 sm:mb-12">
-                <div class="text-lg font-bold sm:text-2xl">道具</div>
-            </div>
-            
-            <!-- 貨幣 強化 可擴充裝備 Tabs -->
-            <ul class="w-full mb-4 text-base font-bold border-b border-solid space-x-3 sm:space-x-6 border-color-353535 tabs">
-                <li class="inline-block px-4 py-3 align-middle btn-tab">
-                    <a href="##" id="default-tab" class="mx-auto mb-0 text-sm font-bold color-898989 sm:mb-3">全部</a>
+        <!-- GameFi Pass  -->
+        <div class="gamefi-pass">
+            <h2>GAMEFI PASS</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/product/gamefi-pass-01.png" alt="">
+                        <span class="name">GAMEFI PASS - 移動式</span>
+                        <span class="fee">TWD 10,000 / BNB 3,300</span>
+                        <span class="usdt">(≈3,300 USDT)</span>
+                    </a>
                 </li>
-                <li class="inline-block px-4 py-3 align-middle">
-                    <a href="##" class="mx-auto mb-0 text-sm font-bold color-898989 sm:mb-3">貨幣</a>
+                <li>
+                    <a href="#">
+                        <img src="images/product/gamefi-pass-02.png" alt="">
+                        <span class="name">GAMEFI PASS - 阿謝</span>
+                        <span class="fee">TWD 10,000 / BNB 3,300</span>
+                        <span class="usdt">(≈3,300 USDT)</span>
+                    </a>
                 </li>
-                <li class="inline-block px-4 py-3 align-middle">
-                    <a href="##" class="mx-auto mb-0 text-sm font-bold color-898989 sm:mb-3">強化</a>
+                <li>
+                    <a href="#">
+                        <img src="images/product/gamefi-pass-03.png" alt="">
+                        <span class="name">GAMEFI PASS - 米海爾</span>
+                        <span class="fee">TWD 10,000 / BNB 3,300</span>
+                        <span class="usdt">(≈3,300 USDT)</span>
+                    </a>
                 </li>
-                <li class="inline-block px-4 py-3 align-middle">
-                    <a href="##" class="mx-auto mb-0 text-sm font-bold color-898989 sm:mb-3">可擴充裝備</a>
+                <li>
+                    <a href="#">
+                        <img src="images/product/gamefi-pass-04.png" alt="">
+                        <span class="name">GAMEFI PASS - 希克斯</span>
+                        <span class="fee">TWD 10,000 / BNB 3,300</span>
+                        <span class="usdt">(≈3,300 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/gamefi-pass-05.png" alt="">
+                        <span class="name">GAMEFI PASS - 紅領巾</span>
+                        <span class="fee">TWD 10,000 / BNB 3,300</span>
+                        <span class="usdt">(≈3,300 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/gamefi-pass-06.png" alt="">
+                        <span class="name">GAMEFI PASS - Pepi</span>
+                        <span class="fee">TWD 10,000 / BNB 3,300</span>
+                        <span class="usdt">(≈3,300 USDT)</span>
+                    </a>
                 </li>
             </ul>
+        </div>        
 
-            <div class="flex items-center flex-wrap md:justify-center lg:justify-between">
-                <!-- 20220608 新增道具連結 -->
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 lg:ml-0 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                        </div>
-                        <div class="absolute bottom-2 left-1/2 px-3 py-1 whitespace-nowrap transform -translate-x-1/2 text-sm font-bold rounded-lg bg-7e97f0-85">coming soon!</div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長好過會點點點商品名稱可以好</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-          
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                        </div>
-                        <div class="absolute bottom-2 left-1/2 px-3 py-1 whitespace-nowrap transform -translate-x-1/2 text-sm font-bold rounded-lg bg-e08083-60">Sold out</div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-          
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/card-sample.png" alt="" class="max-w-full h-auto">
-                        </div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-    
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 lg:mr-0 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                        </div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 lg:ml-0 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                        </div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                        </div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                        </div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-
-                <a href="product.html" class="w-full px-5 py-4 mx-0 m-2 border border-solid rounded-3xl border-color-353535 md:w-64 md:m-2 lg:mr-0 -ty-8">
-                    <div class="flex items-center mb-4">
-                        <div><img src="images/icon/icon-a.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-a-plus.svg" alt=""></div>
-                        <div class="ml-1.5"><img src="images/icon/icon-s.svg" alt=""></div>
-                        <div class="ml-2 justify-center text-xs font-bold color-898989">限定</div>
-                    </div>
-                    <!-- 20220610 增加 coming soon 或 sold out -->
-                    <div class="relative">
-                        <div class="flex justify-center items-center w-48 h-48 mx-auto mb-4 relative rounded-lg overflow-hidden">
-                            <img src="images/product/step-discription.png" alt="" class="max-w-full h-auto">
-                        </div>
-                    </div>
-                    <div class="mb-3 text-sm font-bold truncate color-efefef">商品名稱可以好長</div>
-                    <div class="flex items-center">
-                        <span class="mr-1"><img src="images/icon/icon-coin.svg" alt=""></span>
-                        <span class="text-base font-bold color-7e97f0">300,000</span>
-                    </div>
-                </a>
-            </div>
-        </div>   
+        <!-- 道具 -->
+        <div class="props">
+            <h2>道具</h2>
+            <ul class="prop-tab">
+                <li id="prop-tab-1" class="active"><a href="javascript:void(0)">全部</a></li>
+                <li id="prop-tab-2"><a href="javascript:void(0)">貨幣</a></li>
+                <li id="prop-tab-3"><a href="javascript:void(0)">強化</a></li>
+                <li id="prop-tab-4"><a href="javascript:void(0)">可擴充裝備</a></li>
+            </ul>
+            <ul id="prop-list-1" class="prop-list active">
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop01.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop02.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop03.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop04.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop05.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop06.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop01.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop02.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop03.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop04.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+            </ul>
+            <ul id="prop-list-2" class="prop-list">
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop04.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop05.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+            </ul>
+            <ul id="prop-list-3" class="prop-list">
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop06.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+            </ul>
+            <ul id="prop-list-4" class="prop-list">
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop01.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product/prop02.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+                <li class="pass">
+                    <a href="#">
+                        <img src="images/product/prop03.png">
+                        <span class="name">商品名稱可以好長超過會點點點...</span>
+                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
+                        <span class="usdt">(≈30 USDT)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
     <!-- footer -->
-    <div class="max-w-7xl mx-auto mt-28 px-5 text-white color-898989 lg:mt-60">
-        <div class="py-7 text-xs text-center border-t border-color-898989">© 2022 GASH POINT Co., Ltd. All right reserved</div>
-    </div>
+    <footer>
+        <div class="copyright">© 2022 GASH POINT Co., Ltd. All right reserved</div>
+    </footer>
 
 
     <!-- social link -->
@@ -489,7 +451,7 @@
         <a href="##" class="block" target="_blank">
             <img src="images/icon/icon-dioscord-pc.svg" alt="">
         </a>
-    </div>    
+    </div>   
     
 
 
@@ -548,5 +510,20 @@
     </div>
 </div>
 
+<script>
+    // 道具 tab
+    $(function() {
+        for ( let i = 1; i <= 4; i++ ) {
+            let propTab = $('#prop-tab-' + i)
+            let propList = $('#prop-list-' + i)
+            $(propTab).click(function(){
+               $('.prop-tab li').removeClass('active')
+               $(this).addClass('active')
+               $('.prop-list').removeClass('active')
+               $(propList).addClass('active')
+            })
+        }
+    })
+</script>
 
 </html>

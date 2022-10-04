@@ -39,26 +39,6 @@ p.bold, span.bold {
   font-weight: 700;
 }
 
-@media screen and (max-width: 515px) {
-  h1 {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 18px;
-  }
-  h4 {
-    font-size: 14px;
-  }
-  p, span {
-    font-size: 16px;
-  }
-  p.title, span.title {
-    font-size: 18px;
-  }
-  p.note, span.note {
-    font-size: 14px;
-  }
-}
 /* 色彩設定 */
 .white {
   color: #ffffff;
@@ -192,14 +172,11 @@ input[warning] {
 /* 頁尾設定 */
 footer {
   width: 85vw;
-  margin: 228px auto 170px;
+  margin: 228px auto 44px;
   text-align: center;
   color: gray;
 }
 footer ul {
-  border-bottom: 0.5px solid #898989;
-  margin-bottom: 28px;
-  padding-bottom: 30px;
   display: flex;
   gap: 120px;
   justify-content: center;
@@ -212,6 +189,9 @@ footer ul li a:hover {
   color: #8AA3FF;
 }
 footer .copyright {
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 0.5px solid #898989;
   font-size: 12px;
 }
 
@@ -221,6 +201,24 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 515px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  p, span {
+    font-size: 16px;
+  }
+  p.title, span.title {
+    font-size: 18px;
+  }
+  p.note, span.note {
+    font-size: 14px;
+  }
   footer {
     margin-top: 120px;
     margin-bottom: 24px;
