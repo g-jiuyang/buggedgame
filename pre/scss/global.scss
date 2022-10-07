@@ -49,13 +49,13 @@ p, span {
 .frameBg { color: $frameBg; }
 .darkBg { color: $darkBg; }
 
-.primaryA { color: $primaryA; }
-.primaryB { color: $primaryB; }
-.primaryC { color: $primaryC; }
-.neutral { color: $neutral; }
-.success { color: $success; }
-.error { color: $error; }
-.warning { color: $warning; }
+.primaryA { color: $primaryA !important; }
+.primaryB { color: $primaryB !important; }
+.primaryC { color: $primaryC !important; }
+.neutral { color: $neutral !important; }
+.success { color: $success !important; }
+.error { color: $error !important; }
+.warning { color: $warning !important; }
 
 /* 按鈕設定 */
 button, input[type=submit], a.button {
@@ -116,12 +116,19 @@ button, input[type=submit], a.button {
 
 /* 表單設定 */
 input {
+    height: 44px;
+    background-color: $darkBg;
+    padding: 12px 24px;
+    border: 1px solid $dark;
+    border-radius: 24px;
+    font-size: calc($fontSize * 1.4);
+
     &:focus {
         border-color: $primaryC !important;
         outline: none;
     }
 
-    &[type=checkbox] {
+    &[type=checkbox] ,&[type=radio] {
         display: none;
 
         + span {
@@ -140,6 +147,82 @@ input {
 
     &[warning] {
         border-color: $warning !important;
+    }
+}
+
+// 下拉選單
+.selector{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    span{
+        flex: 100%;
+        color: $gray;
+        padding: 8px 24px;
+        margin-bottom: 12px;
+        border: 1px solid $dark;
+        border-radius: 24px;
+        cursor: pointer;
+        position: relative;
+        height: 42px;
+        &:after{
+            content: url(../images/icon/icon-arrow-bottom.svg);
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-45%);
+            transition: all .5s;
+        }
+    }
+    div{
+        flex: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s;
+        padding: 0 8px 0 12px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        font-size: calc($fontSize * 1.4);
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            padding-right: 4px;
+            gap: 8px;
+            li{
+                flex: 100%;
+                padding: 8px;
+                cursor: pointer;
+                border-radius: 8px;
+                transition: all .5s;
+                &:hover{
+                    background-color: $frameBg;
+                }
+            }
+            &::-webkit-scrollbar {
+                background-color: transparent;
+                width: 5px;
+                height: calc(100% - 20px);
+                transform: translateY(10px) translateX(-5px);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $gray;
+                border-radius: 5px;
+            }
+        }
+    }
+    &.open{
+        span{
+            &:after{
+                transform: translateY(-60%) rotate(180deg);
+            }
+        }
+        div{
+            max-height: 80vh;
+            border-color: $dark;
+            padding: 12px 8px 12px 12px;
+            margin-bottom: 12px;
+        }
     }
 }
 

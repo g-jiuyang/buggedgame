@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +7,22 @@
     <title>遊戲完蛋了</title>
     <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    
     <!-- tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+
+    <!-- Custom styles -->
     <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="css/custom-animation.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/record.css">
 
+    <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
+
     <!-- tailwind js -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    
     <script src="js/cookie.js"></script>
     <script src="js/step.js"></script>
     <script src="js/tabs.js"></script>
@@ -53,8 +61,11 @@
                                 <li class="-ty-3">
                                     <a href="##" class="block px-5">白皮書</a>
                                 </li>
-                                <li class="text-center color-a8a8a8">
-                                    <a href="##" class="block px-5 cursor-not-allowed">DEX <br> <span class="text-xs">(coming soon)</span></a>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
                                 </li>
                                 <li class="relative font-bold">
                                     <a href="##" class="px-5 flex items-center space-x-1 btn-language">
@@ -142,8 +153,11 @@
                 <li class="py-4">
                     <a href="##" class="block">白皮書</a>
                 </li>
-                <li class="py-4 text-center color-a8a8a8">
-                    <a href="##" class="cursor-not-allowed">DEX<br>(coming soon)</a>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
                 </li>
                 <li class="py-4 relative top-60">
                     <a href="##" class="block space-x-1  btn-m-language">
@@ -209,429 +223,319 @@
     </div>
 
     <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        
+        <!-- 麵包屑 -->
         <div class="flex items-center space-x-1 pt-24 mb-5 sm:mb-11">
             <a href="index.html" class="text-sm font-normal sm:text-xs color-898989">首頁</a>
             <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
             <a href="##" class="text-sm font-bold sm:text-xs color-898989">歷史紀錄</a>
         </div>
 
-        <div class="block justify-between items-center items-stretch max-w-2xl mx-auto mb-8 sm:mb-20 sm:flex">   
-            <div class="w-full px-4 py-5 mx-0 mb-5 rounded-3xl border border-solid relative border-color-353535 sm:w-1/2 sm:mx-3 sm:mb-0">
-                <div class="px-2 pb-4 border-b border-solid border-color-353535">
-                    <div>
-                        <div class="inline-block align-middle mr-3"><img src="images/icon/icon-account.svg" alt=""></div>
-                        <div class="inline-block align-middle text-base font-bold color-efefef sm:text-sm">0x130...123D</div>
-                    </div>
-                    <div class="hidden mt-4 text-sm font-normal color-898989 sm:text-xs">*帳號已鎖定，如有問題 <a href="mailto:" class="font-bold color-7e97f0">請洽客服</a></div>
-                </div>
-                <div class="px-2 pt-4">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center">
-                            <div class="mr-2 text-sm color-898989 lg:text-xs">入場券等級</div>
-                            <a href="##"><img src="images/icon/icon-info.svg" alt=""></a>
-                        </div>
-                        <div class="text-base font-bold color-efefef lg:text-sm">免費試玩</div>
-                    </div>
-                    <div class="text-sm font-normal mb-3 color-bdbdbd sm:text-xs">
-                        <div class="mb-1">蟲蟲幣加成 110%、擁有彩金活動資格(JP)</div>
-                        <div>到期日：2022/05/21 23:00(UTC+8)</div>
-                    </div>
-                </div>
-                <div>
-                    <a href="##" class="w-full flex items-center justify-center py-3 px-6 border-transparent rounded-full text-sm font-bold whitespace-nowrap color-efefef bg-from-e63eb6-to-749ff5 lg:text-xs">購買入場券</a>
-                </div>
-            </div>
-
-            <div class="w-full px-4 py-5 mx-0 rounded-3xl border border-solid relative border-color-353535 sm:w-1/2 sm:mx-3">
-                <div>    
-                    <div class="flex items-center justify-between px-2 pt-1 pb-4">
-                        <div class="flex items-center">
-                            <div class="mr-3"><img src="images/icon/icon-coin.svg" alt=""></div>
-                            <div class="sm:text-xs text-sm font-normal color-898989">蟲蟲幣</div>
-                        </div>
-                        <div class="text-base font-bold color-efefef lg:text-sm">300,000.00</div>
-                    </div>
-                    <div class="">
-                        <div class="px-2 pb-1 text-sm font-normal mb-3 color-bdbdbd sm:mb-0 sm:text-xs">
-                            <div>*如果有需要一些注意事項可在這，沒的話隱藏起來，沒的話隱藏起來。</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full flex items-center justify-between static bottom-5 left-auto transform-none sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
-                    <!-- <button class="w-1/2 py-3 sm:ml-4 ml-0 mr-2 rounded-full font-bold text-sm border border-solid border-transparent border-linear-gradient-121212-e63eb6-749ff5 color-efefef lg:text-xs">提領</button>
-                    <button class="w-1/2 py-3 ml-2 sm:mr-4 mr-0 rounded-full font-bold text-sm border border-solid border-transparent border-linear-gradient-121212-e63eb6-749ff5 color-efefef lg:text-xs">存入</button> -->
-                    
-                    <!-- 20220629 -->
-                    <div class="relative w-1/2 ml-0 mr-2 md:ml-4">
-                        <a href="##" class="w-full flex items-center justify-center py-3 px-6 text-center text-sm font-bold whitespace-nowrap color-efefef md:text-xs border-linear-gradient-121212-e63eb6-749ff5">提領</a>
-                    </div>
-                    <div class="relative w-1/2 ml-2 mr-0 md:mr-4">
-                        <a href="##" class="w-full flex items-center justify-center py-3 px-6 text-center text-sm font-bold whitespace-nowrap color-efefef md:text-xs border-linear-gradient-121212-e63eb6-749ff5">存入</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <!-- 歷史紀錄 -->
-        <div class="mx-auto mb-20 color-efefef">
-            <div class="mb-5 sm:mb-12">
-                <div class="text-lg font-bold sm:text-2xl">歷史紀錄</div>
-            </div>
-            
-            <!-- 個人資產、蟲蟲幣獲得 Tabs -->
-            <ul class="w-full mb-4 text-base font-bold border-b border-solid space-x-3 sm:space-x-6 border-color-353535 tabs">
-                <li id="r1" class="inline-block px-4 py-3 align-middle btn-tab">
-                    <a href="##" id="default-tab" class="mx-auto text-sm font-bold color-898989">資產兌換</a>
-                </li>
-                <li id="r2" class="inline-block px-4 py-3 align-middle color-efefef">
-                    <a href="##" class="mx-auto text-sm font-bold color-898989">蟲蟲幣獲得/提領</a>
-                </li>
-                <li id="r3" class="inline-block px-4 py-3 align-middle color-efefef">
-                    <a href="##" class="mx-auto text-sm font-bold color-898989">NFT</a>
-                </li>
+        <div class="record">
+            <h2>歷史紀錄</h2>
+            <ul class="record-tab">
+                <li id="record-tab-1" class="active"><a href="javascript:void(0)">資產兌換</a></li>
+                <li id="record-tab-2"><a href="javascript:void(0)">蟲蟲幣獲得/提領</a></li>
+                <li id="record-tab-3"><a href="javascript:void(0)">質押</a></li>
             </ul>
-
-
-            <!-- 空白狀態 沒有資料會顯示的狀態-->
-            <div class="hidden w-40 mx-auto text-center">
-                <div class="font-bold text-lg mb-3">沒有紀錄</div>
-                <div class="font-noraml text-sm mb-3 color-898989">快前往商城兌換入場券或道具，一起邊玩邊轉吧！</div>
+            <div class="no-record" style="display: none;">
                 <div>
-                    <a href="shop.html" class="text-sm font-bold rounded-full py-3 px-6 text-white bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">前往商城</a>
+                    <p class="title">沒有紀錄</p>
+                    <p class="desc">快前往商城兌換入場券或道具，一起邊玩邊轉吧！</p>
+                    <button class="btn-gradient">前往商城</button>
                 </div>
             </div>
-
-
-            <!-- table 個人資產-->
-            <div id="t1" class="max-w-full overflow-x-auto md:overflow-x-auto lg:overflow-x-visible">
-                <!-- 篩選 目前隱藏 sprint6 顯示-->
-                <div class="mb-4 flex lg:justify-end md:justify-start">
-                    <div class="flex items-center">
-                        <div class="relative filter-box">
-                            <div class="hidden flex items-center mr-7">
-                                <span class="mr-3 text-sm sm:text-xs">篩選</span>
-                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
-                                    <span class="mr-3 text-base font-normal">30天</span>
-                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
-                                </button>
-                            </div>
-                            <!-- 20220620 加 px-2 -->
-                            <div class="hidden w-36 px-2 py-2 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 filter-menu">
-                                <button class="w-full px-4 py-2 text-sm font-bold text-white">30天</button>
-                                <button class="w-full px-4 py-2 text-sm font-bold text-white">3個月</button>
-                                <button class="w-full px-4 py-2 text-sm font-bold text-white">6個月</button>
-                            </div>
-                        </div>
-
-                        <div class="relative filter-box">
-                            <div class="flex items-center">
-                                <span class="mr-3 text-sm sm:text-xs">頁數</span>
-                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
-                                    <span class="mr-3 text-base font-normal">1</span>
-                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
-                                </button>
-                            </div>
-                            <div class="hidden filter-menu w-36 px-2 max-h-52 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 ">
-                                <div class="max-h-44 my-4 overflow-y-auto scroll-style">    
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">1</button>
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">2</button>
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">3</button>
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">4</button>
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">5</button>
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">6</button> 
-                                </div>
-                            </div>
+            <div class="record-content">
+                <div class="filter">
+                    <div class="days">
+                        篩選
+                        <button>30天 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
+                        <div class="items">
+                            <ul>
+                                <li>30天</li>
+                                <li>3個月</li>
+                                <li>6個月</li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="pages">
+                        頁數
+                        <button>1 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
+                        <div class="items">
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="status">
+                        狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+                    </div>
                 </div>
-                <table class="table-auto w-full">
-                    <thead class="text-left bg-1f1f1f color-bdbdbd">
+                <table id="content-table-1" class="active">
+                    <thead>
                         <tr>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 pl-5 rounded-tl-xl rounded-bl-xl color-bdbdbd min-w-178">時間</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">交易單號</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-200">兌換商品</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">單價</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-80">數量</th> 
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">總價</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 rounded-tr-xl rounded-br-xl color-bdbdbd min-w-80">
-                                <span class="inline-block align-middle">狀態</span>
-                                <a href="##" class="inline-block align-middle"><img src="images/icon/icon-info-2.svg" alt=""></a>
-                            </th>                            
+                            <th>時間</th>
+                            <th>交易單號</th>
+                            <th>兌換商品</th>
+                            <th>單價</th>
+                            <th>數量</th>
+                            <th>總價</th>
+                            <th>狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle">10000</span>
-                                <span class="inline-block align-middle">TWD</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle">10000</span>
-                                <span class="inline-block align-middle">NTD</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>
-                                <span class="inline-block align-middle">成功</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">入場券</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle">99.9999</span>
-                                <span class="inline-block align-middle">BNB</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block align-middle">99.9999</span>
-                                <span class="inline-block align-middle">BNB</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>
-                                <span class="inline-block align-middle">失敗</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="neutral">•</span> 進行中</td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">道具名稱</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
-                                <span class="inline-block align-middle">99.9999</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">10</td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
-                                <span class="inline-block align-middle">990.9999</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
-                                <span class="inline-block align-middle">存入中</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="error">•</span> 失敗<br><a href="javascript:void(0)">補領道具</a></td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">入場券</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle">99.9999</span>
-                                <span class="inline-block align-middle">BNB</span> 
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block align-middle">99.9999</span>
-                                <span class="inline-block align-middle">BNB</span> 
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>
-                                <span class="inline-block align-middle">失敗</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">入場券</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle">99.9999</span>
-                                <span class="inline-block align-middle">BNB</span> 
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">1</td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block align-middle">99.9999</span>
-                                <span class="inline-block align-middle">BNB</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>
-                                <span class="inline-block align-middle">失敗</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="neutral">•</span> 進行中</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
+                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-number">2</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-
-            <!-- table 蟲蟲幣獲得提領 -->
-            <div id="t2" class="hidden max-w-full overflow-x-auto md:overflow-x-auto lg:overflow-x-visible">
-                <!-- 篩選 目前隱藏 sprint？ 顯示-->
-                <div class="mb-4 flex lg:justify-end md:justify-start">
-                    <div class="flex items-center">
-                        <div class="relative filter-box">
-                            <div class="hidden flex items-center mr-7">
-                                <span class="mr-3 text-sm sm:text-xs">篩選</span>
-                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
-                                    <span class="mr-3 text-base font-normal">30天</span>
-                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
-                                </button>
-                            </div>
-                            <!-- 20220616 加 px-2 -->
-                            <div class="hidden w-36 px-2 py-2 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 filter-menu">
-                                <button class="w-full px-4 py-2 text-sm font-bold text-white">30天</button>
-                                <button class="w-full px-4 py-2 text-sm font-bold text-white">3個月</button>
-                                <button class="w-full px-4 py-2 text-sm font-bold text-white">6個月</button>
-                            </div>
-                        </div>
-
-                        <div class="relative filter-box">
-                            <div class="flex items-center">
-                                <span class="mr-3 text-sm sm:text-xs">頁數</span>
-                                <button class="flex focus:outline-none color-7e97f0 filter-c1">
-                                    <span class="mr-3 text-base font-normal">1</span>
-                                    <span><img src="images/icon/icon-arrow-bottom-7e97f0.svg" alt=""></span>
-                                </button>
-                            </div>
-                            
-                            <div class="hidden filter-menu w-36 px-2 max-h-52 mt-2 absolute right-0 left-0 border border-solid text-left bg-white rounded-xl sm:left-0 lg:left-auto bg-1f1f1f border-color-353535 color-898989 ">
-                                <div class="max-h-44 my-4 overflow-y-auto scroll-style">    
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">1</button>
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">2</button>
-                                    <button class="w-full px-4 py-2 text-sm font-bold text-white">3</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <table class="table-auto w-full">
-                    <thead class="text-left bg-1f1f1f color-bdbdbd">
+                <table id="content-table-2">
+                    <thead>
                         <tr>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 pl-5 rounded-tl-xl rounded-bl-xl color-bdbdbd min-w-178">時間</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">交易單號</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-200">活動名稱</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">單價(加乘)</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-80">手續費</th> 
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 color-bdbdbd min-w-178">總價</th>
-                            <th class="w-1/12 font-normal text-sm py-2 px-2 rounded-tr-xl rounded-br-xl color-bdbdbd min-w-80">
-                                <span class="inline-block align-middle">狀態</span>
-                                <a href="##" class="inline-block align-middle"><img src="images/icon/icon-info-2.svg" alt=""></a>
-                            </th>                            
+                            <th>時間</th>
+                            <th>交易單號</th>
+                            <th>活動名稱</th>
+                            <th>單價 (加乘)</th>
+                            <th>手續費</th>
+                            <th>總價</th>
+                            <th>狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">+9999.0000(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="hidden inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">-</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
-                                <span class="inline-block align-middle">+9999.9999 (+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
-                                <span class="inline-block align-middle">存入中</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
+                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> -1060.40</td>
+                            <td class="title-fee"><img src="images/icon/icon-bug.svg"> 0.99</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> -1061.39</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">-1060.4000(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">0.99</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
-                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
-                                <span class="inline-block align-middle">提領中</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">拉新活動獎勵</td>
+                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> +5.00 (+1.99)</td>
+                            <td class="title-fee">-</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> +6.99</td>
+                            <td class="title-status"><span class="neutral">•</span> 進行中</td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">+1000.0000(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">0.99</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
-                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
-                                <span class="inline-block align-middle">提領中</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">提領至MetaMask</td>
+                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> +5.00 (+1.99)</td>
+                            <td class="title-fee">-</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> +6.99</td>
+                            <td class="title-status"><span class="error">•</span> 失敗</td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">0.99</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
-                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
-                                <span class="inline-block align-middle">提領中</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
+                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> -1060.40</td>
+                            <td class="title-fee"><img src="images/icon/icon-bug.svg"> 0.99</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> -1061.39</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
-                            <td class="py-4 px-2 pl-5 font-normal text-sm text-left color-efefef">2020/03/03 23:55:12</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">MNYpo390s14edfwes14e</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">超級入場券好大盾超級入場券好大盾超級入場券好大盾</td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">+9999.99(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span>
-                                <span class="inline-block align-middle">0.99</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm text-left color-efefef">
-                                <span class="inline-block align-middle"><img src="images/icon/icon-coin-20px.svg" alt=""></span> 
-                                <span class="inline-block align-middle">+9999.9999(+9999.9999)</span>
-                            </td>
-                            <td class="py-4 px-2 font-normal text-sm color-efefef">
-                                <span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>
-                                <span class="inline-block align-middle">提領中</span>
-                            </td>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
+                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> -1060.40</td>
+                            <td class="title-fee"><img src="images/icon/icon-bug.svg"> 0.99</td>
+                            <td class="title-total"><img src="images/icon/icon-bug.svg"> -1061.39</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                     </tbody>
                 </table>
-            </div> 
-            
-            
+                <table id="content-table-3">
+                    <thead>
+                        <tr>
+                            <th>時間</th>
+                            <th>交易單號</th>
+                            <th>項目</th>
+                            <th>手續費</th>
+                            <th>收益</th>
+                            <th>狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">開始質押NFT<br>NFT項目：移動式 x1、希克斯 x1、大波斯菊 x1</td>
+                            <td class="title-fee">30.00 BNB</td>
+                            <td class="title-benefit">-</td>
+                            <td class="title-status"><span class="success">•</span> 成功</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">領取收益</td>
+                            <td class="title-fee">30.00 BNB</td>
+                            <td class="title-benefit"><img src="images/icon/icon-bug.svg"> 6.99</td>
+                            <td class="title-status"><span class="neutral">•</span> 進行中</td>
+                        </tr>
+                        <tr>
+                            <td class="title-time">2020/03/03 23:55</td>
+                            <td class="title-trackno">MNYpo390s14edfwe</td>
+                            <td class="title-name">解除質押NFT<br>解除NFT項目：移動式 x1、希克斯 x1、大波斯菊 x1</td>
+                            <td class="title-fee">30.00 BNB</td>
+                            <td class="title-benefit"><img src="images/icon/icon-bug.svg"> 6.99</td>
+                            <td class="title-status"><span class="error">•</span> 失敗</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
     </div>
 
 
 
     <!-- footer -->
-    <div class="max-w-7xl mx-auto mt-28 px-5 text-white color-898989 lg:mt-60">
-        <div class="py-7 text-xs text-center border-t border-color-898989">© 2022 GASH POINT Co., Ltd. All right reserved</div>
-    </div>
+    <footer>
+        <div class="copyright">© 2022 GASH POINT Co., Ltd. All right reserved</div>
+    </footer>
 
     <!-- social link -->
     <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
@@ -639,8 +543,6 @@
             <img src="images/icon/icon-dioscord-pc.svg" alt="">
         </a>
     </div>
-    
-
 
 </body>
 
@@ -653,7 +555,7 @@
 <div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">連接錢包</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">請先連結Metamask錢包。</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">請先連結MetaMask錢包。</div>
         <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
@@ -692,8 +594,8 @@
 <div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">等待確認中</div>
-        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待Metamask錢包確認中，請稍候。</div>
-        <div class="text-sm font-noraml text-center color-efefef">還沒下載Metamask錢包? <a href="##" target="_blank" class="font-bold color-7e97f0">前往下載</a></div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank" class="font-bold color-7e97f0">前往下載</a></div>
     </div>
 </div>
 
@@ -730,5 +632,34 @@
         <img src="images/icon/icon-close.svg" alt="">
     </button>
 </div>
+
+
+<script>
+    // 頁籤切換
+    $(function() {
+        for ( let i = 1; i <= 3; i++ ) {
+            let recordTab = $('#record-tab-' + i)
+            let recordContent = $('#content-table-' + i)
+            $(recordTab).click(function(){
+               $('.record-tab li').removeClass('active')
+               $(this).addClass('active')
+               $('.record-content table').removeClass('active')
+               $(recordContent).addClass('active')
+            })
+        }
+    })
+
+    // 篩選下拉
+    $('.days').click(function(){
+        $('.pages').removeClass('active')
+        $(this).toggleClass('active')
+    })
+
+    // 頁碼下拉
+    $('.pages').click(function(){
+        $('.days').removeClass('active')
+        $(this).toggleClass('active')
+    })
+</script>
 
 </html>

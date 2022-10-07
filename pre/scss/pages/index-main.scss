@@ -46,6 +46,12 @@
             font-size: calc($fontSize * 1.8);
             font-weight: $Medium;
             text-align: justify;
+            &.updated-time{
+                font-size: calc($fontSize * 1.2);
+                font-weight: $Regular;
+                color: $gray;
+                margin-top: 24px;
+            }
         }
         button{
             width: 150px;
@@ -121,7 +127,7 @@
         flex-shrink: 0;
         position: relative;
         border-radius: 40px;
-        padding: 20px;
+        padding: 16px 20px;
         height: 160px;
         .ranking-header{
             display: flex;

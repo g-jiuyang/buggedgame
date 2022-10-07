@@ -69,31 +69,31 @@ p.bold, span.bold {
 }
 
 .primaryA {
-  color: #7B61FF;
+  color: #7B61FF !important;
 }
 
 .primaryB {
-  color: #E142B9;
+  color: #E142B9 !important;
 }
 
 .primaryC {
-  color: #8AA3FF;
+  color: #8AA3FF !important;
 }
 
 .neutral {
-  color: #D8B42C;
+  color: #D8B42C !important;
 }
 
 .success {
-  color: #7EF09E;
+  color: #7EF09E !important;
 }
 
 .error {
-  color: #CC47A6;
+  color: #CC47A6 !important;
 }
 
 .warning {
-  color: #E08083;
+  color: #E08083 !important;
 }
 
 /* 按鈕設定 */
@@ -147,26 +147,104 @@ button.btn-outline:hover, input[type=submit].btn-outline:hover, a.button.btn-out
 }
 
 /* 表單設定 */
+input {
+  height: 44px;
+  background-color: #121212;
+  padding: 12px 24px;
+  border: 1px solid #353535;
+  border-radius: 24px;
+  font-size: 14px;
+}
 input:focus {
   border-color: #8AA3FF !important;
   outline: none;
 }
-input[type=checkbox] {
+input[type=checkbox], input[type=radio] {
   display: none;
 }
-input[type=checkbox] + span {
+input[type=checkbox] + span, input[type=radio] + span {
   display: inline-block;
   padding-left: 26px;
   line-height: 20px;
   background: url(../images/icon/icon-checkbox-normal.svg) no-repeat left top;
   background-size: 20px;
 }
-input[type=checkbox]:checked + span {
+input[type=checkbox]:checked + span, input[type=radio]:checked + span {
   background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
   background-size: 20px;
 }
 input[warning] {
   border-color: #E08083 !important;
+}
+
+.selector {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.selector span {
+  flex: 100%;
+  color: #898989;
+  padding: 8px 24px;
+  margin-bottom: 12px;
+  border: 1px solid #353535;
+  border-radius: 24px;
+  cursor: pointer;
+  position: relative;
+  height: 42px;
+}
+.selector span:after {
+  content: url(../images/icon/icon-arrow-bottom.svg);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-45%);
+  transition: all 0.5s;
+}
+.selector div {
+  flex: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  padding: 0 8px 0 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+.selector div ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 4px;
+  gap: 8px;
+}
+.selector div ul li {
+  flex: 100%;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.5s;
+}
+.selector div ul li:hover {
+  background-color: #1F1F1F;
+}
+.selector div ul::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+  height: calc(100% - 20px);
+  transform: translateY(10px) translateX(-5px);
+}
+.selector div ul::-webkit-scrollbar-thumb {
+  background-color: #898989;
+  border-radius: 5px;
+}
+.selector.open span:after {
+  transform: translateY(-60%) rotate(180deg);
+}
+.selector.open div {
+  max-height: 80vh;
+  border-color: #353535;
+  padding: 12px 8px 12px 12px;
+  margin-bottom: 12px;
 }
 
 /* 頁尾設定 */

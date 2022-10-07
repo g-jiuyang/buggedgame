@@ -1,0 +1,290 @@
+@charset "UTF-8";
+.record {
+  margin-bottom: 64px;
+}
+.record h2 {
+  margin-bottom: 32px;
+}
+.record .record-tab {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #353535;
+}
+.record .record-tab li {
+  border-bottom: 3px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
+}
+.record .record-tab li a {
+  display: inline-block;
+  padding: 12px 16px;
+  color: #898989;
+  transition: all 0.5s;
+}
+.record .record-tab li.active {
+  border-color: #8AA3FF;
+}
+.record .record-tab li.active a, .record .record-tab li:hover a {
+  color: #EFEFEF;
+}
+.record .no-record {
+  width: 190px;
+  margin: 100px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.record .no-record .title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.record .no-record .desc {
+  font-size: 12px;
+  color: #898989;
+}
+.record .no-record button {
+  width: 135px;
+  padding: 12px;
+  color: #EFEFEF;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 28px;
+}
+.record .record-content .filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
+  color: #BDBDBD;
+  font-size: 12px;
+  margin: 16px 0;
+}
+.record .record-content .filter .days, .record .record-content .filter .pages {
+  position: relative;
+}
+.record .record-content .filter .days button, .record .record-content .filter .pages button {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8AA3FF;
+  padding: 8px;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.record .record-content .filter .days button img, .record .record-content .filter .pages button img {
+  display: inline-block;
+  margin-left: 12px;
+  transition: all 0.5s;
+}
+.record .record-content .filter .days button:hover, .record .record-content .filter .pages button:hover {
+  filter: brightness(80%);
+}
+.record .record-content .filter .days .items, .record .record-content .filter .pages .items {
+  position: absolute;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0 8px;
+  width: 144px;
+  right: 0;
+}
+.record .record-content .filter .days .items ul, .record .record-content .filter .pages .items ul {
+  overflow: hidden;
+  max-height: 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #EFEFEF;
+  transition: all 0.5s;
+}
+.record .record-content .filter .days .items ul li, .record .record-content .filter .pages .items ul li {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+.record .record-content .filter .days .items ul li:hover, .record .record-content .filter .pages .items ul li:hover {
+  background-color: #353535;
+}
+.record .record-content .filter .days.active button img, .record .record-content .filter .pages.active button img {
+  transform: rotate(180deg);
+}
+.record .record-content .filter .days.active .items, .record .record-content .filter .pages.active .items {
+  border: 1px solid #353535;
+  background-color: #1F1F1F;
+  padding: 8px;
+  z-index: 100;
+}
+.record .record-content .filter .days.active .items ul, .record .record-content .filter .pages.active .items ul {
+  max-height: 13em;
+  overflow-y: auto;
+}
+.record .record-content .filter .days.active .items ul::-webkit-scrollbar, .record .record-content .filter .pages.active .items ul::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 2px;
+}
+.record .record-content .filter .days.active .items ul::-webkit-scrollbar-track, .record .record-content .filter .pages.active .items ul::-webkit-scrollbar-track {
+  background-color: #353535;
+  border-radius: 2px;
+}
+.record .record-content .filter .days.active .items ul::-webkit-scrollbar-thumb, .record .record-content .filter .pages.active .items ul::-webkit-scrollbar-thumb {
+  background-color: #BDBDBD;
+  border-radius: 2px;
+}
+.record .record-content .filter .status {
+  display: none;
+}
+.record .record-content .filter .status img {
+  display: inline-block;
+  margin-left: 4px;
+  transition: all 0.5s;
+  transform: translateY(-1px);
+}
+.record .record-content .filter .status img:hover {
+  filter: brightness(130%);
+}
+.record .record-content table {
+  width: 100%;
+  display: none;
+}
+.record .record-content table.active {
+  display: table;
+}
+.record .record-content table thead tr th {
+  text-align: left;
+  padding: 8px;
+  background-color: #1F1F1F;
+  color: #BDBDBD;
+  font-size: 14px;
+  font-weight: 400;
+}
+.record .record-content table thead tr th:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.record .record-content table thead tr th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.record .record-content table thead tr th img {
+  display: inline-block;
+  margin-left: 4px;
+  transform: translateY(-1px);
+  transition: all 0.5s;
+}
+.record .record-content table thead tr th img:hover {
+  filter: brightness(120%);
+}
+.record .record-content table tbody tr td {
+  height: 52px;
+  color: #EFEFEF;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px;
+}
+.record .record-content table tbody tr td img {
+  display: inline-block;
+  width: 20px;
+  margin-right: 6px;
+  transform: translateY(-2px);
+}
+.record .record-content table tbody tr td a {
+  color: #BDBDBD;
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+.record .record-content table tbody tr td a:hover {
+  color: #EFEFEF;
+}
+.record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-total {
+  min-width: 108px;
+}
+.record .record-content table tbody tr td.title-number {
+  min-width: 62px;
+}
+.record .record-content table tbody tr td.title-fee {
+  min-width: 86px;
+}
+.record .record-content table tbody tr td.title-status {
+  min-width: 76px;
+}
+
+@media screen and (max-width: 767px) {
+  .record .record-content .filter .status {
+    display: inline;
+  }
+  .record .record-content table thead {
+    display: none;
+  }
+  .record .record-content table tbody tr {
+    background-color: #1F1F1F;
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 12px;
+  }
+  .record .record-content table tbody tr td {
+    height: auto;
+    padding: 4px 0;
+  }
+  .record .record-content table tbody tr td.title-time, .record .record-content table tbody tr td.title-trackno {
+    flex: calc(50% - 6px);
+    border-bottom: 1px solid #353535;
+    padding-bottom: 4px;
+    color: #898989;
+  }
+  .record .record-content table tbody tr td.title-trackno {
+    text-align: right;
+  }
+  .record .record-content table tbody tr td.title-name {
+    flex: calc(100% - 84px);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 12px 0;
+  }
+  .record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-number, .record .record-content table tbody tr td.title-fee, .record .record-content table tbody tr td.title-total, .record .record-content table tbody tr td.title-benefit {
+    order: 2;
+    flex: 100%;
+    padding: 4px 12px;
+    text-align: right;
+    color: #898989;
+    position: relative;
+  }
+  .record .record-content table tbody tr td.title-price:before, .record .record-content table tbody tr td.title-price-plus:before, .record .record-content table tbody tr td.title-number:before, .record .record-content table tbody tr td.title-fee:before, .record .record-content table tbody tr td.title-total:before, .record .record-content table tbody tr td.title-benefit:before {
+    position: absolute;
+    left: 12px;
+  }
+  .record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-total {
+    background-color: #353535;
+    border-radius: 8px;
+  }
+  .record .record-content table tbody tr td.title-price:before {
+    content: "單價";
+  }
+  .record .record-content table tbody tr td.title-price-plus:before {
+    content: "單價 (加乘)";
+  }
+  .record .record-content table tbody tr td.title-number:before {
+    content: "數量";
+  }
+  .record .record-content table tbody tr td.title-fee:before {
+    content: "手續費";
+  }
+  .record .record-content table tbody tr td.title-total:before {
+    content: "總價";
+  }
+  .record .record-content table tbody tr td.title-status {
+    flex: 72px;
+    min-width: auto;
+    text-align: right;
+    margin: 12px 0;
+  }
+  .record .record-content table#content-table-3 tbody tr td.title-fee {
+    background-color: #353535;
+    border-radius: 8px;
+  }
+  .record .record-content table#content-table-3 tbody tr td.title-benefit:before {
+    content: "收益";
+  }
+}

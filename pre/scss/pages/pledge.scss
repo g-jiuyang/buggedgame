@@ -357,7 +357,6 @@
             .img {
                 background-color: $dark;
                 border-radius: 8px;
-                // height: calc(((500px - 30px) / 3) - 32px);
                 margin-bottom: 16px;
                 position: relative;
             }
@@ -397,7 +396,7 @@
                         content: '已解除';
                         padding: 4px 8px;
                         border-radius: 8px;
-                        background-color: rgba(#E08083, .6);
+                        background-color: rgba(#E08083, .85);
                         color: $lightGray;
                         font-size: calc($fontSize * 1.2);
                         font-weight: $UltraBold;

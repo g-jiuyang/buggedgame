@@ -48,6 +48,12 @@
   font-weight: 500;
   text-align: justify;
 }
+.animation-banner main p.updated-time {
+  font-size: 12px;
+  font-weight: 400;
+  color: #898989;
+  margin-top: 24px;
+}
 .animation-banner main button {
   width: 150px;
   margin-right: 20px;
@@ -121,7 +127,7 @@
   flex-shrink: 0;
   position: relative;
   border-radius: 40px;
-  padding: 20px;
+  padding: 16px 20px;
   height: 160px;
 }
 .banner-ranking .ranking-frame .ranking-header {

@@ -1,0 +1,342 @@
+@import "../variable";
+.record{
+    margin-bottom: 64px;
+    h2{
+        margin-bottom: 32px;
+    }
+    .record-tab{
+        display: flex;
+        gap: 24px;
+        border-bottom: 1px solid $dark;
+        li{
+            border-bottom: 3px solid transparent;
+            font-size: calc($fontSize * 1.2);
+            font-weight: $UltraBold;
+            a{
+                display: inline-block;
+                padding: 12px 16px;
+                color: $gray;
+                transition: all .5s;
+            }
+            &.active{
+                border-color: $primaryC;
+            }
+            &.active, &:hover{
+                a{
+                    color: $lightGray;
+                }
+            }
+        }
+    }
+    .no-record{
+        width: 190px;
+        margin: 100px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .title{
+            font-weight: $UltraBold;
+            margin-bottom: 4px;
+        }
+        .desc{
+            font-size: calc($fontSize * 1.2);
+            color: $gray;
+        }
+        button{
+            width: 135px;
+            padding: 12px;
+            color: $lightGray;
+            font-size: calc($fontSize * 1.2);
+            font-weight: $UltraBold;
+            margin-top: 28px;
+        }
+    }
+    .record-content{
+        .filter{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 28px;
+            color: $lighter;
+            font-size: calc($fontSize * 1.2);
+            margin: 16px 0;
+            .days, .pages{
+                position: relative;
+                button{
+                    font-size: calc($fontSize * 1.4);
+                    font-weight: $UltraBold;
+                    color: $primaryC;
+                    padding: 8px;
+                    margin-left: 12px;
+                    cursor: pointer;
+                    transition: all .5s;
+                    img{
+                        display: inline-block;
+                        margin-left: 12px;
+                        transition: all .5s;
+                    }
+                    &:hover{
+                        filter: brightness(80%);
+                    }
+                }
+                .items{
+                    position: absolute;
+                    border: 1px solid transparent;
+                    border-radius: 12px;
+                    padding: 0 8px;
+                    width: 144px;
+                    right: 0;
+                    ul{
+                        overflow: hidden;
+                        max-height: 0;
+                        text-align: center;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $UltraBold;
+                        color: $lightGray;
+                        transition: all .5s;
+                        li{
+                            cursor: pointer;
+                            padding: 8px;
+                            border-radius: 4px;
+                            &:hover{
+                                background-color: $dark;
+                            }
+                        }
+                    }
+                }
+                &.active{
+                    button{
+                        img{
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .items{
+                        border: 1px solid $dark;
+                        background-color: $frameBg;
+                        padding: 8px;
+                        z-index: 100;
+                        ul{
+                            max-height: 13em;
+                            overflow-y: auto;
+                            &::-webkit-scrollbar {
+                                width: 2px;
+                                border-radius: 2px;
+                            }
+                            &::-webkit-scrollbar-track {
+                                background-color: $dark;
+                                border-radius: 2px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background-color: $lighter;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .status{
+                display: none;
+                img{
+                    display: inline-block;
+                    margin-left: 4px;
+                    transition: all .5s;
+                    transform: translateY(-1px);
+                    &:hover{
+                        filter: brightness(130%);
+                    }
+                }
+            }
+        }
+        table{
+            width: 100%;
+            display: none;
+            &.active{
+                display: table;
+            }
+            thead{
+                tr{
+                    th{
+                        text-align: left;
+                        padding: 8px;
+                        background-color: $frameBg;
+                        color: $lighter;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $Regular;
+                        &:first-child{
+                            border-top-left-radius: 12px;
+                            border-bottom-left-radius: 12px;
+                        }
+                        &:last-child{
+                            border-top-right-radius: 12px;
+                            border-bottom-right-radius: 12px;
+                        }
+                        img{
+                            display: inline-block;
+                            margin-left: 4px;
+                            transform: translateY(-1px);
+                            transition: all .5s;
+                            &:hover{
+                                filter: brightness(120%);
+                            }
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        height: 52px;
+                        color: $lightGray;
+                        font-size: calc($fontSize * 1.4);
+                        font-weight: $Regular;
+                        padding: 8px;
+                        img{
+                            display: inline-block;
+                            width: 20px;
+                            margin-right: 6px;
+                            transform: translateY(-2px);
+                        }
+                        a{
+                            color: $lighter;
+                            text-decoration: underline;
+                            transition: all .5s;
+                            &:hover{
+                                color: $lightGray;
+                            }
+                        }
+                        &.title-{
+                            &price, &total{
+                                min-width: 108px;
+                            }
+                            &number{
+                                min-width: 62px;
+                            }
+                            &fee{
+                                min-width: 86px;
+                            }
+                            &status{
+                                min-width: 76px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 767px) {
+    .record{
+        .record-content{
+            .filter{
+                .status{
+                    display: inline;
+                }
+            }
+            table{
+                thead{
+                    display: none;
+                }
+                tbody{
+                    tr{
+                        background-color: $frameBg;
+                        margin-bottom: 12px;
+                        padding: 12px 18px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        gap: 0 12px;
+                        td{
+                            height: auto;
+                            padding: 4px 0;
+                            &.title-{
+                                &time, &trackno{
+                                    flex: calc(50% - 6px);
+                                    border-bottom: 1px solid $dark;
+                                    padding-bottom: 4px;
+                                    color: $gray;
+                                }
+                                &trackno{
+                                    text-align: right;
+                                }
+                                &name{
+                                    flex: calc(100% - 84px);
+                                    font-size: calc($fontSize * 1.6);
+                                    font-weight: $UltraBold;
+                                    margin: 12px 0;
+                                }
+                                &price, &price-plus, &number, &fee, &total, &benefit{
+                                    order: 2;
+                                    flex: 100%;
+                                    padding: 4px 12px;
+                                    text-align: right;
+                                    color: $gray;
+                                    position: relative;
+                                    &:before{
+                                        position: absolute;
+                                        left: 12px;
+                                    }
+                                }
+                                &price, &price-plus, &total{
+                                    background-color: $dark;
+                                    border-radius: 8px;
+                                }
+                                &price{
+                                    &:before{
+                                        content: '單價';
+                                    }
+                                }
+                                &price-plus{
+                                    &:before{
+                                        content: '單價 (加乘)';
+                                    }
+                                }
+                                &number{
+                                    &:before{
+                                        content: '數量';
+                                    }
+                                }
+                                &fee{
+                                    &:before{
+                                        content: '手續費';
+                                    }
+                                }
+                                &total{
+                                    &:before{
+                                        content: '總價';
+                                    }
+                                }
+                                &status{
+                                    flex: 72px;
+                                    min-width: auto;
+                                    text-align: right;
+                                    margin: 12px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                &#content-table-3{
+                    tbody{
+                        tr{
+                            td{
+                                &.title-{
+                                    &fee{
+                                        background-color: $dark;
+                                        border-radius: 8px;
+                                    }
+                                    &benefit{
+                                        &:before{
+                                            content: '收益';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} // max-width: 767px
