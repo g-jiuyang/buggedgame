@@ -374,7 +374,7 @@
                 </div>
                 <label class="agree">
                     <input type="checkbox">
-                    <span>我已閱讀並同意購買<a href="">注意事項</a>與<a href="">隱私權政策</a></span>
+                    <span>我已閱讀並同意購買<a id="notice--open" href="javascript:void(0)">注意事項</a>與<a id="privacy--open" href="javascript:void(0)">隱私權政策</a></span>
                 </label>
                 <input type="submit" class="btn-gradient" value="確認購買" disabled>
                 <!-- ↑↑請協助做資料驗證，submit按鈕預設為disabled，所有項目都填寫完畢才可亮起，並開始倒數30秒「確認購買 (30秒)」↑↑ -->
@@ -598,6 +598,31 @@
             <button id="invoiceInfo--close" class="popUp--submit">確認</button>
         </div>
     </div>
+
+    <!-- pop up 注意事項 -->
+    <div id="notice--popUp" class="popUp">
+        <div class="popUp--container">
+            <h2>注意事項</h2>
+            <p class="note">
+                注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明<a href="#" target="_blank">相關連結</a>。
+            </p>
+            <button id="notice--close" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
+    <!-- pop up 隱私權政策 -->
+    <div id="privacy--popUp" class="popUp">
+        <div class="popUp--container">
+            <h2>隱私權政策</h2>
+            <p class="note">
+                隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明<a href="#" target="_blank">相關連結</a>。
+            </p>
+            <p class="note">
+                隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明。
+            </p>
+            <button id="privacy--close" class="popUp--submit">確認</button>
+        </div>
+    </div>
   
 </body>
 
@@ -752,10 +777,26 @@
         }
     });
 
-    // 同意事項
+    // 同意事項（打開submit按鈕）
     $('.agree').click(function(){
         $('input[type=submit]').removeAttr('disabled')
         $('input[type=submit]').attr('value','確認購買 (30秒)')
+    })
+
+    // 注意事項彈窗
+    $('#notice--open').click(function(){
+        $('#notice--popUp').addClass('active')
+    })
+    $('#notice--close').click(function(){
+        $('#notice--popUp').removeClass('active')
+    })
+
+    // 隱私權彈窗
+    $('#privacy--open').click(function(){
+        $('#privacy--popUp').addClass('active')
+    })
+    $('#privacy--close').click(function(){
+        $('#privacy--popUp').removeClass('active')
     })
 </script>
 

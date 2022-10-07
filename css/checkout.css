@@ -161,11 +161,11 @@
   margin-top: 10px;
 }
 
-#invoiceInfo--popUp p.note {
+.popUp p.note {
   font-size: 14px;
   text-align: justify;
 }
-#invoiceInfo--popUp p.note a {
+.popUp p.note a {
   font-weight: 700;
   color: #8AA3FF;
 }
