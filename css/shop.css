@@ -25,6 +25,7 @@
 .gamefi-pass ul li a img {
   width: calc(100% - 32px);
   margin: 40px auto 16px;
+  border-radius: 8px;
 }
 .gamefi-pass ul li a span {
   display: block;

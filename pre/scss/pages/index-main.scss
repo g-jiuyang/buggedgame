@@ -27,6 +27,7 @@
     }
     main{
         width: 408px;
+        padding-top: 100px;
         color: $white;
         h2{
             font-size: calc($fontSize * 4);
@@ -101,8 +102,8 @@
     display: flex;
     gap: 28px;
     .banner-frame{
-        flex: 33%;
-        max-width: 33%;
+        flex: 400px;
+        max-width: 400px;
         .banner-content{
             position: relative;
             height: 160px;
@@ -111,8 +112,17 @@
             border: 1px solid $gray;
             a{
                 position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                img{
+                    position: absolute;
+                    min-width: 100%;
+                    min-height: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
         }
         .banner-thumb{
@@ -123,7 +133,7 @@
         }
     }
     .ranking-frame{
-        flex: 67%;
+        flex: calc(100% - 428px);
         flex-shrink: 0;
         position: relative;
         border-radius: 40px;
@@ -132,7 +142,7 @@
         .ranking-header{
             display: flex;
             .title{
-                flex: 35%;
+                flex: 33%;
                 flex-shrink: 0;
                 font-size: calc($fontSize * 1.4);
                 font-weight: $UltraBold;
@@ -142,7 +152,7 @@
                 }
             }
             .gold-medal{
-                flex: 30%;
+                flex: 33%;
                 dl{
                     display: flex;
                     gap: 12px;
@@ -162,7 +172,7 @@
                 }
             }
             .btns{
-                flex: 35%;
+                flex: 33%;
                 #ranking-basis{
                     float: right;
                     display: flex;
@@ -598,10 +608,10 @@
         flex-wrap: wrap;
         justify-content: center;
         .banner-frame{
-            flex: 50%;
-            max-width: 50%;
+            flex: 50vw;
+            max-width: 50vw;
             .banner-content{
-                height: 180px;
+                height: 20vw;
                 a{
                     left: 0;
                     right: 0;
@@ -813,7 +823,7 @@
             flex: 100%;
             max-width: 100%;
             .banner-content{
-                height: 33vw;
+                height: 40vw;
             }
         }
         .ranking-frame{
