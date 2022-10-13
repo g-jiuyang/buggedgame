@@ -626,8 +626,8 @@
     </div>
 
     <!-- social link -->
-    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
-        <a href="##" class="block" target="_blank">
+    <div class="btn-discord">
+        <a href="#" target="_blank">
             <img src="images/icon/icon-dioscord-pc.svg" alt="">
         </a>
     </div>
@@ -751,11 +751,7 @@
 
     // 常見問題開合
     $('.faq > ul > li').click(function(){
-        if($(this).hasClass('open')) $(this).removeClass('open')
-        else {
-            $('.faq > ul > li').removeClass('open')
-            $(this).addClass('open')
-        }
+        $(this).toggleClass('open')
     })
 
     // 開發團隊看更多

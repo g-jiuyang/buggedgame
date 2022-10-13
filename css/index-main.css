@@ -97,6 +97,7 @@
 
 .banner-ranking {
   width: 90vw;
+  max-width: 1440px;
   margin: 0 auto 120px;
   display: flex;
   gap: 28px;
@@ -214,10 +215,11 @@
 }
 .banner-ranking .ranking-frame .ranking-content ul li {
   width: 30%;
-  color: #898989;
+  color: #BDBDBD;
   font-size: 13px;
   font-weight: 700;
   display: flex;
+  align-items: center;
   margin-right: 8px;
   gap: 8px;
 }
@@ -378,7 +380,7 @@
 }
 
 .faq {
-  max-width: 75vw;
+  max-width: 1080px;
   margin: 0 auto 120px;
 }
 .faq h2 {
@@ -578,6 +580,15 @@
   background-color: #718fff;
 }
 
+@media screen and (min-width: 1440px) {
+  .pg-12 {
+    right: calc(50% - 38rem);
+    top: 540px;
+  }
+  .animation-banner .animation-wrap {
+    right: calc(50% - 720px);
+  }
+}
 @media screen and (max-width: 1200px) {
   .animation-banner {
     max-width: 90vw;
@@ -749,7 +760,7 @@
   }
   .animation-banner main {
     width: 90vw;
-    margin-top: 440px;
+    margin-top: 320px;
     margin-bottom: 0;
   }
   .animation-banner main h2 {
@@ -787,11 +798,20 @@
     flex: 100%;
     text-align: center;
   }
+  .banner-ranking .ranking-frame .ranking-header .gold-medal dl {
+    gap: 0;
+  }
   .banner-ranking .ranking-frame .ranking-header .gold-medal dl dd {
     font-size: 13px;
   }
   .banner-ranking .ranking-frame .ranking-header .btns {
     flex: none;
+  }
+  .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis {
+    width: auto;
+  }
+  .banner-ranking .ranking-frame .ranking-content p.update-time {
+    font-size: 12px;
   }
   .banner-ranking .ranking-frame .ranking-content ul li .id {
     font-size: 13px;
@@ -805,6 +825,10 @@
   .step .step-tab {
     max-width: 224px;
     margin: 24px auto 20px;
+  }
+  .step .step-tab li:after {
+    right: -28px;
+    transform: translateY(-55%);
   }
   .step .step-contents ul.active li:first-child {
     padding: 0;
@@ -826,7 +850,7 @@
     padding: 0 32px 0 0;
   }
   .faq ul li.open .answer {
-    padding-top: 12px;
+    padding: 12px 32px 12px 0;
   }
   .buy-pass {
     margin-bottom: 60px;

@@ -2,6 +2,7 @@
 body {
   color: #EFEFEF;
   font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* 文字設定 */
@@ -247,9 +248,16 @@ input[warning] {
   margin-bottom: 12px;
 }
 
+.btn-discord {
+  position: fixed;
+  right: calc(50% - 38rem);
+  bottom: 52px;
+}
+
 /* 頁尾設定 */
 footer {
   width: 85vw;
+  max-width: 76rem;
   margin: 228px auto 44px;
   text-align: center;
   color: gray;
@@ -296,6 +304,9 @@ footer .copyright {
   }
   p.note, span.note {
     font-size: 14px;
+  }
+  .btn-discord {
+    display: none;
   }
   footer {
     margin-top: 120px;

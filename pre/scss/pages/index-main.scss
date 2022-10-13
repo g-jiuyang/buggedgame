@@ -98,6 +98,7 @@
 
 .banner-ranking{
     width: 90vw;
+    max-width: 1440px;
     margin: 0 auto 120px;
     display: flex;
     gap: 28px;
@@ -213,10 +214,11 @@
                 height: 78px;
                 li{
                     width: 30%;
-                    color: $gray;
+                    color: $lighter;
                     font-size: calc($fontSize * 1.3);
                     font-weight: $UltraBold;
                     display: flex;
+                    align-items: center;
                     margin-right: 8px;
                     gap: 8px;
                     .rank{
@@ -389,7 +391,8 @@
 }
 
 .faq{
-    max-width: 75vw;
+    // max-width: 75vw;
+    max-width: 1080px;
     margin: 0 auto 120px;
     h2{
         text-align: center;
@@ -597,6 +600,18 @@
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .pg-12{
+        right: calc(50% - 38rem);
+        top: 540px;
+    }
+    .animation-banner{
+        .animation-wrap{
+            right: calc(50% - 720px);
+        }
+    }
+} // min-width: 1440px
+
 @media screen and (max-width: 1200px) {
     .animation-banner{
         max-width: 90vw;
@@ -792,7 +807,7 @@
         }
         main{
             width: 90vw;
-            margin-top: 440px;
+            margin-top: 320px;
             margin-bottom: 0;
             h2{
                 font-size: calc($fontSize * 2.4);
@@ -834,6 +849,7 @@
                 }
                 .gold-medal{
                     dl{
+                        gap: 0;
                         dd{
                             font-size: calc($fontSize * 1.3);
                         }
@@ -841,9 +857,17 @@
                 }
                 .btns{
                     flex: none;
+                    #ranking-basis{
+                        width: auto;
+                    }
                 }
             }
             .ranking-content{
+                p{
+                    &.update-time{
+                        font-size: 12px;
+                    }
+                }
                 ul{
                     li{
                         .id{
@@ -862,6 +886,12 @@
         .step-tab{
             max-width: 224px;
             margin: 24px auto 20px;
+            li{
+                &:after{
+                    right: -28px;
+                    transform: translateY(-55%);
+                }
+            }
         }
         .step-contents{
             ul{
@@ -892,7 +922,7 @@
                 }
                 &.open{
                     .answer{
-                        padding-top: 12px;
+                        padding: 12px 32px 12px 0;
                     }
                 }
             }
