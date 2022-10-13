@@ -229,7 +229,7 @@ input {
 
 .btn-discord{
     position: fixed;
-    right: calc(50% - 38rem);
+    right: 2rem;
     bottom: 52px;
 }
 
@@ -261,6 +261,12 @@ footer{
         font-size: calc($fontSize * 1.2);
     }
 }
+
+@media screen and (min-width: 1280px) {
+    .btn-discord{
+        right: calc(50% - 38rem);
+    }
+} // min-width: 1280px
 
 @media screen and (max-width: 831px) {
     footer{

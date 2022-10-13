@@ -420,7 +420,7 @@
                 height: auto;
                 max-height: 0;
                 overflow: hidden;
-                transition: all .5s;
+                transition: max-height .3s, padding .5s;
                 padding-right: 48px;
                 font-weight: $Regular;
             }
@@ -638,6 +638,13 @@
         }
         .ranking-frame{
             height: 172px;
+            .ranking-content{
+                p{
+                    &.update-time{
+                        margin-top: 8px;
+                    }
+                }
+            }
         }
     }
     .roadmap, .team, .coworker{
@@ -795,6 +802,7 @@
 
 @media screen and (max-width: 515px) {
     .pg-12{
+        width: 22px;
         top: 360px;
     }
     .animation-banner{
@@ -968,14 +976,19 @@
                 &:first-child, &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6){
                     display: inline;
                 }
+                span{
+                    &.occupation{
+                        font-size: calc($fontSize * 1.4);
+                    }
+                }
             }
         }
         .more{
             display: block;
             border-radius: 0;
-            margin: 16px auto;
+            margin: 28px auto;
             text-align: center;
-            color: $lighter;
+            color: $gray;
             font-size: calc($fontSize * 1.4);
             cursor: pointer;
             img{

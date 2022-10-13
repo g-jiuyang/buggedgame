@@ -409,7 +409,7 @@
   height: auto;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s;
+  transition: max-height 0.3s, padding 0.5s;
   padding-right: 48px;
   font-weight: 400;
 }
@@ -617,6 +617,9 @@
   .banner-ranking .ranking-frame {
     height: 172px;
   }
+  .banner-ranking .ranking-frame .ranking-content p.update-time {
+    margin-top: 8px;
+  }
   .roadmap, .team, .coworker {
     max-width: 90vw;
   }
@@ -747,6 +750,7 @@
 }
 @media screen and (max-width: 515px) {
   .pg-12 {
+    width: 22px;
     top: 360px;
   }
   .animation-banner {
@@ -895,12 +899,15 @@
   .team .team-list li:first-child, .team .team-list li:nth-child(2), .team .team-list li:nth-child(3), .team .team-list li:nth-child(4), .team .team-list li:nth-child(5), .team .team-list li:nth-child(6) {
     display: inline;
   }
+  .team .team-list li span.occupation {
+    font-size: 14px;
+  }
   .team .more {
     display: block;
     border-radius: 0;
-    margin: 16px auto;
+    margin: 28px auto;
     text-align: center;
-    color: #BDBDBD;
+    color: #898989;
     font-size: 14px;
     cursor: pointer;
   }
