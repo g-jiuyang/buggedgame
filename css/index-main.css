@@ -897,6 +897,7 @@
   }
   .team .more {
     display: block;
+    border-radius: 0;
     margin: 16px auto;
     text-align: center;
     color: #BDBDBD;
