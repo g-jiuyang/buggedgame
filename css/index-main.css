@@ -834,9 +834,13 @@
     right: -28px;
     transform: translateY(-55%);
   }
+  .step .step-contents ul li p.title {
+    font-size: 16px;
+  }
   .step .step-contents ul.active li:first-child {
     padding: 0;
     margin-bottom: -4px;
+    font-size: 16px;
   }
   .faq {
     margin-bottom: 64px;

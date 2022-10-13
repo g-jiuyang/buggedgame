@@ -903,11 +903,19 @@
         }
         .step-contents{
             ul{
+                li{
+                    p{
+                        &.title{
+                            font-size: calc($fontSize * 1.6);
+                        }
+                    }
+                }
                 &.active{
                     li{
                         &:first-child{
                             padding: 0;
                             margin-bottom: -4px;
+                            font-size: calc($fontSize * 1.6);
                         }
                     }
                 }
