@@ -358,10 +358,11 @@
 .popUp p a {
   color: #8AA3FF;
   font-weight: 700;
-  transition: all 0.15s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 .popUp p a:hover {
-  text-decoration: underline;
+  color: #718fff;
 }
 .popUp p #collapse {
   display: inline-block;
@@ -395,7 +396,6 @@
 }
 .popUp label {
   margin-top: 28px;
-  margin-bottom: 12px;
   display: block;
   text-align: left;
 }
@@ -403,9 +403,11 @@
   font-size: 14px;
   color: #BDBDBD;
 }
+.popUp label + a.button {
+  margin-top: 12px !important;
+}
 .popUp button, .popUp a.button {
   position: relative;
-  margin-top: 0 !important;
 }
 .popUp button .count, .popUp a.button .count {
   position: absolute;
@@ -513,6 +515,12 @@
   }
 }
 @media screen and (max-width: 515px) {
+  .project .borderCard .project__info {
+    margin-bottom: 0;
+  }
+  .project .borderCard .dDate {
+    margin: 4px 0;
+  }
   .choose ul {
     -webkit-tap-highlight-color: transparent;
   }
