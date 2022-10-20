@@ -41,6 +41,16 @@ p, span {
     }
 }
 
+a{
+    color: $lighter;
+    text-decoration: underline;
+    transition: all .5s;
+
+    &:hover{
+        color: $gray;
+    }
+}
+
 /* 色彩設定 */
 .white { color: $white; }
 .lightGray { color: $lightGray; }
@@ -109,8 +119,8 @@ button, input[type=submit], a.button {
             background-image: $gradient;
         }
 
-        &:hover {
-            background: $gradient;
+        &:hover:before {
+            background-color: $frameBg;
         }
     }
 }

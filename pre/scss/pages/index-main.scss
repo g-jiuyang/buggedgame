@@ -54,13 +54,16 @@
                 margin-top: 24px;
             }
         }
-        button{
-            width: 150px;
-            margin-right: 20px;
-            float: left;
-            height: 40px;
+        .btns{
+            display: flex;
+            gap: 20px;
             font-size: calc($fontSize * 1.2);
             font-weight: $UltraBold;
+            justify-content: flex-start;
+            button{
+                width: 150px;
+                height: 40px;
+            }
         }
         ul{
             padding-top: 48px;
@@ -154,21 +157,29 @@
             }
             .gold-medal{
                 flex: 33%;
-                dl{
+                overflow: hidden;
+                ul{
                     display: flex;
-                    gap: 12px;
-                    justify-content: space-between;
-                    font-size: calc($fontSize * 1.2);
-                    font-weight: $UltraBold;
-                    color: $lightGray;
-                    background: $gradient;
-                    border-radius: 12px;
-                    padding: 6px 12px;
-                    height: 32px;
-                    img{
-                        display: inline;
-                        max-width: 20px;
-                        margin-right: 8px;
+                    width: 200%;
+                    transition: all .3s ease-in-out;
+                    gap: 8px;
+                    li{
+                        flex: 100%;
+                        display: flex;
+                        gap: 12px;
+                        justify-content: space-between;
+                        font-size: calc($fontSize * 1.2);
+                        font-weight: $UltraBold;
+                        color: $lightGray;
+                        background: $gradient;
+                        border-radius: 12px;
+                        padding: 6px 12px;
+                        height: 32px;
+                        img{
+                            display: inline;
+                            max-width: 20px;
+                            margin-right: 8px;
+                        }
                     }
                 }
             }
@@ -181,20 +192,30 @@
                     border: 1px solid $gray;
                     border-radius: 16px;
                     padding: 4px;
+                    position: relative;
                     button{
                         color: $lightGray;
                         font-size: calc($fontSize * 1.2);
                         font-weight: $UltraBold;
                         padding: 2px 12px;
+                        z-index: 1;
+                    }
+                    &:before{
+                        content: '';
+                        background-color: $primaryC;
+                        width: 48px;
+                        height: 22px;
                         border-radius: 16px;
-                        &.active{
-                            background-color: $primaryC;
-                        }
+                        position: absolute;
+                        z-index: 0;
+                        transition: all .3s;
+                        left: 4px;
                     }
                 }
             }
         }
         .ranking-content{
+            overflow: hidden;
             margin-top: 12px;
             p{
                 &.no-info{
@@ -207,37 +228,64 @@
                     color: $gray;
                 }
             }
-            ul{
+            .content-switch{
                 display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                height: 78px;
-                li{
-                    width: 30%;
-                    color: $lighter;
-                    font-size: calc($fontSize * 1.3);
-                    font-weight: $UltraBold;
+                width: calc(200% + 20px);
+                transition: all .3s ease-in-out;
+                ul{
+                    flex: 100%;
                     display: flex;
-                    align-items: center;
-                    margin-right: 8px;
-                    gap: 8px;
-                    .rank{
-                        flex: 24px;
-                        text-align: center;
-                    }
-                    .id{
-                        flex: 94px;
-                        color: $lightGray;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    height: 78px;
+                    li{
+                        width: 30%;
+                        color: $lighter;
+                        font-size: calc($fontSize * 1.3);
                         font-weight: $UltraBold;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 8px;
+                        gap: 8px;
+                        .rank{
+                            flex: 24px;
+                            text-align: center;
+                        }
+                        .id{
+                            flex: 94px;
+                            color: $lightGray;
+                            font-weight: $UltraBold;
+                        }
+                        img{
+                            display: inline;
+                            max-width: 20px;
+                            margin-left: 2px;
+                        }
+                        .amount{
+                            flex: 56px;
+                        }
                     }
-                    img{
-                        display: inline;
-                        max-width: 20px;
-                        margin-left: 2px;
+                }
+            }
+        }
+        &.byWeek{
+            .ranking-header{
+                .gold-medal{
+                    ul{
+                        transform: translateX(-50%);
                     }
-                    .amount{
-                        flex: 56px;
+                }
+                .btns{
+                    #ranking-basis{
+                        &:before{
+                            left: 52px;
+                        }
                     }
+                }
+            }
+            .ranking-content{
+                .content-switch{
+                    transform: translateX(-50%);
                 }
             }
         }
@@ -486,7 +534,7 @@
                 }
             }
             &:hover{
-                transform: translateY(-10px);
+                transform: translateY(-8px);
             }
         }
     }
@@ -593,7 +641,7 @@
                 font-size: calc($fontSize * 1.4);
                 font-weight: $UltraBold;
                 &:hover{
-                    background-color: darken($primaryC,5%);
+                    background-color: #7087D8;
                 }
             }
         }
@@ -696,27 +744,33 @@
                     padding-left: 4px;
                 }
                 .gold-medal{
+                    display: flex;
                     flex: 100%;
                     order: 2;
-                    dl{
-                        font-size: calc($fontSize * 1.4);
+                    ul{
+                        min-width: 200%;
+                        li{
+                            font-size: calc($fontSize * 1.4);
+                        }
                     }
                 }
             }
             .ranking-content{
                 margin-top: 8px;
-                ul{
-                    height: auto;
-                    li{
-                        width: 100%;
-                        justify-content: space-between;
-                        .rank{
-                            max-width: 24px;
-                            padding-left: 10px;
-                        }
-                        .amount{
-                            max-width: 68px;
-                            padding-right: 12px;
+                .content-switch{
+                    ul{
+                        height: auto;
+                        li{
+                            width: 100%;
+                            justify-content: space-between;
+                            .rank{
+                                max-width: 24px;
+                                padding-left: 10px;
+                            }
+                            .amount{
+                                max-width: 68px;
+                                padding-right: 12px;
+                            }
                         }
                     }
                 }
@@ -802,7 +856,7 @@
 
 @media screen and (max-width: 515px) {
     .pg-12{
-        width: 22px;
+        width: 30px;
         top: 360px;
     }
     .animation-banner{
@@ -828,11 +882,17 @@
                 margin-top: 8px;
                 margin-bottom: 10px;
             }
-            button{
+            .btns{
+                gap: 12px;
                 font-size: calc($fontSize * 1.3);
-                width: 100%;
-                margin: 6px auto;
-                height: 44px;
+                flex-wrap: wrap;
+                button{
+                    flex: 100%;
+                    height: 44px;
+                    &#download--open{
+                        order: 2;
+                    }
+                }
             }
             ul{
                 padding-top: 26px;
@@ -850,16 +910,21 @@
             }
         }
         .ranking-frame{
+            max-width: 90vw;
             .ranking-header{
                 .title{
                     flex: 100%;
                     text-align: center;
                 }
                 .gold-medal{
-                    dl{
-                        gap: 0;
-                        dd{
-                            font-size: calc($fontSize * 1.3);
+                    ul{
+                        li{
+                            gap: 0;
+                            span{
+                                &:last-child{
+                                    font-size: calc($fontSize * 1.3);
+                                }
+                            }
                         }
                     }
                 }
@@ -876,13 +941,15 @@
                         font-size: 12px;
                     }
                 }
-                ul{
-                    li{
-                        .id{
-                            font-size: calc($fontSize * 1.3);
-                        }
-                        .amount{
-                            font-size: calc($fontSize * 1.2);
+                .content-switch{
+                    ul{
+                        li{
+                            .id{
+                                font-size: calc($fontSize * 1.3);
+                            }
+                            .amount{
+                                font-size: calc($fontSize * 1.2);
+                            }
                         }
                     }
                 }

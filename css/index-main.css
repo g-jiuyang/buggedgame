@@ -55,13 +55,16 @@
   color: #898989;
   margin-top: 24px;
 }
-.animation-banner main button {
-  width: 150px;
-  margin-right: 20px;
-  float: left;
-  height: 40px;
+.animation-banner main .btns {
+  display: flex;
+  gap: 20px;
   font-size: 12px;
   font-weight: 700;
+  justify-content: flex-start;
+}
+.animation-banner main .btns button {
+  width: 150px;
+  height: 40px;
 }
 .animation-banner main ul {
   padding-top: 48px;
@@ -156,8 +159,16 @@
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal {
   flex: 33%;
+  overflow: hidden;
 }
-.banner-ranking .ranking-frame .ranking-header .gold-medal dl {
+.banner-ranking .ranking-frame .ranking-header .gold-medal ul {
+  display: flex;
+  width: 200%;
+  transition: all 0.3s ease-in-out;
+  gap: 8px;
+}
+.banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
+  flex: 100%;
   display: flex;
   gap: 12px;
   justify-content: space-between;
@@ -169,7 +180,7 @@
   padding: 6px 12px;
   height: 32px;
 }
-.banner-ranking .ranking-frame .ranking-header .gold-medal dl img {
+.banner-ranking .ranking-frame .ranking-header .gold-medal ul li img {
   display: inline;
   max-width: 20px;
   margin-right: 8px;
@@ -184,18 +195,28 @@
   border: 1px solid #898989;
   border-radius: 16px;
   padding: 4px;
+  position: relative;
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis button {
   color: #EFEFEF;
   font-size: 12px;
   font-weight: 700;
   padding: 2px 12px;
-  border-radius: 16px;
+  z-index: 1;
 }
-.banner-ranking .ranking-frame .ranking-header .btns #ranking-basis button.active {
+.banner-ranking .ranking-frame .ranking-header .btns #ranking-basis:before {
+  content: "";
   background-color: #8AA3FF;
+  width: 48px;
+  height: 22px;
+  border-radius: 16px;
+  position: absolute;
+  z-index: 0;
+  transition: all 0.3s;
+  left: 4px;
 }
 .banner-ranking .ranking-frame .ranking-content {
+  overflow: hidden;
   margin-top: 12px;
 }
 .banner-ranking .ranking-frame .ranking-content p.no-info {
@@ -207,13 +228,19 @@
   font-size: 8px;
   color: #898989;
 }
-.banner-ranking .ranking-frame .ranking-content ul {
+.banner-ranking .ranking-frame .ranking-content .content-switch {
+  display: flex;
+  width: calc(200% + 20px);
+  transition: all 0.3s ease-in-out;
+}
+.banner-ranking .ranking-frame .ranking-content .content-switch ul {
+  flex: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   height: 78px;
 }
-.banner-ranking .ranking-frame .ranking-content ul li {
+.banner-ranking .ranking-frame .ranking-content .content-switch ul li {
   width: 30%;
   color: #BDBDBD;
   font-size: 13px;
@@ -223,22 +250,31 @@
   margin-right: 8px;
   gap: 8px;
 }
-.banner-ranking .ranking-frame .ranking-content ul li .rank {
+.banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
   flex: 24px;
   text-align: center;
 }
-.banner-ranking .ranking-frame .ranking-content ul li .id {
+.banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
   flex: 94px;
   color: #EFEFEF;
   font-weight: 700;
 }
-.banner-ranking .ranking-frame .ranking-content ul li img {
+.banner-ranking .ranking-frame .ranking-content .content-switch ul li img {
   display: inline;
   max-width: 20px;
   margin-left: 2px;
 }
-.banner-ranking .ranking-frame .ranking-content ul li .amount {
+.banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
   flex: 56px;
+}
+.banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul {
+  transform: translateX(-50%);
+}
+.banner-ranking .ranking-frame.byWeek .ranking-header .btns #ranking-basis:before {
+  left: 52px;
+}
+.banner-ranking .ranking-frame.byWeek .ranking-content .content-switch {
+  transform: translateX(-50%);
 }
 .banner-ranking .ranking-frame:before, .banner-ranking .ranking-frame:after {
   content: "";
@@ -471,7 +507,7 @@
   font-size: 12px;
 }
 .buy-pass .pass-items li:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .roadmap {
@@ -577,7 +613,7 @@
   font-weight: 700;
 }
 #download--popUp .popUp--container .btns button:hover {
-  background-color: #718fff;
+  background-color: #7087D8;
 }
 
 @media screen and (min-width: 1440px) {
@@ -667,27 +703,31 @@
     padding-left: 4px;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal {
+    display: flex;
     flex: 100%;
     order: 2;
   }
-  .banner-ranking .ranking-frame .ranking-header .gold-medal dl {
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul {
+    min-width: 200%;
+  }
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
     font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-content {
     margin-top: 8px;
   }
-  .banner-ranking .ranking-frame .ranking-content ul {
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul {
     height: auto;
   }
-  .banner-ranking .ranking-frame .ranking-content ul li {
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
     width: 100%;
     justify-content: space-between;
   }
-  .banner-ranking .ranking-frame .ranking-content ul li .rank {
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
     max-width: 24px;
     padding-left: 10px;
   }
-  .banner-ranking .ranking-frame .ranking-content ul li .amount {
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
     max-width: 68px;
     padding-right: 12px;
   }
@@ -750,7 +790,7 @@
 }
 @media screen and (max-width: 515px) {
   .pg-12 {
-    width: 22px;
+    width: 30px;
     top: 360px;
   }
   .animation-banner {
@@ -778,11 +818,17 @@
     margin-top: 8px;
     margin-bottom: 10px;
   }
-  .animation-banner main button {
+  .animation-banner main .btns {
+    gap: 12px;
     font-size: 13px;
-    width: 100%;
-    margin: 6px auto;
+    flex-wrap: wrap;
+  }
+  .animation-banner main .btns button {
+    flex: 100%;
     height: 44px;
+  }
+  .animation-banner main .btns button#download--open {
+    order: 2;
   }
   .animation-banner main ul {
     padding-top: 26px;
@@ -798,14 +844,17 @@
   .banner-ranking .banner-frame .banner-content {
     height: 40vw;
   }
+  .banner-ranking .ranking-frame {
+    max-width: 90vw;
+  }
   .banner-ranking .ranking-frame .ranking-header .title {
     flex: 100%;
     text-align: center;
   }
-  .banner-ranking .ranking-frame .ranking-header .gold-medal dl {
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
     gap: 0;
   }
-  .banner-ranking .ranking-frame .ranking-header .gold-medal dl dd {
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span:last-child {
     font-size: 13px;
   }
   .banner-ranking .ranking-frame .ranking-header .btns {
@@ -817,10 +866,10 @@
   .banner-ranking .ranking-frame .ranking-content p.update-time {
     font-size: 12px;
   }
-  .banner-ranking .ranking-frame .ranking-content ul li .id {
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
     font-size: 13px;
   }
-  .banner-ranking .ranking-frame .ranking-content ul li .amount {
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
     font-size: 12px;
   }
   .step {

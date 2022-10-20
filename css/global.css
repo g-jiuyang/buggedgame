@@ -143,8 +143,8 @@ button.btn-outline:after, input[type=submit].btn-outline:after, a.button.btn-out
   border-radius: 9999px;
   background-image: linear-gradient(to right, #E63EB6, #749FF5);
 }
-button.btn-outline:hover, input[type=submit].btn-outline:hover, a.button.btn-outline:hover {
-  background: linear-gradient(to right, #E63EB6, #749FF5);
+button.btn-outline:hover:before, input[type=submit].btn-outline:hover:before, a.button.btn-outline:hover:before {
+  background-color: #1F1F1F;
 }
 
 /* 表單設定 */
