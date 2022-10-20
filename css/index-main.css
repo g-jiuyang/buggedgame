@@ -160,11 +160,13 @@
 .banner-ranking .ranking-frame .ranking-header .gold-medal {
   flex: 33%;
   overflow: hidden;
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+  border-radius: 12px;
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal ul {
   display: flex;
   width: 200%;
-  transition: all 0.3s ease-in-out;
+  transition: all 1s ease-in;
   gap: 8px;
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
@@ -175,8 +177,6 @@
   font-size: 12px;
   font-weight: 700;
   color: #EFEFEF;
-  background: linear-gradient(to right, #E63EB6, #749FF5);
-  border-radius: 12px;
   padding: 6px 12px;
   height: 32px;
 }
@@ -212,7 +212,7 @@
   border-radius: 16px;
   position: absolute;
   z-index: 0;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in;
   left: 4px;
 }
 .banner-ranking .ranking-frame .ranking-content {
@@ -231,7 +231,7 @@
 .banner-ranking .ranking-frame .ranking-content .content-switch {
   display: flex;
   width: calc(200% + 20px);
-  transition: all 0.3s ease-in-out;
+  transition: all 1.2s ease-in-out;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul {
   flex: 100%;

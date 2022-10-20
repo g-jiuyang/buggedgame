@@ -158,10 +158,12 @@
             .gold-medal{
                 flex: 33%;
                 overflow: hidden;
+                background: $gradient;
+                border-radius: 12px;
                 ul{
                     display: flex;
                     width: 200%;
-                    transition: all .3s ease-in-out;
+                    transition: all 1s ease-in;
                     gap: 8px;
                     li{
                         flex: 100%;
@@ -171,8 +173,6 @@
                         font-size: calc($fontSize * 1.2);
                         font-weight: $UltraBold;
                         color: $lightGray;
-                        background: $gradient;
-                        border-radius: 12px;
                         padding: 6px 12px;
                         height: 32px;
                         img{
@@ -208,7 +208,7 @@
                         border-radius: 16px;
                         position: absolute;
                         z-index: 0;
-                        transition: all .3s;
+                        transition: all .3s ease-in;
                         left: 4px;
                     }
                 }
@@ -231,7 +231,7 @@
             .content-switch{
                 display: flex;
                 width: calc(200% + 20px);
-                transition: all .3s ease-in-out;
+                transition: all 1.2s ease-in-out;
                 ul{
                     flex: 100%;
                     display: flex;

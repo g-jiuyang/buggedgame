@@ -243,6 +243,17 @@ input {
     bottom: 52px;
 }
 
+/* nav 設定 */
+nav{
+    a{
+        color: $lightGray;
+        text-decoration: none;
+        &:hover{
+            color: $lightGray;
+        }
+    }
+}
+
 /* 頁尾設定 */
 footer{
     width: 85vw;
