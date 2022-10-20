@@ -41,7 +41,7 @@ p, span {
     }
 }
 
-a{
+p a{
     color: $lighter;
     text-decoration: underline;
     transition: all .5s;
@@ -241,17 +241,6 @@ input {
     position: fixed;
     right: 2rem;
     bottom: 52px;
-}
-
-/* nav 設定 */
-nav{
-    a{
-        color: $lightGray;
-        text-decoration: none;
-        &:hover{
-            color: $lightGray;
-        }
-    }
 }
 
 /* 頁尾設定 */

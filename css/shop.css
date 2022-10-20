@@ -20,6 +20,7 @@
 }
 .gamefi-pass ul li a {
   display: inline-block;
+  width: 100%;
   padding: 16px 20px;
 }
 .gamefi-pass ul li a img {
@@ -35,6 +36,10 @@
   font-size: 14px;
   color: #EFEFEF;
   margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .gamefi-pass ul li a span.fee {
   font-size: 14px;
@@ -45,7 +50,7 @@
   color: #898989;
 }
 .gamefi-pass ul li:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .props h2 {
@@ -94,9 +99,26 @@
   padding: 16px 20px;
   width: 100%;
 }
-.props ul.prop-list li a > img {
+.props ul.prop-list li a .img {
   width: calc(100% - 18px);
   margin: 42px auto 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.props ul.prop-list li a .img .coming_soon, .props ul.prop-list li a .img .sold_out {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  padding: 4px 12px;
+  border-radius: 8px;
+  transform: translateX(-50%);
+}
+.props ul.prop-list li a .img .coming_soon {
+  background-color: rgba(138, 163, 255, 0.85);
+}
+.props ul.prop-list li a .img .sold_out {
+  background-color: rgba(224, 128, 131, 0.85);
 }
 .props ul.prop-list li a span {
   display: block;
@@ -106,6 +128,10 @@
   font-size: 14px;
   color: #EFEFEF;
   margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .props ul.prop-list li a span.fee {
   font-size: 16px;
@@ -120,7 +146,7 @@
   color: #898989;
 }
 .props ul.prop-list li:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 .props ul.prop-list li.pass:before {
   content: "";
@@ -161,6 +187,10 @@
     flex: 100%;
     max-width: 100%;
   }
+  .gamefi-pass ul li a img {
+    width: 200px;
+    margin-top: 44px;
+  }
   .props h2 {
     margin-bottom: 12px;
   }
@@ -177,6 +207,13 @@
   .props ul.prop-list li {
     flex: 100%;
     max-width: 100%;
+  }
+  .props ul.prop-list li a .img {
+    width: 200px;
+    margin-top: 44px;
+  }
+  .props ul.prop-list li a .img img {
+    width: 100%;
   }
   .props ul.prop-list li a span.fee img {
     width: 20px;

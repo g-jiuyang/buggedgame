@@ -17,6 +17,7 @@
             transition: all .5s;
             a{
                 display: inline-block;
+                width: 100%;
                 padding: 16px 20px;
                 img{
                     width: calc(100% - 32px);
@@ -30,6 +31,10 @@
                         font-size: calc($fontSize * 1.4);
                         color: $lightGray;
                         margin-bottom: 12px;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
                     }
                     &.fee{
                         font-size: calc($fontSize * 1.4);
@@ -42,7 +47,7 @@
                 }
             }
             &:hover{
-                transform: translateY(-10px);
+                transform: translateY(-8px);
             }
         }
     }
@@ -92,9 +97,26 @@
                     display: inline-block;
                     padding: 16px 20px;
                     width: 100%;
-                    >img{
+                    .img{
                         width: calc(100% - 18px);
                         margin: 42px auto 16px;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        position: relative;
+                        .coming_soon, .sold_out{
+                            position: absolute;
+                            bottom: 16px;
+                            left: 50%;
+                            padding: 4px 12px;
+                            border-radius: 8px;
+                            transform: translateX(-50%);
+                        }
+                        .coming_soon{
+                            background-color: rgba($primaryC, .85);
+                        }
+                        .sold_out{
+                            background-color: rgba(#E08083, .85);
+                        }
                     }
                     span{
                         display: block;
@@ -103,6 +125,10 @@
                             font-size: calc($fontSize * 1.4);
                             color: $lightGray;
                             margin-bottom: 12px;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 1;
+                            overflow: hidden;
                         }
                         &.fee{
                             font-size: calc($fontSize * 1.6);
@@ -119,7 +145,7 @@
                     }
                 }
                 &:hover{
-                    transform: translateY(-10px);
+                    transform: translateY(-8px);
                 }
                 &.pass{
                     &:before{
@@ -163,6 +189,12 @@
             li{
                 flex: 100%;
                 max-width: 100%;
+                a{
+                    img{
+                        width: 200px;
+                        margin-top: 44px;
+                    }
+                }
             }
         }
     }
@@ -184,6 +216,13 @@
                     flex: 100%;
                     max-width: 100%;
                     a{
+                        .img{
+                            width: 200px;
+                            margin-top: 44px;
+                            img{
+                                width: 100%;
+                            }
+                        }
                         span{
                             &.fee{
                                 img{

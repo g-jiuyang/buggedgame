@@ -40,12 +40,12 @@ p.bold, span.bold {
   font-weight: 700;
 }
 
-a {
+p a {
   color: #BDBDBD;
   text-decoration: underline;
   transition: all 0.5s;
 }
-a:hover {
+p a:hover {
   color: #898989;
 }
 
@@ -261,15 +261,6 @@ input[warning] {
   position: fixed;
   right: 2rem;
   bottom: 52px;
-}
-
-/* nav 設定 */
-nav a {
-  color: #EFEFEF;
-  text-decoration: none;
-}
-nav a:hover {
-  color: #EFEFEF;
 }
 
 /* 頁尾設定 */
