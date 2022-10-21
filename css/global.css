@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  transition: color 0.3s;
+}
+
 body {
   color: #EFEFEF;
   font-family: "Roboto", sans-serif;
@@ -43,7 +47,6 @@ p.bold, span.bold {
 p a {
   color: #BDBDBD;
   text-decoration: underline;
-  transition: all 0.5s;
 }
 p a:hover {
   color: #898989;
@@ -281,9 +284,6 @@ footer ul {
   gap: 120px;
   justify-content: center;
   font-size: 14px;
-}
-footer ul li a {
-  transition: all 0.3s;
 }
 footer ul li a:hover {
   color: #8AA3FF;

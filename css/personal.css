@@ -16,15 +16,11 @@
 .dashboard li:last-child {
   margin-right: 0;
 }
-.dashboard li .info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .dashboard li .info > p {
   display: flex;
   align-items: center;
   color: #EFEFEF;
+  margin-top: 4px;
 }
 .dashboard li .info > p img {
   margin-right: 8px;
@@ -143,12 +139,6 @@
   height: 6px;
   border-radius: 10px;
 }
-.dashboard li.bugCoin .info a {
-  transition: all 0.15s ease;
-}
-.dashboard li.bugCoin .info a:hover {
-  filter: brightness(120%);
-}
 .dashboard li.bugCoin .bugCoin--password {
   display: inline-block;
   margin-right: 16px;
@@ -160,10 +150,10 @@
 .dashboard li.bugCoin .bugCoin--password a {
   color: #BDBDBD;
   text-decoration: underline;
-  transition: all 0.15s ease;
+  transition: all 0.5s;
 }
 .dashboard li.bugCoin .bugCoin--password a:hover {
-  color: #d7d7d7;
+  color: #898989;
 }
 
 .myNft {
@@ -209,15 +199,14 @@
   font-size: 14px;
   font-weight: 700;
   bottom: 8px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   left: 50%;
   transform: translateX(-50%);
-}
-
-#gamepass--open {
-  transition: all 0.15s ease;
-}
-#gamepass--open:hover {
-  filter: brightness(120%);
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 #gamepass--popUp {
@@ -486,7 +475,7 @@
 
 @media screen and (max-width: 1069px) {
   .dashboard li.bugCoin {
-    min-height: 150px;
+    min-height: 200px;
   }
   .dashboard li.bugCoin .info {
     flex-wrap: wrap;
@@ -497,7 +486,7 @@
 }
 @media screen and (max-width: 991px) {
   .dashboard li.account {
-    min-height: 240px;
+    min-height: 220px;
   }
   .dashboard li.account .account__gamepass {
     flex-wrap: wrap;
@@ -549,7 +538,7 @@
     text-align: right;
   }
   .dashboard li.pledge {
-    min-height: 150px;
+    min-height: 180px;
   }
 }
 @media screen and (max-width: 515px) {
@@ -557,6 +546,9 @@
     font-size: 14px;
   }
   .dashboard li.bugCoin .info p span {
+    font-size: 14px;
+  }
+  .dashboard li.bugCoin .bugCoin--password {
     font-size: 14px;
   }
   .myNft ul li {

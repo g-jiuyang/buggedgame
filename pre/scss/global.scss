@@ -1,5 +1,9 @@
 @import "variable";
 
+* {
+    transition: color .3s;
+}
+
 body {
     color: $lightGray;
     font-family: 'Roboto', sans-serif;
@@ -44,7 +48,6 @@ p, span {
 p a{
     color: $lighter;
     text-decoration: underline;
-    transition: all .5s;
 
     &:hover{
         color: $gray;
@@ -244,7 +247,7 @@ input {
     bottom: 52px;
 }
 
-img[src=images/icon/icon-info.svg] {
+img[src="images/icon/icon-info.svg"] {
     &:hover{
         filter: brightness(80%);
     }
@@ -264,7 +267,6 @@ footer{
         font-size: calc($fontSize * 1.4);
         li{
             a{
-                transition: all .3s;
                 &:hover{
                     color: $primaryC;
                 }

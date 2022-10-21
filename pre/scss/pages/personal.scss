@@ -1,5 +1,4 @@
 @import "../variable";
-
 .dashboard {
     display: flex;
     justify-content: space-between;
@@ -19,14 +18,11 @@
         }
 
         .info {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
             > p {
                 display: flex;
                 align-items: center;
                 color: $lightGray;
+                margin-top: 4px;
 
                 img {
                     margin-right: 8px;
@@ -174,16 +170,6 @@
         }
 
         &.bugCoin {
-            .info {
-                a {
-                    transition: all .15s ease;
-
-                    &:hover {
-                        filter: brightness(120%);
-                    }
-                }
-            }
-
             .bugCoin--password {
                 display: inline-block;
                 margin-right: 16px;
@@ -195,10 +181,11 @@
                 a {
                     color: $lighter;
                     text-decoration: underline;
-                    transition: all .15s ease;
+                    transition: all .5s;
 
                     &:hover {
-                        color: lighten($lighter, 10%);
+                        // color: darken($lighter, 10%);
+                        color: $gray;
                     }
                 }
             }
@@ -255,20 +242,14 @@
                         font-size: calc($fontSize * 1.4);
                         font-weight: $UltraBold;
                         bottom: 8px;
+                        width: max-content;
                         left: 50%;
                         transform: translateX(-50%);
+                        min-width: max-content;
                     }
                 }
             }
         }
-    }
-}
-
-#gamepass--open {
-    transition: all .15s ease;
-
-    &:hover {
-        filter: brightness(120%);
     }
 }
 
@@ -602,7 +583,7 @@
     .dashboard {
         li {
             &.bugCoin {
-                min-height: 150px;
+                min-height: 200px;
 
                 .info {
                     flex-wrap: wrap;
@@ -620,7 +601,7 @@
     .dashboard {
         li {
             &.account {
-                min-height: 240px;
+                min-height: 220px;
 
                 .account__gamepass {
                     flex-wrap: wrap;
@@ -692,7 +673,7 @@
             }
 
             &.pledge {
-                min-height: 150px;
+                min-height: 180px;
             }
         }
     }
@@ -712,6 +693,9 @@
                             font-size: calc($fontSize * 1.4);
                         }
                     }
+                }
+                .bugCoin--password{
+                    font-size: calc($fontSize * 1.4);
                 }
             }
         }

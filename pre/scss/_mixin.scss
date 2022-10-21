@@ -1,0 +1,9 @@
+@mixin a-color($color) {
+    a {
+        color: $color;
+        transition: all .5s;
+        &:hover {
+            color: darken($color, 5%);
+        }
+    }
+}

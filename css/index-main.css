@@ -103,15 +103,17 @@
   max-width: 1440px;
   margin: 0 auto 120px;
   display: flex;
+  flex-wrap: wrap;
   gap: 28px;
 }
 .banner-ranking .banner-frame {
-  flex: 400px;
-  max-width: 400px;
+  flex: 50vw;
+  max-width: 50vw;
+  margin: 0 auto;
 }
 .banner-ranking .banner-frame .banner-content {
   position: relative;
-  height: 160px;
+  height: 20vw;
   border-radius: 40px;
   overflow: hidden;
   border: 1px solid #898989;
@@ -137,18 +139,22 @@
   gap: 8px;
 }
 .banner-ranking .ranking-frame {
-  flex: calc(100% - 428px);
+  flex: 100%;
   flex-shrink: 0;
   position: relative;
   border-radius: 40px;
-  padding: 16px 20px;
+  padding: 12px 20px;
   height: 160px;
 }
 .banner-ranking .ranking-frame .ranking-header {
   display: flex;
+  align-items: center;
 }
 .banner-ranking .ranking-frame .ranking-header .title {
-  flex: 33%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  padding-right: 20px;
   flex-shrink: 0;
   font-size: 14px;
   font-weight: 700;
@@ -158,66 +164,69 @@
   display: inline;
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal {
-  flex: 33%;
-  overflow: hidden;
-  background: linear-gradient(to right, #E63EB6, #749FF5);
+  background: #7B61FF;
   border-radius: 12px;
-}
-.banner-ranking .ranking-frame .ranking-header .gold-medal ul {
-  display: flex;
-  width: 200%;
-  transition: all 1s ease-in;
-  gap: 8px;
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
   flex: 100%;
-  display: flex;
-  gap: 12px;
   justify-content: space-between;
+  gap: 12px;
+  text-align: center;
   font-size: 12px;
-  font-weight: 700;
   color: #EFEFEF;
   padding: 6px 12px;
   height: 32px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
-.banner-ranking .ranking-frame .ranking-header .gold-medal ul li img {
+.banner-ranking .ranking-frame .ranking-header .gold-medal ul li span {
+  font-weight: 700;
+}
+.banner-ranking .ranking-frame .ranking-header .gold-medal ul li span img {
   display: inline;
   max-width: 20px;
   margin-right: 8px;
 }
+.banner-ranking .ranking-frame .ranking-header .gold-medal ul li:first-child {
+  display: flex;
+}
+.banner-ranking .ranking-frame .ranking-header .gold-medal ul li:last-child {
+  display: none;
+}
 .banner-ranking .ranking-frame .ranking-header .btns {
-  flex: 33%;
+  flex: 100%;
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis {
   float: right;
   display: flex;
-  width: calc(4em + 42px);
-  border: 1px solid #898989;
-  border-radius: 16px;
-  padding: 4px;
+  width: calc(4em + 54px);
+  border: 1px solid #353535;
+  border-radius: 22px;
+  padding: 8px;
   position: relative;
+  gap: 4px;
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis button {
   color: #EFEFEF;
   font-size: 12px;
   font-weight: 700;
-  padding: 2px 12px;
+  padding: 4px 12px;
   z-index: 1;
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis:before {
   content: "";
   background-color: #8AA3FF;
   width: 48px;
-  height: 22px;
+  height: 26px;
   border-radius: 16px;
   position: absolute;
   z-index: 0;
   transition: all 0.3s ease-in;
-  left: 4px;
+  left: 8px;
 }
 .banner-ranking .ranking-frame .ranking-content {
   overflow: hidden;
-  margin-top: 12px;
 }
 .banner-ranking .ranking-frame .ranking-content p.no-info {
   display: none;
@@ -227,74 +236,59 @@
   text-align: center;
   font-size: 8px;
   color: #898989;
+  margin-top: 4px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch {
   display: flex;
   width: calc(200% + 20px);
-  transition: all 1.2s ease-in-out;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul {
   flex: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: inherit;
   height: 78px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
-  width: 30%;
+  flex: 30%;
+  max-width: 30%;
   color: #BDBDBD;
   font-size: 13px;
   font-weight: 700;
   display: flex;
   align-items: center;
-  margin-right: 8px;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 4px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
-  flex: 24px;
+  flex: 16px;
+  min-width: 16px;
   text-align: center;
+  color: #898989;
+  font-size: 12px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
-  flex: 94px;
   color: #EFEFEF;
   font-weight: 700;
-}
-.banner-ranking .ranking-frame .ranking-content .content-switch ul li img {
-  display: inline;
-  max-width: 20px;
-  margin-left: 2px;
+  font-size: 12px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
-  flex: 56px;
+  flex: calc(100% - 120px);
+  max-width: calc(100% - 120px);
+  font-size: 12px;
 }
-.banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul {
-  transform: translateX(-50%);
+.banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul li:first-child {
+  display: none;
+}
+.banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul li:last-child {
+  display: flex;
 }
 .banner-ranking .ranking-frame.byWeek .ranking-header .btns #ranking-basis:before {
-  left: 52px;
+  left: 60px;
 }
 .banner-ranking .ranking-frame.byWeek .ranking-content .content-switch {
   transform: translateX(-50%);
-}
-.banner-ranking .ranking-frame:before, .banner-ranking .ranking-frame:after {
-  content: "";
-  position: absolute;
-  border-radius: 40px;
-  z-index: -1;
-}
-.banner-ranking .ranking-frame:before {
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  background: linear-gradient(to right, #E63EB6, #749FF5);
-}
-.banner-ranking .ranking-frame:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #353535;
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-header .gold-medal {
   display: none;
@@ -316,6 +310,26 @@
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-content ul {
   display: none;
+}
+.banner-ranking .ranking-frame:before, .banner-ranking .ranking-frame:after {
+  content: "";
+  position: absolute;
+  border-radius: 40px;
+  z-index: -1;
+}
+.banner-ranking .ranking-frame:before {
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+}
+.banner-ranking .ranking-frame:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #1F1F1F;
 }
 
 .step {
@@ -624,6 +638,16 @@
   .animation-banner .animation-wrap {
     right: calc(50% - 720px);
   }
+  .banner-ranking .banner-frame {
+    flex: 400px;
+    max-width: 400px;
+  }
+  .banner-ranking .banner-frame .banner-content {
+    height: 160px;
+  }
+  .banner-ranking .ranking-frame {
+    flex: calc(100% - 428px);
+  }
 }
 @media screen and (max-width: 1200px) {
   .animation-banner {
@@ -696,40 +720,64 @@
   }
   .banner-ranking .ranking-frame .ranking-header {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 12px;
   }
   .banner-ranking .ranking-frame .ranking-header .title {
-    padding-left: 4px;
+    flex: calc(50% - 6px);
+    padding: 0;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal {
     display: flex;
     flex: 100%;
     order: 2;
+    overflow: hidden;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul {
+    display: flex;
     min-width: 200%;
+    transition: all 0.6s ease-in;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
+    display: flex !important;
+    flex: 50%;
+    max-width: 50%;
+    justify-content: flex-start;
+    gap: 12px;
+    transition: all 0.6s ease-in;
     font-size: 14px;
+  }
+  .banner-ranking .ranking-frame .ranking-header .btns {
+    flex: calc(50% - 6px);
   }
   .banner-ranking .ranking-frame .ranking-content {
     margin-top: 8px;
   }
+  .banner-ranking .ranking-frame .ranking-content .content-switch {
+    transition: all 0.6s ease-in;
+  }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul {
     height: auto;
+    flex-direction: row;
+    align-items: inherit;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
-    width: 100%;
-    justify-content: space-between;
+    flex: 100%;
+    max-width: 100%;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
     max-width: 24px;
     padding-left: 10px;
   }
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
+    min-width: 108px;
+  }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
     max-width: 68px;
     padding-right: 12px;
+  }
+  .banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul {
+    transform: translateX(-50%);
   }
   .banner-ranking .ranking-frame p {
     margin-top: 16px;
@@ -759,6 +807,9 @@
   }
   .animation-banner main {
     margin-top: 540px;
+  }
+  .banner-ranking .ranking-frame {
+    max-width: 90vw;
   }
   .step .step-tab {
     max-width: 500px;
@@ -814,9 +865,10 @@
     font-size: 24px;
   }
   .animation-banner main p {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 400;
     margin-top: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
   .animation-banner main .btns {
     gap: 12px;
@@ -844,21 +896,19 @@
   .banner-ranking .banner-frame .banner-content {
     height: 40vw;
   }
-  .banner-ranking .ranking-frame {
-    max-width: 90vw;
-  }
   .banner-ranking .ranking-frame .ranking-header .title {
     flex: 100%;
     text-align: center;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
-    gap: 0;
+    align-items: center;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span:last-child {
     font-size: 13px;
   }
   .banner-ranking .ranking-frame .ranking-header .btns {
     flex: none;
+    margin: 0 auto;
   }
   .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis {
     width: auto;
