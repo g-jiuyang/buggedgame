@@ -50,7 +50,7 @@
             position: absolute;
             bottom: 20px;
             width: calc(100% - 40px);
-            margin-top: 12px;
+            margin-top: 16px;
         }
 
         .btns {
@@ -693,6 +693,7 @@
 
 @media screen and (max-width:515px) {
     .dashboard {
+        margin-bottom: 40px;
         li {
             .desc {
                 font-size: calc($fontSize * 1.4);
@@ -715,6 +716,7 @@
 
     .myNft {
         ul {
+            margin-top: 16px;
             li {
                 flex: calc(50% - 8px);
                 max-width: calc(50% - 8px);

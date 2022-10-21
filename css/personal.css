@@ -42,7 +42,7 @@
   position: absolute;
   bottom: 20px;
   width: calc(100% - 40px);
-  margin-top: 12px;
+  margin-top: 16px;
 }
 .dashboard li .btns {
   display: flex;
@@ -561,6 +561,9 @@
   }
 }
 @media screen and (max-width: 515px) {
+  .dashboard {
+    margin-bottom: 40px;
+  }
   .dashboard li .desc {
     font-size: 14px;
   }
@@ -569,6 +572,9 @@
   }
   .dashboard li.bugCoin .bugCoin--password {
     font-size: 14px;
+  }
+  .myNft ul {
+    margin-top: 16px;
   }
   .myNft ul li {
     flex: calc(50% - 8px);
