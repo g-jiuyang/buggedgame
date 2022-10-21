@@ -137,8 +137,7 @@
                             </div>
                             <!-- mobile btn wallet -->
                             <div>
-                                <!-- 20220629 -->
-                                <a href="##" target="_blank" class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                                <a href="javascript:void(0)" class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
                             </div>
                         </div>
                     </div>
@@ -235,7 +234,8 @@
         </div>
 
         <!-- 結帳+發票頁 -->
-        <div class="checkout">
+        <!-- ↓↓新台幣結帳↓↓
+        <div class="checkout hidden">
             <div class="product">
                 <div class="pic"><img src="images/product/gamefi-pass-01.png"></div>
                 <div class="info">
@@ -252,15 +252,166 @@
                 </ul>
                 <p class="desc">*信用卡提醒訊息說明，一些說明說明說明說明說一些說明說明說明說明說一些說明說明</p>
             </div>
-            <form action="">
+            <form action="result-in-progress.html">
                 <p class="title">發票資料* <a href="javascript:void(0)" id="invoiceInfo--open"><img src="images/icon/icon-info.svg"></a></p>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" id="no-invoice" checked>
+                        <input type="checkbox" id="no-invoice">
                         <span>我不需要索取發票，請直接捐贈給指定社團法人( 捐贈碼：510 )</span>
                     </label>
                 </div>
-                <div id="invoice">
+                <div id="invoice" class="active">
+                    <div id="invoice-select" class="selector">
+                        <span>請選擇發票類型</span>
+                        <div>
+                            <ul>
+                                <li id="invoice-select-1">我要捐贈</li> 
+                                <li id="invoice-select-2">個人發票</li>
+                                <li id="invoice-select-3">公司用發票</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="invoice-select-content-1" class="invoice-type">
+                        <label>
+                            <span>受捐贈機關或團體之捐贈碼 <a href="https://www.einvoice.nat.gov.tw/APCONSUMER/BTC603W/" target="_blank"><img src="images/icon/icon-info.svg"></a></span>
+                            <input type="text" value="510" placeholder="請輸入捐贈碼(限數字)">
+                        </label>
+                        <label>
+                            <span>Email 信箱 (選填)</span>
+                            <input type="email" placeholder="請輸入Email信箱">
+                        </label>
+                    </div>
+                    <div id="invoice-select-content-2" class="invoice-type">
+                        <label>
+                            <span>*電子發票載具類別 <a href="https://www.einvoice.nat.gov.tw/" target="_blank"><img src="images/icon/icon-info.svg"></a></span>
+                        </label>
+                        <div id="carrier-select" class="selector">
+                            <span>未持有</span>
+                            <div>
+                                <ul>
+                                    <li id="carrier-select-1">未持有</li> 
+                                    <li id="carrier-select-2">手機條碼</li>
+                                    <li id="carrier-select-3">自然憑證條碼</li>
+                                </ul>
+                            </div>
+                            <input type="text" id="carrier-select-content-2" class="carrier-select-content" placeholder="請輸入手機條碼">
+                            <input type="text" id="carrier-select-content-3" class="carrier-select-content" placeholder="請輸入自然憑證條碼">
+                        </div>
+                        <label>
+                            <span>*Email 信箱</span>
+                            <input type="email" placeholder="請輸入Email信箱" required warning>
+                            // ↑↑required欄位資料錯誤時，增加warning屬性，顯示為紅框↑↑
+                            <span class="note warning">未填寫完成或格式錯誤</span>
+                            // ↑↑required欄位資料錯誤時，增加此行錯誤訊息↑↑
+                            <span class="note">此Email信箱僅供寄送電子發票開立通知使用。</span>
+                        </label>
+                    </div>
+                    <div id="invoice-select-content-3" class="invoice-type">
+                        <label>
+                            <span>*公司抬頭或姓名</span>
+                            <input type="text" placeholder="請輸入公司抬頭或姓名" required>
+                        </label>
+                        <label>
+                            <span>*統一編號</span>
+                            <input type="text" placeholder="請輸入統一編號" required>
+                        </label>
+                        <label>
+                            <span>*Email 信箱</span>
+                            <input type="email" placeholder="請輸入Email信箱" required>
+                        </label>
+                        <label><span>*寄送地址(即日起不主動寄送紙本發票)</span></label>
+                        <div id="county-select" class="selector" required>
+                            <span>請選擇縣市</span>
+                            <div>
+                                <ul>
+                                    <li id="county-1">臺北市</li>
+                                    <li id="county-2">新北市</li>
+                                    <li id="county-3">基隆市</li>
+                                    <li id="county-4">桃園市</li>
+                                    <li id="county-5">新竹縣</li>
+                                    <li id="county-6">苗栗縣</li>
+                                    <li id="county-7">臺中市</li>
+                                    <li id="county-8">彰化縣</li>
+                                    <li id="county-9">南投縣</li>
+                                    <li id="county-10">雲林縣</li>
+                                    <li id="county-11">嘉義縣</li>
+                                    <li id="county-12">臺南市</li>
+                                    <li id="county-13">高雄市</li>
+                                    <li id="county-14">屏東縣</li>
+                                    <li id="county-15">宜蘭縣</li>
+                                    <li id="county-16">花蓮縣</li>
+                                    <li id="county-17">臺東縣</li>
+                                    <li id="county-18">澎湖縣</li>
+                                    <li id="county-19">綠島</li>
+                                    <li id="county-20">蘭嶼</li>
+                                    <li id="county-21">金門縣</li>
+                                    <li id="county-22">馬祖</li>
+                                    <li id="county-23">連江縣</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="city-select" class="selector">
+                            <span>請選擇鄉鎮市區</span>
+                            <div>
+                                <ul>
+                                    <li id="city-1">松山區</li> 
+                                    <li id="city-2">信義區</li>
+                                    <li id="city-3">中正區</li>
+                                    <li id="city-4">大同區</li> 
+                                    <li id="city-5">中山區</li>
+                                    <li id="city-6">大安區</li>
+                                    <li id="city-7">萬華區</li> 
+                                    <li id="city-8">士林區</li>
+                                    <li id="city-9">北投區</li>
+                                    <li id="city-10">內湖區</li> 
+                                    <li id="city-11">南港區</li>
+                                    <li id="city-12">文山區</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <label>
+                            <input type="text" placeholder="輸入寄送地址，請勿填寫郵政信箱" required>
+                        </label>
+                    </div>
+                </div>
+                <label class="agree">
+                    <input type="checkbox">
+                    <span>我已閱讀並同意購買<a id="notice--open" href="javascript:void(0)">注意事項</a>與<a id="privacy--open" href="javascript:void(0)">隱私權政策</a></span>
+                </label>
+                <input type="submit" class="btn-gradient" value="確認購買" disabled>
+                // ↑↑請RD協助做曹狀資料驗證↑↑
+            </form>
+        </div> -->
+
+        <!-- ↓↓BNB結帳↓↓ -->
+        <div class="checkout">
+            <div class="product">
+                <div class="pic"><img src="images/product/gamefi-pass-01.png"></div>
+                <div class="info">
+                    <p class="title">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</p>
+                    <p>數量：1</p>
+                    <p>結帳總額： <span class="amount">300,000,000,000</span> <span class="currency">BNB</span></p>
+                </div>
+                <div class="warning">唉呀~您的BNB還差 599，餘額不足 <a href="#" target="_blank">獲得BNB教學</a></div>
+            </div>
+            <div class="payment">
+                <label>支付方式*</label>
+                <ul class="payment-select">
+                    <li checked>使用 BNB 付款</li>
+                    <li>未來如果有增加付款方式會往下長成這樣</li>
+                </ul>
+                <p>Network：幣安智能鏈 (BSC)</p>
+                <p class="desc">*使用加密貨幣付款 <a href="javascript:void(0)" id="disclaimer--open">免責聲明</a></p>
+            </div>
+            <form action="result-in-progress.html">
+                <p class="title">發票資料* <a href="javascript:void(0)" id="invoiceInfo--open"><img src="images/icon/icon-info.svg"></a></p>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="no-invoice">
+                        <span>我不需要索取發票，請直接捐贈給指定社團法人( 捐贈碼：510 )</span>
+                    </label>
+                </div>
+                <div id="invoice" class="active">
                     <div id="invoice-select" class="selector">
                         <span>請選擇發票類型</span>
                         <div>
@@ -376,8 +527,8 @@
                     <input type="checkbox">
                     <span>我已閱讀並同意購買<a id="notice--open" href="javascript:void(0)">注意事項</a>與<a id="privacy--open" href="javascript:void(0)">隱私權政策</a></span>
                 </label>
-                <input type="submit" class="btn-gradient" value="確認購買" disabled>
-                <!-- ↑↑請協助做資料驗證，submit按鈕預設為disabled，所有項目都填寫完畢才可亮起，並開始倒數30秒「確認購買 (30秒)」↑↑ -->
+                <input type="submit" class="btn-gradient" value="確認購買 (30秒)">
+                <!-- ↑↑請RD協助做曹狀資料驗證，並於進入頁面時開始倒數30秒，超過30秒則按鈕功能改變，且文字變成「刷新」↑↑ -->
             </form>
         </div>
 
@@ -582,9 +733,22 @@
         </a>
     </div>
 
-    <!-- pop up 發票資料 -->
+    <!-- pop up 免責聲明 -->
+    <div id="disclaimer--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="disclaimer--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>免責聲明</h2>
+            <p class="note">
+                免責聲明免責聲明免責聲明免責聲明免責聲明免責聲明，詳見<a href="#">這是連結</a>說明。
+            </p>
+        </div>
+    </div>
+
+    <!-- pop up 發票說明 -->
     <div id="invoiceInfo--popUp" class="popUp">
         <div class="popUp--container">
+            <button id="invoiceInfo--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>發票說明</h2>
             <p class="note">
                 財政部於2013年1月1日起正式推動電子發票虛實合一政策！<br>
                 此政策讓持有共通性載具之消費者，可於消費時作為電子發票之載具，並提供消費者以捐贈碼捐贈予特定受捐贈機關或團體之管道。<br>
@@ -592,27 +756,27 @@
             </p>
             <p class="note">
                 注意：<br>
-                如資料有誤導致無法寄達，我們將直接把發票捐贈給(社團法人台灣一起夢想公益協會)<br>
+                如資料有誤導致無法寄達，我們將直接把發票捐贈給「社團法人台灣一起夢想公益協會」。<br>
                 因應財政部推廣無紙化作業，即日起將不再主動寄送紙本發票，若仍有索取紙本需求請與樂點客服聯繫。
             </p>
-            <button id="invoiceInfo--close" class="popUp--submit">確認</button>
         </div>
     </div>
 
     <!-- pop up 注意事項 -->
     <div id="notice--popUp" class="popUp">
         <div class="popUp--container">
+            <button id="notice--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>注意事項</h2>
             <p class="note">
                 注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明<a href="#" target="_blank">相關連結</a>。
             </p>
-            <button id="notice--close" class="popUp--submit">確認</button>
         </div>
     </div>
 
     <!-- pop up 隱私權政策 -->
     <div id="privacy--popUp" class="popUp">
         <div class="popUp--container">
+            <button id="privacy--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>隱私權政策</h2>
             <p class="note">
                 隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明<a href="#" target="_blank">相關連結</a>。
@@ -620,7 +784,6 @@
             <p class="note">
                 隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明。
             </p>
-            <button id="privacy--close" class="popUp--submit">確認</button>
         </div>
     </div>
   
@@ -702,6 +865,14 @@
         $(this).attr('checked', true)
     })
 
+    // 免責聲明
+    $('#disclaimer--open').click(function(){
+        $('#disclaimer--popUp').addClass('active')
+    })
+    $('#disclaimer--close').click(function(){
+        $('#disclaimer--popUp').removeClass('active')
+    })
+
     // 發票說明彈窗
     $('#invoiceInfo--open').click(function(){
         $('#invoiceInfo--popUp').addClass('active')
@@ -776,12 +947,6 @@
             })
         }
     });
-
-    // 同意事項（打開submit按鈕）
-    $('.agree').click(function(){
-        $('input[type=submit]').removeAttr('disabled')
-        $('input[type=submit]').attr('value','確認購買 (30秒)')
-    })
 
     // 注意事項彈窗
     $('#notice--open').click(function(){

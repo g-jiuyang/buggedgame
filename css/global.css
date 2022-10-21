@@ -235,7 +235,7 @@ input[warning] {
   transition: all 0.5s;
 }
 .selector div ul li:hover {
-  background-color: #1F1F1F;
+  background-color: #353535;
 }
 .selector div ul::-webkit-scrollbar {
   background-color: transparent;
@@ -255,12 +255,17 @@ input[warning] {
   border-color: #353535;
   padding: 12px 8px 12px 12px;
   margin-bottom: 12px;
+  background-color: #1F1F1F;
 }
 
 .btn-discord {
   position: fixed;
   right: 2rem;
   bottom: 52px;
+}
+
+img[src="images/icon/icon-info.svg"]:hover {
+  filter: brightness(80%);
 }
 
 /* 頁尾設定 */

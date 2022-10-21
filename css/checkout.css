@@ -4,6 +4,7 @@
 }
 .checkout .product {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 36px;
 }
@@ -29,6 +30,19 @@
 .checkout .product .info p .currency {
   font-size: 18px;
   font-weight: 500;
+}
+.checkout .product .warning {
+  flex: 100%;
+  background-color: rgba(224, 128, 131, 0.15);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.checkout .product .warning a {
+  font-weight: 700;
+  transition: all 0.5s;
+}
+.checkout .product .warning a:hover {
+  color: #d85f63;
 }
 .checkout .payment {
   margin-bottom: 28px;
@@ -60,8 +74,20 @@
   content: url(../images/icon/icon-check.svg);
   right: 20px;
 }
+.checkout .payment p + .desc {
+  margin-top: 12px;
+}
 .checkout .payment .desc {
   color: #BDBDBD;
+}
+.checkout .payment .desc a {
+  color: #8AA3FF;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+.checkout .payment .desc a:hover {
+  color: #718fff;
 }
 .checkout form .title {
   font-size: 14px;
@@ -75,7 +101,7 @@
   transition: all 0.5s;
 }
 .checkout form .title img:hover {
-  filter: brightness(130%);
+  filter: brightness(80%);
 }
 .checkout form .checkbox {
   background-color: #353535;
@@ -93,6 +119,7 @@
   display: none;
   flex-wrap: wrap;
   gap: 8px;
+  color: #BDBDBD;
 }
 .checkout form #invoice .invoice-type.show {
   display: flex;
@@ -115,9 +142,6 @@
 .checkout form #invoice .invoice-type label span img {
   margin-left: 8px;
   transition: all 0.5s;
-}
-.checkout form #invoice .invoice-type label span img:hover {
-  filter: brightness(130%);
 }
 .checkout form #invoice .invoice-type label input {
   flex: 100%;
@@ -155,10 +179,18 @@
 }
 .checkout form .agree a {
   color: #8AA3FF;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+.checkout form .agree a:hover {
+  color: #718fff;
 }
 .checkout form input[type=submit] {
   width: 100%;
   margin-top: 10px;
+}
+.checkout form .selector div ul li {
+  text-align: center;
 }
 
 .popUp p.note {
@@ -168,4 +200,13 @@
 .popUp p.note a {
   font-weight: 700;
   color: #8AA3FF;
+}
+.popUp p.note + p.note {
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 767px) {
+  .checkout {
+    max-width: 90vw;
+  }
 }

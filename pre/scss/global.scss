@@ -206,7 +206,7 @@ input {
                 border-radius: 8px;
                 transition: all .5s;
                 &:hover{
-                    background-color: $frameBg;
+                    background-color: $dark;
                 }
             }
             &::-webkit-scrollbar {
@@ -233,6 +233,7 @@ input {
             border-color: $dark;
             padding: 12px 8px 12px 12px;
             margin-bottom: 12px;
+            background-color: $frameBg;
         }
     }
 }
@@ -241,6 +242,12 @@ input {
     position: fixed;
     right: 2rem;
     bottom: 52px;
+}
+
+img[src=images/icon/icon-info.svg] {
+    &:hover{
+        filter: brightness(80%);
+    }
 }
 
 /* 頁尾設定 */
