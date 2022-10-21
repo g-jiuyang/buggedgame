@@ -630,6 +630,7 @@
             margin-bottom: 22px;
 
             &.account {
+                min-height: auto;
                 .account {
                     &__gamepass {
                         flex-wrap: nowrap;
@@ -651,6 +652,10 @@
                 }
 
                 .bottom {
+                    display: block;
+                    position: inherit;
+                    bottom: auto;
+                    margin-top: 4px;
                     p {
                         font-size: calc($fontSize * 1.4);
                     }
@@ -658,22 +663,29 @@
             } 
 
             &.bugCoin {
+                min-height: auto;
                 .info {
                     flex-wrap: nowrap;
                     justify-content: space-between;
 
                     p {
                         flex: unset;
-
-                        &:last-child {
-                            text-align: right;
-                        }
                     }
+                }
+                .bottom{
+                    position: inherit;
+                    bottom: auto;
+                    width: 100%;
                 }
             }
 
             &.pledge {
-                min-height: 180px;
+                min-height: auto;
+                .bottom{
+                    position: inherit;
+                    bottom: auto;
+                    width: 100%;
+                }
             }
         }
     }

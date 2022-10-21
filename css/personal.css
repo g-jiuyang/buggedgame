@@ -508,6 +508,9 @@
     margin: 0;
     margin-bottom: 22px;
   }
+  .dashboard li.account {
+    min-height: auto;
+  }
   .dashboard li.account .account__gamepass {
     flex-wrap: nowrap;
   }
@@ -524,8 +527,17 @@
     min-width: -moz-max-content;
     min-width: max-content;
   }
+  .dashboard li.account .bottom {
+    display: block;
+    position: inherit;
+    bottom: auto;
+    margin-top: 4px;
+  }
   .dashboard li.account .bottom p {
     font-size: 14px;
+  }
+  .dashboard li.bugCoin {
+    min-height: auto;
   }
   .dashboard li.bugCoin .info {
     flex-wrap: nowrap;
@@ -534,11 +546,18 @@
   .dashboard li.bugCoin .info p {
     flex: unset;
   }
-  .dashboard li.bugCoin .info p:last-child {
-    text-align: right;
+  .dashboard li.bugCoin .bottom {
+    position: inherit;
+    bottom: auto;
+    width: 100%;
   }
   .dashboard li.pledge {
-    min-height: 180px;
+    min-height: auto;
+  }
+  .dashboard li.pledge .bottom {
+    position: inherit;
+    bottom: auto;
+    width: 100%;
   }
 }
 @media screen and (max-width: 515px) {
