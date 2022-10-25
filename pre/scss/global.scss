@@ -169,6 +169,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    position: relative;
     span{
         flex: 100%;
         color: $gray;
@@ -189,14 +190,19 @@ input {
         }
     }
     div{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
         flex: 100%;
         max-height: 0;
         overflow: hidden;
-        transition: all .5s;
         padding: 0 8px 0 12px;
         border-radius: 12px;
         border: 1px solid transparent;
         font-size: calc($fontSize * 1.4);
+        transition: all .3s, background-color .5s;
+        z-index: 20;
         ul{
             display: flex;
             flex-wrap: wrap;

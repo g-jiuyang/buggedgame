@@ -194,6 +194,7 @@ input[warning] {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  position: relative;
 }
 .selector span {
   flex: 100%;
@@ -215,14 +216,19 @@ input[warning] {
   transition: all 0.5s;
 }
 .selector div {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
   flex: 100%;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s;
   padding: 0 8px 0 12px;
   border-radius: 12px;
   border: 1px solid transparent;
   font-size: 14px;
+  transition: all 0.3s, background-color 0.5s;
+  z-index: 20;
 }
 .selector div ul {
   display: flex;

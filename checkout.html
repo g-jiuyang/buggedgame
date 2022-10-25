@@ -527,195 +527,10 @@
                     <input type="checkbox">
                     <span>我已閱讀並同意購買<a id="notice--open" href="javascript:void(0)">注意事項</a>與<a id="privacy--open" href="javascript:void(0)">隱私權政策</a></span>
                 </label>
-                <input type="submit" class="btn-gradient" value="確認購買 (30秒)">
+                <button class="btn btn-gradient">確認購買 (30秒)</button>
+                <!-- <input type="submit" class="btn-gradient" value="確認購買 (30秒)"> -->
                 <!-- ↑↑請RD協助做曹狀資料驗證，並於進入頁面時開始倒數30秒，超過30秒則按鈕功能改變，且文字變成「刷新」↑↑ -->
             </form>
-        </div>
-
-
-        <div class="w-full lg:w-2/4 mx-auto hidden">
-            <div class="flex justify-between mb-9">
-                <div class="w-24 h-24 mx-auto mr-5 relative rounded-lg overflow-hidden lg:mr-5 md:mx-auto">
-                    <img src="images/product/ticket.svg" alt="" class="w-full">
-                </div>
-                <div class="mt-1 lg:mr-0 md:w-auto md:mr-10" style="width: calc(100% - 116px)">
-                    <div class="mb-2 font-bold text-base color-efefef lg:text-sm">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</div>
-                    <div class="text-sm color-efefef">
-                        <div class="mb-1">
-                            <span>數量：</span>
-                            <span>1</span>
-                        </div>
-                        <div class="flex items-center mb-1">
-                            <span>結帳總額：</span>
-                            <span class="lg:text-2xl font-bold text-lg">6,000 <span class="lg:text-lg font-medium text-sm">TWD</span></span>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-7">
-                <div class="mb-3 text-sm font-bold color-efefef">支付方式*</div>
-                <div class="flex mb-3 items-center justify-center rounded-full color-898989 bg-353535 border border-solid color-7e97f0 border-color-7e97f0 bg-7e97f0-20">
-                    <a href="##" class="flex w-full py-2 px-6 items-center justify-between text-sm font-bold">
-                        <span class="inline-block mx-1 align-bottom">信用卡一次付清 (限台灣發行信用卡)</span>
-                        <span class="inline-block align-middle">
-                            <img src="images/icon/icon-check.svg" alt="">
-                        </span>
-                    </a>
-                </div>
-                <div class="hidden mb-3 text-sm font-noraml color-efefef">Network：幣安智能鏈 (BSC)</div>
-                <div class="text-sm color-bdbdbd">*信用卡提醒訊息說明，一些說明說明說明說明說一些說明說明說明說明說一些說明說明</div>
-            </div>
-
-            <div>
-                <div class="mb-3 text-sm font-bold color-efefef">發票資料*<span class="inline-block align-middle ml-2"><img src="images/icon/icon-info-light.svg" alt=""></span></div>
-                <div id="no-invoice" class="flex items-center px-4 py-2.5 mb-5 rounded-xl bg-353535">
-                    <input type="checkbox" id="d1">
-                    <label for="d1" class="text-sm color-efefef">
-                        <span class="inline-block w-6 h-6 mr-2 align-middle"></span>我不需要索取發票，請直接捐贈
-                    </label>
-                </div>
-                <div id="invoice-info">
-                    <!-- 20220620 -->
-                    <div class="w-full block px-6 py-2 mb-3 rounded-full appearance-none border border-solid bg-transparent relative cursor-pointer border-color-353535 color-efefef select-arrow-custom outline-7e97f0 invoice-select">
-                        我要捐款
-                        <ul class="hidden w-full px-2 py-6 text-center font-bold mt-3 border border-solid text-sm absolute left-0 top-9 z-10 rounded-xl bg-1f1f1f border-color-353535 color-898989 invoice-sub-select">
-                            <li class="rounded">
-                                <a href="##" id="invoice-sub-select-list1" class="block p-2 text-white">我要捐款</a>
-                            </li>
-                            <li class="rounded">
-                                <a href="##" id="invoice-sub-select-list2" class="block p-2 text-white">個人發票</a>
-                            </li>
-                            <li class="rounded">
-                                <a href="##" id="invoice-sub-select-list3" class="block p-2 text-white">公司發票</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- 我要捐贈 -->
-                    <div class="radio-box" id="invoice-1">
-                        <label class="radio-list">
-                            <input type="radio" checked="checked" name="radio" class="r1">
-                            <span class="checkmark"></span>
-                            <p>社團法人台灣一起夢想公益協會</p>
-                        </label>
-                        <label class="radio-list">
-                            <input type="radio" name="radio" class="r2">
-                            <span class="checkmark"></span>
-                            <p>其他受捐贈機關或是團體</p>
-                        </label>
-                        <div id="donat-input1" class="hidden mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">捐贈碼*</label>
-                            <input type="text" placeholder="請輸入捐贈碼(限數字)" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                        </div>
-                        <div id="donat-input2" class="hidden mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">Email信箱*</label>
-                            <input type="email" placeholder="請輸入Email信箱" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                            <div class="mt-1 text-sm color-898989">*此Email信箱僅供寄送電子發票使用。</div>
-                        </div>
-                    </div>
-
-                    <!-- 個人發票 -->
-                    <div id="invoice-2" class="hidden">
-                        <div class="mb-3">
-                            <label class="block mb-1 text-sm color-efefef">電子發票載具類別
-                                <span class="inline-block align-middle"><img src="images/icon/icon-info-light.svg" alt=""></span>
-                            </label>
-                            <!-- 20220620 -->
-                            <div class="w-full px-6 py-2 mb-3 rounded-full appearance-none border border-solid bg-transparent relative cursor-pointer border-color-353535 color-efefef select-arrow-custom outline-7e97f0 invoice-select2">
-                                未持有
-                                <ul class="hidden w-full px-2 py-6 text-center font-bold mt-3 border border-solid text-sm absolute left-0 top-9 rounded-xl bg-1f1f1f border-color-353535 color-898989 invoice-sub-select2">
-                                    <li class="rounded">
-                                        <a href="##" id="invoice-sub-select2-list1" class="block p-2 text-white">未持有</a>
-                                    </li>
-                                    <li class="rounded">
-                                        <a href="##" id="invoice-sub-select2-list2" class="block p-2 text-white">手機條碼</a>
-                                    </li>
-                                    <li class="rounded">
-                                        <a href="##" id="invoice-sub-select2-list3" class="block p-2 text-white">自然人憑證條碼</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="people-input1" class="hidden mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">手機號碼*</label>
-                            <input type="text" placeholder="請輸入手機號碼" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                        </div>
-                        <div id="people-input2" class="hidden mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">自然人憑證條碼*</label>
-                            <input type="text" placeholder="請輸入自然人憑證條碼" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                        </div>
-                        <div id="people-input3" class="mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">Email信箱*</label>
-                            <input type="email" placeholder="請輸入Email信箱" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                            <div class="mt-1 text-sm color-898989">*此Email信箱僅供寄送電子發票使用。</div>
-                        </div>
-                    </div>
-
-                    <!-- 公司發票 -->
-                    <div id="invoice-3" class="hidden">
-                        <div class="mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">公司抬頭或姓名*</label>
-                            <input type="text" placeholder="請輸入公司抬頭或姓名" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">統一編號*</label>
-                            <input type="text" placeholder="請輸入統一編號" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="block mb-1 text-xs color-bdbdbd">Email信箱*</label>
-                            <input type="email" placeholder="請輸入Email信箱" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                            <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                            <div class="mt-1 text-sm color-898989">*此Email信箱僅供寄送電子發票開立通知與中獎通知使用。</div>
-                        </div>
-                        <div class="mt-5 mb-3">
-                            <div>
-                                <label class="block mb-3 text-sm font-bold color-efefef">寄送地址(即日起不主動寄送紙本發票)*</label>
-                                <div>
-                                    <div class="flex items-center justify-between">
-                                        <select class="w-1/2 px-6 py-2 rounded-full appearance-none border border-solid bg-transparent border-color-353535 color-efefef select-arrow-custom outline-7e97f0">
-                                            <option value="">請選擇縣市</option>
-                                            <option value="">台北市</option>
-                                            <option value="">新北市</option>
-                                        </select>
-                                        <select class="w-1/2 px-6 py-2 ml-2 rounded-full appearance-none border border-solid bg-transparent border-color-353535 color-efefef select-arrow-custom outline-7e97f0">
-                                            <option value="">請選擇鄉鎮市區</option>
-                                            <option value="">信義區</option>
-                                            <option value="">內湖區</option>
-                                        </select>
-                                    </div>
-                                    <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <label class="block mb-1 text-xs color-bdbdbd">寄送地址 (不適用郵政信箱)*</label>
-                                <input type="text" placeholder="輸入寄送地址，請勿填寫郵政信箱" class="block w-full px-6 py-2.5 text-sm rounded-full border border-solid bg-transparent border-color-353535 color-efefef outline-7e97f0">
-                                <div class="hidden mt-1 text-sm color-e08083">*未填寫完成或格式錯誤</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-5 lg:mt-12">
-                <div class="mb-3">
-                    <input type="checkbox" id="d4">
-                    <label for="d4" class="text-sm font-noraml color-efefef">
-                        <span class="inline-block w-6 h-6 mr-2 align-bottom"></span>我已閱讀並同意購買<a href="##" target="_blank" class="font-bold color-7e97f0">注意事項與隱私權政策</a></label>
-                </div>
-                <div class="w-full">
-                    <!-- 填完必寫資料後class加入 bg-from-e63eb6-to-749ff5, color-efefef -->
-                    <a href="#" class="block py-3 px-6 border-transparent rounded-full text-sm font-bold text-center color-898989 bg-353535 md:text-xs"><span>確認購買</span></a>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -887,6 +702,11 @@
     })
 
     // 發票類型下拉
+    $('#invoice-select > span').click(function(){
+        $('#carrier-select').removeClass('open')
+        $('#county-select').removeClass('open')
+        $('#city-select').removeClass('open')
+    })
     $(function() {
         for ( let i = 1; i <= 3; i++ ) {
             let clickedButton = $('#invoice-select-'+i);
@@ -903,6 +723,9 @@
     });
 
     // 載具下拉
+    $('#carrier-select > span').click(function(){
+        $('#invoice-select').removeClass('open')
+    })
     $(function() {
         for ( let i = 1; i <= 3; i++ ) {
             let clickedButton = $('#carrier-select-'+i);
@@ -920,6 +743,7 @@
 
     // 地址(縣市)下拉
     $('#county-select').click(function(){
+        $('#invoice-select').removeClass('open')
         $('#city-select').removeClass('open')
     })
     $(function() {
@@ -935,6 +759,7 @@
 
     // 地址(鄉鎮市區)下拉
     $('#city-select').click(function(){
+        $('#invoice-select').removeClass('open')
         $('#county-select').removeClass('open')
     })
     $(function() {
