@@ -23,6 +23,7 @@
   top: 96px;
   right: 0;
   height: auto;
+  width: 70vw;
 }
 .animation-banner main {
   width: 408px;
@@ -100,20 +101,20 @@
 
 .banner-ranking {
   width: 90vw;
-  max-width: 1440px;
+  max-width: 76rem;
   margin: 0 auto 120px;
   display: flex;
   flex-wrap: wrap;
   gap: 28px;
 }
 .banner-ranking .banner-frame {
-  flex: 50vw;
-  max-width: 50vw;
+  flex: 30vw;
+  max-width: 30vw;
   margin: 0 auto;
 }
 .banner-ranking .banner-frame .banner-content {
   position: relative;
-  height: 20vw;
+  height: 12vw;
   border-radius: 40px;
   overflow: hidden;
   border: 1px solid #898989;
@@ -143,7 +144,7 @@
   flex-shrink: 0;
   position: relative;
   border-radius: 40px;
-  padding: 12px 20px;
+  padding: 12px 28px;
   height: 160px;
 }
 .banner-ranking .ranking-frame .ranking-header {
@@ -166,6 +167,9 @@
 .banner-ranking .ranking-frame .ranking-header .gold-medal {
   background: #7B61FF;
   border-radius: 12px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
   flex: 100%;
@@ -182,6 +186,7 @@
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span {
   font-weight: 700;
+  font-size: 12px;
 }
 .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span img {
   display: inline;
@@ -213,6 +218,9 @@
   font-weight: 700;
   padding: 4px 12px;
   z-index: 1;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis:before {
   content: "";
@@ -234,9 +242,12 @@
 .banner-ranking .ranking-frame .ranking-content p.update-time {
   flex: 100%;
   text-align: center;
-  font-size: 8px;
+  font-size: 10px;
   color: #898989;
-  margin-top: 4px;
+  margin-top: 0;
+}
+.banner-ranking .ranking-frame .ranking-content p.update-time span:after {
+  content: " | ";
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch {
   display: flex;
@@ -272,6 +283,7 @@
   color: #EFEFEF;
   font-weight: 700;
   font-size: 12px;
+  min-width: 93px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
   flex: calc(100% - 120px);
@@ -648,6 +660,9 @@
   .banner-ranking .ranking-frame {
     flex: calc(100% - 428px);
   }
+  .banner-ranking .ranking-frame .ranking-content p.update-time {
+    margin-top: -2px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .animation-banner {
@@ -677,9 +692,6 @@
   .banner-ranking .ranking-frame {
     height: 172px;
   }
-  .banner-ranking .ranking-frame .ranking-content p.update-time {
-    margin-top: 8px;
-  }
   .roadmap, .team, .coworker {
     max-width: 90vw;
   }
@@ -697,6 +709,7 @@
     top: 60px;
     left: -200px;
     right: -120px;
+    width: auto;
   }
   .animation-banner main {
     width: 80vw;
@@ -717,6 +730,7 @@
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
+    padding: 20px;
   }
   .banner-ranking .ranking-frame .ranking-header {
     flex-wrap: wrap;
@@ -745,12 +759,17 @@
     justify-content: flex-start;
     gap: 12px;
     transition: all 0.6s ease-in;
+  }
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span {
     font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-header .btns {
     flex: calc(50% - 6px);
   }
   .banner-ranking .ranking-frame .ranking-content {
+    margin-top: 20px;
+  }
+  .banner-ranking .ranking-frame .ranking-content p.update-time {
     margin-top: 8px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch {
@@ -760,6 +779,7 @@
     height: auto;
     flex-direction: row;
     align-items: inherit;
+    gap: 8px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
     flex: 100%;
@@ -771,10 +791,12 @@
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
     min-width: 108px;
+    font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
     max-width: 68px;
     padding-right: 12px;
+    font-size: 14px;
   }
   .banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul {
     transform: translateX(-50%);
@@ -899,12 +921,13 @@
   .banner-ranking .ranking-frame .ranking-header .title {
     flex: 100%;
     text-align: center;
+    font-size: 18px;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
     align-items: center;
   }
-  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span:last-child {
-    font-size: 13px;
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span {
+    font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-header .btns {
     flex: none;
@@ -914,13 +937,12 @@
     width: auto;
   }
   .banner-ranking .ranking-frame .ranking-content p.update-time {
-    font-size: 12px;
+    margin-top: 20px;
+    font-size: 14px;
   }
-  .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
-    font-size: 13px;
-  }
-  .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
-    font-size: 12px;
+  .banner-ranking .ranking-frame .ranking-content p.update-time span::after {
+    content: "";
+    display: block;
   }
   .step {
     margin-bottom: 60px;
