@@ -833,6 +833,9 @@
   .banner-ranking .ranking-frame {
     max-width: 90vw;
   }
+  .banner-ranking .ranking-frame .ranking-header .gold-medal {
+    min-width: auto;
+  }
   .step .step-tab {
     max-width: 500px;
     margin: 42px auto 16px;

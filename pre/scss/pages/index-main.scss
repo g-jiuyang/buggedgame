@@ -893,6 +893,11 @@
     .banner-ranking{
         .ranking-frame{
             max-width: 90vw;
+            .ranking-header{
+                .gold-medal{
+                    min-width: auto;
+                }
+            }
         }
     }
     .step{
