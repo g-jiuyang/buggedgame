@@ -3,6 +3,17 @@
   transition: color 0.3s;
 }
 
+/* -- 反白選取樣式 -- */
+::-moz-selection {
+  background-color: rgba(138, 163, 255, 0.9);
+  color: #ffffff;
+}
+
+::selection {
+  background-color: rgba(138, 163, 255, 0.9);
+  color: #ffffff;
+}
+
 body {
   color: #EFEFEF;
   font-family: "Roboto", sans-serif;
@@ -234,11 +245,11 @@ input[warning] {
   display: flex;
   flex-wrap: wrap;
   padding-right: 4px;
-  gap: 8px;
+  gap: 16px;
 }
 .selector div ul li {
   flex: 100%;
-  padding: 8px;
+  padding: 4px;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.5s;
@@ -247,14 +258,14 @@ input[warning] {
   background-color: #353535;
 }
 .selector div ul::-webkit-scrollbar {
-  background-color: transparent;
-  width: 5px;
+  background-color: #BDBDBD;
+  width: 2px;
   height: calc(100% - 20px);
-  transform: translateY(10px) translateX(-5px);
+  transform: translateY(10px) translateX(-2px);
 }
 .selector div ul::-webkit-scrollbar-thumb {
   background-color: #898989;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .selector.open span:after {
   transform: translateY(-60%) rotate(180deg);
@@ -265,6 +276,7 @@ input[warning] {
   padding: 12px 8px 12px 12px;
   margin-bottom: 12px;
   background-color: #1F1F1F;
+  transition: all 0.3s, background-color 0.1s;
 }
 
 .btn-discord {
@@ -287,18 +299,36 @@ footer {
 }
 footer ul {
   display: flex;
-  gap: 120px;
-  justify-content: center;
   font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
 }
 footer ul li a:hover {
   color: #8AA3FF;
 }
 footer .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 30px;
   padding-top: 28px;
   border-top: 0.5px solid #898989;
   font-size: 12px;
+}
+footer .copyright dl {
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+footer .copyright dl dd {
+  margin-left: 28px;
+}
+footer .copyright div {
+  height: 40px;
+}
+footer .copyright div img {
+  max-height: 100%;
 }
 
 @media screen and (min-width: 1280px) {
@@ -306,9 +336,27 @@ footer .copyright {
     right: calc(50% - 38rem);
   }
 }
-@media screen and (max-width: 831px) {
+@media screen and (max-width: 767px) {
   footer ul {
     gap: 40px;
+  }
+  footer .copyright {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  footer .copyright dl dd {
+    position: absolute;
+    margin-left: 0;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  footer .copyright div {
+    margin-right: 18px;
+    height: 32px;
   }
 }
 @media screen and (max-width: 515px) {

@@ -152,6 +152,9 @@
 .record .record-content table.active {
   display: table;
 }
+.record .record-content table thead {
+  margin-bottom: 16px;
+}
 .record .record-content table thead tr th {
   text-align: left;
   padding: 8px;
@@ -182,7 +185,7 @@
   color: #EFEFEF;
   font-size: 14px;
   font-weight: 400;
-  padding: 8px;
+  padding: 16px 8px;
 }
 .record .record-content table tbody tr td img {
   display: inline-block;
@@ -193,13 +196,17 @@
 .record .record-content table tbody tr td a {
   color: #BDBDBD;
   text-decoration: underline;
-  transition: all 0.5s;
 }
 .record .record-content table tbody tr td a:hover {
-  color: #EFEFEF;
+  color: #898989;
 }
-.record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-total {
-  min-width: 108px;
+.record .record-content table tbody tr td .currency {
+  display: inline-block;
+  font-size: 14px;
+}
+.record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-number, .record .record-content table tbody tr td.title-fee, .record .record-content table tbody tr td.title-total, .record .record-content table tbody tr td.title-benefit {
+  width: 120px;
+  word-break: break-all;
 }
 .record .record-content table tbody tr td.title-number {
   min-width: 62px;
@@ -209,6 +216,9 @@
 }
 .record .record-content table tbody tr td.title-status {
   min-width: 76px;
+}
+.record .record-content table tbody tr:first-child td {
+  padding-top: 32px;
 }
 
 @media screen and (max-width: 767px) {
@@ -231,11 +241,15 @@
     height: auto;
     padding: 4px 0;
   }
+  .record .record-content table tbody tr td .currency {
+    font-weight: 700;
+  }
   .record .record-content table tbody tr td.title-time, .record .record-content table tbody tr td.title-trackno {
     flex: calc(50% - 6px);
     border-bottom: 1px solid #353535;
     padding-bottom: 4px;
     color: #898989;
+    padding-top: 0 !important;
   }
   .record .record-content table tbody tr td.title-trackno {
     text-align: right;
@@ -249,16 +263,20 @@
   .record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-number, .record .record-content table tbody tr td.title-fee, .record .record-content table tbody tr td.title-total, .record .record-content table tbody tr td.title-benefit {
     order: 2;
     flex: 100%;
-    padding: 4px 12px;
+    padding: 4px 12px 4px 4em;
     text-align: right;
-    color: #898989;
+    color: #BDBDBD;
     position: relative;
     font-weight: 700;
+    margin: 2px 0;
   }
   .record .record-content table tbody tr td.title-price:before, .record .record-content table tbody tr td.title-price-plus:before, .record .record-content table tbody tr td.title-number:before, .record .record-content table tbody tr td.title-fee:before, .record .record-content table tbody tr td.title-total:before, .record .record-content table tbody tr td.title-benefit:before {
     position: absolute;
     left: 12px;
     font-weight: 400;
+  }
+  .record .record-content table tbody tr td.title-price-plus {
+    padding: 4px 12px 4px 6.5em;
   }
   .record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-total {
     background-color: #353535;
@@ -280,12 +298,14 @@
     content: "總價";
   }
   .record .record-content table tbody tr td.title-status {
-    flex: 44px;
+    flex: auto;
     min-width: auto;
     text-align: right;
-    margin: 12px;
-    margin-right: 0;
+    margin: 12px 0 12px 20px;
     align-self: flex-start;
+  }
+  .record .record-content table tbody tr:first-child td {
+    padding-top: 4px;
   }
   .record .record-content table#content-table-3 tbody tr td.title-fee {
     background-color: #353535;

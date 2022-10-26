@@ -211,6 +211,7 @@
   padding: 8px;
   position: relative;
   gap: 4px;
+  cursor: pointer;
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis button {
   color: #EFEFEF;

@@ -204,6 +204,7 @@
                     padding: 8px;
                     position: relative;
                     gap: 4px;
+                    cursor: pointer;
                     button{
                         color: $lightGray;
                         font-size: calc($fontSize * 1.2);

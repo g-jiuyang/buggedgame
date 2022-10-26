@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>遊戲完蛋了</title>
     <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
@@ -16,6 +17,8 @@
     <link rel="stylesheet" href="css/custom-animation.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/record.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/pop-up.css">
 
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -274,7 +277,7 @@
                         </div>
                     </div>
                     <div class="status">
-                        狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
+                        狀態 <a id="status--open-4" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
                     </div>
                 </div>
                 <table id="content-table-1" class="active">
@@ -286,7 +289,7 @@
                             <th>單價</th>
                             <th>數量</th>
                             <th>總價</th>
-                            <th>狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
+                            <th>狀態 <a id="status--open-1" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -294,135 +297,135 @@
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-price">300,000,000 <span class="currency">TWD</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-total">600,000 <span class="currency">TWD</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
-                            <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-price">300,000.000001 <span class="currency">BUG</span></td>
+                            <td class="title-number">4</td>
+                            <td class="title-total">115,786,562,453,412,652,523,200,000.000004 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="neutral">•</span> 進行中</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="error">•</span> 失敗<br><a href="javascript:void(0)">補領道具</a></td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="neutral">•</span> 進行中</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-price">300,000 TWD</td>
                             <td class="title-number">2</td>
-                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-total">600,000 TWD</td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-price">300,000 TWD</td>
                             <td class="title-number">2</td>
-                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-total">600,000 TWD</td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-price">300,000 TWD</td>
                             <td class="title-number">2</td>
-                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-total">600,000 TWD</td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price">TWD 300,000</td>
+                            <td class="title-price">300,000 TWD</td>
                             <td class="title-number">2</td>
-                            <td class="title-total">TWD 600,000</td>
+                            <td class="title-total">600,000 TWD</td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">超級入場券好大盾超級盾牌好大盾超級盾牌好大盾超級盾牌好</td>
-                            <td class="title-price"><img src="images/icon/icon-bug.svg"> 300,000</td>
+                            <td class="title-price">300,000.123456 <span class="currency">BUG</span></td>
                             <td class="title-number">2</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> 600,000</td>
+                            <td class="title-total">2,600,000.789456 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                     </tbody>
@@ -436,7 +439,7 @@
                             <th>單價 (加乘)</th>
                             <th>手續費</th>
                             <th>總價</th>
-                            <th>狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
+                            <th>狀態 <a id="status--open-2" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -444,45 +447,45 @@
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
-                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> -1060.40</td>
-                            <td class="title-fee"><img src="images/icon/icon-bug.svg"> 0.99</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> -1061.39</td>
+                            <td class="title-price-plus">-1060.40 <span class="currency">BUG</span></td>
+                            <td class="title-fee">0.99 <span class="currency">BUG</span></td>
+                            <td class="title-total">-1061.39 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">拉新活動獎勵</td>
-                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> +5.00 (+1.99)</td>
+                            <td class="title-price-plus">+5.00 (+1.99) <span class="currency">BUG</span></td>
                             <td class="title-fee">－</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> +6.99</td>
+                            <td class="title-total">+6.99 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="neutral">•</span> 進行中</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">提領至MetaMask</td>
-                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> +5.00 (+1.99)</td>
+                            <td class="title-price-plus">+5.00 (+1.99) <span class="currency">BUG</span></td>
                             <td class="title-fee">－</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> +6.99</td>
+                            <td class="title-total">+6.99 <span class="currency">BUG</span></td>
                             <td class="title-status"><span class="error">•</span> 失敗</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
-                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> -1060.40</td>
-                            <td class="title-fee"><img src="images/icon/icon-bug.svg"> 0.99</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> -1061.39</td>
+                            <td class="title-price-plus">-1060.40 <span class="currency">BUG</span></td>
+                            <td class="title-fee">0.99 <span class="currency">BUG</span></td>
+                            <td class="title-total">-1061.39 BUG</td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                         <tr>
                             <td class="title-time">2020/03/03 23:55</td>
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">鏡子國解磚排名賽(第N 名) 鏡子國解磚排名賽</td>
-                            <td class="title-price-plus"><img src="images/icon/icon-bug.svg"> -1060.40</td>
-                            <td class="title-fee"><img src="images/icon/icon-bug.svg"> 0.99</td>
-                            <td class="title-total"><img src="images/icon/icon-bug.svg"> -1061.39</td>
+                            <td class="title-price-plus">-1060.40 BUG</td>
+                            <td class="title-fee">0.99 BUG</td>
+                            <td class="title-total">-1061.39 BUG</td>
                             <td class="title-status"><span class="success">•</span> 成功</td>
                         </tr>
                     </tbody>
@@ -495,7 +498,7 @@
                             <th>項目</th>
                             <th>手續費</th>
                             <th>收益</th>
-                            <th>狀態 <a href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
+                            <th>狀態 <a id="status--open-3" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -512,7 +515,7 @@
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">領取收益</td>
                             <td class="title-fee">30.00 BNB</td>
-                            <td class="title-benefit"><img src="images/icon/icon-bug.svg"> 6.99</td>
+                            <td class="title-benefit">6.99 BUG</td>
                             <td class="title-status"><span class="neutral">•</span> 進行中</td>
                         </tr>
                         <tr>
@@ -520,7 +523,7 @@
                             <td class="title-trackno">MNYpo390s14edfwe</td>
                             <td class="title-name">解除質押NFT<br>解除NFT項目：移動式 x1、希克斯 x1、大波斯菊 x1</td>
                             <td class="title-fee">30.00 BNB</td>
-                            <td class="title-benefit"><img src="images/icon/icon-bug.svg"> 6.99</td>
+                            <td class="title-benefit">6.99 BUG</td>
                             <td class="title-status"><span class="error">•</span> 失敗</td>
                         </tr>
                     </tbody>
@@ -533,7 +536,14 @@
 
     <!-- footer -->
     <footer>
-        <div class="copyright">© 2022 GASH POINT Co., Ltd. All right reserved</div>
+        <div class="copyright">
+            <dl>
+                <dt><img src="images/product/Logo_GASH.png"></dt>
+                <dt><img src="images/product/Logo_Naddic.png"></dt>
+                <dd>© 2022 GASH POINT Co., Ltd. All right reserved</dd>
+            </dl>
+            <div><img src="images/icon/icon-pg-12.svg"></div>
+        </div>
     </footer>
 
     <!-- social link -->
@@ -541,6 +551,28 @@
         <a href="##" class="block" target="_blank">
             <img src="images/icon/icon-dioscord-pc.svg" alt="">
         </a>
+    </div>
+
+    <!-- toast 補領道具成功 -->
+    <div class="toast toast--primary active">
+        <img src="images/icon/icon-check.svg">
+        <span>補領道具成功</span>
+    </div>
+
+    <!-- toast 補領道具失敗 -->
+    <div class="toast toast--warning">
+        <img src="images/icon/icon-bell.svg">
+        <span>領道具失敗，請再試一次</span>
+    </div>
+
+    <!-- pop up 狀態 -->
+    <div id="status--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="status--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>狀態</h2>
+            <p class="desc">狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡<a href="#">這是連結</a>。</p>
+            <p class="warning">一些比較重要的說明可以是紅色。</p>
+        </div>
     </div>
 
 </body>
@@ -646,6 +678,18 @@
                $(recordContent).addClass('active')
             })
         }
+    })
+
+    // pop up 狀態
+    $(function() {
+        for ( let i = 1; i <= 4; i++ ) {
+            $('#status--open-' + i).click(function(){
+                $('#status--popUp').addClass('active')
+            })
+        }
+    })
+    $('#status--close').click(function () {
+        $('#status--popUp').removeClass('active')
     })
 
     // 篩選下拉

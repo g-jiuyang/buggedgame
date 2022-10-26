@@ -164,6 +164,7 @@
                 display: table;
             }
             thead{
+                margin-bottom: 16px;
                 tr{
                     th{
                         text-align: left;
@@ -199,7 +200,7 @@
                         color: $lightGray;
                         font-size: calc($fontSize * 1.4);
                         font-weight: $Regular;
-                        padding: 8px;
+                        padding: 16px 8px;
                         img{
                             display: inline-block;
                             width: 20px;
@@ -209,14 +210,19 @@
                         a{
                             color: $lighter;
                             text-decoration: underline;
-                            transition: all .5s;
                             &:hover{
-                                color: $lightGray;
+                                color: $gray;
                             }
                         }
+                        .currency{
+                            display: inline-block;
+                            font-size: calc($fontSize * 1.4);
+
+                        }
                         &.title-{
-                            &price, &total{
-                                min-width: 108px;
+                            &price, &price-plus, &number, &fee, &total, &benefit{
+                                width: 120px;
+                                word-break: break-all;
                             }
                             &number{
                                 min-width: 62px;
@@ -227,6 +233,11 @@
                             &status{
                                 min-width: 76px;
                             }
+                        }
+                    }
+                    &:first-child{
+                        td{
+                            padding-top: 32px;
                         }
                     }
                 }
@@ -259,12 +270,16 @@
                             align-items: center;
                             height: auto;
                             padding: 4px 0;
+                            .currency{
+                                font-weight: $UltraBold;
+                            }
                             &.title-{
                                 &time, &trackno{
                                     flex: calc(50% - 6px);
                                     border-bottom: 1px solid $dark;
                                     padding-bottom: 4px;
                                     color: $gray;
+                                    padding-top: 0 !important;
                                 }
                                 &trackno{
                                     text-align: right;
@@ -278,16 +293,20 @@
                                 &price, &price-plus, &number, &fee, &total, &benefit{
                                     order: 2;
                                     flex: 100%;
-                                    padding: 4px 12px;
+                                    padding: 4px 12px 4px 4em;
                                     text-align: right;
-                                    color: $gray;
+                                    color: $lighter;
                                     position: relative;
                                     font-weight: $UltraBold;
+                                    margin: 2px 0;
                                     &:before{
                                         position: absolute;
                                         left: 12px;
                                         font-weight: $Regular;
                                     }
+                                }
+                                &price-plus{
+                                    padding: 4px 12px 4px 6.5em;
                                 }
                                 &price, &price-plus, &total{
                                     background-color: $dark;
@@ -319,13 +338,17 @@
                                     }
                                 }
                                 &status{
-                                    flex: 44px;
+                                    flex: auto;
                                     min-width: auto;
                                     text-align: right;
-                                    margin: 12px;
-                                    margin-right: 0;
+                                    margin: 12px 0 12px 20px;
                                     align-self: flex-start;
                                 }
+                            }
+                        }
+                        &:first-child{
+                            td{
+                                padding-top: 4px;
                             }
                         }
                     }
