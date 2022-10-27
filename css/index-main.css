@@ -394,7 +394,7 @@
 .step .step-tab li:after {
   position: absolute;
   top: 50%;
-  right: -30px;
+  right: -28px;
   transform: translateY(-50%);
   content: url(../images/icon/icon-arrow-step.svg);
 }
