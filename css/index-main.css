@@ -518,6 +518,7 @@
 }
 .buy-pass .pass-items li img {
   margin-bottom: 16px;
+  border-radius: 8px;
 }
 .buy-pass .pass-items li span {
   display: block;

@@ -486,7 +486,7 @@
 }
 @media screen and (max-width: 991px) {
   .dashboard li.account {
-    min-height: 220px;
+    min-height: 300px;
   }
   .dashboard li.account .account__gamepass {
     flex-wrap: wrap;

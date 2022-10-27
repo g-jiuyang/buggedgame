@@ -349,6 +349,9 @@
                                     align-self: flex-start;
                                 }
                             }
+                            &:first-child{
+                                padding-left: 0;
+                            }
                         }
                         &:first-child{
                             td{
@@ -406,3 +409,13 @@
         }
     }
 } // mobile
+
+@media screen and (max-width: 400px) {
+    .record{
+        .record-content{
+            .filter{
+                gap: 12px;
+            }
+        }
+    }
+} // mini mobile

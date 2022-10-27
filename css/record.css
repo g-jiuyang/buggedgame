@@ -308,6 +308,9 @@
     margin: 12px 0 12px 20px;
     align-self: flex-start;
   }
+  .record .record-content table tbody tr td:first-child {
+    padding-left: 0;
+  }
   .record .record-content table tbody tr:first-child td {
     padding-top: 4px;
   }
@@ -336,5 +339,10 @@
   }
   .record .record-content .filter .days button, .record .record-content .filter .pages button {
     margin-left: 8px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .record .record-content .filter {
+    gap: 12px;
   }
 }
