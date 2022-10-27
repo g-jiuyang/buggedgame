@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>遊戲完蛋了</title>
     <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    
     <!-- tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    
+    <!-- custom css -->
     <link rel="stylesheet" href="css/custom-animation.css">
     <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/success.css">
+    <link rel="stylesheet" href="css/pop-up.css">
     
+    <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
+
     <!-- tailwind js -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    
     <script src="js/cookie.js"></script>
     <script src="js/step.js"></script>
     <script src="js/tabs.js"></script>
@@ -207,119 +217,88 @@
     </div>
 
     <div class="max-w-6xl mx-auto mb-20 px-5 sm:px-6 lg:px-8">
+        <!-- 結帳步驟 -->
         <div class="flex items-center space-x-1 pt-24 mb-10 font-bold text-sm lg:text-xs">
             <span class="color-898989">1 填寫付款資料</span>
-            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <span><img src="images/icon/icon-arrow-right.svg"></span>
             <span class="color-898989">2 信用卡付款</span>
-            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <span><img src="images/icon/icon-arrow-right.svg"></span>
             <span class="color-7e97f0">3 兌換完成</span>
         </div>
 
-
-        <div class="w-full lg:w-2/4 mx-auto">
-            <div class="mb-9">
-                <div class="mb-4 flex justify-center">
-                    <img src="images/icon/icon-success-check.svg" alt="">
-                </div>
-                <div class="text-sm text-center font-bold text-white">兌換成功</div>
+        <main class="success-page">
+            <div class="message">
+                <img src="images/icon/icon-success-check.svg">
+                <p>兌換成功</p>
             </div>
-
-            <div class="flex justify-between pb-5 mb-5 border-b border-solid border-color-898989">
-                <div class="w-24 h-24 mx-auto mr-5 rounded-lg overflow-hidden lg:mr-5 md:mx-auto">
-                    <img src="images/product/tool.svg" alt="" class="w-full">
-                </div>
-                
-                <!-- 20220620 修改字少的問題 -->
-                <div class="w-80 mt-1 lg:mr-0 md:w-auto md:mr-10" style="width: calc(100% - 116px)">
-                    <div class="mb-2 font-bold text-base color-efefef lg:text-sm">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</div>
-                    <div class="text-sm color-bdbdbd lg:text-xs">
-                        <div class="mb-1">
-                            <span>訂單編號：</span>
-                            <span>TGB210602L0001825</span>
-                        </div>
-                        <div class="mb-1">
-                            <span>交易時間：</span>
-                            <span>2022/03/03 23:56:00</span>
-                        </div>
-                        <div class="mb-1">
-                            <span>商品名稱：</span>
-                            <span>S級王者入場券</span>
-                        </div>
-                        <div class="mb-1">
-                            <span>兌換方式：</span>
-                            <span>信用卡</span>
-                        </div>
-                    </div>
+            <div class="product">
+                <div class="pic"><img src="images/product/gamefi-pass-01.png"></div>
+                <div class="info">
+                    <p class="title">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</p>
+                    <ul>
+                        <li>訂單編號：TGB210602L0001825</li>
+                        <li>交易時間：2022/03/03 23:56:00</li>
+                        <li>商品名稱：S級王者入場券</li>
+                        <li>兌換方式：信用卡</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="flex justify-end mb-8">
-                <div>
-                    <!-- 入場券只有總價, 道具有單價、數量、總價 -->
-                    <div class="mb-2">
-                        <span class="inline-block align-bottom text-sm font-normal color-efefef lg:text-xs">單價：</span>
-                        <span class="inline-block align-bottom text-right">
-                            <img src="images/icon/icon-coin-20px.svg" alt="" class="inline-block align-bottom">
-                            <span class="inline-block align-bottom text-sm font-bold color-efefef lg:text-xs">300,000.00</span>
-                        </span>
-                    </div>
-                    <div class="mb-2">
-                        <span class="text-sm font-normal color-efefef lg:text-xs">數量：</span>
-                        <span class="text-sm font-bold color-efefef lg:text-xs">20</span>
-                    </div>
-                    <div class="mb-2">
-                        <span class="inline-block align-bottom text-sm font-normal color-efefef lg:text-xs">總價：</span>
-                        <span class="inline-block align-bottom text-right">
-                            <img src="images/icon/icon-coin-20px.svg" alt="" class="inline-block align-bottom">
-                            <span class="inline-block align-bottom text-sm font-bold color-efefef lg:text-xs">6,000,000.00</span>
-                        </span>
-                    </div>
-                </div>
+            <div class="calculate">
+                <ul>
+                    <li>單價：<img src="images/icon/icon-coin-20px.svg">300,000</li>
+                    <li>數量：10</li>
+                    <li>總價：<img src="images/icon/icon-coin-20px.svg">3,000,000</li>
+                </ul>
             </div>
-
-            <div class="w-full mb-8">
-                <div class="relative rounded-2xl bg-353535">
-                    <div class="h-24 lg:h-28 rounded-2xl bg-no-repeat bg-right-top" style="background-image: url(images/product/qrc-bg.png)">
-                        <div class="absolute top-7 left-6 md:top-1/2 md:transform md:-translate-y-1/2">
-                            <img src="images/product/QRC.png" alt="" class="hidden md:block">
-                        </div>
-                        <div class="absolute top-4 left-5 font-normal text-sm color-efefef lg:text-xs lg:top-8 md:ml-2 md:left-28 md:top-5">兌換的商品已寄送至遊戲內！</div>
-                        <a href="##" class="text-sm font-bold absolute bottom-4 right-5 lg:bottom-5 lg:right-6 color-efefef lg:text-xs">立即前往遊戲查看 ></a>
-                    </div>
-                </div>
+            <div class="card">
+                <p>兌換的商品已寄送至遊戲內！</p>
+                <p><a id="download--open" href="javascript:void(0)">立即前往遊戲查看 ></a></p>
+                <!-- ↑↑點選時：行動裝置直接導向遊戲（或商店），電腦版開啟pop up↑↑ -->
             </div>
-
-            <div class="mt-5 lg:mt-8 md:flex md:justify-center">
-                <!-- <div class="w-full rounded-full border border-solid border-transparent border-linear-gradient-121212-e63eb6-749ff5 lg:w-1/2">
-                    <a href="##" class="block py-3 px-6 border-transparent text-sm font-bold text-center color-efefef md:text-xs"><span>查看紀錄</span></a>
-                </div> -->
-                <!-- 20220629 -->
-                <div class="relative md:w-1/2">
-                    <a href="#" class="w-full flex items-center justify-center py-3 px-6 text-center text-sm font-bold whitespace-nowrap color-efefef md:text-xs border-linear-gradient-121212-e63eb6-749ff5"> 查看紀錄 </a>
-                </div>
-                <div class="w-full mt-3 md:w-1/2 md:mt-0 md:ml-4">
-                    <a href="##" class="block py-3 px-6 border-transparent rounded-full text-sm font-bold whitespace-nowrap text-center color-efefef bg-from-e63eb6-to-749ff5 md:text-xs"><span>繼續兌換</span></a>
-                </div>
+            <div class="btns">
+                <button class="btn-outline">查看紀錄</button>
+                <button class="btn-gradient">繼續兌換</button>
             </div>
-        </div>
+        </main>
     </div>
 
 
     <!-- footer -->
-    <div class="max-w-7xl mx-auto mt-30 sm:mt-60 px-5 text-white color-898989">
-        <div class="py-7 text-xs text-center border-t border-color-898989">© 2022 GASH POINT Co., Ltd. All right reserved</div>
-    </div>
-
+    <footer>
+        <div class="copyright">
+            <dl>
+                <dt><img src="images/product/Logo_GASH.png"></dt>
+                <dt><img src="images/product/Logo_Naddic.png"></dt>
+                <dd>© 2022 GASH POINT Co., Ltd. All right reserved</dd>
+            </dl>
+            <div><img src="images/icon/icon-pg-12.svg"></div>
+        </div>
+    </footer>
 
     <!-- social link -->
     <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
         <a href="##" class="block" target="_blank">
             <img src="images/icon/icon-dioscord-pc.svg" alt="">
         </a>
-    </div>    
-    
+    </div>
 
 
+    <!-- pop up 下載遊戲 -->
+    <div id="download--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="download--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>下載遊戲</h2>
+            <p class="desc web">馬上拿起手機掃描QR Code下載遊戲吧！</p>
+            <p class="desc mobile">馬上點擊下載遊戲吧！</p>
+            <img class="qrc web" src="images/QRC.png" alt="">
+            <div class="btns">
+                <button id="iOS" class="web">iOS 下載</button>
+                <button id="android" class="web">Android 下載</button>
+                <button id="app-store" class="mobile">iOS / Android 下載</button>
+                <button id="apk">APK 下載</button>
+            </div>
+        </div>
+    </div>
   
 </body>
 
@@ -391,6 +370,20 @@
         <img src="images/icon/icon-close.svg" alt="">
     </button>
 </div>
+
+
+<script>
+    // pop up 開啟遊戲
+    $('#download--open').click(function(){
+        if (window.innerWidth > 768) $('#download--popUp').addClass('active')
+        else window.open('#')
+    })
+    $('#download--close').click(function () {
+        $('#download--popUp').removeClass('active')
+    })
+    
+    
+</script>
 
 
 </html>
