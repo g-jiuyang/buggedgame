@@ -172,6 +172,10 @@ input {
             background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
             background-size: 24px;
         }
+
+        &[warning] + span {
+            background: url(../images/icon/icon-checkbox-warning.svg) no-repeat left top;
+        }
     }
 
     &[warning] {
