@@ -163,18 +163,18 @@ input {
             display: inline-block;
             padding-left: 26px;
             line-height: 1.6;
-            background: url(../images/icon/icon-checkbox-normal.svg) no-repeat left top;
+            background-image: url(../images/icon/icon-checkbox-normal.svg);
+            background-repeat: no-repeat;
             background-size: 24px;
             background-position: top -1px left 0;
         }
 
-        &:checked + span {
-            background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
-            background-size: 24px;
+        &[warning] + span {
+            background-image: url(../images/icon/icon-checkbox-warning.svg);
         }
 
-        &[warning] + span {
-            background: url(../images/icon/icon-checkbox-warning.svg) no-repeat left top;
+        &:checked + span {
+            background-image: url(../images/icon/icon-checkbox-higlight.svg);
         }
     }
 

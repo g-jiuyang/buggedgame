@@ -193,16 +193,16 @@ input[type=checkbox] + span, input[type=radio] + span {
   display: inline-block;
   padding-left: 26px;
   line-height: 1.6;
-  background: url(../images/icon/icon-checkbox-normal.svg) no-repeat left top;
+  background-image: url(../images/icon/icon-checkbox-normal.svg);
+  background-repeat: no-repeat;
   background-size: 24px;
   background-position: top -1px left 0;
 }
-input[type=checkbox]:checked + span, input[type=radio]:checked + span {
-  background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
-  background-size: 24px;
-}
 input[type=checkbox][warning] + span, input[type=radio][warning] + span {
-  background: url(../images/icon/icon-checkbox-warning.svg) no-repeat left top;
+  background-image: url(../images/icon/icon-checkbox-warning.svg);
+}
+input[type=checkbox]:checked + span, input[type=radio]:checked + span {
+  background-image: url(../images/icon/icon-checkbox-higlight.svg);
 }
 input[warning] {
   border-color: #E08083 !important;
