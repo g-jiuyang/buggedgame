@@ -481,7 +481,7 @@
             .question{
                 position: relative;
                 cursor: pointer;
-                padding: 12px 48px 12px 0;
+                padding: 12px 80px 12px 0;
                 font-weight: $UltraBold;
                 &:after{
                     content: url(../images/icon/icon-arrow-bottom.svg);
@@ -497,7 +497,7 @@
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height .3s, padding .5s;
-                padding-right: 48px;
+                padding-right: 80px;
                 font-weight: $Regular;
             }
             &.open{
@@ -508,7 +508,7 @@
                 }
                 .answer{
                     max-height: 100vh;
-                    padding: 12px 48px 12px 0;
+                    padding: 12px 80px 12px 0;
                 }
             }
             a{
@@ -1088,17 +1088,17 @@
             li{
                 padding: 16px 12px;
                 .question{
-                    padding: 0 32px 0 0;
+                    padding: 0 40px 0 0;
                     &:after{
                         right: 0;
                     }
                 }
                 .answer{
-                    padding: 0 32px 0 0;
+                    padding: 0 40px 0 0;
                 }
                 &.open{
                     .answer{
-                        padding: 12px 32px 12px 0;
+                        padding: 12px 40px 12px 0;
                     }
                 }
             }

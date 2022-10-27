@@ -457,7 +457,7 @@
 .faq ul li .question {
   position: relative;
   cursor: pointer;
-  padding: 12px 48px 12px 0;
+  padding: 12px 80px 12px 0;
   font-weight: 700;
 }
 .faq ul li .question:after {
@@ -473,7 +473,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s, padding 0.5s;
-  padding-right: 48px;
+  padding-right: 80px;
   font-weight: 400;
 }
 .faq ul li.open .question:after {
@@ -481,7 +481,7 @@
 }
 .faq ul li.open .answer {
   max-height: 100vh;
-  padding: 12px 48px 12px 0;
+  padding: 12px 80px 12px 0;
 }
 .faq ul li a {
   color: #8AA3FF;
@@ -982,16 +982,16 @@
     padding: 16px 12px;
   }
   .faq ul li .question {
-    padding: 0 32px 0 0;
+    padding: 0 40px 0 0;
   }
   .faq ul li .question:after {
     right: 0;
   }
   .faq ul li .answer {
-    padding: 0 32px 0 0;
+    padding: 0 40px 0 0;
   }
   .faq ul li.open .answer {
-    padding: 12px 32px 12px 0;
+    padding: 12px 40px 12px 0;
   }
   .buy-pass {
     margin-bottom: 60px;

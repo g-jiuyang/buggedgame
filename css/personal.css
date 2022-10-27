@@ -60,7 +60,7 @@
   text-align: center;
 }
 .dashboard li.account {
-  min-height: 210px;
+  min-height: 240px;
 }
 .dashboard li.account .account__info {
   padding-bottom: 12px;
