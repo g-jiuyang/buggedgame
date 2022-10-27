@@ -166,6 +166,7 @@
 .record .record-content table thead tr th:first-child {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+  padding-left: 24px;
 }
 .record .record-content table thead tr th:last-child {
   border-top-right-radius: 12px;
@@ -204,18 +205,21 @@
   display: inline-block;
   font-size: 14px;
 }
-.record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-number, .record .record-content table tbody tr td.title-fee, .record .record-content table tbody tr td.title-total, .record .record-content table tbody tr td.title-benefit {
+.record .record-content table tbody tr td.title-price, .record .record-content table tbody tr td.title-price-plus, .record .record-content table tbody tr td.title-fee, .record .record-content table tbody tr td.title-total, .record .record-content table tbody tr td.title-benefit {
   width: 120px;
   word-break: break-all;
 }
 .record .record-content table tbody tr td.title-number {
-  min-width: 62px;
+  width: 48px;
 }
 .record .record-content table tbody tr td.title-fee {
   min-width: 86px;
 }
 .record .record-content table tbody tr td.title-status {
   min-width: 76px;
+}
+.record .record-content table tbody tr td:first-child {
+  padding-left: 24px;
 }
 .record .record-content table tbody tr:first-child td {
   padding-top: 32px;

@@ -86,6 +86,7 @@ p a{
 button, input[type=submit], a.button {
     cursor: pointer;
     border-radius: 24px;
+    font-size: calc($fontSize * 1.2);
 
     &[disabled] {
         cursor: default !important;
@@ -98,6 +99,7 @@ button, input[type=submit], a.button {
         background: $gradient;
         text-shadow: 0 0 12px rgba(black, .4);
         font-weight: $UltraBold;
+        min-height: 40px;
 
         &:hover {
             background: $gradient-hover;
@@ -106,6 +108,7 @@ button, input[type=submit], a.button {
 
     &.btn-outline {
         position: relative;
+        min-height: 40px;
 
         &:before {
             content: '';
@@ -159,14 +162,15 @@ input {
         + span {
             display: inline-block;
             padding-left: 26px;
-            line-height: 20px;
+            line-height: 1.6;
             background: url(../images/icon/icon-checkbox-normal.svg) no-repeat left top;
-            background-size: 20px;
+            background-size: 24px;
+            background-position: top -1px left 0;
         }
 
         &:checked + span {
             background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
-            background-size: 20px;
+            background-size: 24px;
         }
     }
 
@@ -323,15 +327,27 @@ footer{
     }
 } // min-width: 1280px
 
+@media screen and (max-width: 1023px) {
+    footer{
+        width: calc(100vw - 4rem);
+    }
+} // max-width: 1023px
+
 @media screen and (max-width: 767px) {
     footer{
+        width: calc(100vw - 3.5rem);
         ul{
             gap: 40px;
         }
         .copyright{
             position: relative;
+            margin-top: 20px;
+            padding-top: 12px;
             padding-bottom: 40px;
             dl{
+                dt{
+                    transform: translateX(-8px);
+                }
                 dd{
                     position: absolute;
                     margin-left: 0;
@@ -342,7 +358,7 @@ footer{
                 }
             }
             div{
-                margin-right: 18px;
+                margin-right: 20px;
                 height: 32px;
             }
         }
@@ -380,7 +396,7 @@ footer{
 
     footer{
         margin-top: 120px;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
         ul{
             flex-wrap: wrap;
             gap: 16px 0;

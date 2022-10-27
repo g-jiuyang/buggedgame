@@ -126,6 +126,7 @@
 }
 .checkout form #invoice .invoice-type .note {
   font-size: 14px;
+  color: #898989;
 }
 .checkout form #invoice .invoice-type label {
   flex: 100%;

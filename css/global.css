@@ -124,6 +124,7 @@ p a:hover {
 button, input[type=submit], a.button {
   cursor: pointer;
   border-radius: 24px;
+  font-size: 12px;
 }
 button[disabled], input[type=submit][disabled], a.button[disabled] {
   cursor: default !important;
@@ -135,12 +136,14 @@ button.btn-gradient, input[type=submit].btn-gradient, a.button.btn-gradient {
   background: linear-gradient(to right, #E63EB6, #749FF5);
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   font-weight: 700;
+  min-height: 40px;
 }
 button.btn-gradient:hover, input[type=submit].btn-gradient:hover, a.button.btn-gradient:hover {
   background: linear-gradient(to right, #cf36a3, #658ad6);
 }
 button.btn-outline, input[type=submit].btn-outline, a.button.btn-outline {
   position: relative;
+  min-height: 40px;
 }
 button.btn-outline:before, input[type=submit].btn-outline:before, a.button.btn-outline:before {
   content: "";
@@ -189,13 +192,14 @@ input[type=checkbox], input[type=radio] {
 input[type=checkbox] + span, input[type=radio] + span {
   display: inline-block;
   padding-left: 26px;
-  line-height: 20px;
+  line-height: 1.6;
   background: url(../images/icon/icon-checkbox-normal.svg) no-repeat left top;
-  background-size: 20px;
+  background-size: 24px;
+  background-position: top -1px left 0;
 }
 input[type=checkbox]:checked + span, input[type=radio]:checked + span {
   background: url(../images/icon/icon-checkbox-higlight.svg) no-repeat left top;
-  background-size: 20px;
+  background-size: 24px;
 }
 input[warning] {
   border-color: #E08083 !important;
@@ -336,13 +340,26 @@ footer .copyright div img {
     right: calc(50% - 38rem);
   }
 }
+@media screen and (max-width: 1023px) {
+  footer {
+    width: calc(100vw - 4rem);
+  }
+}
 @media screen and (max-width: 767px) {
+  footer {
+    width: calc(100vw - 3.5rem);
+  }
   footer ul {
     gap: 40px;
   }
   footer .copyright {
     position: relative;
+    margin-top: 20px;
+    padding-top: 12px;
     padding-bottom: 40px;
+  }
+  footer .copyright dl dt {
+    transform: translateX(-8px);
   }
   footer .copyright dl dd {
     position: absolute;
@@ -355,7 +372,7 @@ footer .copyright div img {
     transform: translateX(-50%);
   }
   footer .copyright div {
-    margin-right: 18px;
+    margin-right: 20px;
     height: 32px;
   }
 }
@@ -383,7 +400,7 @@ footer .copyright div img {
   }
   footer {
     margin-top: 120px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   footer ul {
     flex-wrap: wrap;

@@ -649,7 +649,8 @@
     top: 540px;
   }
   .animation-banner .animation-wrap {
-    right: calc(50% - 720px);
+    right: calc(50% - 760px);
+    width: 65vw;
   }
   .banner-ranking .banner-frame {
     flex: 400px;
@@ -939,6 +940,13 @@
   }
   .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis {
     width: auto;
+  }
+  .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis button {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+  .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis:before {
+    height: 30px;
   }
   .banner-ranking .ranking-frame .ranking-content p.update-time {
     margin-top: 20px;

@@ -683,7 +683,8 @@
     }
     .animation-banner{
         .animation-wrap{
-            right: calc(50% - 720px);
+            right: calc(50% - 760px);
+            width: 65vw;
         }
     }
     .banner-ranking{
@@ -1022,6 +1023,13 @@
                     margin: 0 auto;
                     #ranking-basis{
                         width: auto;
+                        button{
+                            padding: 4px 10px;
+                            font-size: calc($fontSize * 1.4);
+                        }
+                        &:before{
+                            height: 30px;
+                        }
                     }
                 }
             }

@@ -176,6 +176,7 @@
                         &:first-child{
                             border-top-left-radius: 12px;
                             border-bottom-left-radius: 12px;
+                            padding-left: 24px;
                         }
                         &:last-child{
                             border-top-right-radius: 12px;
@@ -220,12 +221,12 @@
 
                         }
                         &.title-{
-                            &price, &price-plus, &number, &fee, &total, &benefit{
+                            &price, &price-plus, &fee, &total, &benefit{
                                 width: 120px;
                                 word-break: break-all;
                             }
                             &number{
-                                min-width: 62px;
+                                width: 48px;
                             }
                             &fee{
                                 min-width: 86px;
@@ -233,6 +234,9 @@
                             &status{
                                 min-width: 76px;
                             }
+                        }
+                        &:first-child{
+                            padding-left: 24px;
                         }
                     }
                     &:first-child{
