@@ -390,17 +390,28 @@ footer{
         }
     }
 
-    .btn-discord{
+    input {
+        &[type=checkbox] ,&[type=radio] {
+            + span {
+                background-position: top 0 left 0;
+            }
+        }
+    }
+
+    .btn-discord {
         display: none;
     }
 
-    footer{
+    footer {
         margin-top: 120px;
         margin-bottom: 16px;
-        ul{
+        width: calc(100vw - 2.5rem);
+
+        ul {
             flex-wrap: wrap;
             gap: 16px 0;
-            li{
+
+            li {
                 flex: 50%;
                 text-align: left;
             }

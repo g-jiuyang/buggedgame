@@ -395,12 +395,16 @@ footer .copyright div img {
   p.note, span.note {
     font-size: 14px;
   }
+  input[type=checkbox] + span, input[type=radio] + span {
+    background-position: top 0 left 0;
+  }
   .btn-discord {
     display: none;
   }
   footer {
     margin-top: 120px;
     margin-bottom: 16px;
+    width: calc(100vw - 2.5rem);
   }
   footer ul {
     flex-wrap: wrap;
