@@ -268,7 +268,7 @@
                         gap: 4px;
                         .rank{
                             flex: 16px;
-                            min-width: 16px;
+                            width: 16px;
                             text-align: center;
                             color: $gray;
                             font-size: calc($fontSize * 1.2);
@@ -277,7 +277,9 @@
                             color: $lightGray;
                             font-weight: $UltraBold;
                             font-size: calc($fontSize * 1.2);
-                            min-width: 93px;
+                            width: 93px;
+                            overflow: hidden;
+                            // font-family: monospace;
                         }
                         .amount{
                             flex: calc(100% - 120px);
@@ -316,7 +318,6 @@
                 }
             }
         }
-        
         &.coming-soon{
             .ranking-header{
                 .gold-medal{
@@ -325,21 +326,24 @@
             }
             .ranking-content{
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                height: calc(100% - 72px);
+                justify-content: center;
+                height: calc(100% - 68px);
                 p{
                     &.no-info{
                         display: inline;
+                        flex: 1;
                         font-size: calc($fontSize * 1.8);
                         font-weight: $UltraBold;
                         color: $lighter;
+                        min-width: max-content;
+                        text-align: center;
                     }
                     &.update-time{
                         display: none;
                     }
                 }
-                ul{
+                .content-switch{
                     display: none;
                 }
             }
@@ -859,6 +863,17 @@
             }
             p{
                 margin-top: 16px;
+            }
+            &.coming-soon{
+                .ranking-content{
+                    margin: 20px auto;
+                    height: calc(100% - 64px);
+                    p{
+                        &.no-info{
+                            margin: 16px auto;
+                        }
+                    }
+                }
             }
         }
     }

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>遊戲完蛋了</title>
     <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
     <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
+    
     <!-- tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    
+    <!-- custom css -->
     <link rel="stylesheet" href="css/custom-animation.css">
     <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/product.css">
     
+    <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
+
     <!-- tailwind js -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
+    
     <script src="js/cookie.js"></script>
     <script src="js/step.js"></script>
     <script src="js/tabs.js"></script>
@@ -32,6 +40,7 @@
     <script src="js/popup.js"></script>
 </head>
 <body class="font-sans overflow-x-hidden bg-121212">
+
     <!-- header -->
     <div class="min-h-full">
         <!-- 20220620 -->
@@ -55,8 +64,11 @@
                                 <li class="-ty-3">
                                     <a href="##" class="block px-5">白皮書</a>
                                 </li>
-                                <li class="text-center color-a8a8a8">
-                                    <a href="##" class="block px-5 cursor-not-allowed">DEX <br> <span class="text-xs">(coming soon)</span></a>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
                                 </li>
                                 <li class="relative font-bold">
                                     <a href="##" class="px-5 flex items-center space-x-1 btn-language">
@@ -143,8 +155,11 @@
                 <li class="py-4">
                     <a href="##" class="block">白皮書</a>
                 </li>
-                <li class="py-4 text-center color-a8a8a8">
-                    <a href="##" class="cursor-not-allowed">DEX<br>(coming soon)</a>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
                 </li>
                 <li class="py-4 relative top-60">
                     <a href="##" class="block space-x-1  btn-m-language">
@@ -204,15 +219,18 @@
         </div>
     </div>
 
+    <!-- 背景漸層色 -->
     <div class="w-full fixed top-0 left-0 -z-1">
-        <img src="images/product/bg-gradient.svg" alt="" class="w-full">
+        <img src="images/product/bg-gradient.svg" class="w-full">
     </div>
+
     <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- 麵包屑 -->
         <div class="flex items-center space-x-1 pt-24 mb-5 text-sm static top-0 lg:text-xs lg:mb-11 md:sticky">
             <a href="index.html" class="font-normal color-898989">首頁</a>
-            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <span><img src="images/icon/icon-arrow-right.svg"></span>
             <a href="shop.html" class="font-normal color-898989">商城</a>
-            <span><img src="images/icon/icon-arrow-right.svg" alt=""></span>
+            <span><img src="images/icon/icon-arrow-right.svg"></span>
             <a href="##" class="font-bold color-898989">我是入場券</a>
             <!-- <a href="##" class="font-bold color-898989">我是道具</a> -->
         </div>
@@ -220,20 +238,18 @@
         <main class="product">
             <div class="pic-box">
                 <div class="pic">
-                    <img src="images/product/card-sample.png" alt="" class="max-w-full h-auto">
+                    <img src="images/product/card-sample.png" class="max-w-full h-auto">
                 </div>
                 <div class="badge">
                     <ul>
-                        <li><img src="images/icon/icon-a.svg" alt=""></li>
-                        <li><img src="images/icon/icon-a-plus.svg" alt=""></li>
-                        <li><img src="images/icon/icon-s.svg" alt=""></li>
+                        <li><img src="images/icon/icon-pass.svg"></li>
                         <li>限定</li>
                     </ul>
                 </div>
             </div>
             <div class="content-box">
-                <div class="product-name">商品名稱可以好長好長依據寬度超過會點點</div>
-                <div class="product-txt">（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述<a href="#" target="_blank">可以點的連結</a></div>
+                <div class="product-name">商品名稱可以好長好長好長好長好長好長好長好長好長好長好長好長依據寬度超過會點點</div>
+                <div class="product-txt">**禮包內容之NFT不含GAMEFIPASS字樣。<br>（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述 <a href="#" target="_blank">可以點的連結</a></div>
                 <div class="currency-box">
                     <div class="box-title">請選擇支付幣別</div>
                     <div class="currency-list">
@@ -264,7 +280,7 @@
                         <div class="currency">
                             <input type="radio" id="type5" value="" name="currencyType">
                             <label class="change-box" for="type5">
-                                <div class="pay"><img src="images/icon/icon-coin.svg" alt="">1.00</div>
+                                <div class="pay"><img src="images/icon/icon-coin.svg">1.00</div>
                             </label>
                         </div>
                     </div>
@@ -273,9 +289,9 @@
                     <div class="box-title">數量</div>
                     <div class="amount">
                         <!-- 無法點擊時，請於當 button 新增 class="none" -->
-                        <button id="add" class="cursor-pointer none"><img src="images/icon/icon-minus.svg" alt=""></button>
+                        <button id="add" class="cursor-pointer"><img src="images/icon/icon-minus-353535.svg"></button>
                         <input id="quantity" type="text" value="1" class="input-amount">
-                        <button id="min" class="cursor-pointer"><img src="images/icon/icon-plus.svg" alt=""></button>
+                        <button id="min" class="cursor-pointer"><img src="images/icon/icon-plus.svg"></button>
                     </div>
                     <!-- 有限購時，提示字 -->
                     <p class="remark">*每個帳號每日限購3個</p>
@@ -296,18 +312,29 @@
                     <div class="total">結帳總額：<span>300,000<span class="currency">TWD</span></span></div>
                     <a href="checkout.html" class="btn bg-from-e63eb6-to-749ff5">購買</a>
                     <!-- 道具用: btn 點擊後，正流程請開啟 popup 重要提醒 8-1-2 -->
-                    <!-- <div class="total">結帳總額：<span class="ic-coin"><img src="images/icon/icon-coin.svg" alt="">300,000.00</span></div>
+                    <!-- <div class="total">結帳總額：<span class="ic-coin"><img src="images/icon/icon-coin.svg">300,000.00</span></div>
                     <a href="checkout-bnb.html" class="btn bg-from-e63eb6-to-749ff5">兌換</a> -->
                 </div>
             </div>
         </main>
     </div>
+
+
+
     <!-- social link -->
-    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
+    <!-- <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
         <a href="##" class="block" target="_blank">
             <img src="images/icon/icon-dioscord-pc.svg" alt="">
         </a>
-    </div>      
+    </div> -->
+
+
+    <!-- social link -->
+    <div class="btn-discord">
+        <a href="#" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg">
+        </a>
+    </div>
 </body>
 
 
@@ -323,7 +350,7 @@
         <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
-        <img src="images/icon/icon-close.svg" alt="">
+        <img src="images/icon/icon-close.svg">
     </button>
 </div>
 
@@ -382,7 +409,7 @@
         </a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
-        <img src="images/icon/icon-close.svg" alt="">
+        <img src="images/icon/icon-close.svg">
     </button>
 </div>
 

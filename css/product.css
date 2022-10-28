@@ -3,13 +3,6 @@ main.product {
   justify-content: center;
 }
 
-@media screen and (max-width: 428px) {
-  main.product {
-    display: block;
-    justify-content: center;
-    padding-bottom: 150px;
-  }
-}
 .pic-box {
   width: 50%;
   max-width: 400px;
@@ -22,8 +15,8 @@ main.product {
 .pic-box .pic {
   width: 100%;
   overflow: hidden;
-  border-radius: 1.5rem;
-  margin-bottom: 1.5rem;
+  border-radius: 24px;
+  margin-bottom: 24px;
 }
 .pic-box .pic img {
   width: 100%;
@@ -31,12 +24,11 @@ main.product {
 }
 .pic-box .badge ul {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .pic-box .badge ul li {
   padding: 0 0.2rem;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 700;
   color: #898989;
 }
@@ -49,32 +41,24 @@ main.product {
   margin-bottom: 0.75rem;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #efefef;
-}
-.content-box p.remark {
-  margin-top: 0.5rem;
-  font-size: 0.7rem;
-  color: #BDBDBD;
-}
-.content-box p.remark.error {
-  color: #E08083;
+  color: #EFEFEF;
 }
 .content-box .product-name {
-  margin-bottom: 2.25rem;
+  margin-bottom: 32px;
   font-size: 1.125rem;
   font-weight: 700;
-  color: #efefef;
+  color: #EFEFEF;
 }
 .content-box .product-txt {
-  margin-bottom: 2.25rem;
+  margin-bottom: 32px;
   font-size: 0.875rem;
-  color: #bdbdbd;
-  line-height: 1.625;
+  color: #BDBDBD;
+  line-height: 1.6;
+  text-align: justify;
 }
 .content-box .product-txt a {
-  margin: 0 0.25rem;
   font-weight: 700;
-  color: #7e97f0;
+  color: #8AA3FF;
 }
 .content-box .currency-box {
   margin-bottom: 2.25rem;
@@ -150,17 +134,25 @@ main.product {
   margin: 0 2.5rem;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #efefef;
+  color: #EFEFEF;
   line-height: 1.25rem;
   text-align: center;
   background-color: transparent;
+}
+.content-box .amount-box p.remark {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: #BDBDBD;
+}
+.content-box .amount-box p.remark.error {
+  color: #E08083;
 }
 .content-box .amount-box .input-invitation-code {
   display: block;
   width: 100%;
   padding: 0.625rem 1.5rem;
   font-size: 0.875rem;
-  color: #efefef;
+  color: #EFEFEF;
   line-height: 1.25rem;
   border: 1px #353535 solid;
   border-radius: 999px;
@@ -176,7 +168,7 @@ main.product {
 .content-box .note-box .txt {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #bdbdbd;
+  color: #BDBDBD;
   line-height: 1.625;
 }
 .content-box .note-box .txt a {
@@ -234,7 +226,12 @@ main.product {
     padding-top: 2rem;
   }
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 515px) {
+  main.product {
+    display: block;
+    justify-content: center;
+    padding-bottom: 150px;
+  }
   .pic-box {
     width: 100%;
     max-width: 100%;

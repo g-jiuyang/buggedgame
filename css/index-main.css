@@ -275,7 +275,7 @@
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
   flex: 16px;
-  min-width: 16px;
+  width: 16px;
   text-align: center;
   color: #898989;
   font-size: 12px;
@@ -284,7 +284,8 @@
   color: #EFEFEF;
   font-weight: 700;
   font-size: 12px;
-  min-width: 93px;
+  width: 93px;
+  overflow: hidden;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
   flex: calc(100% - 120px);
@@ -308,20 +309,25 @@
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-content {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: calc(100% - 72px);
+  justify-content: center;
+  height: calc(100% - 68px);
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-content p.no-info {
   display: inline;
+  flex: 1;
   font-size: 18px;
   font-weight: 700;
   color: #BDBDBD;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  text-align: center;
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-content p.update-time {
   display: none;
 }
-.banner-ranking .ranking-frame.coming-soon .ranking-content ul {
+.banner-ranking .ranking-frame.coming-soon .ranking-content .content-switch {
   display: none;
 }
 .banner-ranking .ranking-frame:before, .banner-ranking .ranking-frame:after {
@@ -806,6 +812,13 @@
   }
   .banner-ranking .ranking-frame p {
     margin-top: 16px;
+  }
+  .banner-ranking .ranking-frame.coming-soon .ranking-content {
+    margin: 20px auto;
+    height: calc(100% - 64px);
+  }
+  .banner-ranking .ranking-frame.coming-soon .ranking-content p.no-info {
+    margin: 16px auto;
   }
   .step {
     max-width: 90vw;
