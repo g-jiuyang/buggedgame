@@ -285,7 +285,6 @@
   font-weight: 700;
   font-size: 12px;
   width: 93px;
-  overflow: hidden;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
   flex: calc(100% - 120px);

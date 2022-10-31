@@ -278,8 +278,6 @@
                             font-weight: $UltraBold;
                             font-size: calc($fontSize * 1.2);
                             width: 93px;
-                            overflow: hidden;
-                            // font-family: monospace;
                         }
                         .amount{
                             flex: calc(100% - 120px);

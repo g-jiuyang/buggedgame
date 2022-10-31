@@ -3,10 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
-// * {
-//     transition: color .3s;
-// }
-
 /* -- 反白選取樣式 -- */
 ::-moz-selection {
 	background-color: rgba($primaryC, .9);
@@ -62,6 +58,7 @@ p, span {
 p a{
     color: $lighter;
     text-decoration: underline;
+    transition: color .3s;
 
     &:hover{
         color: $gray;

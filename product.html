@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/pop-up.css">
     
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -248,8 +249,11 @@
                 </div>
             </div>
             <div class="content-box">
-                <div class="product-name">商品名稱可以好長好長好長好長好長好長好長好長好長好長好長好長依據寬度超過會點點</div>
-                <div class="product-txt">**禮包內容之NFT不含GAMEFIPASS字樣。<br>（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述 <a href="#" target="_blank">可以點的連結</a></div>
+                <div class="product-name">商品名稱可以好長好長好長好長好長好長好長好長好長好長好長好長依據寬度超過會一直換行下去</div>
+                <div class="product-txt">
+                    <p>**禮包內容之NFT不含GAMEFIPASS字樣。</p>
+                    <p>（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述 <a href="#" target="_blank">可以點的連結</a></p>
+                </div>
                 <div class="currency-box">
                     <div class="box-title">請選擇支付幣別</div>
                     <div class="currency-list">
@@ -289,51 +293,65 @@
                     <div class="box-title">數量</div>
                     <div class="amount">
                         <!-- 無法點擊時，請於當 button 新增 class="none" -->
-                        <button id="add" class="cursor-pointer"><img src="images/icon/icon-minus-353535.svg"></button>
+                        <button id="add" disabled><img src="images/icon/icon-minus.svg"></button>
                         <input id="quantity" type="text" value="1" class="input-amount">
-                        <button id="min" class="cursor-pointer"><img src="images/icon/icon-plus.svg"></button>
+                        <button id="min"><img src="images/icon/icon-plus.svg"></button>
                     </div>
                     <!-- 有限購時，提示字 -->
-                    <p class="remark">*每個帳號每日限購3個</p>
+                    <p class="remark">*每個帳號每日限購3個（目前剩餘：1/3）</p>
                 </div>
                 <div class="amount-box">
                     <div class="box-title">邀請碼</div>
                     <input type="email" placeholder="請輸入5碼英數字" class="input-invitation-code" onKeyUp="value=value.replace(/[\W]/g,'')" maxlength="6">
                     <!-- 邀請碼錯誤訊息 -->
-                    <p class="remark error">*邀請碼不存在，請重新輸入</p>
+                    <p class="remark warning">*邀請碼不存在，請重新輸入</p>
                 </div>
                 <div class="note-box">
                     <div class="box-title">注意事項</div>
-                    <div class="txt">一經購買，無法退貨。可以斷行。（營運會編輯資料<a href="#" target="_blank">可以點的連結</a>入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹 可以點的連結 （營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以嘛的一些敘述入場券可以嘛的一些敘述入場券可以嘛的一些敘述入場券可以。
+                    <div class="txt">
+                        <p>一經購買，無法退貨。</p>
+                        <p>可以斷行。</p>
+                        <p>（營運會編輯資料 <a href="#" target="_blank">可以點的連結</a> 入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹 可以點的連結 （營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以嘛的一些敘述入場券可以嘛的一些敘述入場券可以嘛的一些敘述入場券可以。</p>
                     </div>
                 </div>
                 <div class="check-box">
                     <!-- NFT用 -->
-                    <div class="total">結帳總額：<span>300,000<span class="currency">TWD</span></span></div>
-                    <a href="checkout.html" class="btn bg-from-e63eb6-to-749ff5">購買</a>
+                    <!-- <div class="total">結帳總額：<span>300,000<span class="currency">TWD</span></span></div>
+                    <a href="checkout.html" class="btn bg-from-e63eb6-to-749ff5">購買</a> -->
                     <!-- 道具用: btn 點擊後，正流程請開啟 popup 重要提醒 8-1-2 -->
-                    <!-- <div class="total">結帳總額：<span class="ic-coin"><img src="images/icon/icon-coin.svg">300,000.00</span></div>
-                    <a href="checkout-bnb.html" class="btn bg-from-e63eb6-to-749ff5">兌換</a> -->
+                    <div class="total">結帳總額：<span class="ic-coin"><img src="images/icon/icon-coin.svg">300,000.00</span></div>
+                    <a href="javascript:void(0)" id="exchange--open" class="btn bg-from-e63eb6-to-749ff5">兌換</a>
                 </div>
             </div>
         </main>
     </div>
-
-
-
-    <!-- social link -->
-    <!-- <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
-        <a href="##" class="block" target="_blank">
-            <img src="images/icon/icon-dioscord-pc.svg" alt="">
-        </a>
-    </div> -->
-
 
     <!-- social link -->
     <div class="btn-discord">
         <a href="#" target="_blank">
             <img src="images/icon/icon-dioscord-pc.svg">
         </a>
+    </div>
+
+
+
+    <!-- pop up 兌換道具 -->
+    <div id="exchange--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="exchange--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>重要提醒</h2>
+            <p class="desc">您即將兌換<span>「XXXXX(商品名稱)」x3</span>，一旦兌換成功將扣除帳戶內的蟲蟲幣 <span>4,500顆</span>。</p>
+            <button id="exchange--submit" class="popUp--submit" disabled>確認兌換<span>3 s</span></button>
+        </div>
+    </div>
+
+    <!-- pop up 錢包位址鎖定 -->
+    <div id="locked--popUp" class="popUp">
+        <div class="popUp--container">
+            <h2>錢包位址鎖定</h2>
+            <p class="desc">您所連接的錢包位址已被鎖定，無法進行交易。<a href="#">請洽客服</a></p>
+            <button id="locked--submit" class="popUp--submit">確認</button>
+        </div>
     </div>
 </body>
 
@@ -422,5 +440,23 @@
     </div>
 </div>
 
+
+<script>
+    // pop up 兌換道具
+    $('#exchange--open').click(function () {
+        $('#exchange--popUp').addClass('active')
+    })
+    $('#exchange--close').click(function () {
+        $('#exchange--popUp').removeClass('active')
+    })
+    $('#exchange--submit').click(function () {
+        location.href="success.html"
+    })
+
+    // pop up 錢包位址鎖定
+    $('#locked--submit').click(function () {
+        $('#locked--popUp').removeClass('active')
+    })
+</script>
 
 </html>

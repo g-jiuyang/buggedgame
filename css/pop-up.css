@@ -19,7 +19,7 @@
   border: 1px solid #353535;
   padding: 40px;
   text-align: center;
-  max-width: 510px;
+  width: 510px;
 }
 .popUp .popUp--container h2 {
   margin-bottom: 28px;
@@ -145,6 +145,9 @@
   .popUp .popUp--container {
     width: calc(100vw - 40px);
     padding: 28px;
+  }
+  .popUp .popUp--container .content {
+    min-height: 250px;
   }
   .popUp .popUp--container .popUp--close {
     top: 20px;
