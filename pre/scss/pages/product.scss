@@ -39,7 +39,7 @@ main.product{
         padding-top: .5rem;
         .box-title{
             margin-bottom: 12px;
-            font-size: calc($fontSize * 1.4);
+            font-size: calc($fontSize * 1.6);
             font-weight: $UltraBold;
             color: $lightGray;
         }
@@ -54,7 +54,6 @@ main.product{
             font-size: calc($fontSize * 1.4);
             color: $lighter;
             line-height: 1.6;
-            text-align: justify;
             a{
                 font-weight: $UltraBold;
                 color: $primaryC;
@@ -151,10 +150,8 @@ main.product{
                     }
                 }
             }
-            p.remark{
+            p.note{
                 margin-top: 8px;
-                font-size: calc($fontSize * 1.2);
-                color: $lighter;
             }
             .input-invitation-code{
                 display: block;
@@ -174,17 +171,18 @@ main.product{
         .note-box{
             padding-bottom: 24px;
             .txt{
-                font-size: 14px;
                 font-weight: $Regular;
                 color: $lighter;
                 line-height: 1.6;
-                text-align: justify;
-                a{
-                    font-weight: $UltraBold;
-                    color: $primaryC;
-                    text-decoration: none;
-                    &:hover{
-                        color: darken($primaryC,5%);
+                p{
+                    font-size: calc($fontSize * 1.4);
+                    a{
+                        font-weight: $UltraBold;
+                        color: $primaryC;
+                        text-decoration: none;
+                        &:hover{
+                            color: darken($primaryC,5%);
+                        }
                     }
                 }
             }
@@ -248,7 +246,6 @@ main.product{
     .popUp--container{
         .desc{
             color: $lighter;
-            text-align: justify;
             span{
                 color: $primaryC;
                 font-weight: $UltraBold;
@@ -305,8 +302,16 @@ main.product{
         .content-box{
             width: 100%;
             padding: 0;
-            p.remark{
+            .box-title{
                 font-size: calc($fontSize * 1.4);
+            }
+            .product-name{
+                font-size: calc($fontSize * 1.6);
+            }
+            .product-txt{
+                p{
+                    font-size: calc($fontSize * 1.4);
+                }
             }
             .currency-box{
                 .currency-list{

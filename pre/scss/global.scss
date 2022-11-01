@@ -399,7 +399,11 @@ footer{
 
 @media screen and (max-width: 515px) {
     .checkout-step {
-        font-size: calc($fontSize * 1.2);
+        font-size: calc($fontSize * 1.4);
+        
+        span {
+            font-size: calc($fontSize * 1.4);
+        }
     }
 
     h1 {

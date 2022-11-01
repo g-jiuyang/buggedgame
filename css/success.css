@@ -42,7 +42,6 @@
 }
 .success-page .calculate {
   font-size: 12px;
-  font-weight: 700;
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -50,6 +49,9 @@
 }
 .success-page .calculate ul li {
   margin-bottom: 8px;
+}
+.success-page .calculate ul li span {
+  font-weight: 700;
 }
 .success-page .calculate ul li img {
   display: inline-block;
@@ -129,5 +131,42 @@
 @media screen and (max-width: 767px) {
   .success-page {
     max-width: 90vw;
+  }
+  .success-page .product {
+    margin-bottom: 28px;
+  }
+  .success-page .product .pic {
+    flex: 80px;
+    max-width: 80px;
+  }
+  .success-page .product .info {
+    flex: calc(100% - 100px);
+  }
+  .success-page .product .info p.title {
+    font-size: 16px;
+  }
+  .success-page .product .info ul {
+    font-size: 14px;
+  }
+  .success-page .calculate {
+    margin-bottom: 28px;
+    font-size: 14px;
+  }
+  .success-page .card {
+    padding: 16px 20px;
+  }
+  .success-page .card p {
+    margin-top: 0;
+    font-size: 14px;
+  }
+  .success-page .btns {
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-direction: column-reverse;
+  }
+  .success-page .btns a {
+    flex: 100%;
+    font-size: 14px;
+    font-weight: 700;
   }
 }

@@ -405,7 +405,10 @@ footer .copyright div img {
 }
 @media screen and (max-width: 515px) {
   .checkout-step {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .checkout-step span {
+    font-size: 14px;
   }
   h1 {
     font-size: 24px;

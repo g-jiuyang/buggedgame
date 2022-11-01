@@ -37,7 +37,7 @@ main.product .content-box {
 }
 main.product .content-box .box-title {
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: #EFEFEF;
 }
@@ -52,7 +52,6 @@ main.product .content-box .product-txt {
   font-size: 14px;
   color: #BDBDBD;
   line-height: 1.6;
-  text-align: justify;
 }
 main.product .content-box .product-txt a {
   font-weight: 700;
@@ -146,10 +145,8 @@ main.product .content-box .amount-box .amount .input-amount {
 main.product .content-box .amount-box .amount .input-amount:disabled {
   color: #898989;
 }
-main.product .content-box .amount-box p.remark {
+main.product .content-box .amount-box p.note {
   margin-top: 8px;
-  font-size: 12px;
-  color: #BDBDBD;
 }
 main.product .content-box .amount-box .input-invitation-code {
   display: block;
@@ -175,18 +172,19 @@ main.product .content-box .note-box {
   padding-bottom: 24px;
 }
 main.product .content-box .note-box .txt {
-  font-size: 14px;
   font-weight: 400;
   color: #BDBDBD;
   line-height: 1.6;
-  text-align: justify;
 }
-main.product .content-box .note-box .txt a {
+main.product .content-box .note-box .txt p {
+  font-size: 14px;
+}
+main.product .content-box .note-box .txt p a {
   font-weight: 700;
   color: #8AA3FF;
   text-decoration: none;
 }
-main.product .content-box .note-box .txt a:hover {
+main.product .content-box .note-box .txt p a:hover {
   color: #718fff;
 }
 main.product .content-box .check-box {
@@ -243,7 +241,6 @@ main.product .check-box button, main.product .check-box a.button {
 
 .popUp .popUp--container .desc {
   color: #BDBDBD;
-  text-align: justify;
 }
 .popUp .popUp--container .desc span {
   color: #8AA3FF;
@@ -297,7 +294,13 @@ main.product .check-box button, main.product .check-box a.button {
     width: 100%;
     padding: 0;
   }
-  main.product .content-box p.remark {
+  main.product .content-box .box-title {
+    font-size: 14px;
+  }
+  main.product .content-box .product-name {
+    font-size: 16px;
+  }
+  main.product .content-box .product-txt p {
     font-size: 14px;
   }
   main.product .content-box .currency-box .currency-list .currency {

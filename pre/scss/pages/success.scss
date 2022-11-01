@@ -48,7 +48,6 @@
 
     .calculate {
         font-size: calc($fontSize * 1.2);
-        font-weight: $UltraBold;
         display: flex;
         width: 100%;
         justify-content: flex-end;
@@ -56,6 +55,11 @@
         ul {
             li {
                 margin-bottom: 8px;
+                
+                span {
+                    font-weight: $UltraBold;
+                }
+
                 img {
                     display: inline-block;
                     transform: translateY(-4px);
@@ -152,5 +156,52 @@
 @media screen and (max-width: 767px) {
     .success-page {
         max-width: 90vw;
+
+        .product {
+            margin-bottom: 28px;
+
+            .pic {
+                flex: 80px;
+                max-width: 80px;
+            }
+
+            .info {
+                flex: calc(100% - 100px);
+
+                p.title {
+                    font-size: calc($fontSize * 1.6);
+                }
+
+                ul {
+                    font-size: calc($fontSize * 1.4);
+                }
+            }
+        }
+
+        .calculate {
+            margin-bottom: 28px;
+            font-size: calc($fontSize * 1.4);
+        }
+
+        .card {
+            padding: 16px 20px;
+
+            p {
+                margin-top: 0;
+                font-size: calc($fontSize * 1.4);
+            }
+        }
+
+        .btns {
+            flex-wrap: wrap;
+            gap: 12px;
+            flex-direction: column-reverse;
+
+            a {
+                flex: 100%;
+                font-size: calc($fontSize * 1.4);
+                font-weight: $UltraBold;
+            }
+        }
     }
 } // max-width: 767px

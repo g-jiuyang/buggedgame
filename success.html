@@ -49,7 +49,7 @@
                         <!-- 20220628 20220629-->
                         <div class="w-24 lg:w-32 flex-shrink-0 lg:w-auto">
                             <a href="index.html">
-                                <img src="images/product/logo.png" alt="">
+                                <img src="images/product/logo.png">
                             </a>
                         </div>
                         <!-- pc and mobile menu -->
@@ -62,14 +62,17 @@
                                 <li class="-ty-3">
                                     <a href="##" class="block px-5">白皮書</a>
                                 </li>
-                                <li class="text-center color-a8a8a8">
-                                    <a href="##" class="block px-5 cursor-not-allowed">DEX <br> <span class="text-xs">(coming soon)</span></a>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
                                 </li>
                                 <li class="relative font-bold">
                                     <a href="##" class="px-5 flex items-center space-x-1 btn-language">
-                                        <img src="images/icon/icon-language.svg" alt=""> 
+                                        <img src="images/icon/icon-language.svg"> 
                                         <span class="text-sm">繁體中文</span>
-                                        <img src="images/icon/icon-arrow-bottom.svg" alt="" class="icon-arrow-bottom">
+                                        <img src="images/icon/icon-arrow-bottom.svg" class="icon-arrow-bottom">
                                     </a>
                                     <ul class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
                                         <li>
@@ -88,7 +91,7 @@
                                 </li>
                                 <li class="hidden mr-10 relative font-normal coin-box">
                                     <span class="flex space-x-2">
-                                        <span><img src="images/icon/icon-coin.svg" alt=""></span>
+                                        <span><img src="images/icon/icon-coin.svg"></span>
                                         <span class="coin">300,000.00</span>
                                     </span>
                                     <div class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
@@ -102,17 +105,17 @@
                                 <!-- 20220621 -->
                                 <li class="flex justify-center items-center w-10 h-10 mx-1 block">
                                     <a href="##" class="block w-full" target="_blank">
-                                        <img src="images/icon/icon-discord.svg" alt="" class="w-full">
+                                        <img src="images/icon/icon-discord.svg" class="w-full">
                                     </a>
                                 </li>
                                 <li class="flex justify-center items-center w-10 h-10 mx-1 btn-hamburger">
                                     <a href="##" class="block w-full">
-                                        <img src="images/icon/icon-menu.svg" alt="" class="w-full">
+                                        <img src="images/icon/icon-menu.svg" class="w-full">
                                     </a>
                                 </li>
                                 <li class="flex justify-center items-center w-11 h-11 mx-1 mr-0 hidden">
                                     <a href="##" class="w-full">
-                                        <img src="images/icon/personal.svg" alt="" class="w-full">
+                                        <img src="images/icon/personal.svg" class="w-full">
                                     </a>
                                 </li>
                             </ul>
@@ -150,14 +153,17 @@
                 <li class="py-4">
                     <a href="##" class="block">白皮書</a>
                 </li>
-                <li class="py-4 text-center color-a8a8a8">
-                    <a href="##" class="cursor-not-allowed">DEX<br>(coming soon)</a>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
                 </li>
                 <li class="py-4 relative top-60">
                     <a href="##" class="block space-x-1  btn-m-language">
-                        <img src="images/icon/icon-language.svg" alt="" class="inline-block align-middle"> 
+                        <img src="images/icon/icon-language.svg" class="inline-block align-middle"> 
                         <span class="inline-block align-middle text-sm">繁體中文</span>
-                        <img src="images/icon/icon-arrow-top.svg" alt="" class="inline-block align-middle">
+                        <img src="images/icon/icon-arrow-top.svg" class="inline-block align-middle">
                     </a>
                     <ul class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
                         <li class="">
@@ -213,17 +219,17 @@
 
     <!-- 背景漸層色 -->
     <div class="w-full absolute top-0 left-0 -z-1">
-        <img src="images/product/bg-gradient.svg" alt="" class="w-full">
+        <img src="images/product/bg-gradient.svg" class="w-full">
     </div>
 
     <div class="max-w-6xl mx-auto mb-20 px-5 sm:px-6 lg:px-8">
         <!-- 結帳步驟 -->
-        <div class="flex items-center space-x-1 pt-24 mb-10 font-bold text-sm lg:text-xs">
-            <span class="color-898989">1 填寫付款資料</span>
-            <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <span class="color-898989">2 信用卡付款</span>
-            <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <span class="color-7e97f0">3 交易完成</span>
+        <div class="checkout-step">
+            1 填寫付款資料
+            <img src="images/icon/icon-arrow-right.svg">
+            2 信用卡付款
+            <img src="images/icon/icon-arrow-right.svg">
+            <span>3 交易完成</span>
         </div>
 
         <main class="success-page">
@@ -255,9 +261,9 @@
             </div>
             <div class="calculate">
                 <ul>
-                    <li>單價：<img src="images/icon/icon-coin-20px.svg">300,000.000001</li>
+                    <li>單價：<img src="images/icon/icon-coin-20px.svg"><span>300,000.000001</span></li>
                     <li>數量：10</li>
-                    <li>總價：<img src="images/icon/icon-coin-20px.svg">3,000,000.000010</li>
+                    <li>總價：<img src="images/icon/icon-coin-20px.svg"><span>3,000,000.000010</span></li>
                     <!-- ↑↑GameFi Pass 時只顯示總價，不顯示單價及數量↑↑ -->
                 </ul>
             </div>
@@ -298,7 +304,7 @@
     <!-- social link -->
     <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
         <a href="##" class="block" target="_blank">
-            <img src="images/icon/icon-dioscord-pc.svg" alt="">
+            <img src="images/icon/icon-dioscord-pc.svg">
         </a>
     </div>
 
@@ -310,7 +316,7 @@
             <h2>下載遊戲</h2>
             <p class="desc web">馬上拿起手機掃描QR Code下載遊戲吧！</p>
             <p class="desc mobile">馬上點擊下載遊戲吧！</p>
-            <img class="qrc web" src="images/QRC.png" alt="">
+            <img class="qrc web" src="images/QRC.png">
             <div class="btns">
                 <button id="iOS" class="web">iOS 下載</button>
                 <button id="android" class="web">Android 下載</button>
@@ -335,7 +341,7 @@
         <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
-        <img src="images/icon/icon-close.svg" alt="">
+        <img src="images/icon/icon-close.svg">
     </button>
 </div>
 
@@ -382,12 +388,12 @@
         <div class="mb-7 text-sm font-noraml text-center color-efefef hidden lg:block">馬上拿起手機掃描QR Code下載遊戲吧！</div>
         <div class="mb-7 text-lg font-noraml text-left color-efefef lg:hidden">馬上點擊下載遊戲吧！</div>
         <div class="hidden lg:block">
-            <img src="images/product/QRC.png" alt="" class="mx-auto">
+            <img src="images/product/QRC.png" class="mx-auto">
         </div>
         <a href="##" target="_blank" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 lg:hidden">下載遊戲</a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
-        <img src="images/icon/icon-close.svg" alt="">
+        <img src="images/icon/icon-close.svg">
     </button>
 </div>
 
