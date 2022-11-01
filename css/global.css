@@ -29,6 +29,20 @@ body {
   text-overflow: ellipsis;
 }
 
+.checkout-step {
+  margin: 96px 0 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #898989;
+}
+.checkout-step img {
+  display: inline-block;
+  margin: 0 4px;
+}
+.checkout-step span {
+  color: #8AA3FF;
+}
+
 /* 文字設定 */
 h1 {
   font-weight: 800;
@@ -390,6 +404,9 @@ footer .copyright div img {
   }
 }
 @media screen and (max-width: 515px) {
+  .checkout-step {
+    font-size: 12px;
+  }
   h1 {
     font-size: 24px;
   }

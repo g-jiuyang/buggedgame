@@ -32,6 +32,22 @@ body {
     }
 }
 
+.checkout-step {
+    margin: 96px 0 20px;
+    font-size: calc($fontSize * 1.2);
+    font-weight: $UltraBold;
+    color: $gray;
+
+    img {
+        display: inline-block;
+        margin: 0 4px;
+    }
+
+    span {
+        color: $primaryC;
+    }
+}
+
 /* 文字設定 */
 h1 {
     font-weight: $Black;
@@ -382,6 +398,10 @@ footer{
 } // max-width: 767px
 
 @media screen and (max-width: 515px) {
+    .checkout-step {
+        font-size: calc($fontSize * 1.2);
+    }
+
     h1 {
         font-size: calc($fontSize * 2.4);
     }

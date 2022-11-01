@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/custom-animation.css">
     <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/success.css">
+    <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/pop-up.css">
     
     <!-- jQuery -->
@@ -36,6 +36,9 @@
     <script src="js/faq.js"></script>
     <script src="js/table-show.js"></script>
     <script src="js/nav-blur.js"></script>
+    <script src="js/quantity-add-min.js"></script>
+    <script src="js/btn-state-higlight.js"></script>
+    <script src="js/popup.js"></script>
 </head>
 <body class="font-sans overflow-x-hidden bg-121212">
 
@@ -62,8 +65,11 @@
                                 <li class="-ty-3">
                                     <a href="##" class="block px-5">白皮書</a>
                                 </li>
-                                <li class="text-center color-a8a8a8">
-                                    <a href="##" class="block px-5 cursor-not-allowed">DEX <br> <span class="text-xs">(coming soon)</span></a>
+                                <li class="-ty-3">
+                                    <a href="pledge.html" class="block px-5">質押</a>
+                                </li>
+                                <li class="-ty-3">
+                                    <a href="##" class="block px-5">DEX</a>
                                 </li>
                                 <li class="relative font-bold">
                                     <a href="##" class="px-5 flex items-center space-x-1 btn-language">
@@ -150,8 +156,11 @@
                 <li class="py-4">
                     <a href="##" class="block">白皮書</a>
                 </li>
-                <li class="py-4 text-center color-a8a8a8">
-                    <a href="##" class="cursor-not-allowed">DEX<br>(coming soon)</a>
+                <li class="py-4">
+                    <a href="pledge.html" class="block">質押</a>
+                </li>
+                <li class="py-4">
+                    <a href="##" class="block">DEX</a>
                 </li>
                 <li class="py-4 relative top-60">
                     <a href="##" class="block space-x-1  btn-m-language">
@@ -212,114 +221,138 @@
     </div>
 
     <!-- 背景漸層色 -->
-    <div class="w-full absolute top-0 left-0 -z-1">
-        <img src="images/product/bg-gradient.svg" alt="" class="w-full">
+    <div class="w-full fixed top-0 left-0 -z-1">
+        <img src="images/product/bg-gradient.svg" class="w-full">
     </div>
 
-    <div class="max-w-6xl mx-auto mb-20 px-5 sm:px-6 lg:px-8">
-        <!-- 結帳步驟 -->
-        <div class="flex items-center space-x-1 pt-24 mb-10 font-bold text-sm lg:text-xs">
-            <span class="color-898989">1 填寫付款資料</span>
+    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
+        <!-- 麵包屑 -->
+        <div class="flex items-center space-x-1 pt-24 mb-5 text-sm static top-0 lg:text-xs lg:mb-11 md:sticky breadcrumb">
+            <a href="index.html">首頁</a>
             <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <span class="color-898989">2 信用卡付款</span>
+            <a href="shop.html">商城</a>
             <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <span class="color-7e97f0">3 交易完成</span>
+            <a href="javascript:void(0)">商品名稱最多顯示十字超過...已經做在css中</a>
+            <!-- <a href="javascript:void(0)">我是道具</a> -->
         </div>
-
-        <main class="success-page">
-            <div class="message">
-                <!-- ↓↓GameFi Pass 時有兩種顯示狀態↓↓ 
-                1. 信用卡交易時：
-                <img src="images/icon/icon-success-check.svg">
-                <p>購買成功</p>
-
-                2. BNB交易時：
-                <img src="images/icon/icon-processing.svg">
-                <p>兌換進行中</p>  -->
-
-                <!-- ↓↓道具時顯示↓↓ -->
-                <img src="images/icon/icon-success-check.svg">
-                <p>兌換成功</p>
-            </div>
-            <div class="product">
-                <div class="pic"><img src="images/product/gamefi-pass-01.png"></div>
-                <div class="info">
-                    <p class="title">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</p>
-                    <ul>
-                        <li>訂單編號：TGB210602L0001825</li>
-                        <li>交易時間：2022/03/03 23:56:00</li>
-                        <li>商品名稱：S級王者入場券</li>
-                        <li>交易方式：BNB</li> <!-- 支付方式為臺幣的時候寫信用卡，BNB時寫BNB，BUG幣時寫蟲蟲幣 -->
-                    </ul>
+        
+        <main class="product">
+            <div class="pic-box">
+                <div class="pic">
+                    <img src="images/product/gamefi-pass-01.png" class="max-w-full h-auto">
                 </div>
             </div>
-            <div class="calculate">
-                <ul>
-                    <li>單價：<img src="images/icon/icon-coin-20px.svg">300,000.000001</li>
-                    <li>數量：10</li>
-                    <li>總價：<img src="images/icon/icon-coin-20px.svg">3,000,000.000010</li>
-                    <!-- ↑↑GameFi Pass 時只顯示總價，不顯示單價及數量↑↑ -->
-                </ul>
-            </div>
-            <div class="card">
-                <!-- ↓↓GameFi Pass時有兩種顯示狀態↓↓
-                1. 信用卡交易時：
-                <p>購買的商品已寄送至遊戲內！</p>
+            <div class="content-box">
+                <div class="product-name">商品名稱可以好長好長好長好長好長好長好長好長好長好長好長好長依據寬度超過會一直換行下去</div>
+                <div class="product-txt">
+                    <p>**禮包內容之NFT不含GAMEFIPASS字樣。</p>
+                    <p>（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述 <a href="#" target="_blank">可以點的連結</a></p>
+                </div>
+                <div class="currency-box">
+                    <div class="box-title">請選擇支付幣別</div>
+                    <div class="currency-list">
+                        <div class="currency">
+                            <input type="radio" id="type1" value="" name="currencyType" checked>
+                            <label class="change-box" for="type1">
+                                <div class="pay">123,000 TWD</div>
+                            </label>
+                        </div>
+                        <div class="currency">
+                            <input type="radio" id="type2" value="" name="currencyType">
+                            <label class="change-box" for="type2">
+                                <div class="pay">1.00 BNB</div>
+                            </label>
+                        </div>
+                        <div class="currency">
+                            <input type="radio" id="type3" value="" name="currencyType">
+                            <label class="change-box" for="type3">
+                                <div class="pay">333.00 USDT</div>
+                            </label>
+                        </div>
+                        <div class="currency">
+                            <input type="radio" id="type4" value="" name="currencyType">
+                            <label class="change-box" for="type4">
+                                <div class="pay">333.00 USDT</div>
+                            </label>
+                        </div>
+                        <div class="currency">
+                            <input type="radio" id="type5" value="" name="currencyType">
+                            <label class="change-box" for="type5">
+                                <div class="pay"><img src="images/icon/icon-coin.svg">1.00</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="amount-box">
+                    <div class="box-title">數量</div>
+                    <div class="amount">
+                        <!-- 無法點擊時，請於該物件新增 disabled 屬性 -->
+                        <button id="add" disabled><img src="images/icon/icon-minus.svg"></button>
+                        <input id="quantity" type="text" value="1" class="input-amount">
+                        <button id="min"><img src="images/icon/icon-plus.svg"></button>
+                    </div>
+                    <!-- 有限購時，提示字 -->
+                    <p class="remark">*每個帳號每日限購3個（目前剩餘：1/3）</p>
+                </div>
+                <div class="amount-box">
+                    <div class="box-title">邀請碼</div>
+                    <input type="email" placeholder="請輸入5碼英數字" class="input-invitation-code" onKeyUp="value=value.replace(/[\W]/g,'')" maxlength="5" required>
+                    <!-- 邀請碼錯誤訊息 -->
+                    <p class="remark warning">*邀請碼不存在，請重新輸入</p>
+                </div>
+                <div class="note-box">
+                    <div class="box-title">注意事項</div>
+                    <div class="txt">
+                        <p>一經購買，無法退貨。</p>
+                        <p>可以斷行。</p>
+                        <p>（營運會編輯資料 <a href="#" target="_blank">可以點的連結</a> 入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹 可以點的連結 （營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以（營運會編輯資料）入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以。入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以幹嘛的一些敘述入場券可以嘛的一些敘述入場券可以嘛的一些敘述入場券可以嘛的一些敘述入場券可以。</p>
+                    </div>
+                </div>
+                <div class="check-box">
+                    <!-- ↓↓ GameFi Pass用 ↓↓  -->
+                    <div class="total">結帳總額：<span>300,000<span class="currency">TWD</span></span></div>
+                    <a href="checkout.html" class="button btn-gradient">購買</a>
+                    
+                    <!-- ↓↓ 道具用分為兩種狀態 ↓↓
+                    <div class="total">結帳總額：<span class="ic-coin"><img src="images/icon/icon-coin.svg">300,000.00</span></div> -->
 
-                2. BNB交易時：
-                <p>購買的商品將於5分鐘內寄送至遊戲內！</p> -->
-                
-                <!-- ↓↓道具時顯示↓↓ -->
-                <p>兌換的商品已寄送至遊戲內！</p>
-                
-                <!-- ↓↓點選時：電腦版開啟pop up，行動裝置直接導向遊戲（或商店）↓↓ -->
-                <p><a id="download--open" href="javascript:void(0)">前往遊戲查看 ></a></p>
-            </div>
-            <div class="btns">
-                <a href="record.html" class="button btn-outline">查看紀錄</a>
-                <a href="shop.html" class="button btn-gradient">繼續購買</a>
+                    <!-- btn 點擊後，正流程請開啟 popup 重要提醒 8-1-3
+                    <button id="exchange--open" class="btn-gradient">兌換</button> --> <!-- 「敬請期待」&「已售完」的時候，文字更換且按鈕disabled -->
+
+                    <!-- btn 點擊後，有狀況時的流程請開啟 popup 交易有問題的情況 8-2-xx (詳見Figma)
+                    <button id="locked--open" class="btn-gradient">兌換</button> -->
+                </div>
             </div>
         </main>
     </div>
 
-
-    <!-- footer -->
-    <footer>
-        <div class="copyright">
-            <dl>
-                <dt><img src="images/product/Logo_GASH.png"></dt>
-                <dt><img src="images/product/Logo_Naddic.png"></dt>
-                <dd>© 2022 GASH POINT Co., Ltd. All right reserved</dd>
-            </dl>
-            <div><img src="images/icon/icon-pg-12.svg"></div>
-        </div>
-    </footer>
-
     <!-- social link -->
-    <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
-        <a href="##" class="block" target="_blank">
-            <img src="images/icon/icon-dioscord-pc.svg" alt="">
+    <div class="btn-discord">
+        <a href="#" target="_blank">
+            <img src="images/icon/icon-dioscord-pc.svg">
         </a>
     </div>
 
 
-    <!-- pop up 下載遊戲 -->
-    <div id="download--popUp" class="popUp">
+
+    <!-- pop up 兌換道具 -->
+    <div id="exchange--popUp" class="popUp">
         <div class="popUp--container">
-            <button id="download--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
-            <h2>下載遊戲</h2>
-            <p class="desc web">馬上拿起手機掃描QR Code下載遊戲吧！</p>
-            <p class="desc mobile">馬上點擊下載遊戲吧！</p>
-            <img class="qrc web" src="images/QRC.png" alt="">
-            <div class="btns">
-                <button id="iOS" class="web">iOS 下載</button>
-                <button id="android" class="web">Android 下載</button>
-                <button id="app-store" class="mobile">iOS / Android 下載</button>
-                <button id="apk">APK 下載</button>
-            </div>
+            <button id="exchange--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>重要提醒</h2>
+            <p class="desc">您即將兌換<span>「XXXXX(商品名稱)」x3</span>，一旦兌換成功將扣除帳戶內的蟲蟲幣 <span>4,500顆</span>。</p>
+            <button id="exchange--submit" class="popUp--submit" disabled>確認兌換<span>3s</span></button>
         </div>
     </div>
-  
+
+    <!-- pop up 錢包位址鎖定 -->
+    <div id="locked--popUp" class="popUp">
+        <div class="popUp--container">
+            <h2>錢包位址鎖定</h2>
+            <p class="desc">您所連接的錢包位址已被鎖定，無法進行交易。<a href="#">請洽客服</a></p>
+            <button id="locked--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
 </body>
 
 
@@ -335,7 +368,7 @@
         <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
-        <img src="images/icon/icon-close.svg" alt="">
+        <img src="images/icon/icon-close.svg">
     </button>
 </div>
 
@@ -371,39 +404,74 @@
     <div>
         <div class="mb-7 text-lg font-bold">等待確認中</div>
         <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
-        <div class="text-sm font-noraml text-center color-bdbdbd">還沒下載MetaMask錢包? <a href="##" target="_blank" class="font-bold color-7e97f0">前往下載</a></div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank" class="font-bold color-7e97f0">前往下載</a></div>
     </div>
 </div>
 
-<!-- 點擊立即前往遊戲查看 8-2-10 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<!-- 重要提醒 8-1-2 -->
+<!-- 按鈕規則：使用者須滿足條件，此按鈕才能active： 1.勾選我同意後出現倒數3秒  2.倒數3秒後，按鈕換顏色後才可點擊確認兌換 -->
+<div class="hidden w-11/12 p-7 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap lg:w-1/4 md:w-3/5 md:p-10">
     <div>
-        <div class="mb-7 text-lg font-bold">打開遊戲</div>
-        <div class="mb-7 text-sm font-noraml text-center color-efefef hidden lg:block">馬上拿起手機掃描QR Code下載遊戲吧！</div>
-        <div class="mb-7 text-lg font-noraml text-left color-efefef lg:hidden">馬上點擊下載遊戲吧！</div>
-        <div class="hidden lg:block">
-            <img src="images/product/QRC.png" alt="" class="mx-auto">
+        <div class="mb-7 text-lg font-bold">重要提醒</div>
+        <!-- span裡面套數字 -->
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">您現在是免費試玩等級，試玩活動時獲得的蟲蟲幣：<span>68</span><br>一旦兌換 A 級後，原在試玩時獲得的<span class="color-e08083">蟲蟲幣將全數歸零。</span></div>
+        <div class="mb-3 text-left">
+            <input type="checkbox" id="d4" class="inline-block align-middle">
+            <label for="d4" class="text-sm font-noraml color-efefef">
+                <span class="inline-block w-6 h-6 mr-2 align-middle"></span>我同意銷毀試玩時所獲得的蟲蟲幣</a>
+            </label>
         </div>
-        <a href="##" target="_blank" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 lg:hidden">下載遊戲</a>
+        <a href="##" class="block w-full py-3 px-6 relative border-transparent rounded-full text-sm font-bold color-898989 bg-353535">
+            確認兌換
+            <span class="absolute right-5 font-bold color-7e97f0">3秒</span>
+        </a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
-        <img src="images/icon/icon-close.svg" alt="">
+        <img src="images/icon/icon-close.svg">
     </button>
+</div>
+
+<!-- 已有入場券 8-2-4 -->
+<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap lg:w-1/4 md:w-2/4">
+    <div>
+        <div class="mb-7 text-lg font-bold">已有入場券</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">您目前已擁有入場券，無法兌換。請於入場券到期後再兌換新的入場券。</div>
+        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+    </div>
 </div>
 
 
 <script>
-    // pop up 開啟遊戲
-    $('#download--open').click(function(){
-        if (window.innerWidth > 768) $('#download--popUp').addClass('active')
-        else window.open('#')
-    })
-    $('#download--close').click(function () {
-        $('#download--popUp').removeClass('active')
-    })
-    
-    
-</script>
+    // pop up 兌換道具
+    $('#exchange--open').click(function () {
+        $('#exchange--popUp').addClass('active')
 
+        setTimeout(function() { 
+            $("#exchange--submit > span").html('2s');
+        }, 1000);
+
+        setTimeout(function() { 
+            $("#exchange--submit > span").html('1s');
+        }, 2000);
+
+        setTimeout(function() {
+            $("#exchange--submit").removeAttr('disabled');
+        }, 3000);
+    })
+    $('#exchange--close').click(function () {
+        $('#exchange--popUp').removeClass('active')
+    })
+    $('#exchange--submit').click(function () {
+        location.href="success.html"
+    })
+
+    // pop up 錢包位址鎖定
+    $('#locked--open').click(function () {
+        $('#locked--popUp').addClass('active')
+    })
+    $('#locked--submit').click(function () {
+        $('#locked--popUp').removeClass('active')
+    })
+</script>
 
 </html>

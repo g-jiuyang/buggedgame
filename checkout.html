@@ -226,12 +226,12 @@
 
     <div class="max-w-6xl mx-auto mb-20 px-5 sm:px-6 lg:px-8">
         <!-- 結帳步驟 -->
-        <div class="flex items-center space-x-1 pt-24 mb-5 font-bold text-sm lg:text-xs lg:mb-11">
-            <span class="color-7e97f0">1 填寫付款資料</span>
-            <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <span class="color-898989">2 信用卡付款</span>
-            <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <span class="color-898989">3 兌換完成</span>
+        <div class="checkout-step">
+            <span>1 填寫付款資料</span>
+            <img src="images/icon/icon-arrow-right.svg">
+            2 信用卡付款
+            <img src="images/icon/icon-arrow-right.svg">
+            3 交易完成
         </div>
 
         <!-- 結帳+發票頁 -->
@@ -404,7 +404,7 @@
                 <p>Network：幣安智能鏈 (BSC)</p>
                 <p class="desc">*使用加密貨幣付款 <a href="javascript:void(0)" id="disclaimer--open">免責聲明</a></p>
             </div>
-            <form action="success.html">
+            <form action="success-pass.html">
                 <p class="title">發票資料* <a href="javascript:void(0)" id="invoiceInfo--open"><img src="images/icon/icon-info.svg"></a></p>
                 <div class="checkbox">
                     <label>
@@ -451,7 +451,7 @@
                         </div>
                         <label>
                             <span>*Email 信箱</span>
-                            <input type="email" placeholder="請輸入Email信箱" required warning><!-- required欄位資料錯誤時，增加warning屬性，顯示為紅框 -->
+                            <input type="email" placeholder="請輸入Email信箱" warning><!-- required欄位資料錯誤時，增加warning屬性，顯示為紅框 -->
                             <span class="note warning">未填寫完成或格式錯誤</span> <!-- required欄位資料錯誤時，增加此行錯誤訊息 -->
                             <span class="note">*此Email信箱僅供寄送電子發票開立通知使用。</span>
                         </label>
@@ -459,18 +459,18 @@
                     <div id="invoice-select-content-3" class="invoice-type">
                         <label>
                             <span>*公司抬頭或姓名</span>
-                            <input type="text" placeholder="請輸入公司抬頭或姓名" required>
+                            <input type="text" placeholder="請輸入公司抬頭或姓名">
                         </label>
                         <label>
                             <span>*統一編號</span>
-                            <input type="text" placeholder="請輸入統一編號" required>
+                            <input type="text" placeholder="請輸入統一編號">
                         </label>
                         <label>
                             <span>*Email 信箱</span>
-                            <input type="email" placeholder="請輸入Email信箱" required>
+                            <input type="email" placeholder="請輸入Email信箱">
                         </label>
                         <label><span>*寄送地址(即日起不主動寄送紙本發票)</span></label>
-                        <div id="county-select" class="selector" required>
+                        <div id="county-select" class="selector">
                             <span>請選擇縣市</span>
                             <div>
                                 <ul>
@@ -520,7 +520,7 @@
                             </div>
                         </div>
                         <label>
-                            <input type="text" placeholder="輸入寄送地址，請勿填寫郵政信箱" required>
+                            <input type="text" placeholder="輸入寄送地址，請勿填寫郵政信箱">
                         </label>
                     </div>
                 </div>
@@ -528,7 +528,7 @@
                     <input type="checkbox" warning> <!-- 若未勾選，點選購買時增加warning屬性 -->
                     <span>我已閱讀並同意購買 <a id="notice--open" href="javascript:void(0)">注意事項</a> 與 <a id="privacy--open" href="javascript:void(0)">隱私權政策</a></span>
                 </label>
-                <button class="btn btn-gradient">確認購買 (30秒)</button>
+                <button class="btn btn-gradient">確認購買</button>
                 <!-- ↑↑請RD協助做曹狀資料驗證，並於進入頁面時開始倒數30秒，超過30秒則按鈕功能改變，且文字變成「刷新」↑↑ -->
             </form>
         </div>
