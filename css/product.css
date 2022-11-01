@@ -233,6 +233,13 @@ main.product .content-box .check-box a.btn {
   text-align: center;
   border-radius: 24px;
 }
+main.product .check-box button, main.product .check-box a.button {
+  width: 100%;
+  display: block;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
 
 .popUp .popUp--container .desc {
   color: #BDBDBD;

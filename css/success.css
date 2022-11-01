@@ -86,7 +86,9 @@
   display: flex;
   gap: 16px;
 }
-.success-page .btns button {
+.success-page .btns a {
+  text-align: center;
+  line-height: 40px;
   flex: 1;
 }
 

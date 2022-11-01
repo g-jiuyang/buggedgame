@@ -227,13 +227,13 @@
 
     <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
         <!-- 麵包屑 -->
-        <div class="flex items-center space-x-1 pt-24 mb-5 text-sm static top-0 lg:text-xs lg:mb-11 md:sticky">
-            <a href="index.html" class="font-normal color-898989">首頁</a>
+        <div class="flex items-center space-x-1 pt-24 mb-5 text-sm static top-0 lg:text-xs lg:mb-11 md:sticky breadcrumb">
+            <a href="index.html">首頁</a>
             <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <a href="shop.html" class="font-normal color-898989">商城</a>
+            <a href="shop.html">商城</a>
             <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <a href="##" class="font-bold color-898989">我是入場券</a>
-            <!-- <a href="##" class="font-bold color-898989">我是道具</a> -->
+            <a href="javascript:void(0)">商品名稱最多顯示十字超過...已經做在css中</a>
+            <!-- <a href="javascript:void(0)">我是道具</a> -->
         </div>
         
         <main class="product">
@@ -302,7 +302,7 @@
                 </div>
                 <div class="amount-box">
                     <div class="box-title">邀請碼</div>
-                    <input type="email" placeholder="請輸入5碼英數字" class="input-invitation-code" onKeyUp="value=value.replace(/[\W]/g,'')" maxlength="6">
+                    <input type="email" placeholder="請輸入5碼英數字" class="input-invitation-code" onKeyUp="value=value.replace(/[\W]/g,'')" maxlength="5" required>
                     <!-- 邀請碼錯誤訊息 -->
                     <p class="remark warning">*邀請碼不存在，請重新輸入</p>
                 </div>
@@ -315,12 +315,17 @@
                     </div>
                 </div>
                 <div class="check-box">
-                    <!-- NFT用 -->
+                    <!-- ↓↓ NFT用 ↓↓ -->
                     <!-- <div class="total">結帳總額：<span>300,000<span class="currency">TWD</span></span></div>
-                    <a href="checkout.html" class="btn bg-from-e63eb6-to-749ff5">購買</a> -->
-                    <!-- 道具用: btn 點擊後，正流程請開啟 popup 重要提醒 8-1-2 -->
+                    <a href="checkout.html" class="button btn-gradient">購買</a> -->
+
                     <div class="total">結帳總額：<span class="ic-coin"><img src="images/icon/icon-coin.svg">300,000.00</span></div>
-                    <a href="javascript:void(0)" id="exchange--open" class="btn bg-from-e63eb6-to-749ff5">兌換</a>
+                    
+                    <!-- ↓↓ 道具用: btn 點擊後，正流程請開啟 popup 重要提醒 8-1-3 ↓↓ -->
+                    <button id="exchange--open" class="btn-gradient">兌換</button> <!-- 「敬請期待」&「已售完」的時候按鈕disabled -->
+
+                    <!-- ↓↓ 道具用: btn 點擊後，有狀況時的流程請開啟 popup 交易有問題的情況 8-2-xx (詳見Figma) ↓↓
+                    <button id="locked--open" class="btn-gradient">兌換</button> -->
                 </div>
             </div>
         </main>
@@ -341,7 +346,7 @@
             <button id="exchange--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>重要提醒</h2>
             <p class="desc">您即將兌換<span>「XXXXX(商品名稱)」x3</span>，一旦兌換成功將扣除帳戶內的蟲蟲幣 <span>4,500顆</span>。</p>
-            <button id="exchange--submit" class="popUp--submit" disabled>確認兌換<span>3 s</span></button>
+            <button id="exchange--submit" class="popUp--submit" disabled>確認兌換<span>3s</span></button>
         </div>
     </div>
 
@@ -445,6 +450,18 @@
     // pop up 兌換道具
     $('#exchange--open').click(function () {
         $('#exchange--popUp').addClass('active')
+
+        setTimeout(function() { 
+            $("#exchange--submit > span").html('2s');
+        }, 1000);
+
+        setTimeout(function() { 
+            $("#exchange--submit > span").html('1s');
+        }, 2000);
+
+        setTimeout(function() {
+            $("#exchange--submit").removeAttr('disabled');
+        }, 3000);
     })
     $('#exchange--close').click(function () {
         $('#exchange--popUp').removeClass('active')
@@ -454,6 +471,9 @@
     })
 
     // pop up 錢包位址鎖定
+    $('#locked--open').click(function () {
+        $('#locked--popUp').addClass('active')
+    })
     $('#locked--submit').click(function () {
         $('#locked--popUp').removeClass('active')
     })

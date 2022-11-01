@@ -99,7 +99,9 @@
         display: flex;
         gap: 16px;
 
-        button {
+        a {
+            text-align: center;
+            line-height: 40px;
             flex: 1;
         }
     }

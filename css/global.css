@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* -- 反白選取樣式 -- */
 ::-moz-selection {
   background-color: rgba(138, 163, 255, 0.9);
@@ -15,6 +14,19 @@ body {
   color: #EFEFEF;
   font-family: "Roboto", sans-serif;
   -webkit-tap-highlight-color: transparent;
+}
+
+.breadcrumb a {
+  font-weight: 400;
+  color: #898989;
+}
+.breadcrumb a:last-child {
+  font-weight: 700;
+  cursor: default;
+  width: 11em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 文字設定 */
