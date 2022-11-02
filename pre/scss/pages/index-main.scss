@@ -47,7 +47,6 @@
             margin: 20px 0;
             font-size: calc($fontSize * 1.8);
             font-weight: $Medium;
-            text-align: justify;
             &.updated-time{
                 font-size: calc($fontSize * 1.2);
                 font-weight: $Regular;
@@ -1042,7 +1041,7 @@
                             font-size: calc($fontSize * 1.4);
                         }
                         &:before{
-                            height: 30px;
+                            height: 29px;
                         }
                     }
                 }
@@ -1051,6 +1050,7 @@
                 p{
                     &.update-time{
                         margin-top: 20px;
+                        padding: 0 10px;
                         font-size: calc($fontSize * 1.4);
                         span{
                             &::after{

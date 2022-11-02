@@ -30,9 +30,8 @@ body {
 }
 
 .checkout-step {
-  margin: 96px 0 20px;
+  margin: 96px auto 20px;
   font-size: 12px;
-  font-weight: 700;
   color: #898989;
 }
 .checkout-step img {
@@ -41,6 +40,7 @@ body {
 }
 .checkout-step span {
   color: #8AA3FF;
+  font-weight: 700;
 }
 
 /* 文字設定 */
@@ -406,6 +406,9 @@ footer .copyright div img {
 @media screen and (max-width: 515px) {
   .checkout-step {
     font-size: 14px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   .checkout-step span {
     font-size: 14px;
@@ -428,8 +431,11 @@ footer .copyright div img {
   p.note, span.note {
     font-size: 14px;
   }
+  button, input[type=submit], a.button {
+    font-size: 14px;
+  }
   input[type=checkbox] + span, input[type=radio] + span {
-    background-position: top 0 left 0;
+    padding-left: 36px;
   }
   .btn-discord {
     display: none;

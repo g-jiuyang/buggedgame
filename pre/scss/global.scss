@@ -33,9 +33,8 @@ body {
 }
 
 .checkout-step {
-    margin: 96px 0 20px;
+    margin: 96px auto 20px;
     font-size: calc($fontSize * 1.2);
-    font-weight: $UltraBold;
     color: $gray;
 
     img {
@@ -45,6 +44,7 @@ body {
 
     span {
         color: $primaryC;
+        font-weight: $UltraBold;
     }
 }
 
@@ -400,6 +400,7 @@ footer{
 @media screen and (max-width: 515px) {
     .checkout-step {
         font-size: calc($fontSize * 1.4);
+        width: max-content;
         
         span {
             font-size: calc($fontSize * 1.4);
@@ -430,10 +431,14 @@ footer{
         }
     }
 
+    button, input[type=submit], a.button {
+        font-size: calc($fontSize * 1.4);
+    }
+
     input {
         &[type=checkbox] ,&[type=radio] {
             + span {
-                background-position: top 0 left 0;
+                padding-left: 36px;
             }
         }
     }

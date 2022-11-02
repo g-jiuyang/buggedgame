@@ -153,12 +153,12 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 515px) {
     .success-page {
         max-width: 90vw;
 
         .product {
-            margin-bottom: 28px;
+            margin-bottom: 20px;
 
             .pic {
                 flex: 80px;
@@ -199,9 +199,8 @@
 
             a {
                 flex: 100%;
-                font-size: calc($fontSize * 1.4);
                 font-weight: $UltraBold;
             }
         }
     }
-} // max-width: 767px
+} // mobile

@@ -303,6 +303,9 @@ main.product .check-box button, main.product .check-box a.button {
   main.product .content-box .product-txt p {
     font-size: 14px;
   }
+  main.product .content-box .currency-box {
+    margin-bottom: 12px;
+  }
   main.product .content-box .currency-box .currency-list .currency {
     margin-right: 10px;
     margin-bottom: 16px;

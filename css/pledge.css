@@ -165,13 +165,11 @@
 .project .borderCard .flex #submit {
   height: 44px;
   width: 295px;
-  font-size: 14px;
 }
 .project .borderCard .flex #relieve, .project .borderCard .flex #recieve {
   flex: 1;
   margin-left: 16px;
   height: 44px;
-  font-size: 14px;
 }
 
 .choose .mainTitle {
@@ -242,7 +240,6 @@
   display: inline-block;
   height: 44px;
   width: 335px;
-  font-size: 14px;
   text-align: center;
   line-height: 44px;
   font-weight: 700;
@@ -546,6 +543,7 @@
     border-bottom: none;
     text-align: center;
     padding: 16px 20px;
+    z-index: 50;
   }
   .choose--done .button {
     max-width: calc(100vw - 60px);
@@ -558,11 +556,8 @@
   }
   .pledge-success .nft--list li {
     overflow: hidden;
-    flex: calc((100vw - 2.5rem - 30px) / 2);
-    max-width: calc((100vw - 2.5rem - 30px) / 2);
-  }
-  .pledge-success .nft--list li .img {
-    height: calc((100vw - 2.5rem - 30px) / 2 - 32px);
+    flex: calc((100% - 15px) / 2);
+    max-width: calc((100% - 15px) / 2);
   }
   .pledge-success .btns {
     flex-direction: column-reverse;
@@ -570,7 +565,6 @@
   }
   .pledge-success .btns a {
     flex: 100%;
-    max-width: calc(100vw - 60px);
   }
 }
 @media screen and (max-width: 340px) {

@@ -48,7 +48,6 @@
   margin: 20px 0;
   font-size: 18px;
   font-weight: 500;
-  text-align: justify;
 }
 .animation-banner main p.updated-time {
   font-size: 12px;
@@ -959,10 +958,11 @@
     font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis:before {
-    height: 30px;
+    height: 29px;
   }
   .banner-ranking .ranking-frame .ranking-content p.update-time {
     margin-top: 20px;
+    padding: 0 10px;
     font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-content p.update-time span::after {

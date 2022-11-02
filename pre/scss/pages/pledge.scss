@@ -205,14 +205,12 @@
             #submit {
                 height: 44px;
                 width: 295px;
-                font-size: calc($fontSize * 1.4);
             }
 
             #relieve, #recieve {
                 flex: 1;
                 margin-left: 16px;
                 height: 44px;
-                font-size: calc($fontSize * 1.4);
             }
         }
     }
@@ -298,7 +296,6 @@
             display: inline-block;
             height: 44px;
             width: 335px;
-            font-size: calc($fontSize * 1.4);
             text-align: center;
             line-height: 44px;
             font-weight: $UltraBold;
@@ -666,6 +663,7 @@
             }
         }
     }
+
     .choose {
         ul {
             -webkit-tap-highlight-color: transparent;
@@ -698,6 +696,7 @@
             border-bottom: none;
             text-align: center;
             padding: 16px 20px;
+            z-index: 50;
 
             .button {
                 max-width: calc(100vw - 60px);
@@ -713,12 +712,8 @@
 
             li {
                 overflow: hidden;
-                flex: calc(((100vw - 2.5rem) - 30px) / 2);
-                max-width: calc(((100vw - 2.5rem) - 30px) / 2);
-
-                .img {
-                    height: calc((((100vw - 2.5rem) - 30px) / 2) - 32px);
-                }
+                flex: calc((100% - 15px) / 2);
+                max-width: calc((100% - 15px) / 2);
             }
         }
 
@@ -728,7 +723,6 @@
 
             a {
                 flex: 100%;
-                max-width: calc(100vw - 60px);
             }
         }
     }

@@ -20,25 +20,24 @@
         border-radius: 24px;
         border: 1px solid $dark;
         padding: 40px;
-        text-align: center;
         width: 510px;
+        max-height: calc(60vh);
+        min-height: 300px;
 
         h2 {
             margin-bottom: 28px;
+            text-align: center;
             // padding-right: 40px;
         }
 
         .content {
-            min-height: 300px;
-            max-height: calc(60vh);
             overflow-y: auto;
             padding-right: 10px;
-            
+            max-height: calc(60vh - 138px);
+
             &::-webkit-scrollbar {
                 background-color: transparent;
                 width: 5px;
-                height: calc(100% - 20px);
-                transform: translateY(10px) translateX(-5px);
             }
 
             &::-webkit-scrollbar-thumb {
@@ -87,79 +86,6 @@
                 color: $lighter;
             }
         }
-
-        form {
-            margin: 28px 0 12px 0;
-
-            .flex {
-                display: flex;
-                justify-content: space-between;
-                margin: 6px 0;
-
-                input {
-                    flex: 1;
-                    width: 56px;
-                    height: 56px;
-                    border-radius: 12px;
-                    border: 1px solid $gray;
-                    margin-right: 16px;
-                    background-color: transparent;
-                    text-align: center;
-                    font-size: 24px;
-                    font-weight: 700;
-                    -moz-appearance: textfield;
-        
-                    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
-                        -webkit-appearance: none;
-                        margin: 0;
-                    }
-    
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-
-                .warning {
-                    color: $warning;
-                    font-size: 12px;
-                    font-weight: 400;
-                }
-            
-                .forgot {
-                    text-decoration: underline;
-                    text-align: right;
-                    color: $lighter;
-                    font-size: 12px;
-                    font-weight: 400;
-            
-                    &:hover {
-                        color: lighten($lighter, 10%);
-                    }
-                }
-            }
-
-            input[type=submit] {
-                width: 100%;
-                margin-top: 28px;
-                background: $gradient;
-                height: 40px;
-                border-radius: 24px;
-                padding: 13px 24px;
-                font-size: 12px;
-                font-weight: 700;
-                line-height: 12px;
-                text-shadow: 0 0 12px rgba(#000000, .4);
-        
-                &:hover {
-                    background: $gradient-hover;
-                }
-        
-                &[disabled] {
-                    background: $dark;
-                    cursor: default;
-                }
-            }
-        }
     }
 
     &.active {
@@ -171,10 +97,11 @@
     .popUp {
         .popUp--container {
             width: calc(100vw - 40px);
+            min-height: 250px;
             padding: 28px;
 
             .content {
-                min-height: 250px;
+                max-height: calc(60vh - 110px);
             }
 
             .popUp--close {

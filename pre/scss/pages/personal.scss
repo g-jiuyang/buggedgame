@@ -133,6 +133,7 @@
                             line-height: 22px;
                             transition: all .15s ease;
                             font-size: calc($fontSize * 1.4);
+                            min-height: auto;
                         
                             &:hover {
                                 background-color: darken($primaryA, 3%);

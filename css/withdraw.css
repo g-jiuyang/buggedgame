@@ -60,9 +60,8 @@ main.withdraw form input[type=submit] {
   background: linear-gradient(to right, #E63EB6, #749FF5);
   display: block;
   width: 100%;
-  height: 40px;
+  line-height: 1;
   border-radius: 24px;
-  font-size: 12px;
   font-weight: 700;
   text-shadow: 0 0 12 rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -95,19 +94,6 @@ main.withdraw ul h4 {
 }
 #notice--popUp .popUp--container h2, #privacy--popUp .popUp--container h2 {
   color: #EFEFEF;
-}
-#notice--popUp .popUp--container .content--scroll, #privacy--popUp .popUp--container .content--scroll {
-  max-height: 65vh;
-  overflow-y: auto;
-  padding-right: 10px;
-}
-#notice--popUp .popUp--container .content--scroll::-webkit-scrollbar, #privacy--popUp .popUp--container .content--scroll::-webkit-scrollbar {
-  background-color: transparent;
-  width: 5px;
-}
-#notice--popUp .popUp--container .content--scroll::-webkit-scrollbar-thumb, #privacy--popUp .popUp--container .content--scroll::-webkit-scrollbar-thumb {
-  background-color: #898989;
-  border-radius: 5px;
 }
 #notice--popUp .popUp--container .content--scroll p, #privacy--popUp .popUp--container .content--scroll p {
   text-align: left;
@@ -168,20 +154,21 @@ main.withdraw ul h4 {
 #withdraw--popUp form .flex input:last-child {
   margin-right: 0;
 }
-#withdraw--popUp form .flex .warning {
-  color: #E08083;
+#withdraw--popUp form .flex.note .warning, #withdraw--popUp form .flex.note .forgot {
   font-size: 12px;
   font-weight: 400;
 }
-#withdraw--popUp form .flex .forgot {
+#withdraw--popUp form .flex.note .warning {
+  color: #E08083;
+}
+#withdraw--popUp form .flex.note .forgot {
   text-decoration: underline;
   text-align: right;
   color: #BDBDBD;
-  font-size: 12px;
-  font-weight: 400;
+  transition: color 0.3s;
 }
-#withdraw--popUp form .flex .forgot:hover {
-  color: #d7d7d7;
+#withdraw--popUp form .flex.note .forgot:hover {
+  color: #898989;
 }
 #withdraw--popUp form input[type=submit] {
   width: 100%;
@@ -190,9 +177,8 @@ main.withdraw ul h4 {
   height: 40px;
   border-radius: 24px;
   padding: 13px 24px;
-  font-size: 12px;
   font-weight: 700;
-  line-height: 12px;
+  line-height: 0.8;
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
 #withdraw--popUp form input[type=submit]:hover {
@@ -215,14 +201,17 @@ main.withdraw ul h4 {
     width: calc((100vw - 136px) / 6);
     height: calc((100vw - 136px) / 6);
     margin-right: 8px;
+    padding: 0;
   }
   #withdraw--popUp form .flex input:last-child {
     margin-right: 0;
   }
   #withdraw--popUp form .flex.note {
+    font-size: 14px;
     flex-wrap: wrap;
   }
   #withdraw--popUp form .flex.note .warning, #withdraw--popUp form .flex.note .forgot {
+    font-size: 14px;
     flex: 100%;
     max-width: 100%;
   }
