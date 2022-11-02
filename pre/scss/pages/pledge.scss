@@ -449,11 +449,11 @@
             }
         }
 
-        #collapse {
+        .collapse {
             display: inline-block;
         }
 
-        &#collapse-content {
+        &.collapse-content {
             border-radius: 8px;
             border: 1px solid transparent;
             background-color: transparent;
@@ -469,6 +469,7 @@
                 background-color: $dark;
                 height: auto;
                 max-height: 100px;
+                margin-top: 8px;
                 margin-bottom: 28px;
                 overflow-y: scroll;
 

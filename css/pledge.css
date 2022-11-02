@@ -361,10 +361,10 @@
 .popUp p a:hover {
   color: #718fff;
 }
-.popUp p #collapse {
+.popUp p .collapse {
   display: inline-block;
 }
-.popUp p#collapse-content {
+.popUp p.collapse-content {
   border-radius: 8px;
   border: 1px solid transparent;
   background-color: transparent;
@@ -374,20 +374,21 @@
   transition: all 0.3s ease;
   margin: 0;
 }
-.popUp p#collapse-content.open {
+.popUp p.collapse-content.open {
   padding: 12px;
   border-color: #898989;
   background-color: #353535;
   height: auto;
   max-height: 100px;
+  margin-top: 8px;
   margin-bottom: 28px;
   overflow-y: scroll;
 }
-.popUp p#collapse-content.open::-webkit-scrollbar {
+.popUp p.collapse-content.open::-webkit-scrollbar {
   background-color: transparent;
   width: 5px;
 }
-.popUp p#collapse-content.open::-webkit-scrollbar-thumb {
+.popUp p.collapse-content.open::-webkit-scrollbar-thumb {
   background-color: #898989;
   border-radius: 5px;
 }
