@@ -317,6 +317,9 @@ main.product .check-box button, main.product .check-box a.button {
   main.product .content-box .currency-box .currency-list .currency .pay img {
     height: 20px;
   }
+  main.product .content-box .amount-box {
+    margin-bottom: 28px;
+  }
   main.product .content-box .check-box {
     width: 100%;
     padding: 16px 24px;

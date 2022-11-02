@@ -20,20 +20,9 @@ main.processing {
         color: $lighter;
     }
 
-    button {
+    .check {
         width: 200px;
-        height: 40px;
         margin: 28px auto;
-        background: $gradient;
-        color: $white;
-        border-radius: 24px;
-        font-size: 12px;
-        line-height: 12px;
-        font-weight: $UltraBold;
-
-        &:hover {
-            background: $gradient-hover;
-        }
     }
     
     .btns {

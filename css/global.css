@@ -149,6 +149,7 @@ button, input[type=submit], a.button {
   cursor: pointer;
   border-radius: 24px;
   font-size: 12px;
+  text-align: center;
 }
 button[disabled], input[type=submit][disabled], a.button[disabled] {
   cursor: default !important;
@@ -435,7 +436,7 @@ footer .copyright div img {
     font-size: 14px;
   }
   input[type=checkbox] + span, input[type=radio] + span {
-    padding-left: 36px;
+    padding-left: 28px;
   }
   .btn-discord {
     display: none;

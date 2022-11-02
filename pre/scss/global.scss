@@ -115,6 +115,7 @@ button, input[type=submit], a.button {
     cursor: pointer;
     border-radius: 24px;
     font-size: calc($fontSize * 1.2);
+    text-align: center;
 
     &[disabled] {
         cursor: default !important;
@@ -438,7 +439,7 @@ footer{
     input {
         &[type=checkbox] ,&[type=radio] {
             + span {
-                padding-left: 36px;
+                padding-left: 28px;
             }
         }
     }

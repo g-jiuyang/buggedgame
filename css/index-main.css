@@ -104,6 +104,7 @@
   margin: 0 auto 120px;
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   gap: 28px;
 }
 .banner-ranking .banner-frame {
@@ -144,7 +145,7 @@
   position: relative;
   border-radius: 40px;
   padding: 12px 28px;
-  height: 160px;
+  margin-bottom: 18px;
 }
 .banner-ranking .ranking-frame .ranking-header {
   display: flex;
@@ -259,11 +260,11 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: inherit;
-  height: 78px;
+  max-height: 120px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
-  flex: 30%;
-  max-width: 30%;
+  flex: 33.33%;
+  max-width: 33.33%;
   color: #BDBDBD;
   font-size: 13px;
   font-weight: 700;
@@ -271,6 +272,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 4px;
+  word-break: break-word;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
   flex: 16px;
@@ -661,9 +663,6 @@
     flex: 400px;
     max-width: 400px;
   }
-  .banner-ranking .banner-frame .banner-content {
-    height: 160px;
-  }
   .banner-ranking .ranking-frame {
     flex: calc(100% - 428px);
   }
@@ -695,9 +694,6 @@
   }
   .banner-ranking .banner-frame .banner-content a img {
     min-width: 100%;
-  }
-  .banner-ranking .ranking-frame {
-    height: 172px;
   }
   .roadmap, .team, .coworker {
     max-width: 90vw;
@@ -769,6 +765,14 @@
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span {
     font-size: 14px;
+    text-align: left;
+  }
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span:first-child {
+    min-width: 108px;
+  }
+  .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span:last-child {
+    max-width: calc(100% - 132px);
+    word-break: break-word;
   }
   .banner-ranking .ranking-frame .ranking-header .btns {
     flex: calc(50% - 6px);
@@ -783,27 +787,30 @@
     transition: all 0.6s ease-in;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul {
-    height: auto;
     flex-direction: row;
     align-items: inherit;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
     gap: 8px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
     flex: 100%;
     max-width: 100%;
+    word-break: normal;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
     max-width: 24px;
     padding-left: 10px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
-    min-width: 108px;
+    width: 104px;
     font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
-    max-width: 68px;
     padding-right: 12px;
     font-size: 14px;
+    max-width: calc(100% - 148px);
   }
   .banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul {
     transform: translateX(-50%);
@@ -968,6 +975,9 @@
   .banner-ranking .ranking-frame .ranking-content p.update-time span::after {
     content: "";
     display: block;
+  }
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
+    word-break: break-word;
   }
   .step {
     margin-bottom: 60px;

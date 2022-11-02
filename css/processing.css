@@ -15,19 +15,9 @@ main.processing p.withdraw {
   font-size: 12px;
   color: #BDBDBD;
 }
-main.processing button {
+main.processing .check {
   width: 200px;
-  height: 40px;
   margin: 28px auto;
-  background: linear-gradient(to right, #E63EB6, #749FF5);
-  color: #ffffff;
-  border-radius: 24px;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 700;
-}
-main.processing button:hover {
-  background: linear-gradient(to right, #cf36a3, #658ad6);
 }
 main.processing .btns {
   margin-top: 66px;
