@@ -260,10 +260,10 @@
                         flex: 33.33%;
                         max-width: 33.33%;
                         color: $lighter;
-                        font-size: calc($fontSize * 1.3);
+                        font-size: calc($fontSize * 1.2);
                         font-weight: $UltraBold;
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
                         justify-content: flex-start;
                         gap: 4px;
                         word-break: break-word;
@@ -272,13 +272,14 @@
                             width: 16px;
                             text-align: center;
                             color: $gray;
+                            font-weight: $UltraBold;
                             font-size: calc($fontSize * 1.2);
                         }
                         .id{
                             color: $lightGray;
                             font-weight: $UltraBold;
-                            font-size: calc($fontSize * 1.2);
                             width: 93px;
+                            font-size: calc($fontSize * 1.2);
                         }
                         .amount{
                             flex: calc(100% - 120px);
@@ -838,7 +839,8 @@
                             max-width: 100%;
                             word-break: normal;
                             .rank{
-                                max-width: 24px;
+                                flex: 26px;
+                                width: 26px;
                                 padding-left: 10px;
                             }
                             .id{
@@ -1030,6 +1032,7 @@
                     ul{
                         li{
                             align-items: center;
+                            height: auto;
                             span{
                                 font-size: calc($fontSize * 1.4);
                             }

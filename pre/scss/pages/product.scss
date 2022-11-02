@@ -69,12 +69,8 @@ main.product{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
+                gap: 12px 8px;
                 .currency{
-                    margin-right: 8px;
-                    margin-bottom: 8px;
-                    &:last-child{
-                        margin-right: 0;
-                    }
                     label.change-box {
                         padding: 0;
                     }
@@ -314,11 +310,9 @@ main.product{
                 }
             }
             .currency-box{
-                margin-bottom: 12px;
+                margin-bottom: 28px;
                 .currency-list{
                     .currency{
-                        margin-right: 10px;
-                        margin-bottom: 16px;
                         .pay{
                             min-width: 96px;
                             font-size: 16px;

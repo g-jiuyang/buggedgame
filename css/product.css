@@ -68,13 +68,7 @@ main.product .content-box .currency-box .currency-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
-main.product .content-box .currency-box .currency-list .currency {
-  margin-right: 8px;
-  margin-bottom: 8px;
-}
-main.product .content-box .currency-box .currency-list .currency:last-child {
-  margin-right: 0;
+  gap: 12px 8px;
 }
 main.product .content-box .currency-box .currency-list .currency label.change-box {
   padding: 0;
@@ -304,11 +298,7 @@ main.product .check-box button, main.product .check-box a.button {
     font-size: 14px;
   }
   main.product .content-box .currency-box {
-    margin-bottom: 12px;
-  }
-  main.product .content-box .currency-box .currency-list .currency {
-    margin-right: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 28px;
   }
   main.product .content-box .currency-box .currency-list .currency .pay {
     min-width: 96px;

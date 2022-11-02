@@ -266,10 +266,10 @@
   flex: 33.33%;
   max-width: 33.33%;
   color: #BDBDBD;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 4px;
   word-break: break-word;
@@ -279,13 +279,14 @@
   width: 16px;
   text-align: center;
   color: #898989;
+  font-weight: 700;
   font-size: 12px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
   color: #EFEFEF;
   font-weight: 700;
-  font-size: 12px;
   width: 93px;
+  font-size: 12px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
   flex: calc(100% - 120px);
@@ -800,7 +801,8 @@
     word-break: normal;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
-    max-width: 24px;
+    flex: 26px;
+    width: 26px;
     padding-left: 10px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
@@ -949,6 +951,7 @@
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul li {
     align-items: center;
+    height: auto;
   }
   .banner-ranking .ranking-frame .ranking-header .gold-medal ul li span {
     font-size: 14px;
