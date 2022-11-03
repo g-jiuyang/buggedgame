@@ -340,13 +340,9 @@
   height: 44px;
 }
 
-.popUp h2 {
-  text-align: center;
-}
 .popUp p {
   text-align: left;
   line-height: 25.6px;
-  margin-top: 28px;
   color: #BDBDBD;
 }
 .popUp p.warning {
@@ -354,8 +350,8 @@
 }
 .popUp p a {
   color: #8AA3FF;
+  transition: color 0.5s;
   font-weight: 700;
-  transition: all 0.3s ease;
   text-decoration: none;
 }
 .popUp p a:hover {
@@ -372,7 +368,7 @@
   overflow: hidden;
   max-height: 0;
   transition: all 0.3s ease;
-  margin: 0;
+  margin: 0 !important;
 }
 .popUp p.collapse-content.open {
   padding: 12px;
@@ -380,8 +376,8 @@
   background-color: #353535;
   height: auto;
   max-height: 100px;
-  margin-top: 8px;
-  margin-bottom: 28px;
+  margin-top: 8px !important;
+  margin-bottom: 28px !important;
   overflow-y: scroll;
 }
 .popUp p.collapse-content.open::-webkit-scrollbar {

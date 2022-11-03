@@ -5,65 +5,15 @@
 	background-color: rgba($primaryC, .9);
 	color: $white;
 }
-
 ::selection {
 	background-color: rgba($primaryC, .9);
 	color: $white;
 }
 
-body {
-    color: $lightGray;
-    font-family: 'Roboto', sans-serif;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.breadcrumb {
-    a {
-        font-weight: $Regular;
-        color: $gray;
-        &:last-child {
-            font-weight: $UltraBold;
-            cursor: default;
-            width: 11em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-}
-
-.checkout-step {
-    margin: 96px auto 20px;
-    font-size: calc($fontSize * 1.2);
-    color: $gray;
-
-    img {
-        display: inline-block;
-        margin: 0 4px;
-    }
-
-    span {
-        color: $primaryC;
-        font-weight: $UltraBold;
-    }
-}
-
 /* 文字設定 */
-h1 {
-    font-weight: $Black;
-    font-size: calc($fontSize * 4);
-    line-height: 1.4em;
-}
-h2 {
-    font-weight: $UltraBold;
-    font-size: calc($fontSize * 2.4);
-    line-height: 1.4em;
-}
-h4 {
-    font-weight: $Medium;
-    font-size: calc($fontSize * 1.8);
-    line-height: 1.6em;
-}
+h1 { font-weight: $Black; font-size: calc($fontSize * 4); line-height: 1.4em; }
+h2 { font-weight: $UltraBold; font-size: calc($fontSize * 2.4); line-height: 1.4em; }
+h4 { font-weight: $Medium; font-size: calc($fontSize * 1.8); line-height: 1.6em; }
 p, span {
     font-weight: $Regular;
     font-size: calc($fontSize * 1.4);
@@ -81,15 +31,15 @@ p, span {
     &.bold {
         font-weight: $UltraBold;
     }
-}
 
-p a{
-    color: $lighter;
-    text-decoration: underline;
-    transition: color .3s;
-
-    &:hover{
-        color: $gray;
+    a {
+        color: $lighter;
+        text-decoration: underline;
+        transition: color .3s;
+    
+        &:hover{
+            color: $gray;
+        }
     }
 }
 
@@ -117,7 +67,7 @@ button, input[type=submit], a.button {
     font-size: calc($fontSize * 1.2);
     text-align: center;
 
-    &[disabled] {
+    &:disabled {
         cursor: default !important;
         background-color: $dark !important;
         background: $dark !important;
@@ -296,19 +246,56 @@ input {
     }
 }
 
-.btn-discord{
-    position: fixed;
-    right: 2rem;
-    bottom: 52px;
-}
-
 img[src="images/icon/icon-info.svg"] {
     &:hover{
         filter: brightness(80%);
     }
 }
 
-/* 頁尾設定 */
+body {
+    color: $lightGray;
+    font-family: 'Roboto', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.breadcrumb {
+    a {
+        font-weight: $Regular;
+        color: $gray;
+        &:last-child {
+            font-weight: $UltraBold;
+            cursor: default;
+            width: 11em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.checkout-step {
+    margin: 96px auto 20px;
+    font-size: calc($fontSize * 1.2);
+    color: $gray;
+
+    img {
+        display: inline-block;
+        margin: 0 4px;
+    }
+
+    span {
+        font-size: calc($fontSize * 1.2);
+        color: $primaryC;
+        font-weight: $UltraBold;
+    }
+}
+
+.btn-discord{
+    position: fixed;
+    right: 2rem;
+    bottom: 52px;
+}
+
 footer{
     width: 85vw;
     max-width: 76rem;
@@ -399,27 +386,9 @@ footer{
 } // max-width: 767px
 
 @media screen and (max-width: 515px) {
-    .checkout-step {
-        font-size: calc($fontSize * 1.4);
-        width: max-content;
-        
-        span {
-            font-size: calc($fontSize * 1.4);
-        }
-    }
-
-    h1 {
-        font-size: calc($fontSize * 2.4);
-    }
-
-    h2 {
-        font-size: calc($fontSize * 1.8);
-    }
-
-    h4 {
-        font-size: calc($fontSize * 1.4);
-    }
-
+    h1 { font-size: calc($fontSize * 2.4); }
+    h2 { font-size: calc($fontSize * 1.8); }
+    h4 { font-size: calc($fontSize * 1.4); }
     p, span {
         font-size: calc($fontSize * 1.6);
 
@@ -428,6 +397,15 @@ footer{
         }
 
         &.note {
+            font-size: calc($fontSize * 1.4);
+        }
+    }
+    
+    .checkout-step {
+        font-size: calc($fontSize * 1.4);
+        width: max-content;
+        
+        span {
             font-size: calc($fontSize * 1.4);
         }
     }

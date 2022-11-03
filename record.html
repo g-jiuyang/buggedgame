@@ -532,8 +532,6 @@
         </div>
     </div>
 
-
-
     <!-- footer -->
     <footer>
         <div class="copyright">
@@ -566,12 +564,15 @@
     </div>
 
     <!-- pop up 狀態 -->
-    <div id="status--popUp" class="popUp">
+    <div id="status--popUp" class="popUp popUp__button">
         <div class="popUp--container">
             <button id="status--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>狀態</h2>
-            <p class="desc">狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡<a href="#">這是連結</a>。</p>
-            <p class="warning">一些比較重要的說明可以是紅色。</p>
+            <div class="popUp--content">
+                <p class="desc">狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡。狀態說明內容放這裡狀態說明內容放這裡<a href="#">這是連結</a>。</p>
+                <p class="warning">一些比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="status--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 
@@ -689,6 +690,9 @@
         }
     })
     $('#status--close').click(function () {
+        $('#status--popUp').removeClass('active')
+    })
+    $('#status--submit').click(function () {
         $('#status--popUp').removeClass('active')
     })
 

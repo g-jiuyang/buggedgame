@@ -9,6 +9,7 @@ main.withdraw h2 {
 }
 main.withdraw a {
   color: #8AA3FF;
+  transition: color 0.5s;
   font-weight: 600;
   transition: all 0.15s ease;
 }
@@ -36,7 +37,6 @@ main.withdraw form label input {
   height: 44px;
   border-radius: 22px;
   border: 1px solid #353535;
-  font-size: 14px;
   padding: 0 24px;
 }
 main.withdraw form label input[type=number] {
@@ -47,9 +47,8 @@ main.withdraw form label input[type=number]::-webkit-inner-spin-button, main.wit
   -webkit-appearance: none;
   margin: 0;
 }
-main.withdraw form label input[disabled] {
+main.withdraw form label input:disabled {
   background-color: #1F1F1F !important;
-  font-size: 14px;
   color: #BDBDBD !important;
 }
 main.withdraw form .agree {
@@ -69,7 +68,7 @@ main.withdraw form input[type=submit] {
 main.withdraw form input[type=submit]:hover {
   background: linear-gradient(to right, #cf36a3, #658ad6);
 }
-main.withdraw form input[type=submit][disabled] {
+main.withdraw form input[type=submit]:disabled {
   background: #353535;
   cursor: default;
 }
@@ -86,43 +85,52 @@ main.withdraw ul li {
 main.withdraw ul h4 {
   color: #8AA3FF;
   font-weight: 700;
-  font-size: 18px;
 }
 
-#notice--popUp .popUp--container, #privacy--popUp .popUp--container {
+#notice--popUp .popUp--container,
+#privacy--popUp .popUp--container {
   color: #BDBDBD;
 }
-#notice--popUp .popUp--container h2, #privacy--popUp .popUp--container h2 {
+#notice--popUp .popUp--container h2,
+#privacy--popUp .popUp--container h2 {
   color: #EFEFEF;
 }
-#notice--popUp .popUp--container .content--scroll p, #privacy--popUp .popUp--container .content--scroll p {
+#notice--popUp .popUp--container .content--scroll p,
+#privacy--popUp .popUp--container .content--scroll p {
   text-align: left;
 }
-#notice--popUp .popUp--container .content--scroll p.bold, #privacy--popUp .popUp--container .content--scroll p.bold {
+#notice--popUp .popUp--container .content--scroll p.bold,
+#privacy--popUp .popUp--container .content--scroll p.bold {
   margin-top: 20px;
 }
-#notice--popUp .popUp--container .content--scroll ol.list--cht, #privacy--popUp .popUp--container .content--scroll ol.list--cht {
+#notice--popUp .popUp--container .content--scroll ol.list--cht,
+#privacy--popUp .popUp--container .content--scroll ol.list--cht {
   list-style-type: cjk-ideographic;
   text-align: left;
   padding-left: 4em;
   font-size: 14px;
 }
-#notice--popUp .popUp--container .content--scroll ol.list--cht li, #privacy--popUp .popUp--container .content--scroll ol.list--cht li {
+#notice--popUp .popUp--container .content--scroll ol.list--cht li,
+#privacy--popUp .popUp--container .content--scroll ol.list--cht li {
   padding: 4px 0;
 }
-#notice--popUp .popUp--container .content--scroll ol.bracket, #privacy--popUp .popUp--container .content--scroll ol.bracket {
+#notice--popUp .popUp--container .content--scroll ol.bracket,
+#privacy--popUp .popUp--container .content--scroll ol.bracket {
   list-style-type: none;
   padding-left: 2.5em;
 }
-#notice--popUp .popUp--container .content--scroll ol.bracket li, #privacy--popUp .popUp--container .content--scroll ol.bracket li {
+#notice--popUp .popUp--container .content--scroll ol.bracket li,
+#privacy--popUp .popUp--container .content--scroll ol.bracket li {
   text-indent: -3em;
   padding: 0;
 }
-#notice--popUp .popUp--container .content--scroll ol.number, #privacy--popUp .popUp--container .content--scroll ol.number {
+#notice--popUp .popUp--container .content--scroll ol.number,
+#privacy--popUp .popUp--container .content--scroll ol.number {
   list-style-type: decimal;
   padding-left: 1.5em;
 }
-#notice--popUp .popUp--container .content--scroll ol.number li, #privacy--popUp .popUp--container .content--scroll ol.number li {
+#notice--popUp .popUp--container .content--scroll ol.number li,
+#privacy--popUp .popUp--container .content--scroll ol.number li {
   text-indent: 0;
 }
 
@@ -141,6 +149,7 @@ main.withdraw ul h4 {
   border-radius: 12px;
   border: 1px solid #898989;
   margin-right: 16px;
+  padding: 0;
   background-color: transparent;
   text-align: center;
   font-size: 24px;
@@ -154,7 +163,8 @@ main.withdraw ul h4 {
 #withdraw--popUp form .flex input:last-child {
   margin-right: 0;
 }
-#withdraw--popUp form .flex.note .warning, #withdraw--popUp form .flex.note .forgot {
+#withdraw--popUp form .flex.note .warning,
+#withdraw--popUp form .flex.note .forgot {
   font-size: 12px;
   font-weight: 400;
 }
@@ -165,7 +175,7 @@ main.withdraw ul h4 {
   text-decoration: underline;
   text-align: right;
   color: #BDBDBD;
-  transition: color 0.3s;
+  transition: color 0.5s;
 }
 #withdraw--popUp form .flex.note .forgot:hover {
   color: #898989;
@@ -184,7 +194,7 @@ main.withdraw ul h4 {
 #withdraw--popUp form input[type=submit]:hover {
   background: linear-gradient(to right, #cf36a3, #658ad6);
 }
-#withdraw--popUp form input[type=submit][disabled] {
+#withdraw--popUp form input[type=submit]:disabled {
   background: #353535;
   cursor: default;
 }
@@ -207,10 +217,10 @@ main.withdraw ul h4 {
     margin-right: 0;
   }
   #withdraw--popUp form .flex.note {
-    font-size: 14px;
     flex-wrap: wrap;
   }
-  #withdraw--popUp form .flex.note .warning, #withdraw--popUp form .flex.note .forgot {
+  #withdraw--popUp form .flex.note .warning,
+#withdraw--popUp form .flex.note .forgot {
     font-size: 14px;
     flex: 100%;
     max-width: 100%;

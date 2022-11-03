@@ -1,13 +1,3 @@
-.pg-12 {
-  position: absolute;
-  top: 480px;
-  right: 5vw;
-  width: 40px;
-}
-.pg-12 img {
-  max-width: 100%;
-}
-
 .animation-banner {
   display: flex;
   align-items: center;
@@ -58,13 +48,12 @@
 .animation-banner main .btns {
   display: flex;
   gap: 20px;
-  font-size: 12px;
-  font-weight: 700;
   justify-content: flex-start;
 }
 .animation-banner main .btns button {
   width: 150px;
   height: 40px;
+  font-weight: 700;
 }
 .animation-banner main ul {
   padding-top: 48px;
@@ -83,7 +72,6 @@
 .animation-banner main ul li span {
   display: block;
   font-size: 14px;
-  line-height: 1.6;
   color: #BDBDBD;
   display: flex;
   align-items: center;
@@ -215,7 +203,6 @@
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis button {
   color: #EFEFEF;
-  font-size: 12px;
   font-weight: 700;
   padding: 4px 12px;
   z-index: 1;
@@ -266,8 +253,6 @@
   flex: 33.33%;
   max-width: 33.33%;
   color: #BDBDBD;
-  font-size: 12px;
-  font-weight: 700;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -279,19 +264,20 @@
   width: 16px;
   text-align: center;
   color: #898989;
-  font-weight: 700;
   font-size: 12px;
+  font-weight: 700;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .id {
   color: #EFEFEF;
-  font-weight: 700;
   width: 93px;
   font-size: 12px;
+  font-weight: 700;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .amount {
   flex: calc(100% - 120px);
   max-width: calc(100% - 120px);
   font-size: 12px;
+  font-weight: 700;
 }
 .banner-ranking .ranking-frame.byWeek .ranking-header .gold-medal ul li:first-child {
   display: none;
@@ -324,6 +310,7 @@
   min-width: -moz-max-content;
   min-width: max-content;
   text-align: center;
+  margin: 32px 0;
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-content p.update-time {
   display: none;
@@ -492,8 +479,8 @@
 }
 .faq ul li a {
   color: #8AA3FF;
+  transition: color 0.5s;
   font-weight: 700;
-  transition: all 0.3s;
 }
 .faq ul li a:hover {
   color: #718fff;
@@ -618,7 +605,9 @@
 }
 
 #download--popUp .popUp--container {
-  min-width: 512px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 #download--popUp .popUp--container .mobile {
   display: none;
@@ -652,10 +641,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .pg-12 {
-    right: calc(50% - 38rem);
-    top: 540px;
-  }
   .animation-banner .animation-wrap {
     right: calc(50% - 760px);
     width: 65vw;
@@ -696,14 +681,13 @@
   .banner-ranking .banner-frame .banner-content a img {
     min-width: 100%;
   }
-  .roadmap, .team, .coworker {
+  .roadmap,
+.team,
+.coworker {
     max-width: 90vw;
   }
 }
 @media screen and (max-width: 831px) {
-  .pg-12 {
-    top: 532px;
-  }
   .animation-banner {
     display: block;
     margin-bottom: 28px;
@@ -842,9 +826,6 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .pg-12 {
-    top: 400px;
-  }
   .animation-banner .animation-wrap {
     top: 28px;
     right: 84px;
@@ -888,10 +869,6 @@
   }
 }
 @media screen and (max-width: 515px) {
-  .pg-12 {
-    width: 30px;
-    top: 360px;
-  }
   .animation-banner {
     margin-bottom: 56px;
   }
@@ -965,7 +942,6 @@
   }
   .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis button {
     padding: 4px 10px;
-    font-size: 14px;
   }
   .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis:before {
     height: 29px;
@@ -975,7 +951,7 @@
     padding: 0 10px;
     font-size: 14px;
   }
-  .banner-ranking .ranking-frame .ranking-content p.update-time span::after {
+  .banner-ranking .ranking-frame .ranking-content p.update-time span:after {
     content: "";
     display: block;
   }
@@ -1071,7 +1047,6 @@
     margin: 28px auto;
     text-align: center;
     color: #898989;
-    font-size: 14px;
     cursor: pointer;
   }
   .team .more img {

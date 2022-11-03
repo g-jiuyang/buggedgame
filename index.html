@@ -715,12 +715,15 @@
 
 
     <!-- pop up APR -->
-    <div id="apr--popUp" class="popUp">
+    <div id="apr--popUp" class="popUp popUp__button">
         <div class="popUp--container">
             <button id="apr--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>APR說明標題</h2>
-            <p class="desc">APR說明內容放這裡APR說明內容放這裡。APR說明內容放這裡APR說明內容放這裡。APR說明內容放這裡APR說明內容放這裡。APR說明內容放這裡APR說明內容放這裡<a href="#">這是連結</a>。</p>
-            <p class="warning">一些比較重要的說明可以是紅色。</p>
+            <div class="popUp--content">
+                <p class="desc">APR說明內容放這裡APR說明內容放這裡。APR說明內容放這裡APR說明內容放這裡。APR說明內容放這裡APR說明內容放這裡。APR說明內容放這裡APR說明內容放這裡<a href="#">這是連結</a>。</p>
+                <p class="warning">一些比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="apr--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 </body>
@@ -792,6 +795,9 @@
         $('#apr--popUp').addClass('active')
     })
     $('#apr--close').click(function () {
+        $('#apr--popUp').removeClass('active')
+    })
+    $('#apr--submit').click(function () {
         $('#apr--popUp').removeClass('active')
     })
 

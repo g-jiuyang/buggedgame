@@ -1,4 +1,5 @@
 @import "../variable";
+@import "../mixin";
 
 .success-page {
     width: 500px;
@@ -11,7 +12,7 @@
         img {
             margin: 0 auto 16px auto;
         }
-    
+
         p {
             font-weight: $UltraBold;
         }
@@ -24,20 +25,25 @@
         padding-bottom: 20px;
         margin-bottom: 36px;
         border-bottom: solid 0.5px $gray;
+
         .pic {
             flex: 100px;
             border-radius: 8px;
             overflow: hidden;
         }
+
         .info {
             flex: calc(100% - 120px);
+
             p {
                 margin-bottom: 8px;
+
                 &.title {
                     font-weight: $UltraBold;
                     font-size: calc($fontSize * 1.4);
                 }
             }
+
             ul {
                 font-size: calc($fontSize * 1.2);
                 color: $lighter;
@@ -52,10 +58,11 @@
         width: 100%;
         justify-content: flex-end;
         margin-bottom: 32px;
+
         ul {
             li {
                 margin-bottom: 8px;
-                
+
                 span {
                     font-weight: $UltraBold;
                 }
@@ -81,18 +88,15 @@
         p {
             font-size: calc($fontSize * 1.2);
             margin-top: 12px;
-            &:last-child{
+
+            &:last-child {
                 margin-top: 16px;
                 font-weight: $UltraBold;
                 text-align: right;
 
                 a {
                     text-decoration: none;
-                    color: $lightGray;
-
-                    &:hover {
-                        color: $lighter;
-                    }
+                    @include a-color($lightGray, $lighter);
                 }
             }
         }
@@ -113,7 +117,7 @@
 
 #download--popUp {
     .popUp--container {
-        min-width: 512px;
+        max-height: max-content;
 
         .mobile {
             display: none;
@@ -144,7 +148,7 @@
                 transition: all .5s;
                 font-size: calc($fontSize * 1.4);
                 font-weight: $UltraBold;
-                
+
                 &:hover {
                     background-color: #7087D8;
                 }
@@ -203,4 +207,6 @@
             }
         }
     }
-} // mobile
+}
+
+// mobile

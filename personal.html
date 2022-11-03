@@ -240,7 +240,7 @@
                         <img src="images/icon/icon-pass.svg"><!-- 當使用者擁有GameFi Pass時顯示此icon -->
                     </div>
                     <div>0x130...123D</div>
-                    <!-- <span>* 帳號已鎖定，如有問題 <a href="#">請洽客服</a></span> 帳號有問題時顯示 -->
+                    <span>* 帳號已鎖定，如有問題 <a href="#">請洽客服</a></span> <!-- 帳號有問題時顯示 -->
                 </div>
                 <div class="account__gamepass">
                     <div class="account__gamepass--title">
@@ -248,8 +248,8 @@
                         <a id="gamepass--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
                     </div>
                     <div class="account__gamepass--repair">
-                        <!-- <a href="javascript:void(0)" id="repair--open" class="button"><img src="images/icon/icon-gear.svg"> 修復</a> 生命值100%時不可點選，設定為disable -->
-                        <a href="#" class="button btn-gradient"><img src="images/icon/icon-enable.svg"> 購買</a> <!-- 未購買GameFi Pass時，修復按鈕改為此按鈕 -->
+                        <a href="javascript:void(0)" id="repair--open" class="button"><img src="images/icon/icon-gear.svg"> 修復</a> <!-- 生命值100%時不可點選，設定為disable -->
+                        <!-- <a href="#" class="button btn-gradient"><img src="images/icon/icon-enable.svg"> 購買</a> 未購買GameFi Pass時，修復按鈕改為此按鈕 -->
                     </div>
                 </div>
                 <!-- <div class="desc">*如果有需要一些注意事項可在這，沒的話隱藏起來，沒的話隱藏起來。</div> -->
@@ -267,7 +267,7 @@
                     <!-- 11~50% 時顯示「* 少拿了 40% 回饋，該修復囉！」 -->
                     <!-- 1~10% 時顯示「* 少拿了 60% 回饋，該修復囉！」 -->
                     <!-- 0% 時顯示「* 已失去回饋資格，快修復囉！」 -->
-                    <!-- 未啟用GAMEPASS時顯示「* 目前無GAMEFI PASS，已少賺好多蟲蟲幣拉！快去購買啟用！」 -->
+                    <!-- 未購買GAMEPASS時顯示「* 目前無GAMEFI PASS，已少賺好多蟲蟲幣拉！快去購買啟用！」 -->
                 </div> 
             </li>
 
@@ -285,7 +285,7 @@
                     <div class="bugCoin--password">
                         <a href="password-enable.html">啟用提領密碼</a><!-- 提領密碼已啟用的用戶，文字改為「修改提領密碼」，連至password-reset.html -->
                     </div>
-                    <div class="bugCoin--password"><a href="#">新增至MetaMask</a></div>
+                    <div class="bugCoin--password"><a href="#">新增BUG到錢包</a></div>
                     <div class="btns">
                         <a href="withdraw.html" class="button btn-outline">提領</a>
                         <a href="deposit-processing.html" class="button btn-outline">存入</a>
@@ -396,7 +396,7 @@
         <div class="popUp--container">
             <button id="gamepass--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>GAMEFI PASS 生命值</h2>
-            <div class="content">
+            <div class="popUp--content">
                 <p>當GAMEFI PASS生命值不同時，在日常、長期任務中會有不同的回饋。</p>
                 <div>
                     <p>【 日常任務 】</p>
@@ -474,12 +474,16 @@
     </div>
 
     <!-- pop up 蟲蟲幣說明 -->
-    <div id="bugCoin--popUp" class="popUp">
+    <div id="bugCoin--popUp" class="popUp popUp__button">
         <div class="popUp--container">
             <button id="bugCoin--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>蟲蟲幣說明</h2>
-            <p>蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明。</p>
-            <p class="warning">一些比較重要的說明可以是紅色。</p>
+            <div class="popUp--content">
+                <p>蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consectetur nisi repudiandae sit tenetur, magni et asperiores nihil possimus porro consequuntur corporis, excepturi, aperiam cum officiis delectus obcaecati quaerat pariatur? ipsum dolor sit amet consectetur adipisicing elit. Error id doloribus qui, enim temporibus ipsa minima dolorem natus modi quisquam distinctio fugiat pariatur est repellat aliquam earum perferendis impedit. Temporibus. ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed aperiam, quam aspernatur tenetur vitae commodi nostrum totam, doloremque ducimus eveniet? Ex minus est eaque unde numquam culpa laudantium fugiat?</p>
+                <p class="warning">一些比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="bugCoin--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 </body>
@@ -734,6 +738,9 @@
         $('#bugCoin--popUp').addClass('active')
     })
     $('#bugCoin--close').click(function () {
+        $('#bugCoin--popUp').removeClass('active')
+    })
+    $('#bugCoin--submit').click(function () {
         $('#bugCoin--popUp').removeClass('active')
     })
 </script>

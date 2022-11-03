@@ -1,6 +1,7 @@
 @import "../variable";
+@import "../mixin";
 
-main.withdraw{
+main.withdraw {
     width: 490px;
     max-width: calc(100vw - 40px);
     margin: 0 auto;
@@ -11,13 +12,9 @@ main.withdraw{
     }
 
     a {
-        color: $primaryC;
+        @include a-color($primaryC);
         font-weight: $Bold;
         transition: all .15s ease;
-
-        &:hover {
-            color: darken($primaryC, 5);
-        }
     }
 
     form {
@@ -46,22 +43,21 @@ main.withdraw{
                 height: 44px;
                 border-radius: 22px;
                 border: 1px solid $dark;
-                font-size: calc($fontSize * 1.4);
                 padding: 0 24px;
-    
+
                 &[type=number] {
                     padding-right: 5em;
                     -moz-appearance: textfield;
-    
-                    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button {
                         -webkit-appearance: none;
                         margin: 0;
                     }
                 }
 
-                &[disabled] {
+                &:disabled {
                     background-color: $frameBg !important;
-                    font-size: calc($fontSize * 1.4);
                     color: $lighter !important;
                 }
             }
@@ -79,7 +75,7 @@ main.withdraw{
                 width: 100%;
                 line-height: 1;
                 border-radius: 24px;
-                font-weight: 700;
+                font-weight: $UltraBold;
                 text-shadow: 0 0 12 rgba(#000000, .5);
                 cursor: pointer;
 
@@ -87,7 +83,7 @@ main.withdraw{
                     background: $gradient-hover;
                 }
 
-                &[disabled] {
+                &:disabled {
                     background: $dark;
                     cursor: default;
                 }
@@ -108,13 +104,13 @@ main.withdraw{
 
         h4 {
             color: $primaryC;
-            font-weight: 700;
-            font-size: calc($fontSize * 1.8);
+            font-weight: $UltraBold;
         }
     }
 }
 
-#notice--popUp, #privacy--popUp {
+#notice--popUp,
+#privacy--popUp {
     .popUp--container {
         color: $lighter;
 
@@ -125,12 +121,12 @@ main.withdraw{
         .content--scroll {
             p {
                 text-align: left;
-    
+
                 &.bold {
                     margin-top: 20px;
                 }
             }
-    
+
             ol {
                 &.list--cht {
                     list-style-type: cjk-ideographic;
@@ -182,13 +178,15 @@ main.withdraw{
                 border-radius: 12px;
                 border: 1px solid $gray;
                 margin-right: 16px;
+                padding: 0;
                 background-color: transparent;
                 text-align: center;
                 font-size: 24px;
-                font-weight: 700;
+                font-weight: $UltraBold;
                 -moz-appearance: textfield;
-    
-                &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+
+                &::-webkit-inner-spin-button,
+                &::-webkit-outer-spin-button {
                     -webkit-appearance: none;
                     margin: 0;
                 }
@@ -199,7 +197,8 @@ main.withdraw{
             }
 
             &.note {
-                .warning, .forgot {
+                .warning,
+                .forgot {
                     font-size: calc($fontSize * 1.2);
                     font-weight: $Regular;
                 }
@@ -207,16 +206,11 @@ main.withdraw{
                 .warning {
                     color: $warning;
                 }
-            
+
                 .forgot {
                     text-decoration: underline;
                     text-align: right;
-                    color: $lighter;
-                    transition: color .3s;
-            
-                    &:hover {
-                        color: $gray;
-                    }
+                    @include a-color($lighter, $gray);
                 }
             }
         }
@@ -228,15 +222,15 @@ main.withdraw{
             height: 40px;
             border-radius: 24px;
             padding: 13px 24px;
-            font-weight: 700;
+            font-weight: $UltraBold;
             line-height: .8;
             text-shadow: 0 0 12px rgba(#000000, .4);
-    
+
             &:hover {
                 background: $gradient-hover;
             }
-    
-            &[disabled] {
+
+            &:disabled {
                 background: $dark;
                 cursor: default;
             }
@@ -244,8 +238,8 @@ main.withdraw{
     }
 }
 
-@media screen and (max-width: 515px) { // mobile
-    main.withdraw{
+@media screen and (max-width: 515px) {
+    main.withdraw {
         width: calc(100vw - 3.5rem);
         margin: 0 auto;
 
@@ -273,10 +267,10 @@ main.withdraw{
                 }
 
                 &.note {
-                    font-size: calc($fontSize * 1.4);
                     flex-wrap: wrap;
 
-                    .warning, .forgot {
+                    .warning,
+                    .forgot {
                         font-size: calc($fontSize * 1.4);
                         flex: 100%;
                         max-width: 100%;
@@ -293,4 +287,4 @@ main.withdraw{
             }
         }
     }
-}
+} // mobile

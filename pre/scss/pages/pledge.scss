@@ -1,4 +1,5 @@
 @import "../variable";
+@import "../mixin";
 
 .mainTitle {
     margin-bottom: 16px;
@@ -424,14 +425,9 @@
 }
 
 .popUp {
-    h2 {
-        text-align: center;
-    }
-
     p {
         text-align: left;
         line-height: 25.6px;
-        margin-top: 28px;
         color: $lighter;
 
         &.warning {
@@ -439,14 +435,9 @@
         }
 
         a {
-            color: $primaryC;
+            @include a-color($primaryC);
             font-weight: $UltraBold;
-            transition: all .3s ease;
             text-decoration: none;
-    
-            &:hover {
-                color: darken($primaryC, 5%);
-            }
         }
 
         .collapse {
@@ -461,7 +452,7 @@
             overflow: hidden;
             max-height: 0;
             transition: all .3s ease;
-            margin: 0;
+            margin: 0 !important;
 
             &.open {
                 padding: 12px;
@@ -469,8 +460,8 @@
                 background-color: $dark;
                 height: auto;
                 max-height: 100px;
-                margin-top: 8px;
-                margin-bottom: 28px;
+                margin-top: 8px !important;
+                margin-bottom: 28px !important;
                 overflow-y: scroll;
 
                 &::-webkit-scrollbar {

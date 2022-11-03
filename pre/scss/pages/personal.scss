@@ -1,4 +1,6 @@
 @import "../variable";
+@import "../mixin";
+
 .dashboard {
     display: flex;
     justify-content: space-between;
@@ -18,7 +20,7 @@
         }
 
         .info {
-            > p {
+            >p {
                 display: flex;
                 align-items: center;
                 color: $lightGray;
@@ -64,12 +66,12 @@
                 flex: 1;
                 height: 44px;
                 line-height: 44px;
-                font-size: 14px;
+                font-size: calc($fontSize * 1.4);
                 font-weight: $UltraBold;
                 text-align: center;
             }
         }
-        
+
         &.account {
             min-height: 240px;
 
@@ -79,7 +81,7 @@
                     margin-bottom: 12px;
                     border-bottom: 1px solid $dark;
 
-                    > div {
+                    >div {
                         display: inline-block;
                         vertical-align: middle;
                         margin-right: 12px;
@@ -88,21 +90,15 @@
                         font-weight: $UltraBold;
                     }
 
-                    > span {
+                    >span {
                         display: block;
-                        font-size: calc($fontSize * 1.4);
                         color: $lighter;
                         margin-top: 16px;
                     }
 
                     a {
-                        color: $primaryC;
                         font-weight: $UltraBold;
-                        transition: all .15s ease;
-
-                        &:hover {
-                            color: darken($primaryC,5%);
-                        }
+                        @include a-color($primaryC);
                     }
                 }
 
@@ -110,7 +106,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-        
+
                     &--title {
                         display: flex;
                         align-items: center;
@@ -122,7 +118,7 @@
                             margin-left: 4px;
                         }
                     }
-        
+
                     &--repair {
                         a {
                             display: inline-block;
@@ -134,12 +130,12 @@
                             transition: all .15s ease;
                             font-size: calc($fontSize * 1.4);
                             min-height: auto;
-                        
+
                             &:hover {
                                 background-color: darken($primaryA, 3%);
                             }
-                        
-                            > * {
+
+                            >* {
                                 display: inline-block;
                             }
                         }
@@ -150,7 +146,7 @@
             .bottom {
                 color: $lighter;
                 display: inline;
-                
+
                 .bar {
                     position: relative;
                     width: 100%;
@@ -158,8 +154,8 @@
                     border-radius: 10px;
                     background-color: $dark;
                     margin: 6px 0;
-            
-                    > div {
+
+                    >div {
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -180,14 +176,8 @@
                 padding-bottom: 12px;
 
                 a {
-                    color: $lighter;
                     text-decoration: underline;
-                    transition: all .5s;
-
-                    &:hover {
-                        // color: darken($lighter, 10%);
-                        color: $gray;
-                    }
+                    @include a-color($lighter, $gray);
                 }
             }
         }
@@ -196,7 +186,7 @@
 
 .myNft {
     margin-bottom: 70px;
-    
+
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -255,8 +245,6 @@
 }
 
 #gamepass--popUp {
-    color: $lighter;
-
     h2 {
         color: $lightGray;
     }
@@ -264,7 +252,7 @@
     .content {
         color: $lighter;
 
-        > * {
+        >* {
             margin-bottom: 28px;
         }
     }
@@ -399,7 +387,9 @@
             margin-left: 5em;
             position: relative;
 
-            &-100, &-51, &-11 {
+            &-100,
+            &-51,
+            &-11 {
                 font-size: calc($fontSize * 1.2);
                 position: absolute;
                 transform: translateX(-50%);
@@ -440,7 +430,7 @@
 
 #repair--popUp {
     .popUp--container {
-        min-width: 430px;
+        max-height: max-content;
     }
 
     .repair {
@@ -485,7 +475,8 @@
             margin: 6px 0;
             position: relative;
 
-            #bar--new, #bar--origin {
+            #bar--new,
+            #bar--origin {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -539,7 +530,7 @@
         font-size: calc($fontSize * 1.4);
         text-align: left;
         margin-bottom: 8px;
-        
+
         .color {
             font-weight: $UltraBold;
             font-size: calc($fontSize * 1.4);
@@ -571,15 +562,6 @@
     }
 }
 
-#bugCoin--popUp {
-    .popUp--container {
-        p {
-            text-align: left !important;
-            margin-top: 28px;
-        }
-    }
-}
-
 @media screen and (max-width:1069px) {
     .dashboard {
         li {
@@ -606,11 +588,12 @@
 
                 .account__gamepass {
                     flex-wrap: wrap;
-    
-                    &--title, &--repair {
+
+                    &--title,
+                    &--repair {
                         flex: 100%;
                     }
-    
+
                     &--repair {
                         margin-top: 12px;
                         text-align: right;
@@ -632,19 +615,21 @@
 
             &.account {
                 min-height: auto;
+
                 .account {
                     &__gamepass {
                         flex-wrap: nowrap;
-        
-                        &--title, &--repair {
+
+                        &--title,
+                        &--repair {
                             flex: auto;
                         }
-        
+
                         &--title {
                             word-break: break-all;
                             padding-right: 12px;
                         }
-        
+
                         &--repair {
                             margin-top: 0;
                             min-width: max-content;
@@ -657,14 +642,16 @@
                     position: inherit;
                     bottom: auto;
                     margin-top: 4px;
+
                     p {
                         font-size: calc($fontSize * 1.4);
                     }
                 }
-            } 
+            }
 
             &.bugCoin {
                 min-height: auto;
+
                 .info {
                     flex-wrap: nowrap;
                     justify-content: space-between;
@@ -673,7 +660,8 @@
                         flex: unset;
                     }
                 }
-                .bottom{
+
+                .bottom {
                     position: inherit;
                     bottom: auto;
                     width: 100%;
@@ -682,7 +670,8 @@
 
             &.pledge {
                 min-height: auto;
-                .bottom{
+
+                .bottom {
                     position: inherit;
                     bottom: auto;
                     width: 100%;
@@ -695,6 +684,7 @@
 @media screen and (max-width:515px) {
     .dashboard {
         margin-bottom: 40px;
+
         li {
             .desc {
                 font-size: calc($fontSize * 1.4);
@@ -708,7 +698,8 @@
                         }
                     }
                 }
-                .bugCoin--password{
+
+                .bugCoin--password {
                     font-size: calc($fontSize * 1.4);
                 }
             }
@@ -718,6 +709,7 @@
     .myNft {
         ul {
             margin-top: 16px;
+
             li {
                 flex: calc(50% - 8px);
                 max-width: calc(50% - 8px);
@@ -776,7 +768,8 @@
                 .account__gamepass {
                     flex-wrap: wrap;
 
-                    &--title, &--repair {
+                    &--title,
+                    &--repair {
                         flex: 100%;
                     }
 

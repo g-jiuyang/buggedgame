@@ -556,13 +556,14 @@
     </div>
 
     <!-- pop up 免責聲明 -->
-    <div id="disclaimer--popUp" class="popUp">
+    <div id="disclaimer--popUp" class="popUp popUp__button">
         <div class="popUp--container">
             <button id="disclaimer--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>免責聲明</h2>
-            <p class="note">
-                免責聲明免責聲明免責聲明免責聲明免責聲明免責聲明，詳見<a href="#">這是連結</a>說明。
-            </p>
+            <div class="popUp--content">
+                <p class="note">免責聲明免責聲明免責聲明免責聲明免責聲明免責聲明，詳見<a href="#">這是連結</a>說明。</p>
+            </div>
+            <button id="disclaimer--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 
@@ -571,7 +572,7 @@
         <div class="popUp--container">
             <button id="invoiceInfo--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>發票說明</h2>
-            <div class="content">
+            <div class="popUp--content">
                 <p class="note">
                     財政部於2013年1月1日起正式推動電子發票虛實合一政策！<br>
                     此政策讓持有共通性載具之消費者，可於消費時作為電子發票之載具，並提供消費者以捐贈碼捐贈予特定受捐贈機關或團體之管道。<br>
@@ -591,9 +592,9 @@
         <div class="popUp--container">
             <button id="notice--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>注意事項</h2>
-            <p class="note">
-                注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明<a href="#" target="_blank">相關連結</a>。
-            </p>
+            <div class="popUp--content">
+                <p class="note">注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明注意事項說明<a href="#" target="_blank">相關連結</a>。</p>
+            </div>
         </div>
     </div>
 
@@ -602,12 +603,10 @@
         <div class="popUp--container">
             <button id="privacy--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>隱私權政策</h2>
-            <p class="note">
-                隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明<a href="#" target="_blank">相關連結</a>。
-            </p>
-            <p class="note">
-                隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明。
-            </p>
+            <div class="popUp--content">
+                <p class="note">隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明<a href="#" target="_blank">相關連結</a>。</p>
+                <p class="note">隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明隱私權政策說明。</p>
+            </div>
         </div>
     </div>
   
@@ -684,6 +683,9 @@
         $('#disclaimer--popUp').addClass('active')
     })
     $('#disclaimer--close').click(function(){
+        $('#disclaimer--popUp').removeClass('active')
+    })
+    $('#disclaimer--submit').click(function(){
         $('#disclaimer--popUp').removeClass('active')
     })
 

@@ -342,20 +342,25 @@
 
 
     <!-- pop up 兌換道具 -->
-    <div id="exchange--popUp" class="popUp">
+    <div id="exchange--popUp" class="popUp popUp__button">
         <div class="popUp--container">
             <button id="exchange--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>重要提醒</h2>
-            <p class="desc">您即將兌換<span>「XXXXX(商品名稱)」x3</span>，一旦兌換成功將扣除帳戶內的蟲蟲幣 <span>4,500顆</span>。</p>
+            <div class="popUp--content">
+                <p class="desc">您即將兌換<span>「XXXXX(商品名稱)」x3</span>，一旦兌換成功將扣除帳戶內的蟲蟲幣 <span>4,500顆</span>。</p>
+            </div>
             <button id="exchange--submit" class="popUp--submit" disabled>確認兌換<span>3s</span></button>
         </div>
     </div>
 
     <!-- pop up 錢包位址鎖定 -->
-    <div id="locked--popUp" class="popUp">
+    <div id="locked--popUp" class="popUp popUp__button">
         <div class="popUp--container">
+            <button id="locked--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>錢包位址鎖定</h2>
-            <p class="desc">您所連接的錢包位址已被鎖定，無法進行交易。<a href="#">請洽客服</a></p>
+            <div class="popUp--content">
+                <p class="desc">您所連接的錢包位址已被鎖定，無法進行交易。<a href="#">請洽客服</a></p>
+            </div>
             <button id="locked--submit" class="popUp--submit">確認</button>
         </div>
     </div>
@@ -474,6 +479,9 @@
     // pop up 錢包位址鎖定
     $('#locked--open').click(function () {
         $('#locked--popUp').addClass('active')
+    })
+    $('#locked--close').click(function () {
+        $('#locked--popUp').removeClass('active')
     })
     $('#locked--submit').click(function () {
         $('#locked--popUp').removeClass('active')

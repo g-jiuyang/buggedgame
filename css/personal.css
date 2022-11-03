@@ -77,14 +77,13 @@
 }
 .dashboard li.account .account__info > span {
   display: block;
-  font-size: 14px;
   color: #BDBDBD;
   margin-top: 16px;
 }
 .dashboard li.account .account__info a {
-  color: #8AA3FF;
   font-weight: 700;
-  transition: all 0.15s ease;
+  color: #8AA3FF;
+  transition: color 0.5s;
 }
 .dashboard li.account .account__info a:hover {
   color: #718fff;
@@ -149,9 +148,9 @@
   padding-bottom: 12px;
 }
 .dashboard li.bugCoin .bugCoin--password a {
-  color: #BDBDBD;
   text-decoration: underline;
-  transition: all 0.5s;
+  color: #BDBDBD;
+  transition: color 0.5s;
 }
 .dashboard li.bugCoin .bugCoin--password a:hover {
   color: #898989;
@@ -210,9 +209,6 @@
   min-width: max-content;
 }
 
-#gamepass--popUp {
-  color: #BDBDBD;
-}
 #gamepass--popUp h2 {
   color: #EFEFEF;
 }
@@ -356,7 +352,9 @@
 }
 
 #repair--popUp .popUp--container {
-  min-width: 430px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 #repair--popUp .repair {
   display: flex;
@@ -396,7 +394,8 @@
   margin: 6px 0;
   position: relative;
 }
-#repair--popUp .repair .bar #bar--new, #repair--popUp .repair .bar #bar--origin {
+#repair--popUp .repair .bar #bar--new,
+#repair--popUp .repair .bar #bar--origin {
   position: absolute;
   top: 0;
   left: 0;
@@ -467,11 +466,6 @@
   line-height: 44px;
   font-size: 14px;
   font-weight: 700;
-}
-
-#bugCoin--popUp .popUp--container p {
-  text-align: left !important;
-  margin-top: 28px;
 }
 
 @media screen and (max-width: 1069px) {

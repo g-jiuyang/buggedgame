@@ -299,11 +299,11 @@
                         <li><a href="#">取得 NFT <img src="images/icon/icon-open.svg"></a></li>
                         <li><a href="#">檢視教學 <img src="images/icon/icon-open.svg"></a></li>
                         <li><a href="#">檢查合約 <img src="images/icon/icon-open.svg"></a></li>
-                        <li><a href="#">新增到 MetaMask <img src="images/icon/icon-open.svg"></a></li>
+                        <li><a href="#">新增BUG到錢包 <img src="images/icon/icon-open.svg"></a></li>
                     </ul>
 
-                    <!-- ↓↓↓質押開始前顯示此區塊按鈕↓↓↓
-                    <button id="submit" class="btn-gradient">啟用</button> -->
+                    <!-- ↓↓↓質押開始前顯示此區塊按鈕↓↓↓ -->
+                    <button id="submit" class="btn-gradient">啟用</button>
                     <!-- 啟用完MetaMask的核准後，按鈕從「啟用」變成「開始質押」 -->
 
                     <!-- ↓↓↓質押開始後顯示此區塊按鈕↓↓↓ -->
@@ -337,52 +337,71 @@
 
 
     <!-- pop up 質押池APR -->
-    <div id="apr--popUp" class="popUp">
+    <div id="apr--popUp" class="popUp popUp__button">
         <div class="popUp--container">
+            <button id="apr--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>質押池APR</h2>
-            <p>質押池APR相關說明質押池APR相關說明質押池APR相關說明質押池APR相關說明。</p>
-            <p class="warning">一些關比較重要的說明可以是紅色。</p>
-            <button id="apr--close" class="popUp--submit">確認</button>
+            <div class="popUp--content">
+                <p>質押池APR相關說明質押池APR相關說明質押池APR相關說明質押池APR相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate, unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="apr--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 
     <!-- pop up 日發出量 -->
-    <div id="daily--popUp" class="popUp">
+    <div id="daily--popUp" class="popUp popUp__button">
         <div class="popUp--container">
+            <button id="daily--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>日發出量</h2>
-            <p>日發出量相關說明日發出量相關說明日發出量相關說明日發出量相關說明。</p>
-            <p class="warning">一些關比較重要的說明可以是紅色。</p>
-            <button id="daily--close" class="popUp--submit">確認</button>
+            <div class="popUp--content">
+                <p>日發出量相關說明日發出量相關說明日發出量相關說明日發出量相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate, unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="daily--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 
     <!-- pop up 重要提醒小鈴鐺 -->
-    <div id="notice--popUp" class="popUp">
+    <div id="notice--popUp" class="popUp popUp__button">
         <div class="popUp--container">
+            <button id="notice--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>重要提醒</h2>
-            <p>投資一定有風險，有賺有賠，質押前請詳細理解。</p>
-            <p class="warning">一些關於停止打工要扣很多手續費的說明可以是紅色。</p>
-            <button id="notice--close" class="popUp--submit">確認</button>
+            <div class="popUp--content">
+                <p>投資一定有風險，有賺有賠，質押前請詳細理解。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate, unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關於停止打工要扣很多手續費的說明可以是紅色。</p>
+            </div>
+            <button id="notice--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 
     <!-- pop up 年化報酬率 -->
-    <div id="roi--popUp" class="popUp">
+    <div id="roi--popUp" class="popUp popUp__button">
         <div class="popUp--container">
+            <button id="roi--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>年化報酬率</h2>
-            <p>年化報酬率相關說明年化報酬率相關說明年化報酬率相關說明年化報酬率相關說明。</p>
-            <p class="warning">一些關比較重要的說明可以是紅色。</p>
-            <button id="roi--close" class="popUp--submit">確認</button>
+            <div class="popUp--content">
+                <p>年化報酬率相關說明年化報酬率相關說明年化報酬率相關說明年化報酬率相關說明。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate, unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關比較重要的說明可以是紅色。</p>
+            </div>
+            <button id="roi--submit" class="popUp--submit">確認</button>
         </div>
     </div>
 
     <!-- pop up 開始質押 -->
-    <div id="start--popUp" class="popUp">
+    <div id="start--popUp" class="popUp popUp__check">
         <div class="popUp--container">
             <button id="start--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>重要提醒</h2>
-            <p>投資一定有風險，有賺有賠，質押前請詳細理解。</p>
-            <p class="warning">一些關於停止打工要扣很多手續費的說明可以是紅色。</p>
+            <div class="popUp--content">
+                <p>投資一定有風險，有賺有賠，質押前請詳細理解。</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi perspiciatis nostrum quibusdam adipisci aspernatur rem fuga omnis earum consequuntur numquam suscipit, enim, doloribus impedit nesciunt officiis nihil tempore blanditiis ducimus? ipsum dolor sit amet consectetur, adipisicing elit. Inventore porro omnis rerum ipsum quasi. Dolores hic fugit quos officia iusto sunt tempora quibusdam cum officiis qui, minus recusandae nobis nisi. ipsum dolor sit amet consectetur adipisicing elit. Maxime dignissimos quisquam dolor tenetur ipsum voluptatem culpa eum! Cupiditate, unde. Culpa, dolorem eligendi. Inventore harum fuga aliquam sapiente, hic odio iste.</p>
+                <p class="warning">一些關於停止打工要扣很多手續費的說明可以是紅色。</p>
+            </div>
             <label>
                 <input type="checkbox">
                 <span>我同意並理解質押風險</span>
@@ -396,13 +415,16 @@
     </div>
 
     <!-- pop up 解除質押 -->
-    <div id="relieve--popUp" class="popUp">
+    <div id="relieve--popUp" class="popUp popUp__check">
         <div class="popUp--container">
             <button id="relieve--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>解除質押</h2>
-            <p>約可獲取的 BUG： <span class="warning">0.99</span> (≈ USDT 100.82)</p>
-            <p>倘若您質押期間未滿30天，將扣除<span class="warning">必要的蟲蟲幣手續費</span>。<a id="collapse-1" class="collapse" href="javascript:void(0)">手續費規則</a></p>
-            <p id="collapse-content-1" class="collapse-content">手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡。</p>
+            <div class="popUp--content">
+                <p>約可獲取的 BUG： <span class="warning">0.99</span> (≈ USDT 100.82)</p>
+                <p>倘若您質押期間未滿30天，將扣除<span class="warning">必要的蟲蟲幣手續費</span>。<a id="collapse-1" class="collapse" href="javascript:void(0)">手續費規則</a></p>
+                <p id="collapse-content-1" class="collapse-content">手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡。</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non officia, dolor natus expedita ipsam dignissimos aperiam reprehenderit cumque quisquam magni! Iste quos unde eaque omnis illo, cupiditate error quam iure! ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium voluptatum doloremque nemo facere quaerat delectus quidem veritatis rem similique? Facilis quod rem magni tempora, deserunt ratione repudiandae cumque ut.</p>
+            </div>
             <label>
                 <input type="checkbox">
                 <span>我同意並理解未滿30天需支付手續費</span>
@@ -413,13 +435,16 @@
     </div>
 
     <!-- pop up 領取收益 -->
-    <div id="recieve--popUp" class="popUp">
+    <div id="recieve--popUp" class="popUp popUp__check">
         <div class="popUp--container">
             <button id="recieve--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>領取收益</h2>
-            <p>約可獲取的 BUG： <span class="warning">0.99</span> (≈ USDT 100.82)</p>
-            <p>倘若您質押期間未滿30天，將扣除<span class="warning">必要的蟲蟲幣手續費</span>。<a id="collapse-2" class="collapse" href="javascript:void(0)">手續費規則</a></p>
-            <p id="collapse-content-2" class="collapse-content">手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡。</p>
+            <div class="popUp--content">
+                <p>約可獲取的 BUG： <span class="warning">0.99</span> (≈ USDT 100.82)</p>
+                <p>倘若您質押期間未滿30天，將扣除<span class="warning">必要的蟲蟲幣手續費</span>。<a id="collapse-2" class="collapse" href="javascript:void(0)">手續費規則</a></p>
+                <p id="collapse-content-2" class="collapse-content">手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡手續費規則詳細說明可放在這裡。</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non officia, dolor natus expedita ipsam dignissimos aperiam reprehenderit cumque quisquam magni! Iste quos unde eaque omnis illo, cupiditate error quam iure! ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium voluptatum doloremque nemo facere quaerat delectus quidem veritatis rem similique? Facilis quod rem magni tempora, deserunt ratione repudiandae cumque ut.</p>
+            </div>
             <label>
                 <input type="checkbox">
                 <span>我同意並理解未滿30天需支付手續費</span>
@@ -526,12 +551,18 @@
     $('#apr--close').click(function () {
         $('#apr--popUp').removeClass('active')
     })
+    $('#apr--submit').click(function () {
+        $('#apr--popUp').removeClass('active')
+    })
     
     // pop up 日發出量
     $('#daily--open').click(function () {
         $('#daily--popUp').addClass('active')
     })
     $('#daily--close').click(function () {
+        $('#daily--popUp').removeClass('active')
+    })
+    $('#daily--submit').click(function () {
         $('#daily--popUp').removeClass('active')
     })
     
@@ -542,12 +573,18 @@
     $('#notice--close').click(function () {
         $('#notice--popUp').removeClass('active')
     })
+    $('#notice--submit').click(function () {
+        $('#notice--popUp').removeClass('active')
+    })
 
     // pop up 年化報酬率
     $('#roi--open').click(function () {
         $('#roi--popUp').addClass('active')
     })
     $('#roi--close').click(function () {
+        $('#roi--popUp').removeClass('active')
+    })
+    $('#roi--submit').click(function () {
         $('#roi--popUp').removeClass('active')
     })
 

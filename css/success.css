@@ -79,6 +79,7 @@
 .success-page .card p:last-child a {
   text-decoration: none;
   color: #EFEFEF;
+  transition: color 0.5s;
 }
 .success-page .card p:last-child a:hover {
   color: #BDBDBD;
@@ -95,7 +96,9 @@
 }
 
 #download--popUp .popUp--container {
-  min-width: 512px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 #download--popUp .popUp--container .mobile {
   display: none;

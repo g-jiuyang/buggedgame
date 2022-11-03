@@ -10,39 +10,6 @@
   color: #ffffff;
 }
 
-body {
-  color: #EFEFEF;
-  font-family: "Roboto", sans-serif;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.breadcrumb a {
-  font-weight: 400;
-  color: #898989;
-}
-.breadcrumb a:last-child {
-  font-weight: 700;
-  cursor: default;
-  width: 11em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.checkout-step {
-  margin: 96px auto 20px;
-  font-size: 12px;
-  color: #898989;
-}
-.checkout-step img {
-  display: inline-block;
-  margin: 0 4px;
-}
-.checkout-step span {
-  color: #8AA3FF;
-  font-weight: 700;
-}
-
 /* 文字設定 */
 h1 {
   font-weight: 800;
@@ -77,13 +44,12 @@ p.note, span.note {
 p.bold, span.bold {
   font-weight: 700;
 }
-
-p a {
+p a, span a {
   color: #BDBDBD;
   text-decoration: underline;
   transition: color 0.3s;
 }
-p a:hover {
+p a:hover, span a:hover {
   color: #898989;
 }
 
@@ -151,7 +117,7 @@ button, input[type=submit], a.button {
   font-size: 12px;
   text-align: center;
 }
-button[disabled], input[type=submit][disabled], a.button[disabled] {
+button:disabled, input[type=submit]:disabled, a.button:disabled {
   cursor: default !important;
   background-color: #353535 !important;
   background: #353535 !important;
@@ -311,17 +277,50 @@ input[warning] {
   transition: all 0.3s, background-color 0.1s;
 }
 
+img[src="images/icon/icon-info.svg"]:hover {
+  filter: brightness(80%);
+}
+
+body {
+  color: #EFEFEF;
+  font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.breadcrumb a {
+  font-weight: 400;
+  color: #898989;
+}
+.breadcrumb a:last-child {
+  font-weight: 700;
+  cursor: default;
+  width: 11em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkout-step {
+  margin: 96px auto 20px;
+  font-size: 12px;
+  color: #898989;
+}
+.checkout-step img {
+  display: inline-block;
+  margin: 0 4px;
+}
+.checkout-step span {
+  font-size: 12px;
+  color: #8AA3FF;
+  font-weight: 700;
+}
+
 .btn-discord {
   position: fixed;
   right: 2rem;
   bottom: 52px;
 }
 
-img[src="images/icon/icon-info.svg"]:hover {
-  filter: brightness(80%);
-}
-
-/* 頁尾設定 */
 footer {
   width: 85vw;
   max-width: 76rem;
@@ -405,15 +404,6 @@ footer .copyright div img {
   }
 }
 @media screen and (max-width: 515px) {
-  .checkout-step {
-    font-size: 14px;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-  .checkout-step span {
-    font-size: 14px;
-  }
   h1 {
     font-size: 24px;
   }
@@ -430,6 +420,15 @@ footer .copyright div img {
     font-size: 18px;
   }
   p.note, span.note {
+    font-size: 14px;
+  }
+  .checkout-step {
+    font-size: 14px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .checkout-step span {
     font-size: 14px;
   }
   button, input[type=submit], a.button {
