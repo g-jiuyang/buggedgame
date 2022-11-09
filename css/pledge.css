@@ -341,12 +341,8 @@
 }
 
 .popUp p {
-  text-align: left;
-  line-height: 25.6px;
+  line-height: 1.8;
   color: #BDBDBD;
-}
-.popUp p.warning {
-  color: #E08083;
 }
 .popUp p a {
   color: #8AA3FF;
@@ -399,29 +395,6 @@
 }
 .popUp label + a.button {
   margin-top: 12px !important;
-}
-.popUp button, .popUp a.button {
-  position: relative;
-}
-.popUp button .count, .popUp a.button .count {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #8AA3FF;
-  line-height: 1em;
-}
-.popUp button:hover, .popUp a.button:hover {
-  background: linear-gradient(to right, #cf36a3, #658ad6);
-}
-.popUp button[disabled], .popUp a.button[disabled] {
-  background: #353535;
-  cursor: default;
-}
-.popUp button.popUp--close, .popUp a.button.popUp--close {
-  width: auto;
-  height: auto;
-  background: transparent;
 }
 
 @media screen and (max-width: 1160px) {

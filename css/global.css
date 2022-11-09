@@ -117,12 +117,6 @@ button, input[type=submit], a.button {
   font-size: 12px;
   text-align: center;
 }
-button:disabled, input[type=submit]:disabled, a.button:disabled {
-  cursor: default !important;
-  background-color: #353535 !important;
-  background: #353535 !important;
-  color: #BDBDBD !important;
-}
 button.btn-gradient, input[type=submit].btn-gradient, a.button.btn-gradient {
   background: linear-gradient(to right, #E63EB6, #749FF5);
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
@@ -163,6 +157,17 @@ button.btn-outline:after, input[type=submit].btn-outline:after, a.button.btn-out
 button.btn-outline:hover:before, input[type=submit].btn-outline:hover:before, a.button.btn-outline:hover:before {
   background-color: #1F1F1F;
 }
+button[disabled], input[type=submit][disabled], a.button[disabled] {
+  cursor: default !important;
+  background-color: #353535 !important;
+  background: #353535 !important;
+  color: #BDBDBD !important;
+}
+button[disabled]:hover, input[type=submit][disabled]:hover, a.button[disabled]:hover {
+  background-color: #353535 !important;
+  background: #353535 !important;
+  color: #BDBDBD !important;
+}
 
 /* 表單設定 */
 input {
@@ -188,6 +193,7 @@ input[type=checkbox] + span, input[type=radio] + span {
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: top -1px left 0;
+  cursor: pointer;
 }
 input[type=checkbox][warning] + span, input[type=radio][warning] + span {
   background-image: url(../images/icon/icon-checkbox-warning.svg);

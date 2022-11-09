@@ -426,13 +426,8 @@
 
 .popUp {
     p {
-        text-align: left;
-        line-height: 25.6px;
+        line-height: 1.8;
         color: $lighter;
-
-        &.warning {
-            color: $warning;
-        }
 
         a {
             @include a-color($primaryC);
@@ -489,34 +484,6 @@
 
         + a.button {
             margin-top: 12px !important;
-        }
-    }
-
-    button, a.button {
-        position: relative;
-
-        .count {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: $primaryC;
-            line-height: 1em;
-        }
-
-        &:hover {
-            background: $gradient-hover;
-        }
-
-        &[disabled] {
-            background: $dark;
-            cursor: default;
-        }
-
-        &.popUp--close {
-            width: auto;
-            height: auto;
-            background: transparent;
         }
     }
 }

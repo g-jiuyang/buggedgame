@@ -65,6 +65,7 @@
   border-radius: 2px;
 }
 .popUp .popUp--container .popUp--submit {
+  position: relative;
   display: inline-block;
   height: 44px;
   width: 100%;
@@ -74,6 +75,17 @@
   font-weight: 700;
   line-height: 44px;
   background: linear-gradient(to right, #E63EB6, #749FF5);
+}
+.popUp .popUp--container .popUp--submit .count {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  line-height: 1em;
+}
+.popUp .popUp--container .popUp--submit[disabled] .count {
+  color: #8AA3FF;
 }
 .popUp .popUp--container .popUp--submit:hover {
   background: linear-gradient(to right, #cf36a3, #658ad6);

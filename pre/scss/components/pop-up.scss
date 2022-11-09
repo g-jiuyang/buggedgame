@@ -74,6 +74,7 @@
         }
 
         .popUp--submit {
+            position: relative;
             display: inline-block;
             height: 44px;
             width: 100%;
@@ -83,6 +84,21 @@
             font-weight: $UltraBold;
             line-height: 44px;
             background: $gradient;
+
+            .count {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $white;
+                line-height: 1em;
+            }
+
+            &[disabled] {
+                .count {
+                    color: $primaryC;
+                }
+            }
 
             &:hover {
                 background: $gradient-hover;

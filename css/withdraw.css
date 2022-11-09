@@ -47,7 +47,7 @@ main.withdraw form label input[type=number]::-webkit-inner-spin-button, main.wit
   -webkit-appearance: none;
   margin: 0;
 }
-main.withdraw form label input:disabled {
+main.withdraw form label input[disabled] {
   background-color: #1F1F1F !important;
   color: #BDBDBD !important;
 }
@@ -68,7 +68,7 @@ main.withdraw form input[type=submit] {
 main.withdraw form input[type=submit]:hover {
   background: linear-gradient(to right, #cf36a3, #658ad6);
 }
-main.withdraw form input[type=submit]:disabled {
+main.withdraw form input[type=submit][disabled] {
   background: #353535;
   cursor: default;
 }
@@ -194,7 +194,7 @@ main.withdraw ul h4 {
 #withdraw--popUp form input[type=submit]:hover {
   background: linear-gradient(to right, #cf36a3, #658ad6);
 }
-#withdraw--popUp form input[type=submit]:disabled {
+#withdraw--popUp form input[type=submit][disabled] {
   background: #353535;
   cursor: default;
 }

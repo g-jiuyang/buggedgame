@@ -406,9 +406,9 @@
                 <input type="checkbox">
                 <span>我同意並理解質押風險</span>
             </label>
-            <a href="pledge-choose.html" class="button popUp--submit" disabled>
+            <a id="start--submit" href="pledge-choose.html" class="button popUp--submit" disabled>
                 確認開始質押 
-                <span class="count">3 s</span>
+                <span class="count">3s</span>
             </a>
             <!-- 倒數完3秒，且已勾選同意，才可點選確認(關閉disabled) -->
         </div>
@@ -594,6 +594,18 @@
             $(this).html('開始質押')
         } else {
             $('#start--popUp').addClass('active')
+            setTimeout(function() { 
+                $("#start--submit > span").html('2s');
+            }, 1000);
+
+            setTimeout(function() {
+                $("#start--submit > span").html('1s');
+            }, 2000);
+
+            setTimeout(function() {
+                $("#start--submit > span").html('');
+                $("#start--submit").removeAttr('disabled');
+            }, 3000);
         }
     })
     $('#start--close').click(function () {

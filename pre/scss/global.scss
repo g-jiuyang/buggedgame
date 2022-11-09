@@ -67,13 +67,6 @@ button, input[type=submit], a.button {
     font-size: calc($fontSize * 1.2);
     text-align: center;
 
-    &:disabled {
-        cursor: default !important;
-        background-color: $dark !important;
-        background: $dark !important;
-        color: $lighter !important;
-    }
-
     &.btn-gradient {
         background: $gradient;
         text-shadow: 0 0 12px rgba(black, .4);
@@ -119,6 +112,19 @@ button, input[type=submit], a.button {
             background-color: $frameBg;
         }
     }
+
+    &[disabled] {
+        cursor: default !important;
+        background-color: $dark !important;
+        background: $dark !important;
+        color: $lighter !important;
+
+        &:hover {
+            background-color: $dark !important;
+            background: $dark !important;
+            color: $lighter !important;
+        }
+    }
 }
 
 /* 表單設定 */
@@ -146,6 +152,7 @@ input {
             background-repeat: no-repeat;
             background-size: 24px;
             background-position: top -1px left 0;
+            cursor: pointer;
         }
 
         &[warning] + span {

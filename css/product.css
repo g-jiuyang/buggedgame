@@ -104,6 +104,51 @@ main.product .content-box .currency-box .currency-list .currency input:checked +
   color: #1F1F1F;
   border: 1px #BDBDBD solid;
 }
+main.product .content-box .payment {
+  margin-bottom: 28px;
+}
+main.product .content-box .payment label {
+  font-size: 14px;
+  font-weight: 700;
+}
+main.product .content-box .payment .payment-select li {
+  position: relative;
+  margin: 12px 0;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 1px solid #898989;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+main.product .content-box .payment .payment-select li:hover {
+  background-color: rgba(138, 163, 255, 0.1);
+}
+main.product .content-box .payment .payment-select li[checked] {
+  cursor: default;
+  color: #8AA3FF;
+  background-color: rgba(138, 163, 255, 0.2);
+  border-color: #8AA3FF;
+}
+main.product .content-box .payment .payment-select li[checked]:after {
+  position: absolute;
+  content: url(../images/icon/icon-check.svg);
+  right: 20px;
+}
+main.product .content-box .payment p + .desc {
+  margin-top: 12px;
+}
+main.product .content-box .payment .desc {
+  color: #BDBDBD;
+}
+main.product .content-box .payment .desc a {
+  color: #8AA3FF;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+main.product .content-box .payment .desc a:hover {
+  color: #718fff;
+}
 main.product .content-box .amount-box {
   margin-bottom: 36px;
 }
@@ -119,10 +164,10 @@ main.product .content-box .amount-box .amount {
 main.product .content-box .amount-box .amount button {
   width: 24px;
 }
-main.product .content-box .amount-box .amount button:disabled {
+main.product .content-box .amount-box .amount button[disabled] {
   background: transparent !important;
 }
-main.product .content-box .amount-box .amount button:disabled img {
+main.product .content-box .amount-box .amount button[disabled] img {
   opacity: 0.3;
   cursor: default;
 }
@@ -136,7 +181,7 @@ main.product .content-box .amount-box .amount .input-amount {
   background-color: transparent;
   border: none;
 }
-main.product .content-box .amount-box .amount .input-amount:disabled {
+main.product .content-box .amount-box .amount .input-amount[disabled] {
   color: #898989;
 }
 main.product .content-box .amount-box p.note {
@@ -225,7 +270,8 @@ main.product .content-box .check-box a.btn {
   text-align: center;
   border-radius: 24px;
 }
-main.product .check-box button, main.product .check-box a.button {
+main.product .check-box button,
+main.product .check-box a.button {
   width: 100%;
   display: block;
   height: 40px;
@@ -247,22 +293,6 @@ main.product .check-box button, main.product .check-box a.button {
 }
 .popUp .popUp--container .desc a:hover {
   color: #718fff;
-}
-.popUp .popUp--container #exchange--submit span {
-  color: transparent;
-  position: absolute;
-  font-size: 14px;
-  font-weight: 700;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.popUp .popUp--container #exchange--submit:disabled {
-  display: block;
-  position: relative;
-}
-.popUp .popUp--container #exchange--submit:disabled span {
-  color: #8AA3FF;
 }
 
 @media screen and (max-width: 1023px) {

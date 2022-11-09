@@ -1,89 +1,105 @@
 @import "../variable";
 
-main.product{
+main.product {
     display: flex;
     justify-content: center;
-    .pic-box{
+
+    .pic-box {
         width: 50%;
         max-width: 400px;
         height: 400px;
         margin-right: 50px;
         position: sticky;
         top: 10.3rem;
-        .pic{
+
+        .pic {
             width: 100%;
             overflow: hidden;
             border-radius: 24px;
             margin-bottom: 24px;
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
             }
         }
-        .badge{
-            ul{
+
+        .badge {
+            ul {
                 display: flex;
                 align-items: center;
-                li{
+
+                li {
                     padding: 0 4px;
                     font-size: calc($fontSize * 1.2);
                     font-weight: $UltraBold;
                     color: $gray;
                 }
-    
+
             }
         }
     }
-    .content-box{
+
+    .content-box {
         width: calc(50% - 50px);
         padding-top: .5rem;
-        .box-title{
+
+        .box-title {
             margin-bottom: 12px;
             font-size: calc($fontSize * 1.6);
             font-weight: $UltraBold;
             color: $lightGray;
         }
-        .product-name{
+
+        .product-name {
             margin-bottom: 32px;
             font-size: calc($fontSize * 1.8);
             font-weight: $UltraBold;
             color: $lightGray;
         }
-        .product-txt{
+
+        .product-txt {
             margin-bottom: 32px;
             font-size: calc($fontSize * 1.4);
             color: $lighter;
             line-height: 1.6;
-            a{
+
+            a {
                 font-weight: $UltraBold;
                 color: $primaryC;
                 text-decoration: none;
-                &:hover{
+
+                &:hover {
                     color: darken($primaryC, 5%);
                 }
             }
         }
-        .currency-box{
+
+        .currency-box {
             margin-bottom: 36px;
-            .currency-list{
+
+            .currency-list {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 gap: 12px 8px;
-                .currency{
+
+                .currency {
                     label.change-box {
                         padding: 0;
                     }
+
                     input {
                         display: none;
                     }
-                    .pay{
+
+                    .pay {
                         display: flex;
                         justify-content: center;
                         width: 100%;
                         min-width: 105px;
                         padding: 8px 16px;
-                        box-sizing: border-box;                
+                        box-sizing: border-box;
                         align-items: center;
                         font-size: calc($fontSize * 1.4);
                         font-weight: $UltraBold;
@@ -95,14 +111,16 @@ main.product{
                         transition: .5s ease;
                         vertical-align: middle;
                         cursor: pointer;
-                        img{
+
+                        img {
                             height: 20px;
                             margin-right: 8px;
                         }
                     }
+
                     input:checked {
-                        & + label{
-                            .pay{
+                        &+label {
+                            .pay {
                                 background-color: $lighter;
                                 color: $frameBg;
                                 border: 1px $lighter solid;
@@ -112,27 +130,90 @@ main.product{
                 }
             }
         }
-        .amount-box{
+
+        .payment {
+            margin-bottom: 28px;
+
+            label {
+                font-size: calc($fontSize * 1.4);
+                font-weight: $UltraBold;
+            }
+
+            .payment-select {
+                li {
+                    position: relative;
+                    margin: 12px 0;
+                    padding: 12px 24px;
+                    border-radius: 24px;
+                    border: 1px solid $gray;
+                    cursor: pointer;
+                    transition: all .5s;
+
+                    &:hover {
+                        background-color: rgba($primaryC, .1);
+                    }
+
+                    &[checked] {
+                        cursor: default;
+                        color: $primaryC;
+                        background-color: rgba($primaryC, .2);
+                        border-color: $primaryC;
+
+                        &:after {
+                            position: absolute;
+                            content: url(../images/icon/icon-check.svg);
+                            right: 20px;
+                        }
+                    }
+                }
+            }
+
+            p+.desc {
+                margin-top: 12px;
+            }
+
+            .desc {
+                color: $lighter;
+
+                a {
+                    color: $primaryC;
+                    text-decoration: none;
+                    font-weight: $UltraBold;
+                    transition: all .5s;
+
+                    &:hover {
+                        color: darken($primaryC, 5%);
+                    }
+                }
+            }
+        }
+
+        .amount-box {
             margin-bottom: 36px;
-            .amount{
+
+            .amount {
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
                 padding: 8px 24px;
-                box-sizing: border-box; 
+                box-sizing: border-box;
                 border: 1px $dark solid;
                 border-radius: 24px;
-                button{
+
+                button {
                     width: 24px;
-                    &:disabled{
+
+                    &[disabled] {
                         background: transparent !important;
-                        img{
+
+                        img {
                             opacity: .3;
                             cursor: default;
                         }
                     }
                 }
-                .input-amount{
+
+                .input-amount {
                     display: block;
                     padding: 0;
                     height: 24px;
@@ -141,15 +222,18 @@ main.product{
                     text-align: center;
                     background-color: transparent;
                     border: none;
-                    &:disabled{
+
+                    &[disabled] {
                         color: $gray;
                     }
                 }
             }
-            p.note{
+
+            p.note {
                 margin-top: 8px;
             }
-            .input-invitation-code{
+
+            .input-invitation-code {
                 display: block;
                 width: 100%;
                 padding: 11px 24px;
@@ -159,64 +243,77 @@ main.product{
                 border: 1px $dark solid;
                 border-radius: 24px;
                 background-color: transparent;
-                &::placeholder{
+
+                &::placeholder {
                     color: $gray;
                 }
             }
         }
-        .note-box{
+
+        .note-box {
             padding-bottom: 24px;
-            .txt{
+
+            .txt {
                 font-weight: $Regular;
                 color: $lighter;
                 line-height: 1.6;
-                p{
+
+                p {
                     font-size: calc($fontSize * 1.4);
-                    a{
+
+                    a {
                         font-weight: $UltraBold;
                         color: $primaryC;
                         text-decoration: none;
-                        &:hover{
-                            color: darken($primaryC,5%);
+
+                        &:hover {
+                            color: darken($primaryC, 5%);
                         }
                     }
                 }
             }
         }
-        .check-box{
+
+        .check-box {
             padding: 24px 0 26px;
             background-color: $darkBg;
             box-shadow: 0px -10px 17px $darkBg;
             position: sticky;
             bottom: 0;
-            .total{
+
+            .total {
                 display: flex;
                 align-items: center;
                 margin-bottom: 16px;
                 font-size: calc($fontSize * 1.4);
                 color: $lightGray;
-                span{
+
+                span {
                     display: flex;
                     align-items: end;
                     margin-left: 8px;
                     font-size: 24px;
                     font-weight: $UltraBold;
-                    &.ic-coin{
+
+                    &.ic-coin {
                         align-items: center;
-                        img{
+
+                        img {
                             display: inline-block;
                             height: 24px;
                             margin-right: 8px;
                         }
                     }
-                    span.currency{
+
+                    span.currency {
                         font-size: calc($fontSize * 1.8);
                         font-weight: $Regular;
                         line-height: 2rem;
                     }
                 }
             }
-            a.btn{
+
+            a.btn {
                 display: block;
                 padding: 11px 24px;
                 font-size: calc($fontSize * 1.2);
@@ -227,8 +324,11 @@ main.product{
             }
         }
     }
-    .check-box{
-        button, a.button{
+
+    .check-box {
+
+        button,
+        a.button {
             width: 100%;
             display: block;
             height: 40px;
@@ -238,56 +338,44 @@ main.product{
     }
 }
 
-.popUp{
-    .popUp--container{
-        .desc{
+.popUp {
+    .popUp--container {
+        .desc {
             color: $lighter;
-            span{
+
+            span {
                 color: $primaryC;
                 font-weight: $UltraBold;
             }
-            a{
+
+            a {
                 color: $primaryC;
                 text-decoration: none;
                 transition: color .3s;
-                &:hover{
-                    color: darken($primaryC,5%);
-                }
-            }
-        }
-        #exchange--submit{
-            span{
-                color: transparent;
-                position: absolute;
-                font-size: calc($fontSize * 1.4);
-                font-weight: $UltraBold;
-                right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            &:disabled{
-                display: block;
-                position: relative;
-                span{
-                    color: $primaryC;
+
+                &:hover {
+                    color: darken($primaryC, 5%);
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 1023px) { 
-    .content-box{
+@media screen and (max-width: 1023px) {
+    .content-box {
         padding-top: 2rem;
     }
-} // max-width: 1023px
+}
+
+// max-width: 1023px
 
 @media screen and (max-width: 515px) {
-    main.product{
+    main.product {
         display: block;
         justify-content: center;
         padding-bottom: 150px;
-        .pic-box{
+
+        .pic-box {
             width: 100%;
             max-width: 100%;
             height: auto;
@@ -295,38 +383,47 @@ main.product{
             position: relative;
             top: 0;
         }
-        .content-box{
+
+        .content-box {
             width: 100%;
             padding: 0;
-            .box-title{
+
+            .box-title {
                 font-size: calc($fontSize * 1.4);
             }
-            .product-name{
+
+            .product-name {
                 font-size: calc($fontSize * 1.6);
             }
-            .product-txt{
-                p{
+
+            .product-txt {
+                p {
                     font-size: calc($fontSize * 1.4);
                 }
             }
-            .currency-box{
+
+            .currency-box {
                 margin-bottom: 28px;
-                .currency-list{
-                    .currency{
-                        .pay{
+
+                .currency-list {
+                    .currency {
+                        .pay {
                             min-width: 96px;
                             font-size: 16px;
-                            img{
+
+                            img {
                                 height: 20px;
                             }
                         }
                     }
                 }
             }
-            .amount-box{
+
+            .amount-box {
                 margin-bottom: 28px;
             }
-            .check-box{
+
+            .check-box {
                 width: 100%;
                 padding: 16px 24px;
                 background-color: $frameBg;
@@ -336,21 +433,25 @@ main.product{
                 position: fixed;
                 left: 0;
                 bottom: 0;
-                .total{
-                    span{
+
+                .total {
+                    span {
                         font-size: calc($fontSize * 1.8);
-                        &.ic-coin{
-                            img{
+
+                        &.ic-coin {
+                            img {
                                 height: 26px;
                             }
                         }
-                        span.currency{
+
+                        span.currency {
                             font-size: calc($fontSize * 1.4);
                             line-height: 1.5rem;
                         }
                     }
                 }
-                a.btn{
+
+                a.btn {
                     display: block;
                     padding: 12px 24px;
                     font-size: calc($fontSize * 1.2);
@@ -362,4 +463,6 @@ main.product{
             }
         }
     }
-} // mobile
+}
+
+// mobile

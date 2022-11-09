@@ -223,6 +223,7 @@
 }
 .banner-ranking .ranking-frame .ranking-content {
   overflow: hidden;
+  margin-top: 8px;
 }
 .banner-ranking .ranking-frame .ranking-content p.no-info {
   display: none;

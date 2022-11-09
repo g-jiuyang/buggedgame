@@ -56,7 +56,7 @@ main.withdraw {
                     }
                 }
 
-                &:disabled {
+                &[disabled] {
                     background-color: $frameBg !important;
                     color: $lighter !important;
                 }
@@ -83,7 +83,7 @@ main.withdraw {
                     background: $gradient-hover;
                 }
 
-                &:disabled {
+                &[disabled] {
                     background: $dark;
                     cursor: default;
                 }
@@ -230,7 +230,7 @@ main.withdraw {
                 background: $gradient-hover;
             }
 
-            &:disabled {
+            &[disabled] {
                 background: $dark;
                 cursor: default;
             }

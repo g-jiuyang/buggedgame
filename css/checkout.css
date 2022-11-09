@@ -31,63 +31,19 @@
   font-size: 18px;
   font-weight: 500;
 }
-.checkout .product .warning {
+.checkout .warning {
   flex: 100%;
   background-color: rgba(224, 128, 131, 0.15);
   border-radius: 8px;
   padding: 8px 16px;
+  margin-bottom: 36px;
 }
-.checkout .product .warning a {
+.checkout .warning a {
   font-weight: 700;
   transition: all 0.5s;
 }
-.checkout .product .warning a:hover {
+.checkout .warning a:hover {
   color: #d85f63;
-}
-.checkout .payment {
-  margin-bottom: 28px;
-}
-.checkout .payment label {
-  font-size: 14px;
-  font-weight: 700;
-}
-.checkout .payment .payment-select li {
-  position: relative;
-  margin: 12px 0;
-  padding: 12px 24px;
-  border-radius: 24px;
-  border: 1px solid #898989;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.checkout .payment .payment-select li:hover {
-  background-color: rgba(138, 163, 255, 0.1);
-}
-.checkout .payment .payment-select li[checked] {
-  cursor: default;
-  color: #8AA3FF;
-  background-color: rgba(138, 163, 255, 0.2);
-  border-color: #8AA3FF;
-}
-.checkout .payment .payment-select li[checked]:after {
-  position: absolute;
-  content: url(../images/icon/icon-check.svg);
-  right: 20px;
-}
-.checkout .payment p + .desc {
-  margin-top: 12px;
-}
-.checkout .payment .desc {
-  color: #BDBDBD;
-}
-.checkout .payment .desc a {
-  color: #8AA3FF;
-  text-decoration: none;
-  font-weight: 700;
-  transition: all 0.5s;
-}
-.checkout .payment .desc a:hover {
-  color: #718fff;
 }
 .checkout form .title {
   font-size: 14px;
@@ -157,13 +113,16 @@
   display: inline;
   margin-bottom: 12px;
 }
-.checkout form #invoice .invoice-type #county-select, .checkout form #invoice .invoice-type #city-select {
+.checkout form #invoice .invoice-type #county-select,
+.checkout form #invoice .invoice-type #city-select {
   align-self: flex-start;
 }
-.checkout form #invoice .invoice-type #county-select div, .checkout form #invoice .invoice-type #city-select div {
+.checkout form #invoice .invoice-type #county-select div,
+.checkout form #invoice .invoice-type #city-select div {
   z-index: 100;
 }
-.checkout form #invoice .invoice-type #county-select div ul, .checkout form #invoice .invoice-type #city-select div ul {
+.checkout form #invoice .invoice-type #county-select div ul,
+.checkout form #invoice .invoice-type #city-select div ul {
   max-height: 15em;
   overflow-y: auto;
 }
@@ -185,7 +144,8 @@
 .checkout form .agree a:hover {
   color: #718fff;
 }
-.checkout form input[type=submit], .checkout form button {
+.checkout form input[type=submit],
+.checkout form button {
   width: 100%;
   height: 44px;
   margin-top: 10px;
