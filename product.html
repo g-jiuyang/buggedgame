@@ -362,6 +362,18 @@
 
 
 
+    <!-- pop up 免責聲明 -->
+    <div id="disclaimer--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="disclaimer--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>免責聲明</h2>
+            <div class="popUp--content">
+                <p class="note">免責聲明免責聲明免責聲明免責聲明免責聲明免責聲明，詳見<a href="#">這是連結</a>說明。</p>
+            </div>
+            <button id="disclaimer--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
+
     <!-- pop up 兌換道具 -->
     <div id="exchange--popUp" class="popUp popUp__button">
         <div class="popUp--container">
@@ -490,6 +502,17 @@
     $('#type2').click(function(){
         $('#test2').removeClass('hidden');
         $('#test1').addClass('hidden');
+    })
+
+    // 免責聲明
+    $('#disclaimer--open').click(function(){
+        $('#disclaimer--popUp').addClass('active')
+    })
+    $('#disclaimer--close').click(function(){
+        $('#disclaimer--popUp').removeClass('active')
+    })
+    $('#disclaimer--submit').click(function(){
+        $('#disclaimer--popUp').removeClass('active')
     })
 
     // pop up 兌換道具

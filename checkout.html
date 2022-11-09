@@ -241,8 +241,8 @@
                 <div class="info">
                     <p class="title">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</p>
                     <p>數量：1</p>
+                    <p>支付方式：信用卡</p>
                     <p class="amount">結帳總額： <span>300,000</span> <span class="currency">TWD</span></p>
-                    <p>交易方式：信用卡</p>
                 </div>
             </div>
             <div class="warning">唉呀~您的BNB還差 599，餘額不足 <a href="#" target="_blank">獲得BNB教學</a></div>
@@ -400,18 +400,6 @@
         </a>
     </div>
 
-    <!-- pop up 免責聲明 -->
-    <div id="disclaimer--popUp" class="popUp popUp__button">
-        <div class="popUp--container">
-            <button id="disclaimer--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
-            <h2>免責聲明</h2>
-            <div class="popUp--content">
-                <p class="note">免責聲明免責聲明免責聲明免責聲明免責聲明免責聲明，詳見<a href="#">這是連結</a>說明。</p>
-            </div>
-            <button id="disclaimer--submit" class="popUp--submit">確認</button>
-        </div>
-    </div>
-
     <!-- pop up 發票說明 -->
     <div id="invoiceInfo--popUp" class="popUp">
         <div class="popUp--container">
@@ -515,17 +503,6 @@
     // 下拉選單
     $('.selector > span').click(function(){
         $(this).parent().toggleClass('open')
-    })
-
-    // 免責聲明
-    $('#disclaimer--open').click(function(){
-        $('#disclaimer--popUp').addClass('active')
-    })
-    $('#disclaimer--close').click(function(){
-        $('#disclaimer--popUp').removeClass('active')
-    })
-    $('#disclaimer--submit').click(function(){
-        $('#disclaimer--popUp').removeClass('active')
     })
 
     // 發票說明彈窗

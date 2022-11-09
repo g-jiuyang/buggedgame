@@ -283,6 +283,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="payment">
+                    <label>支付方式*</label>
+                    <!-- ↓↓新台幣結帳↓↓ -->
+                    <div id="test1">
+                        <ul class="payment-select">
+                            <li checked>信用卡一次付清 (限台灣發行信用卡)</li>
+                            <li>未來如果有增加付款方式會往下長成這樣</li>
+                        </ul>
+                        <p class="desc">*信用卡提醒訊息說明，一些說明說明說明說明說一些說明說明說明說明說一些說明說明</p>
+                    </div>
+                    
+                    <!-- ↓↓BNB結帳↓↓ -->
+                    <div id="test2" class="hidden">
+                        <ul class="payment-select">
+                            <li checked>使用 BNB 付款</li>
+                        </ul>
+                        <p>Network：幣安智能鏈 (BSC)</p>
+                        <p class="desc">*使用加密貨幣付款 <a href="javascript:void(0)" id="disclaimer--open">免責聲明</a></p>
+                    </div>
+                    
+                </div>
                 <div class="amount-box">
                     <div class="box-title">數量</div>
                     <div class="amount">
@@ -334,6 +355,18 @@
     </div>
 
 
+
+    <!-- pop up 免責聲明 -->
+    <div id="disclaimer--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="disclaimer--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>免責聲明</h2>
+            <div class="popUp--content">
+                <p class="note">免責聲明免責聲明免責聲明免責聲明免責聲明免責聲明，詳見<a href="#">這是連結</a>說明。</p>
+            </div>
+            <button id="disclaimer--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
 
     <!-- pop up 兌換道具 -->
     <div id="exchange--popUp" class="popUp popUp__button">
@@ -448,6 +481,32 @@
 
 
 <script>
+    // 支付方式
+    $('.payment-select li').click(function(){
+        $('.payment-select li').removeAttr('checked')
+        $(this).attr('checked', true)
+    })
+
+    $('#type1').click(function(){
+        $('#test1').removeClass('hidden');
+        $('#test2').addClass('hidden');
+    })
+    $('#type2').click(function(){
+        $('#test2').removeClass('hidden');
+        $('#test1').addClass('hidden');
+    })
+
+    // 免責聲明
+    $('#disclaimer--open').click(function(){
+        $('#disclaimer--popUp').addClass('active')
+    })
+    $('#disclaimer--close').click(function(){
+        $('#disclaimer--popUp').removeClass('active')
+    })
+    $('#disclaimer--submit').click(function(){
+        $('#disclaimer--popUp').removeClass('active')
+    })
+
     // pop up 兌換道具
     $('#exchange--open').click(function () {
         $('#exchange--popUp').addClass('active')
