@@ -336,6 +336,19 @@ main.product .check-box a.button {
   main.product .content-box .currency-box .currency-list .currency .pay img {
     height: 20px;
   }
+  main.product .content-box .payment label {
+    font-size: 14px;
+  }
+  main.product .content-box .payment .payment-select li {
+    font-size: 14px;
+  }
+  main.product .content-box .payment p {
+    font-size: 14px;
+    margin-top: -4px;
+  }
+  main.product .content-box .payment p.desc {
+    margin-top: 4px;
+  }
   main.product .content-box .amount-box {
     margin-bottom: 28px;
   }

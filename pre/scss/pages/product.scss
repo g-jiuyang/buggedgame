@@ -418,6 +418,27 @@ main.product {
                 }
             }
 
+            .payment {
+                label {
+                    font-size: calc($fontSize * 1.4);
+                }
+
+                .payment-select {
+                    li {
+                        font-size: calc($fontSize * 1.4);
+                    }
+                }
+    
+                p {
+                    font-size: calc($fontSize * 1.4);
+                    margin-top: -4px;
+
+                    &.desc {
+                        margin-top: 4px;
+                    }
+                }
+            }
+
             .amount-box {
                 margin-bottom: 28px;
             }
