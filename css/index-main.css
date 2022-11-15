@@ -740,7 +740,7 @@ footer .copyright {
 
 @media screen and (min-width: 1440px) {
   .animation-banner .animation-wrap {
-    right: calc(50% - 700px);
+    right: calc(50% - 600px);
     width: 50vw;
   }
   .banner-ranking .banner-frame {
