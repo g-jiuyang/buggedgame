@@ -334,16 +334,6 @@ footer {
   text-align: center;
   color: gray;
 }
-footer ul {
-  display: flex;
-  font-size: 14px;
-  align-items: center;
-  justify-content: center;
-  gap: 120px;
-}
-footer ul li a:hover {
-  color: #8AA3FF;
-}
 footer .copyright {
   display: flex;
   align-items: center;
@@ -381,9 +371,6 @@ footer .copyright div img {
 @media screen and (max-width: 767px) {
   footer {
     width: calc(100vw - 3.5rem);
-  }
-  footer ul {
-    gap: 40px;
   }
   footer .copyright {
     position: relative;
@@ -450,13 +437,5 @@ footer .copyright div img {
     margin-top: 120px;
     margin-bottom: 16px;
     width: calc(100vw - 2.5rem);
-  }
-  footer ul {
-    flex-wrap: wrap;
-    gap: 16px 0;
-  }
-  footer ul li {
-    flex: 50%;
-    text-align: left;
   }
 }

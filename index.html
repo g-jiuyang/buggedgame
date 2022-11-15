@@ -48,7 +48,7 @@
     <script src="js/nav-blur.js"></script>
     <script src="js/popup.js"></script>
 </head>
-<body class="font-sans overflow-x-hidden bg-121212">
+<body class="font-sans overflow-x-hidden">
 
     <!-- header -->
     <div class="min-h-full">
@@ -236,15 +236,15 @@
     <!-- 頁首形象圖 & 主標 -->
     <div class="animation-banner">
         <!-- 20220628 -->
-        <div data-aos="fade-up" data-aos-delay="100" class="animation-wrap">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-once="false" class="animation-wrap">
             <!-- 20220628 kv lottiefile -->
             <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_nfmwknro.json" background="transparent" speed="1" loop autoplay class="hidden kv-lottie-h lg:mt-0 md:left-0 md:block"></lottie-player>
             <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_lf6txyyq.json" background="transparent" speed="1" loop autoplay class="block md:hidden relative top-5 -left-10 m-kv-box-w"></lottie-player>
         </div>
-        <!-- <div data-aos="fade-up" data-aos-delay="100" class="pg-12"><img src="images/icon/icon-pg-12.svg"></div> -->
-        <main data-aos="fade-up" data-aos-delay="100">
-            <h2>遊戲完蛋了<span>邊玩邊賺</span> !</h2>
-            <p>簡述怎麼 paly to earn。簡單的敘述告訴玩家怎麼 paly to earn 這個好好玩的鏈遊平台。</p>
+        <!-- <div data-aos="fade-up" data-aos-delay="100" data-aos-once="false" class="pg-12"><img src="images/icon/icon-pg-12.svg"></div> -->
+        <main data-aos="fade-up" data-aos-delay="100" data-aos-once="false">
+            <h2>遊戲完蛋了! <span>趣樂遊玩</span></h2>
+            <p>全球知名放置型RPG卡牌遊戲，放置PLAY還在等什麼!?<br/>運用區塊鏈技術進入 Web3.0世界，最高 APR 高達 2,511%。像素世界 GameFi 傳說，等你來迎戰!!</p>
             <div class="btns">
                 <button id="download--open" class="btn-outline">下載遊戲</button>
                 <button class="btn-gradient">購買GAMEFI PASS</button>
@@ -272,7 +272,7 @@
     </div>
 
     <!-- 輪播和排名 -->
-    <div class="banner-ranking" data-aos="fade-up" data-aos-delay="150">
+    <div class="banner-ranking" data-aos="fade-up" data-aos-delay="150" data-aos-once="false">
         <div class="banner-frame">
             <div class="banner-content">
                 <a href="campaign.html" target="_blank" class="">
@@ -415,7 +415,7 @@
     </div>
 
     <!-- 邊玩邊賺 -->
-    <div data-aos="fade-up" class="step">
+    <div data-aos="fade-up" data-aos-once="false" class="step">
         <h2>如何邊玩邊賺？</h2>
         <ul class="step-tab">
             <li id="step-tab-1" class="active">
@@ -489,7 +489,7 @@
     </div>
 
     <!-- faq -->
-    <div data-aos="fade-up" class="faq">
+    <div data-aos="fade-up" data-aos-once="false" class="faq">
         <h2>FAQ</h2>
         <ul>
             <li>
@@ -508,7 +508,7 @@
     </div>
 
     <!-- 購買GAMEFI PASS -->
-    <div data-aos="fade-up" class="buy-pass">
+    <div data-aos="fade-up" data-aos-once="false" class="buy-pass">
         <h2>馬上購買 GAMEFI PASS</h2>
         <ul class="pass-items">
             <li>
@@ -563,15 +563,15 @@
     </div>
 
     <!-- roadmap -->
-    <!-- <div data-aos="fade-up" class="roadmap">
+    <!-- <div data-aos="fade-up" data-aos-once="false" class="roadmap">
         <h2>Roadmap</h2>
         <img src="images/product/roadmap.svg" class="img-pc">
         <img src="images/product/roadmap-m.svg" class="img-m">
     </div> -->
 
-    <!-- 開發團隊 -->
-    <div data-aos="fade-up" class="team">
-        <h3>開發團隊</h3>
+    <!-- 營運團隊 -->
+    <div data-aos="fade-up" data-aos-once="false" class="team">
+        <h3>營運團隊</h3>
         <ul class="team-list">
             <li>
                 <img src="images/team/Leo.png">
@@ -603,6 +603,7 @@
                 <span class="name">Justin WU</span>
                 <span class="occupation">Blockchain Marketing Dept. Assistant Manager</span>
             </li>
+            
             <li>
                 <img src="images/team/photo07.png">
                 <span class="name">Your Name</span>
@@ -633,7 +634,29 @@
                 <span class="name">Your Name</span>
                 <span class="occupation">Occupation</span>
             </li>
+
+            <li class="col-4">
+                <img src="images/team/photo13.png">
+                <span class="name">Your Name</span>
+                <span class="occupation">Occupation</span>
+            </li>
             <li>
+                <img src="images/team/photo-default.png">
+                <span class="name">Your Name</span>
+                <span class="occupation">Occupation</span>
+            </li>
+            <li>
+                <img src="images/team/photo-default.png">
+                <span class="name">Your Name</span>
+                <span class="occupation">Occupation</span>
+            </li>
+            <li>
+                <img src="images/team/photo-default.png">
+                <span class="name">Your Name</span>
+                <span class="occupation">Occupation</span>
+            </li>
+
+            <li class="col-3">
                 <img src="images/team/photo13.png">
                 <span class="name">Your Name</span>
                 <span class="occupation">Occupation</span>
@@ -653,7 +676,7 @@
     </div>
 
     <!-- 合作夥伴 -->
-    <div data-aos="fade-up" class="coworker">
+    <div data-aos="fade-up" data-aos-once="false" class="coworker">
         <h3>合作夥伴</h3>
         <ul class="coworker-list">
             <li><img src="images/product/sponsor-gamania.svg"></li>

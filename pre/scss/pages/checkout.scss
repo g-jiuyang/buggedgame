@@ -241,18 +241,6 @@
             }
         }
 
-        .payment {
-            .payment-select {
-                li {
-                    font-size: calc($fontSize * 1.4);
-                }
-            }
-
-            p {
-                font-size: calc($fontSize * 1.4);
-            }
-        }
-
         form {
             input {
                 &[type=checkbox]+span {

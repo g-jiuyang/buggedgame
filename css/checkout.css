@@ -181,12 +181,6 @@
   .checkout .product .info p.amount span.currency {
     font-size: 14px;
   }
-  .checkout .payment .payment-select li {
-    font-size: 14px;
-  }
-  .checkout .payment p {
-    font-size: 14px;
-  }
   .checkout form input[type=checkbox] + span {
     font-size: 14px;
   }
