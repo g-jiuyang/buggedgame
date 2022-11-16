@@ -816,7 +816,7 @@ footer .copyright {
     height: auto;
   }
   .animation-banner:after {
-    bottom: -346px;
+    bottom: calc(-100vw + 450px);
   }
   .animation-banner .animation-wrap {
     top: 60px;
@@ -957,7 +957,7 @@ footer .copyright {
 }
 @media screen and (max-width: 767px) {
   .animation-banner:after {
-    bottom: -286px;
+    bottom: calc(-100vw + 360px);
   }
   .animation-banner .animation-wrap {
     top: 28px;
@@ -1011,7 +1011,7 @@ footer .copyright {
     margin-bottom: 56px;
   }
   .animation-banner:after {
-    bottom: -380px;
+    bottom: calc(-100vw + 272px);
     background-size: 400vw;
   }
   .animation-banner .animation-wrap {

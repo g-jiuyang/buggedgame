@@ -1000,7 +1000,7 @@ footer {
         height: auto;
 
         &:after {
-            bottom: -346px;
+            bottom: calc(-100vw + 450px);
         }
 
         .animation-wrap {
@@ -1196,7 +1196,7 @@ footer {
 @media screen and(max-width: 767px) {
     .animation-banner {
         &:after {
-            bottom: -286px;
+            bottom: calc(-100vw + 360px);
         }
 
         .animation-wrap {
@@ -1284,7 +1284,7 @@ footer {
         margin-bottom: 56px;
 
         &:after {
-            bottom: -380px;
+            bottom: calc(-100vw + 272px);
             background-size: 400vw;
         }
 
