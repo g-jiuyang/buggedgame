@@ -276,6 +276,7 @@ body {
   justify-content: flex-start;
   gap: 4px;
   word-break: break-word;
+  max-height: 32px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
   flex: 16px;
