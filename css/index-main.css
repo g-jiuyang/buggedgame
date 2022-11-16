@@ -1011,8 +1011,7 @@ footer .copyright {
     margin-bottom: 56px;
   }
   .animation-banner:after {
-    bottom: calc(-100vw + 272px);
-    background-size: 400vw;
+    background: none;
   }
   .animation-banner .animation-wrap {
     overflow: hidden;
@@ -1021,9 +1020,13 @@ footer .copyright {
     left: 0;
   }
   .animation-banner main {
-    width: 90vw;
+    width: 100vw;
+    padding: 0 5vw 20px;
+    margin: 0;
     margin-top: 100vw;
-    margin-bottom: 0;
+    background-image: url(../images/index-bg1.png);
+    background-size: 400vw;
+    background-position: bottom center;
   }
   .animation-banner main h2 {
     font-size: 24px;
