@@ -450,6 +450,7 @@ body {
         right: 0;
         left: 0;
         height: 100px;
+        z-index: -1;
         background: linear-gradient(to bottom, #010206 0%, rgba(#010206,0) 100%);
     }
 
@@ -649,6 +650,7 @@ body {
         right: 0;
         left: 0;
         height: 100px;
+        z-index: -1;
         background: linear-gradient(to bottom, #010206 0%, rgba(#010206,0) 100%);
     }
 
@@ -734,10 +736,8 @@ body {
         background: linear-gradient(to bottom, #010206 20%, rgba(#010206,0) 100%);
     }
 
-    h3 {
-        font-size: calc($fontSize * 1.6);
+    h2 {
         text-align: center;
-        font-weight: $UltraBold;
         margin-bottom: 42px;
     }
 
@@ -791,10 +791,8 @@ body {
 .coworker {
     padding: 60px 0;
 
-    h3 {
-        font-size: calc($fontSize * 1.6);
+    h2 {
         text-align: center;
-        font-weight: $UltraBold;
         margin-bottom: 42px;
     }
 

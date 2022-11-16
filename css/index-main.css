@@ -373,6 +373,7 @@ body {
   right: 0;
   left: 0;
   height: 100px;
+  z-index: -1;
   background: linear-gradient(to bottom, #010206 0%, rgba(1, 2, 6, 0) 100%);
 }
 .step h2 {
@@ -539,6 +540,7 @@ body {
   right: 0;
   left: 0;
   height: 100px;
+  z-index: -1;
   background: linear-gradient(to bottom, #010206 0%, rgba(1, 2, 6, 0) 100%);
 }
 .buy-pass h2 {
@@ -611,10 +613,8 @@ body {
   z-index: -1;
   background: linear-gradient(to bottom, #010206 20%, rgba(1, 2, 6, 0) 100%);
 }
-.team h3 {
-  font-size: 16px;
+.team h2 {
   text-align: center;
-  font-weight: 700;
   margin-bottom: 42px;
 }
 .team .team-list {
@@ -658,10 +658,8 @@ body {
 .coworker {
   padding: 60px 0;
 }
-.coworker h3 {
-  font-size: 16px;
+.coworker h2 {
   text-align: center;
-  font-weight: 700;
   margin-bottom: 42px;
 }
 .coworker .coworker-list {
