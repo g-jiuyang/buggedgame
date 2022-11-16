@@ -2,7 +2,7 @@
 @import "../mixin";
 
 body {
-    background-color: #010206;
+    background-color: #010206 !important;
 }
 
 .animation-banner {
@@ -409,8 +409,7 @@ body {
         }
 
         // 漸層邊框
-        &:before,
-        &:after {
+        &:before, &:after {
             content: '';
             position: absolute;
             border-radius: 40px;
@@ -430,7 +429,7 @@ body {
             right: 0;
             bottom: 0;
             left: 0;
-            background: $frameBg;
+            background: $darkBg;
         }
     }
 }
@@ -536,6 +535,7 @@ body {
                 border-radius: 40px;
                 color: $lightGray;
                 text-align: center;
+                background-color: rgba($darkBg, .6);
 
                 p.title {
                     font-weight: $UltraBold;
@@ -671,6 +671,7 @@ body {
             padding: 58px 36px 16px 36px;
             cursor: pointer;
             transition: all .5s;
+            background-color: rgba($darkBg, .6);
 
             img {
                 margin-bottom: 16px;
@@ -721,6 +722,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 300px;
+        z-index: -1;
+        background: linear-gradient(to bottom, #010206 20%, rgba(#010206,0) 100%);
+    }
 
     h3 {
         font-size: calc($fontSize * 1.6);
@@ -891,8 +903,8 @@ footer {
 @media screen and (min-width: 1440px) {
     .animation-banner {
         .animation-wrap {
-            right: calc(50% - 600px);
-            width: 50vw;
+            right: calc(50% - 760px);
+            width: 65vw;
         }
     }
 
@@ -1000,7 +1012,7 @@ footer {
 
         main {
             width: 80vw;
-            margin: 600px auto 56px;
+            margin: 75vw auto 56px;
             padding-top: 0;
 
             ul {
@@ -1192,10 +1204,6 @@ footer {
             right: 84px;
             left: 28px;
         }
-
-        main {
-            margin-top: 540px;
-        }
     }
 
     .banner-ranking {
@@ -1289,6 +1297,7 @@ footer {
 
         main {
             width: 90vw;
+            margin-top: 100vw;
             margin-bottom: 0;
 
             h2 {
@@ -1329,7 +1338,6 @@ footer {
 
     .banner-ranking {
         gap: 48px;
-        margin-bottom: 64px;
 
         .banner-frame {
             flex: 100%;
@@ -1407,7 +1415,6 @@ footer {
     }
 
     .step {
-        margin-bottom: 60px;
         background-size: 400vw;
 
         .step-tab {
@@ -1446,8 +1453,6 @@ footer {
     }
 
     .faq {
-        margin-bottom: 64px;
-
         ul {
             li {
                 padding: 16px 12px;
@@ -1507,17 +1512,13 @@ footer {
     }
 
     .team {
-        background-size: 480vw;
+        background-size: 430vw;
 
         &:before {
-            content: '';
-            position: absolute;
-            top: 270vw;
-            right: 0;
-            left: 0;
+            // top: 270vw;
             height: 200px;
-            z-index: -1;
-            background: linear-gradient(to bottom, #010206 10%, rgba(#010206,0) 100%);    
+            top: auto;
+            bottom: 180vw;
         }
 
         h3 {
