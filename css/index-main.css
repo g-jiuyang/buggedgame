@@ -1104,6 +1104,7 @@ footer .copyright {
   }
   .step {
     background-size: 400vw;
+    padding: 60px 0;
   }
   .step .step-tab {
     max-width: 224px;
@@ -1138,6 +1139,7 @@ footer .copyright {
   }
   .buy-pass {
     background-size: 450vw;
+    padding: 60px 0;
   }
   .buy-pass h2 {
     margin-bottom: 24px;
