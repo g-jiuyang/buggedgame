@@ -300,9 +300,6 @@ body {
                     flex: 100%;
                     display: flex;
                     flex-wrap: wrap;
-                    flex-direction: column;
-                    align-items: inherit;
-                    max-height: 120px;
 
                     li {
                         flex: 33.33%;
@@ -925,19 +922,9 @@ footer {
             .ranking-content {
                 p {
                     &.update-time {
-                        margin-top: -2px;
+                        margin-top: 2px;
                     }
                 }
-
-                // .content-switch {
-                //     ul {
-                //         max-height: 86px;
-
-                //         li {
-                //             max-height: 22px;
-                //         }
-                //     }
-                // }
             }
         }
     }
@@ -1132,9 +1119,6 @@ footer {
                     transition: all .6s ease-in;
 
                     ul {
-                        flex-direction: row;
-                        align-items: inherit;
-                        max-height: max-content;
                         gap: 8px;
 
                         li {

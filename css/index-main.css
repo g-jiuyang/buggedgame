@@ -264,9 +264,6 @@ body {
   flex: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: inherit;
-  max-height: 120px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
   flex: 33.33%;
@@ -768,7 +765,7 @@ footer .copyright {
     flex: calc(100% - 428px);
   }
   .banner-ranking .ranking-frame .ranking-content p.update-time {
-    margin-top: -2px;
+    margin-top: 2px;
   }
 }
 @media screen and (min-width: 1680px) {
@@ -912,11 +909,6 @@ footer .copyright {
     transition: all 0.6s ease-in;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul {
-    flex-direction: row;
-    align-items: inherit;
-    max-height: -webkit-max-content;
-    max-height: -moz-max-content;
-    max-height: max-content;
     gap: 8px;
   }
   .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
