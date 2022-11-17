@@ -9,9 +9,10 @@ body {
     display: flex;
     align-items: center;
     height: 650px;
-    overflow: hidden;
-    max-width: 72rem;
+    max-width: 100%;
+    padding: 0 calc(50vw - 36rem);
     margin: 0 auto;
+    position: relative;
 
     &:after{
         content: '';
@@ -20,7 +21,7 @@ body {
         top: 0;
         right: 0;
         left: 0;
-        bottom: 0;
+        bottom: -120px;
         background-image: url(../images/index-bg1.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -312,7 +313,6 @@ body {
                         justify-content: flex-start;
                         gap: 4px;
                         word-break: break-word;
-                        max-height: 32px;
 
                         .rank {
                             flex: 16px;
@@ -929,15 +929,15 @@ footer {
                     }
                 }
 
-                .content-switch {
-                    ul {
-                        max-height: 86px;
+                // .content-switch {
+                //     ul {
+                //         max-height: 86px;
 
-                        li {
-                            max-height: 22px;
-                        }
-                    }
-                }
+                //         li {
+                //             max-height: 22px;
+                //         }
+                //     }
+                // }
             }
         }
     }
@@ -1032,7 +1032,7 @@ footer {
         }
 
         .animation-wrap {
-            top: 60px;
+            top: -70vw;
             left: -200px;
             right: -120px;
             width: auto;
@@ -1228,7 +1228,6 @@ footer {
         }
 
         .animation-wrap {
-            top: 28px;
             right: 84px;
             left: 28px;
         }
@@ -1322,7 +1321,7 @@ footer {
 
         .animation-wrap {
             overflow: hidden;
-            top: 100px;
+            top: -80vw;
             right: 0;
             left: 0;
         }

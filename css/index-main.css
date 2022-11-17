@@ -6,9 +6,10 @@ body {
   display: flex;
   align-items: center;
   height: 650px;
-  overflow: hidden;
-  max-width: 72rem;
+  max-width: 100%;
+  padding: 0 calc(50vw - 36rem);
   margin: 0 auto;
+  position: relative;
 }
 .animation-banner:after {
   content: "";
@@ -17,7 +18,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  bottom: 0;
+  bottom: -120px;
   background-image: url(../images/index-bg1.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -276,7 +277,6 @@ body {
   justify-content: flex-start;
   gap: 4px;
   word-break: break-word;
-  max-height: 32px;
 }
 .banner-ranking .ranking-frame .ranking-content .content-switch ul li .rank {
   flex: 16px;
@@ -770,12 +770,6 @@ footer .copyright {
   .banner-ranking .ranking-frame .ranking-content p.update-time {
     margin-top: -2px;
   }
-  .banner-ranking .ranking-frame .ranking-content .content-switch ul {
-    max-height: 86px;
-  }
-  .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
-    max-height: 22px;
-  }
 }
 @media screen and (min-width: 1680px) {
   .animation-banner .animation-wrap {
@@ -839,7 +833,7 @@ footer .copyright {
     bottom: calc(-100vw + 450px);
   }
   .animation-banner .animation-wrap {
-    top: 60px;
+    top: -70vw;
     left: -200px;
     right: -120px;
     width: auto;
@@ -980,7 +974,6 @@ footer .copyright {
     bottom: calc(-100vw + 360px);
   }
   .animation-banner .animation-wrap {
-    top: 28px;
     right: 84px;
     left: 28px;
   }
@@ -1035,7 +1028,7 @@ footer .copyright {
   }
   .animation-banner .animation-wrap {
     overflow: hidden;
-    top: 100px;
+    top: -80vw;
     right: 0;
     left: 0;
   }
