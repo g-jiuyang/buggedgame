@@ -908,9 +908,15 @@ footer {
     }
 
     .banner-ranking {
+        margin: 60px auto 0;
+
         .banner-frame {
             flex: 400px;
             max-width: 400px;
+
+            .banner-content {
+                height: 160px;
+            }
         }
 
         .ranking-frame {
@@ -922,16 +928,39 @@ footer {
                         margin-top: -2px;
                     }
                 }
+
+                .content-switch {
+                    ul {
+                        max-height: 86px;
+
+                        li {
+                            max-height: 22px;
+                        }
+                    }
+                }
             }
         }
     }
 } // min-width: 1440px
+
+@media screen and (min-width: 1680px) {
+    .animation-banner {
+        .animation-wrap {
+            right: calc(50% - 800px);
+            width: 55vw;
+        }
+    }
+} // min-width: 1680px
 
 @media screen and (max-width: 1200px) {
     .animation-banner {
         .animation-wrap {
             max-width: 110vw;
             margin: -96px auto 0;
+        }
+
+        main {
+            margin-left: 2rem;
         }
     }
 

@@ -754,9 +754,15 @@ footer .copyright {
     right: calc(50% - 760px);
     width: 65vw;
   }
+  .banner-ranking {
+    margin: 60px auto 0;
+  }
   .banner-ranking .banner-frame {
     flex: 400px;
     max-width: 400px;
+  }
+  .banner-ranking .banner-frame .banner-content {
+    height: 160px;
   }
   .banner-ranking .ranking-frame {
     flex: calc(100% - 428px);
@@ -764,11 +770,26 @@ footer .copyright {
   .banner-ranking .ranking-frame .ranking-content p.update-time {
     margin-top: -2px;
   }
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul {
+    max-height: 86px;
+  }
+  .banner-ranking .ranking-frame .ranking-content .content-switch ul li {
+    max-height: 22px;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .animation-banner .animation-wrap {
+    right: calc(50% - 800px);
+    width: 55vw;
+  }
 }
 @media screen and (max-width: 1200px) {
   .animation-banner .animation-wrap {
     max-width: 110vw;
     margin: -96px auto 0;
+  }
+  .animation-banner main {
+    margin-left: 2rem;
   }
   .banner-ranking {
     flex-wrap: wrap;
