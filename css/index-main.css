@@ -673,29 +673,41 @@ body {
 }
 
 #download--popUp .popUp--container {
-  max-height: -webkit-max-content;
-  max-height: -moz-max-content;
-  max-height: max-content;
+  max-height: 90vh;
 }
 #download--popUp .popUp--container .mobile {
   display: none;
 }
-#download--popUp .popUp--container p.desc {
+#download--popUp .popUp--container .desc {
+  text-align: center;
+}
+#download--popUp .popUp--container .desc p {
   font-size: 14px;
   color: #BDBDBD;
 }
-#download--popUp .popUp--container .qrc {
+#download--popUp .popUp--container .desc img {
+  margin-top: 28px;
+  border-radius: 8px;
+}
+#download--popUp .popUp--container .download-show {
+  display: none;
+  gap: 36px;
+  margin-top: 28px;
+}
+#download--popUp .popUp--container .download-show .qrc {
+  flex: 120px;
   max-width: 120px;
   margin: 28px auto;
 }
-#download--popUp .popUp--container .btns {
+#download--popUp .popUp--container .download-show .btns {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
-#download--popUp .popUp--container .btns button {
+#download--popUp .popUp--container .download-show .btns button {
   flex: 100%;
   max-width: 280px;
   height: 44px;
@@ -704,7 +716,7 @@ body {
   font-size: 14px;
   font-weight: 700;
 }
-#download--popUp .popUp--container .btns button:hover {
+#download--popUp .popUp--container .download-show .btns button:hover {
   background-color: #7087D8;
 }
 
@@ -827,7 +839,8 @@ footer .copyright {
     height: auto;
   }
   .animation-banner:after {
-    bottom: calc(-100vw + 450px);
+    background-size: 200vw;
+    bottom: -24px;
   }
   .animation-banner .animation-wrap {
     top: -70vw;
@@ -962,9 +975,6 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 767px) {
-  .animation-banner:after {
-    bottom: calc(-100vw + 360px);
-  }
   .animation-banner .animation-wrap {
     right: 84px;
     left: 28px;
@@ -1016,7 +1026,8 @@ footer .copyright {
     margin-bottom: 56px;
   }
   .animation-banner:after {
-    background: none;
+    background-size: 400vw;
+    bottom: 0;
   }
   .animation-banner .animation-wrap {
     overflow: hidden;
@@ -1029,9 +1040,6 @@ footer .copyright {
     padding: 0 5vw 20px;
     margin: 0;
     margin-top: 100vw;
-    background-image: url(../images/index-bg1.png);
-    background-size: 400vw;
-    background-position: bottom center;
   }
   .animation-banner main h2 {
     font-size: 24px;
@@ -1216,9 +1224,6 @@ footer .copyright {
   }
   #download--popUp .popUp--container .mobile {
     display: inline;
-  }
-  #download--popUp .popUp--container #app-store {
-    margin-top: 28px;
   }
   footer {
     padding-bottom: 16px;

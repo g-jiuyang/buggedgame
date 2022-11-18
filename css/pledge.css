@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .mainTitle {
   margin-bottom: 16px;
   font-size: 16px;
@@ -299,22 +298,25 @@
 .pledge-success .nft--list li .desc .nft--id {
   color: #898989;
 }
-.pledge-success .nft--list li.pledging .img:before {
+.pledge-success .nft--list li.pledging .img span {
   position: absolute;
-  content: "質押中";
-  padding: 4px 8px;
-  border-radius: 8px;
-  background-color: rgba(126, 151, 240, 0.85);
-  color: #EFEFEF;
-  font-size: 12px;
-  font-weight: 700;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 8px;
+  background-color: rgba(126, 151, 240, 0.85);
+  color: #EFEFEF;
+  font-weight: 700;
 }
-.pledge-success .nft--list li.relieve .img:before {
+.pledge-success .nft--list li.relieve .img span {
   position: absolute;
-  content: "已解除";
   padding: 4px 8px;
   border-radius: 8px;
   background-color: rgba(224, 128, 131, 0.85);

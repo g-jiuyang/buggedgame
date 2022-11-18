@@ -724,14 +724,23 @@
         <div class="popUp--container">
             <button id="download--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>下載遊戲</h2>
-            <p class="desc web">馬上拿起手機掃描QR Code下載遊戲吧！</p>
-            <p class="desc mobile">馬上點擊下載遊戲吧！</p>
-            <img class="qrc web" src="images/QRC.png">
-            <div class="btns">
-                <button id="iOS" class="web">iOS 下載</button>
-                <button id="android" class="web">Android 下載</button>
-                <button id="app-store" class="mobile">iOS / Android 下載</button>
-                <button id="apk">APK 下載</button>
+            <div class="desc">
+                <p class="web">馬上拿起手機掃描QR Code下載遊戲吧！<br>＊需連結MetaMask錢包後才可以開始邊玩邊賺哦！</p>
+                <p class="mobile">馬上點擊下載遊戲吧！<br>＊需連結MetaMask錢包後才可以開始邊玩邊賺哦！</p>
+                <img src="images/Metamask.jpg">
+                <a href="javascript:void(0)" id="download--confirm" class="button popUp--submit" disabled>
+                    iOS / Android / APK 下載
+                    <span class="count">3s</span>
+                </a>
+            </div>
+            <div class="download-show">
+                <img class="qrc web" src="images/QRC.png">
+                <div class="btns">
+                    <button id="iOS" class="web">iOS 下載</button>
+                    <button id="android" class="web">Android 下載</button>
+                    <button id="app-store" class="mobile">iOS / Android 下載</button>
+                    <button id="apk">APK 下載</button>
+                </div>
             </div>
         </div>
     </div>
@@ -808,9 +817,26 @@
     // pop up 下載遊戲
     $('#download--open').click(function(){
         $('#download--popUp').addClass('active')
+
+        setTimeout(function() { 
+            $("#download--confirm > .count").html('2s');
+        }, 1000);
+
+        setTimeout(function() {
+            $("#download--confirm > .count").html('1s');
+        }, 2000);
+
+        setTimeout(function() {
+            $("#download--confirm > .count").html('');
+            $("#download--confirm").removeAttr('disabled');
+        }, 3000);
     })
     $('#download--close').click(function () {
         $('#download--popUp').removeClass('active')
+    })
+    $('#download--confirm').click(function() {
+        $(this).css('display', 'none')
+        $('.download-show').css('display', 'flex')
     })
 
     // pop up APR

@@ -158,7 +158,7 @@ input {
             cursor: pointer;
         }
 
-        &[warning] + span {
+        &.input-warning + span {
             background-image: url(../images/icon/icon-checkbox-warning.svg);
         }
 
@@ -167,7 +167,7 @@ input {
         }
     }
 
-    &[warning] {
+    &.input-warning {
         border-color: $warning !important;
     }
 }

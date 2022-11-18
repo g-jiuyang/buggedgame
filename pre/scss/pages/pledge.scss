@@ -371,27 +371,26 @@
 
             &.pledging {
                 .img {
-                    &:before {
+                    span {
                         position: absolute;
-                        content: '質押中';
-                        padding: 4px 8px;
-                        border-radius: 8px;
-                        background-color: rgba(#7E97F0, .85);
-                        color: $lightGray;
-                        font-size: calc($fontSize * 1.2);
-                        font-weight: $UltraBold;
+                        width: max-content;
+                        min-width: max-content;
                         bottom: 8px;
                         left: 50%;
                         transform: translateX(-50%);
+                        padding: 4px 12px;
+                        border-radius: 8px;
+                        background-color: rgba(#7E97F0, .85);
+                        color: $lightGray;
+                        font-weight: $UltraBold;
                     }
                 }
             }
 
             &.relieve {
                 .img {
-                    &:before {
+                    span {
                         position: absolute;
-                        content: '已解除';
                         padding: 4px 8px;
                         border-radius: 8px;
                         background-color: rgba(#E08083, .85);

@@ -223,20 +223,18 @@
 
             &.pledging {
                 .img {
-                    &:before {
+                    span {
                         position: absolute;
-                        content: '質押中';
+                        width: max-content;
+                        min-width: max-content;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
                         padding: 4px 12px;
                         border-radius: 8px;
                         background-color: rgba(#7E97F0, .85);
                         color: $lightGray;
-                        font-size: calc($fontSize * 1.4);
                         font-weight: $UltraBold;
-                        bottom: 8px;
-                        width: max-content;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        min-width: max-content;
                     }
                 }
             }

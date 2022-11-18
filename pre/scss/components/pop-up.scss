@@ -60,6 +60,23 @@
                 margin-bottom: 16px;
             }
 
+            ul {
+                font-size: calc($fontSize * 1.4);
+                color: $lighter;
+                margin-bottom: 8px;
+                padding-left: 2em;
+                text-indent: -2em;
+        
+                li {
+                    margin-bottom: 8px;
+                }
+        
+                a {
+                    font-weight: $UltraBold;
+                    color: $primaryC;
+                }
+            }
+
             &::-webkit-scrollbar {
                 border-radius: 2px;
                 background-color: $gray;

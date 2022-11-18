@@ -810,40 +810,57 @@ body {
 
 #download--popUp {
     .popUp--container {
-        max-height: max-content;
+        max-height: 90vh;
 
         .mobile {
             display: none;
         }
 
-        p.desc {
-            font-size: calc($fontSize * 1.4);
-            color: $lighter;
-        }
+        .desc {
+            text-align: center;
 
-        .qrc {
-            max-width: 120px;
-            margin: 28px auto;
-        }
-
-        .btns {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-
-            button {
-                flex: 100%;
-                max-width: 280px;
-                height: 44px;
-                background-color: $primaryC;
-                transition: all .5s;
+            p {
                 font-size: calc($fontSize * 1.4);
-                font-weight: $UltraBold;
+                color: $lighter;
+            }
+            
+            img {
+                margin-top: 28px;
+                border-radius: 8px;
+            }
+        }
 
-                &:hover {
-                    background-color: #7087D8;
+        .download-show {
+            display: none;
+            gap: 36px;
+            margin-top: 28px;
+
+            .qrc {
+                flex: 120px;
+                max-width: 120px;
+                margin: 28px auto;
+            }
+    
+            .btns {
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+    
+                button {
+                    flex: 100%;
+                    max-width: 280px;
+                    height: 44px;
+                    background-color: $primaryC;
+                    transition: all .5s;
+                    font-size: calc($fontSize * 1.4);
+                    font-weight: $UltraBold;
+    
+                    &:hover {
+                        background-color: #7087D8;
+                    }
                 }
             }
         }
@@ -1015,7 +1032,8 @@ footer {
         height: auto;
 
         &:after {
-            bottom: calc(-100vw + 450px);
+            background-size: 200vw;
+            bottom: -24px;
         }
 
         .animation-wrap {
@@ -1207,10 +1225,6 @@ footer {
 
 @media screen and(max-width: 767px) {
     .animation-banner {
-        &:after {
-            bottom: calc(-100vw + 360px);
-        }
-
         .animation-wrap {
             right: 84px;
             left: 28px;
@@ -1294,13 +1308,9 @@ footer {
     .animation-banner {
         margin-bottom: 56px;
 
-        // &:after {
-        //     bottom: -54px;
-        //     background-size: 400vw;
-        // }
-
         &:after {
-            background: none;
+            background-size: 400vw;
+            bottom: 0;
         }
 
         .animation-wrap {
@@ -1315,9 +1325,6 @@ footer {
             padding: 0 5vw 20px;
             margin: 0;
             margin-top: 100vw;
-            background-image: url(../images/index-bg1.png);
-            background-size: 400vw;
-            background-position: bottom center;
 
             h2 {
                 font-size: calc($fontSize * 2.4);
@@ -1602,10 +1609,6 @@ footer {
 
             .mobile {
                 display: inline;
-            }
-
-            #app-store {
-                margin-top: 28px;
             }
         }
     }

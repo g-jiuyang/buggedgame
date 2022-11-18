@@ -195,13 +195,13 @@ input[type=checkbox] + span, input[type=radio] + span {
   background-position: top -1px left 0;
   cursor: pointer;
 }
-input[type=checkbox][warning] + span, input[type=radio][warning] + span {
+input[type=checkbox].input-warning + span, input[type=radio].input-warning + span {
   background-image: url(../images/icon/icon-checkbox-warning.svg);
 }
 input[type=checkbox]:checked + span, input[type=radio]:checked + span {
   background-image: url(../images/icon/icon-checkbox-higlight.svg);
 }
-input[warning] {
+input.input-warning {
   border-color: #E08083 !important;
 }
 

@@ -42,9 +42,10 @@
         }
     }
 
-    .warning {
+    .warning-badge {
         flex: 100%;
         background-color: rgba($warning, .15);
+        color: $warning;
         border-radius: 8px;
         padding: 8px 16px;
         margin-bottom: 36px;
@@ -211,7 +212,7 @@
             color: $primaryC;
         }
 
-        +p.note {
+        + p.note {
             margin-top: 2em;
         }
     }

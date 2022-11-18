@@ -31,18 +31,19 @@
   font-size: 18px;
   font-weight: 500;
 }
-.checkout .warning {
+.checkout .warning-badge {
   flex: 100%;
   background-color: rgba(224, 128, 131, 0.15);
+  color: #E08083;
   border-radius: 8px;
   padding: 8px 16px;
   margin-bottom: 36px;
 }
-.checkout .warning a {
+.checkout .warning-badge a {
   font-weight: 700;
   transition: all 0.5s;
 }
-.checkout .warning a:hover {
+.checkout .warning-badge a:hover {
   color: #d85f63;
 }
 .checkout form .title {

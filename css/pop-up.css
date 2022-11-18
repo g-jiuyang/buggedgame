@@ -54,6 +54,20 @@
 .popUp .popUp--container .popUp--content p {
   margin-bottom: 16px;
 }
+.popUp .popUp--container .popUp--content ul {
+  font-size: 14px;
+  color: #BDBDBD;
+  margin-bottom: 8px;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+.popUp .popUp--container .popUp--content ul li {
+  margin-bottom: 8px;
+}
+.popUp .popUp--container .popUp--content ul a {
+  font-weight: 700;
+  color: #8AA3FF;
+}
 .popUp .popUp--container .popUp--content::-webkit-scrollbar {
   border-radius: 2px;
   background-color: #898989;
