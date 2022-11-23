@@ -1033,7 +1033,7 @@ body {
             }
             
             img {
-                margin-top: 28px;
+                margin: 16px auto 0;
                 border-radius: 8px;
             }
         }
@@ -1041,12 +1041,12 @@ body {
         .download-show {
             display: none;
             gap: 36px;
-            margin-top: 28px;
+            margin-top: 20px;
 
             .qrc {
                 flex: 120px;
                 max-width: 120px;
-                margin: 28px auto;
+                align-self: center;
             }
     
             .btns {
@@ -1059,7 +1059,6 @@ body {
     
                 button {
                     flex: 100%;
-                    max-width: 280px;
                     height: 44px;
                     background-color: $primaryC;
                     transition: all .5s;

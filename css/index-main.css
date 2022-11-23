@@ -997,18 +997,18 @@ body {
   color: #BDBDBD;
 }
 #download--popUp .popUp--container .desc img {
-  margin-top: 28px;
+  margin: 16px auto 0;
   border-radius: 8px;
 }
 #download--popUp .popUp--container .download-show {
   display: none;
   gap: 36px;
-  margin-top: 28px;
+  margin-top: 20px;
 }
 #download--popUp .popUp--container .download-show .qrc {
   flex: 120px;
   max-width: 120px;
-  margin: 28px auto;
+  align-self: center;
 }
 #download--popUp .popUp--container .download-show .btns {
   flex: 1;
@@ -1020,7 +1020,6 @@ body {
 }
 #download--popUp .popUp--container .download-show .btns button {
   flex: 100%;
-  max-width: 280px;
   height: 44px;
   background-color: #8AA3FF;
   transition: all 0.5s;

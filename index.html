@@ -239,8 +239,8 @@
             <img src="images/keyvision/topik.png">
             <p>全球知名放置型RPG卡牌遊戲！運用區塊鏈技術進入 Web3.0世界，最高 APR 高達 2,511%。像素世界 GameFi 傳說，等你來迎戰!!</p>
             <div class="btns">
-                <button><img src="images/btn-download.png"></button>
-                <button><img src="images/btn-buypass.png"></button>
+                <button id="download--open"><img src="images/btn-download.png"></button>
+                <button onclick="location.href='product-pass.html'"><img src="images/btn-buypass.png"></button>
             </div>
         </main>
         <div data-aos="fade-up" data-aos-delay="100" data-aos-once="false" class="animation-wrap">
@@ -701,7 +701,7 @@
                 <span class="occupation">Occupation</span>
             </li>
         </ul>
-        <button class="more">看更多<img src="images/icon/icon-arrow-bottom-898989.svg"></button>
+        <button class="more">查看更多<img src="images/icon/icon-arrow-bottom-898989.svg"></button>
     </div>
 
     <!-- 合作夥伴 -->
@@ -763,7 +763,7 @@
                 </a>
             </div>
             <div class="download-show">
-                <img class="qrc web" src="images/QRC.png">
+                <div class="qrc web"><img src="images/QRC.png"></div>
                 <div class="btns">
                     <button id="iOS" class="web">iOS 下載</button>
                     <button id="android" class="web">Android 下載</button>
@@ -856,16 +856,12 @@
         }, 2000);
 
         setTimeout(function() {
-            $("#download--confirm > .count").html('');
-            $("#download--confirm").removeAttr('disabled');
+            $("#download--confirm").css('display', 'none')
+            $('.download-show').css('display', 'flex')
         }, 3000);
     })
     $('#download--close').click(function () {
         $('#download--popUp').removeClass('active')
-    })
-    $('#download--confirm').click(function() {
-        $(this).css('display', 'none')
-        $('.download-show').css('display', 'flex')
     })
 
     // pop up APR
