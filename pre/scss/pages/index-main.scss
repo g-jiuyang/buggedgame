@@ -85,7 +85,7 @@ body {
     .animation-wrap {
         flex: 55%;
         position: relative;
-        margin: 20px 0;
+        margin: 0 0 -140px;
 
         .img-flash {
             position: absolute;
@@ -100,40 +100,79 @@ body {
             }
 
             .light {
+                left: 0;
+                top: 0;
                 position: absolute;
-                left: -80px;
-                top: -340px;
-                width: 800px;
-                height: 160px;
-                background-image: linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
-                transform: rotate(-25deg);
-                animation: flash 12s infinite backwards;
+                width: 100%;
+                height: 120%;
+                mask-size: 100%;
+                mask-repeat: no-repeat;
+                background-image: url(../images/keyvision/flash.png);
+                background-repeat: no-repeat;
+                animation: 10s infinite both;
+            }
+
+            &:first-child {
+                .light {
+                    left: 24px;
+                    top: -4px;
+                    animation-name: flash1;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
+                }
             }
 
             &:nth-child(2) {
                 .light {
-                    animation-delay: 3s;
+                    animation-name: flash2;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
                 }
             }
 
             &:nth-child(3) {
                 .light {
-                    animation-delay: 6s;
+                    animation-name: flash3;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
                 }
             }
 
             &:nth-child(4) {
                 .light {
-                    animation-delay: 9s;
-                    // mask: url(../images/keyvision/char4.svg);
+                    animation-name: flash4;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
                 }
             }
         }
 
-        @keyframes flash {
-            20% { top: -340px; }
-            30% { top: 800px; }
-            100% { top: 800px; }
+        @keyframes flash1 {
+            0% { background-position: top -360px center; }
+            10% { background-position: top -360px center; }
+            20% { background-position: top 350px center; }
+            90% { background-position: top 350px center; }
+            100% { background-position: top -360px center; }
+        }
+
+        @keyframes flash2 {
+            0% { background-position: top -360px center; }
+            30% { background-position: top -360px center; }
+            40% { background-position: top 350px center; }
+            90% { background-position: top 350px center; }
+            100% { background-position: top -360px center; }
+        }
+
+        @keyframes flash3 {
+            0% { background-position: top -220px center; }
+            50% { background-position: top -220px center; }
+            60% { background-position: top 500px center; }
+            90% { background-position: top 500px center; }
+            100% { background-position: top -220px center; }
+        }
+
+        @keyframes flash4 {
+            0% { background-position: top -220px center; }
+            70% { background-position: top -220px center; }
+            80% { background-position: top 500px center; }
+            90% { background-position: top 500px center; }
+            100% { background-position: top -220px center; }
         }
 
         &:after {
@@ -899,6 +938,16 @@ body {
         li {
             flex: calc((100% - 80px)/6);
             max-width: calc((100% - 80px)/6);
+            display: none;
+
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                display: inline;
+            }
 
             &.col-4 {
                 margin-left: calc(((100% - 80px)/6) + 16px);
@@ -932,7 +981,16 @@ body {
     }
 
     .more {
-        display: none;
+        display: block;
+        border-radius: 0;
+        margin: 28px auto;
+        text-align: center;
+        color: $gray;
+        cursor: pointer;
+
+        img {
+            margin: 0 auto;
+        }
     }
 }
 
@@ -1064,6 +1122,14 @@ footer {
 }
 
 @media screen and (min-width: 1440px) {
+    .keyvision {
+        padding: 0 calc(50vw - 40rem);
+
+        main {
+            padding: 260px 60px;
+        }
+    }
+
     .animation-banner {
         .animation-wrap {
             right: calc(50% - 720px);
@@ -1098,6 +1164,12 @@ footer {
 } // min-width: 1440px
 
 @media screen and (min-width: 1680px) {
+    .keyvision {
+        .animation-wrap {
+            margin: 64px 0 -60px;
+        }
+    }
+
     .animation-banner {
         .animation-wrap {
             right: calc(50% - 800px);
@@ -1176,6 +1248,31 @@ footer {
 } // max-width: 1200px
 
 @media screen and (max-width: 831px) {
+    .keyvision {
+        height: max-content;
+    }
+    // .keyvision {
+    //     flex-wrap: wrap;
+    //     background-size: 250%;
+    //     height: 100vh;
+
+    //     main {
+    //         flex: 100%;
+    //         order: 2;
+    //         max-width: 500px;
+    //         margin: 100px auto 0;
+    //         padding: 0;
+    //         height: max-content;
+    //     }
+
+    //     .animation-wrap {
+    //         flex: 100%;
+    //         order: 1;
+    //         max-width: 80vw;
+    //         margin: 0 auto -140px;
+    //     }
+    // }
+
     .animation-banner {
         display: block;
         margin-bottom: 28px;
@@ -1693,7 +1790,6 @@ footer {
         background-size: 430vw;
 
         &:before {
-            // top: 270vw;
             height: 200px;
             top: auto;
             bottom: 180vw;
@@ -1708,37 +1804,14 @@ footer {
             justify-content: flex-start;
 
             li {
-                display: none;
                 flex: calc((100% - 16px)/2);
                 max-width: calc((100% - 16px)/2);
-
-                &:first-child,
-                &:nth-child(2),
-                &:nth-child(3),
-                &:nth-child(4),
-                &:nth-child(5),
-                &:nth-child(6) {
-                    display: inline;
-                }
 
                 span {
                     &.occupation {
                         font-size: calc($fontSize * 1.4);
                     }
                 }
-            }
-        }
-
-        .more {
-            display: block;
-            border-radius: 0;
-            margin: 28px auto;
-            text-align: center;
-            color: $gray;
-            cursor: pointer;
-
-            img {
-                margin: 0 auto;
             }
         }
     }

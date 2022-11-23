@@ -94,7 +94,7 @@ body {
 .keyvision .animation-wrap {
   flex: 55%;
   position: relative;
-  margin: 20px 0;
+  margin: 0 0 -140px;
 }
 .keyvision .animation-wrap .img-flash {
   position: absolute;
@@ -108,48 +108,180 @@ body {
   width: 100%;
 }
 .keyvision .animation-wrap .img-flash .light {
+  left: 0;
+  top: 0;
   position: absolute;
-  left: -80px;
-  top: -340px;
-  width: 800px;
-  height: 160px;
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-  transform: rotate(-25deg);
-  -webkit-animation: flash 12s infinite backwards;
-          animation: flash 12s infinite backwards;
+  width: 100%;
+  height: 120%;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-image: url(../images/keyvision/flash.png);
+  background-repeat: no-repeat;
+  -webkit-animation: 10s infinite both;
+          animation: 10s infinite both;
+}
+.keyvision .animation-wrap .img-flash:first-child .light {
+  left: 24px;
+  top: -4px;
+  -webkit-animation-name: flash1;
+          animation-name: flash1;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
 }
 .keyvision .animation-wrap .img-flash:nth-child(2) .light {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-name: flash2;
+          animation-name: flash2;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
 }
 .keyvision .animation-wrap .img-flash:nth-child(3) .light {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  -webkit-animation-name: flash3;
+          animation-name: flash3;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
 }
 .keyvision .animation-wrap .img-flash:nth-child(4) .light {
-  -webkit-animation-delay: 9s;
-          animation-delay: 9s;
+  -webkit-animation-name: flash4;
+          animation-name: flash4;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
 }
-@-webkit-keyframes flash {
-  20% {
-    top: -340px;
+@-webkit-keyframes flash1 {
+  0% {
+    background-position: top -360px center;
   }
-  30% {
-    top: 800px;
+  10% {
+    background-position: top -360px center;
+  }
+  20% {
+    background-position: top 350px center;
+  }
+  90% {
+    background-position: top 350px center;
   }
   100% {
-    top: 800px;
+    background-position: top -360px center;
   }
 }
-@keyframes flash {
-  20% {
-    top: -340px;
+@keyframes flash1 {
+  0% {
+    background-position: top -360px center;
   }
-  30% {
-    top: 800px;
+  10% {
+    background-position: top -360px center;
+  }
+  20% {
+    background-position: top 350px center;
+  }
+  90% {
+    background-position: top 350px center;
   }
   100% {
-    top: 800px;
+    background-position: top -360px center;
+  }
+}
+@-webkit-keyframes flash2 {
+  0% {
+    background-position: top -360px center;
+  }
+  30% {
+    background-position: top -360px center;
+  }
+  40% {
+    background-position: top 350px center;
+  }
+  90% {
+    background-position: top 350px center;
+  }
+  100% {
+    background-position: top -360px center;
+  }
+}
+@keyframes flash2 {
+  0% {
+    background-position: top -360px center;
+  }
+  30% {
+    background-position: top -360px center;
+  }
+  40% {
+    background-position: top 350px center;
+  }
+  90% {
+    background-position: top 350px center;
+  }
+  100% {
+    background-position: top -360px center;
+  }
+}
+@-webkit-keyframes flash3 {
+  0% {
+    background-position: top -220px center;
+  }
+  50% {
+    background-position: top -220px center;
+  }
+  60% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -220px center;
+  }
+}
+@keyframes flash3 {
+  0% {
+    background-position: top -220px center;
+  }
+  50% {
+    background-position: top -220px center;
+  }
+  60% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -220px center;
+  }
+}
+@-webkit-keyframes flash4 {
+  0% {
+    background-position: top -220px center;
+  }
+  70% {
+    background-position: top -220px center;
+  }
+  80% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -220px center;
+  }
+}
+@keyframes flash4 {
+  0% {
+    background-position: top -220px center;
+  }
+  70% {
+    background-position: top -220px center;
+  }
+  80% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -220px center;
   }
 }
 .keyvision .animation-wrap:after {
@@ -792,6 +924,10 @@ body {
 .team .team-list li {
   flex: calc((100% - 80px) / 6);
   max-width: calc((100% - 80px) / 6);
+  display: none;
+}
+.team .team-list li:first-child, .team .team-list li:nth-child(2), .team .team-list li:nth-child(3), .team .team-list li:nth-child(4), .team .team-list li:nth-child(5), .team .team-list li:nth-child(6) {
+  display: inline;
 }
 .team .team-list li.col-4 {
   margin-left: calc((100% - 80px) / 6 + 16px);
@@ -817,7 +953,15 @@ body {
   color: #898989;
 }
 .team .more {
-  display: none;
+  display: block;
+  border-radius: 0;
+  margin: 28px auto;
+  text-align: center;
+  color: #898989;
+  cursor: pointer;
+}
+.team .more img {
+  margin: 0 auto;
 }
 
 .coworker {
@@ -926,6 +1070,12 @@ footer .copyright {
 }
 
 @media screen and (min-width: 1440px) {
+  .keyvision {
+    padding: 0 calc(50vw - 40rem);
+  }
+  .keyvision main {
+    padding: 260px 60px;
+  }
   .animation-banner .animation-wrap {
     right: calc(50% - 720px);
     width: 65vw;
@@ -948,6 +1098,9 @@ footer .copyright {
   }
 }
 @media screen and (min-width: 1680px) {
+  .keyvision .animation-wrap {
+    margin: 64px 0 -60px;
+  }
   .animation-banner .animation-wrap {
     right: calc(50% - 800px);
     width: 55vw;
@@ -1000,6 +1153,11 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 831px) {
+  .keyvision {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
   .animation-banner {
     display: block;
     margin-bottom: 28px;
@@ -1359,26 +1517,11 @@ footer .copyright {
     justify-content: flex-start;
   }
   .team .team-list li {
-    display: none;
     flex: calc((100% - 16px) / 2);
     max-width: calc((100% - 16px) / 2);
   }
-  .team .team-list li:first-child, .team .team-list li:nth-child(2), .team .team-list li:nth-child(3), .team .team-list li:nth-child(4), .team .team-list li:nth-child(5), .team .team-list li:nth-child(6) {
-    display: inline;
-  }
   .team .team-list li span.occupation {
     font-size: 14px;
-  }
-  .team .more {
-    display: block;
-    border-radius: 0;
-    margin: 28px auto;
-    text-align: center;
-    color: #898989;
-    cursor: pointer;
-  }
-  .team .more img {
-    margin: 0 auto;
   }
   .coworker h3 {
     margin-bottom: 24px;
