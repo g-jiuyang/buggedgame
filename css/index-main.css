@@ -1396,17 +1396,18 @@ footer .copyright {
 }
 @media screen and (max-width: 767px) {
   .keyvision {
-    height: 100vh;
-    background-size: 260%;
+    height: 150vw;
+    max-height: 150vw;
+    background-size: 360%;
     flex-wrap: wrap;
-    background-position: top -10vh center;
+    background-position: top -15vh center;
     padding: 20px;
     margin-bottom: 60px;
   }
   .keyvision main {
     flex: 100%;
     order: 2;
-    margin-top: -50vw;
+    margin-top: -25vw;
     z-index: 5;
   }
   .keyvision main > img {
@@ -1468,11 +1469,14 @@ footer .copyright {
 }
 @media screen and (max-width: 515px) {
   .keyvision {
-    height: 95vh;
-    background-size: 425%;
+    height: 220vw;
+    max-height: 220vw;
+    background-size: 505%;
+    background-position: top -35vw center;
+    padding: 0;
   }
   .keyvision main {
-    margin-top: -30vh;
+    margin-top: -45vw;
   }
   .keyvision main > img {
     padding: 0 10vw;
@@ -1481,7 +1485,143 @@ footer .copyright {
     max-width: 260px;
   }
   .keyvision .animation-wrap {
-    margin-top: 0;
+    margin: 10vw 20px;
+  }
+  @-webkit-keyframes flash1 {
+    0% {
+      background-position: top -400px center;
+    }
+    10% {
+      background-position: top -400px center;
+    }
+    20% {
+      background-position: top 350px center;
+    }
+    90% {
+      background-position: top 350px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @keyframes flash1 {
+    0% {
+      background-position: top -400px center;
+    }
+    10% {
+      background-position: top -400px center;
+    }
+    20% {
+      background-position: top 350px center;
+    }
+    90% {
+      background-position: top 350px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @-webkit-keyframes flash2 {
+    0% {
+      background-position: top -420px center;
+    }
+    30% {
+      background-position: top -420px center;
+    }
+    40% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -420px center;
+    }
+  }
+  @keyframes flash2 {
+    0% {
+      background-position: top -420px center;
+    }
+    30% {
+      background-position: top -420px center;
+    }
+    40% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -420px center;
+    }
+  }
+  @-webkit-keyframes flash3 {
+    0% {
+      background-position: top -400px center;
+    }
+    50% {
+      background-position: top -400px center;
+    }
+    60% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @keyframes flash3 {
+    0% {
+      background-position: top -400px center;
+    }
+    50% {
+      background-position: top -400px center;
+    }
+    60% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @-webkit-keyframes flash4 {
+    0% {
+      background-position: top -280px center;
+    }
+    70% {
+      background-position: top -280px center;
+    }
+    80% {
+      background-position: top 650px center;
+    }
+    90% {
+      background-position: top 650px center;
+    }
+    100% {
+      background-position: top -280px center;
+    }
+  }
+  @keyframes flash4 {
+    0% {
+      background-position: top -280px center;
+    }
+    70% {
+      background-position: top -280px center;
+    }
+    80% {
+      background-position: top 650px center;
+    }
+    90% {
+      background-position: top 650px center;
+    }
+    100% {
+      background-position: top -280px center;
+    }
   }
   .animation-banner {
     margin-bottom: 56px;
