@@ -5,9 +5,10 @@ body {
 .keyvision {
   background-image: url(../images/keyvision/key-bg.jpg);
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top -20px center;
   background-size: 100%;
   height: 95vh;
+  max-height: 900px;
   padding: 0 calc(50vw - 36rem);
   display: flex;
 }
@@ -25,10 +26,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 260px;
+  margin: 0 auto;
 }
 .keyvision main .btns button {
-  max-width: 260px;
-  margin: 8px auto;
+  flex: 100%;
+  margin: 8px;
   transition: all 0.3s ease;
   -webkit-animation: btn-bounce 6s infinite;
           animation: btn-bounce 6s infinite;
@@ -90,11 +93,12 @@ body {
   left: 0;
   mix-blend-mode: multiply;
   z-index: -1;
+  opacity: 0.5;
 }
 .keyvision .animation-wrap {
   flex: 55%;
   position: relative;
-  margin: 0 0 -140px;
+  margin: -20px 0 -120px;
 }
 .keyvision .animation-wrap .img-flash {
   position: absolute;
@@ -123,7 +127,7 @@ body {
           animation: 10s infinite both;
 }
 .keyvision .animation-wrap .img-flash:first-child .light {
-  left: 24px;
+  left: 4%;
   top: -4px;
   -webkit-animation-name: flash1;
           animation-name: flash1;
@@ -190,10 +194,10 @@ body {
     background-position: top -360px center;
   }
   40% {
-    background-position: top 350px center;
+    background-position: top 500px center;
   }
   90% {
-    background-position: top 350px center;
+    background-position: top 500px center;
   }
   100% {
     background-position: top -360px center;
@@ -207,10 +211,10 @@ body {
     background-position: top -360px center;
   }
   40% {
-    background-position: top 350px center;
+    background-position: top 500px center;
   }
   90% {
-    background-position: top 350px center;
+    background-position: top 500px center;
   }
   100% {
     background-position: top -360px center;
@@ -258,10 +262,10 @@ body {
     background-position: top -220px center;
   }
   80% {
-    background-position: top 500px center;
+    background-position: top 650px center;
   }
   90% {
-    background-position: top 500px center;
+    background-position: top 650px center;
   }
   100% {
     background-position: top -220px center;
@@ -275,10 +279,10 @@ body {
     background-position: top -220px center;
   }
   80% {
-    background-position: top 500px center;
+    background-position: top 650px center;
   }
   90% {
-    background-position: top 500px center;
+    background-position: top 650px center;
   }
   100% {
     background-position: top -220px center;
@@ -1073,7 +1077,7 @@ footer .copyright {
     padding: 0 calc(50vw - 40rem);
   }
   .keyvision main {
-    padding: 260px 60px;
+    padding: 220px 60px;
   }
   .animation-banner .animation-wrap {
     right: calc(50% - 720px);
@@ -1097,6 +1101,9 @@ footer .copyright {
   }
 }
 @media screen and (min-width: 1680px) {
+  .keyvision main {
+    padding: 300px 60px;
+  }
   .keyvision .animation-wrap {
     margin: 64px 0 -60px;
   }
@@ -1106,6 +1113,24 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 1200px) {
+  .keyvision {
+    padding: 60px;
+    height: auto;
+    background-size: cover;
+    margin-bottom: 120px;
+  }
+  .keyvision main {
+    flex: 50%;
+    margin-top: 100px;
+    padding: 0;
+  }
+  .keyvision main > img {
+    padding: 0 60px;
+  }
+  .keyvision .animation-wrap {
+    flex: 50%;
+    margin: -60px 0 -172px;
+  }
   .animation-banner .animation-wrap {
     max-width: 110vw;
     margin: -96px auto 0;
@@ -1151,11 +1176,82 @@ footer .copyright {
     width: calc(100vw - 4rem);
   }
 }
+@media screen and (max-width: 1140px) {
+  .keyvision {
+    margin-bottom: 3vw;
+  }
+  .keyvision main {
+    margin-top: 9vw;
+  }
+  .keyvision main > img {
+    padding: 0 5vw;
+  }
+  .keyvision .animation-wrap {
+    margin: -5vw 0 -5vw;
+  }
+  @-webkit-keyframes flash3 {
+    0% {
+      background-position: top -300px center;
+    }
+    50% {
+      background-position: top -300px center;
+    }
+    60% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -300px center;
+    }
+  }
+  @keyframes flash3 {
+    0% {
+      background-position: top -300px center;
+    }
+    50% {
+      background-position: top -300px center;
+    }
+    60% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -300px center;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .keyvision {
+    margin-bottom: 3vw;
+  }
+  .keyvision main {
+    margin-top: 7vw;
+  }
+  .keyvision main > img {
+    padding: 0 6vw;
+  }
+  .keyvision main .btns {
+    max-width: 200px;
+  }
+}
 @media screen and (max-width: 831px) {
   .keyvision {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: 70vw;
+    background-size: 120%;
+    margin-bottom: 0;
+  }
+  .keyvision main {
+    margin-top: 8vw;
+  }
+  .keyvision main .btns {
+    max-width: 200px;
+  }
+  .keyvision .animation-wrap {
+    margin: 0;
   }
   .animation-banner {
     display: block;
@@ -1299,6 +1395,31 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 767px) {
+  .keyvision {
+    height: 100vh;
+    background-size: 260%;
+    flex-wrap: wrap;
+    background-position: top -10vh center;
+    padding: 20px;
+    margin-bottom: 60px;
+  }
+  .keyvision main {
+    flex: 100%;
+    order: 2;
+    margin-top: -50vw;
+    z-index: 5;
+  }
+  .keyvision main > img {
+    padding: 0 120px;
+  }
+  .keyvision main .btns {
+    max-width: 300px;
+  }
+  .keyvision .animation-wrap {
+    flex: 100%;
+    height: 115vw;
+    margin-top: -9vw;
+  }
   .animation-banner .animation-wrap {
     right: 84px;
     left: 28px;
@@ -1346,6 +1467,22 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 515px) {
+  .keyvision {
+    height: 95vh;
+    background-size: 425%;
+  }
+  .keyvision main {
+    margin-top: -30vh;
+  }
+  .keyvision main > img {
+    padding: 0 10vw;
+  }
+  .keyvision main .btns {
+    max-width: 260px;
+  }
+  .keyvision .animation-wrap {
+    margin-top: 0;
+  }
   .animation-banner {
     margin-bottom: 56px;
   }

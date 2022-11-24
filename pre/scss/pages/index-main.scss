@@ -8,9 +8,10 @@ body {
 .keyvision {
     background-image: url(../images/keyvision/key-bg.jpg);
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top -20px center;
     background-size: 100%;
     height: 95vh;
+    max-height: 900px;
     padding: 0 calc(50vw - 36rem);
     display: flex;
 
@@ -29,10 +30,12 @@ body {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            max-width: 260px;
+            margin: 0 auto;
 
             button {
-                max-width: 260px;
-                margin: 8px auto;
+                flex: 100%;
+                margin: 8px;
                 transition: all .3s ease;
                 animation: btn-bounce 6s infinite;
 
@@ -79,13 +82,14 @@ body {
             left: 0;
             mix-blend-mode: multiply;
             z-index: -1;
+            opacity: .5;
         }
     }
 
     .animation-wrap {
         flex: 55%;
         position: relative;
-        margin: 0 0 -140px;
+        margin: -20px 0 -120px;
 
         .img-flash {
             position: absolute;
@@ -114,7 +118,7 @@ body {
 
             &:first-child {
                 .light {
-                    left: 24px;
+                    left: 4%;
                     top: -4px;
                     animation-name: flash1;
                     mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
@@ -154,8 +158,8 @@ body {
         @keyframes flash2 {
             0% { background-position: top -360px center; }
             30% { background-position: top -360px center; }
-            40% { background-position: top 350px center; }
-            90% { background-position: top 350px center; }
+            40% { background-position: top 500px center; }
+            90% { background-position: top 500px center; }
             100% { background-position: top -360px center; }
         }
 
@@ -170,8 +174,8 @@ body {
         @keyframes flash4 {
             0% { background-position: top -220px center; }
             70% { background-position: top -220px center; }
-            80% { background-position: top 500px center; }
-            90% { background-position: top 500px center; }
+            80% { background-position: top 650px center; }
+            90% { background-position: top 650px center; }
             100% { background-position: top -220px center; }
         }
 
@@ -1125,7 +1129,7 @@ footer {
         padding: 0 calc(50vw - 40rem);
 
         main {
-            padding: 260px 60px;
+            padding: 220px 60px;
         }
     }
 
@@ -1164,6 +1168,10 @@ footer {
 
 @media screen and (min-width: 1680px) {
     .keyvision {
+        main {
+            padding: 300px 60px;
+        }
+
         .animation-wrap {
             margin: 64px 0 -60px;
         }
@@ -1178,6 +1186,28 @@ footer {
 } // min-width: 1680px
 
 @media screen and (max-width: 1200px) {
+    .keyvision {
+        padding: 60px;
+        height: auto;
+        background-size: cover;
+        margin-bottom: 120px;
+
+        main {
+            flex: 50%;
+            margin-top: 100px;
+            padding: 0;
+
+            > img {
+                padding: 0 60px;
+            }
+        }
+
+        .animation-wrap {
+            flex: 50%;
+            margin: -60px 0 -172px;
+        }
+    }
+
     .animation-banner {
         .animation-wrap {
             max-width: 110vw;
@@ -1246,31 +1276,68 @@ footer {
     }
 } // max-width: 1200px
 
+@media screen and (max-width: 1140px) {
+    .keyvision {
+        margin-bottom: 3vw;
+
+        main {
+            margin-top: 9vw;
+
+            > img {
+                padding: 0 5vw;
+            }
+        }
+
+        .animation-wrap {
+            margin: -5vw 0 -5vw;
+            
+            @keyframes flash3 {
+                0% { background-position: top -300px center; }
+                50% { background-position: top -300px center; }
+                60% { background-position: top 500px center; }
+                90% { background-position: top 500px center; }
+                100% { background-position: top -300px center; }
+            }
+        }
+    }
+} // max-width: 1140px
+
+@media screen and (max-width: 1024px) {
+    .keyvision {
+        margin-bottom: 3vw;
+
+        main {
+            margin-top: 7vw;
+
+            > img {
+                padding: 0 6vw;
+            }
+
+            .btns {
+                max-width: 200px;
+            }
+        }
+    }
+} // max-width: 1024px
+
 @media screen and (max-width: 831px) {
     .keyvision {
-        height: max-content;
+        height: 70vw;
+        background-size: 120%;
+        margin-bottom: 0;
+
+        main {
+            margin-top: 8vw;
+
+            .btns {
+                max-width: 200px;
+            }
+        }
+
+        .animation-wrap {
+            margin: 0;
+        }
     }
-    // .keyvision {
-    //     flex-wrap: wrap;
-    //     background-size: 250%;
-    //     height: 100vh;
-
-    //     main {
-    //         flex: 100%;
-    //         order: 2;
-    //         max-width: 500px;
-    //         margin: 100px auto 0;
-    //         padding: 0;
-    //         height: max-content;
-    //     }
-
-    //     .animation-wrap {
-    //         flex: 100%;
-    //         order: 1;
-    //         max-width: 80vw;
-    //         margin: 0 auto -140px;
-    //     }
-    // }
 
     .animation-banner {
         display: block;
@@ -1470,6 +1537,36 @@ footer {
 } // max-width: 831px
 
 @media screen and(max-width: 767px) {
+    .keyvision {
+        height: 100vh;
+        background-size: 260%;
+        flex-wrap: wrap;
+        background-position: top -10vh center;
+        padding: 20px;
+        margin-bottom: 60px;
+        
+        main {
+            flex: 100%;
+            order: 2;
+            margin-top: -50vw;
+            z-index: 5;
+
+            > img {
+                padding: 0 120px;
+            }
+
+            .btns {
+                max-width: 300px;
+            }
+        }
+
+        .animation-wrap {
+            flex: 100%;
+            height: 115vw;
+            margin-top: -9vw;
+        }
+    }
+
     .animation-banner {
         .animation-wrap {
             right: 84px;
@@ -1551,6 +1648,27 @@ footer {
 } // max-width: 767px
 
 @media screen and (max-width: 515px) {
+    .keyvision {
+        height: 95vh;
+        background-size: 425%;
+        
+        main {
+            margin-top: -30vh;
+
+            > img {
+                padding: 0 10vw;
+            }
+
+            .btns {
+                max-width: 260px;
+            }
+        }
+
+        .animation-wrap {
+            margin-top: 0;
+        }
+    }
+
     .animation-banner {
         margin-bottom: 56px;
 
