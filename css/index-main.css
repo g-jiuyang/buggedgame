@@ -1396,18 +1396,19 @@ footer .copyright {
 }
 @media screen and (max-width: 767px) {
   .keyvision {
+    background-image: url(../images/keyvision/key-bg-m.jpg);
     height: 150vw;
     max-height: 150vw;
-    background-size: 360%;
+    background-size: cover;
     flex-wrap: wrap;
-    background-position: top -15vh center;
+    background-position: top center;
     padding: 20px;
     margin-bottom: 60px;
   }
   .keyvision main {
     flex: 100%;
     order: 2;
-    margin-top: -25vw;
+    margin-top: -45vw;
     z-index: 5;
   }
   .keyvision main > img {
@@ -1470,22 +1471,27 @@ footer .copyright {
 @media screen and (max-width: 515px) {
   .keyvision {
     height: 220vw;
-    max-height: 220vw;
-    background-size: 505%;
-    background-position: top -35vw center;
+    max-height: 200vw;
     padding: 0;
   }
   .keyvision main {
-    margin-top: -45vw;
+    margin-top: -55vw;
   }
   .keyvision main > img {
     padding: 0 10vw;
   }
+  .keyvision main p {
+    margin: 8px 20px;
+  }
   .keyvision main .btns {
     max-width: 260px;
+    margin-top: 20px;
+  }
+  .keyvision main .btns button {
+    margin: 4px;
   }
   .keyvision .animation-wrap {
-    margin: 10vw 20px;
+    margin: 5vw 10px;
   }
   @-webkit-keyframes flash1 {
     0% {
