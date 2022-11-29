@@ -23,6 +23,10 @@ body {
   left: 0;
   opacity: 0.8;
 }
+.keyvision.hq:after {
+  background-image: url(../images/keyvision/key-star_hq.gif);
+  opacity: 0.6;
+}
 .keyvision main {
   flex: 45%;
   position: relative;
@@ -1509,6 +1513,9 @@ footer .copyright {
   }
   .keyvision:after {
     background-image: url(../images/keyvision/key-star_m.gif);
+  }
+  .keyvision.hq:after {
+    background-image: url(../images/keyvision/key-star_m_hq.gif);
   }
   .keyvision main {
     margin-top: -55vw;
