@@ -15,10 +15,23 @@ body {
     padding: 0 calc(50vw - 36rem);
     display: flex;
 
+    &:after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/keyvision/key-star.gif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 95vh;
+        left: 0;
+        opacity: 0.8;
+    }
+
     main {
         flex: 45%;
         position: relative;
         padding: 200px 60px;
+        z-index: 2;
 
         p {
             text-align: center;
@@ -90,6 +103,7 @@ body {
         flex: 55%;
         position: relative;
         margin: -20px 0 -120px;
+        z-index: 2;
 
         .img-flash {
             position: absolute;
@@ -195,6 +209,24 @@ body {
             opacity: .5;
             z-index: -1;
         }
+    }
+}
+
+.dashboard {
+    width: 90vw;
+    max-width: 76rem;
+    margin: 0 auto;
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .updated-time {
+        font-size: calc($fontSize * 1.2);
+        color: $gray;
+        margin: 20px 0 24px;
+        text-align: center;
     }
 }
 
@@ -1141,7 +1173,7 @@ footer {
     }
 
     .banner-ranking {
-        margin: 60px auto 0;
+        margin: 120px auto 0;
 
         .banner-frame {
             flex: 400px;
@@ -1654,6 +1686,10 @@ footer {
         height: 220vw;
         max-height: 200vw;
         padding: 0;
+
+        &:after {
+            background-image: url(../images/keyvision/key-star_m.gif);
+        }
         
         main {
             margin-top: -55vw;
