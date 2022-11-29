@@ -1200,12 +1200,15 @@ footer {
 
 @media screen and (min-width: 1680px) {
     .keyvision {
+        margin-top: -52px;
+        padding: 0 calc(50vw - 43rem);
+
         main {
             padding: 300px 60px;
         }
 
         .animation-wrap {
-            margin: 64px 0 -60px;
+            margin: 52px 0 -60px;
         }
     }
 
