@@ -1511,6 +1511,17 @@ footer {
         }
     }
 
+    .coworker {
+        .coworker-list {
+            flex-wrap: wrap;
+            gap: 12px;
+
+            li {
+                flex: 33%;
+            }
+        }
+    }
+
     footer {
         ul {
             margin-top: 16px;

@@ -1358,6 +1358,13 @@ footer .copyright {
   .buy-pass .pass-items li {
     flex: calc((100% - 40px) / 2);
   }
+  .coworker .coworker-list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .coworker .coworker-list li {
+    flex: 33%;
+  }
   footer ul {
     margin-top: 16px;
     width: calc(100vw - 3.5rem);
