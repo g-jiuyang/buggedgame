@@ -966,7 +966,7 @@ body {
 
     .coworker-list {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         gap: 60px;
         max-width: 1080px;
         margin: 0 auto;
@@ -974,6 +974,9 @@ body {
         li {
             flex: 1;
             max-width: 160px;
+            height: calc((1080px - 240px) / 5);
+            display: flex;
+            align-items: center;
         }
     }
 }
@@ -1034,8 +1037,6 @@ footer {
     }
 
     .banner-ranking {
-        margin: 120px auto 0;
-
         .banner-frame {
             flex: 400px;
             max-width: 400px;
@@ -1079,7 +1080,7 @@ footer {
         padding: 60px;
         height: auto;
         background-size: cover;
-        margin-bottom: 120px;
+        margin-bottom: 60px;
 
         main {
             flex: 50%;
@@ -1219,9 +1220,9 @@ footer {
 
 @media screen and (max-width: 831px) {
     .keyvision {
-        height: 70vw;
+        height: 65vw;
         background-size: 120%;
-        margin-bottom: 0;
+        margin-bottom: -20px;
 
         main {
             margin-top: 8vw;
@@ -1237,7 +1238,7 @@ footer {
     }
 
     .dashboard {
-        margin-bottom: 60px;
+        margin-bottom: 44px;
 
         ul {
             flex-wrap: wrap;
@@ -1428,7 +1429,7 @@ footer {
         flex-wrap: wrap;
         background-position: top center;
         padding: 20px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         
         main {
             flex: 100%;
@@ -1820,13 +1821,16 @@ footer {
     .coworker {
         h3 {
             margin-bottom: 0;
+            padding: 28px 0;
         }
 
         .coworker-list {
-            gap: 0;
+            gap: 40px 0;
+            margin-bottom: 60px;
 
             li {
                 flex: 50%;
+                height: auto;
             }
         }
     }
