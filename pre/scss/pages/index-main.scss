@@ -230,12 +230,15 @@ body {
     ul {
         display: flex;
         justify-content: space-between;
+        gap: 12px;
 
         li {
+            flex: 1;
             text-align: center;
 
             h2 {
                 color: $gamefiPass;
+                margin-bottom: 4px;
             }
 
             span {
@@ -567,7 +570,7 @@ body {
         width: 100%;
         font-size: calc($fontSize * 1.2);
         color: $gray;
-        margin-top: -28px;
+        margin-top: -38px;
         margin-bottom: 24px;
         text-align: right;
     }
@@ -1138,6 +1141,20 @@ footer {
         max-width: 90vw;
     }
 
+    .team {
+        .team-list {
+            li {
+                &.col-4 {
+                    margin-left: calc((100% - 40px) / 6);
+                }
+
+                &.col-3 {
+                    margin-left: calc((100% - 40px) / 4);
+                }
+            }
+        }
+    }
+
     .coworker {
         .coworker-list {
             max-width: 90vw;
@@ -1215,6 +1232,19 @@ footer {
 
         .animation-wrap {
             margin: 0;
+        }
+    }
+
+    .dashboard {
+        margin-bottom: 60px;
+
+        ul {
+            flex-wrap: wrap;
+            gap: 24px;
+
+            li {
+                flex: calc(50% - 12px);
+            }
         }
     }
 
@@ -1351,6 +1381,11 @@ footer {
                     }
                 }
             }
+        }
+
+        .updated-time {
+            text-align: center;
+            font-size: calc($fontSize * 1.4);
         }
     }
 
@@ -1741,12 +1776,12 @@ footer {
     }
 
     .team {
-        background-size: 430vw;
+        background-size: 405vw;
 
         &:before {
             height: 200px;
             top: auto;
-            bottom: 180vw;
+            bottom: 161vw;
         }
 
         h3 {
