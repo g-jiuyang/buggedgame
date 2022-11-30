@@ -1517,9 +1517,11 @@ footer {
         .coworker-list {
             flex-wrap: wrap;
             gap: 12px;
+            justify-content: center;
 
             li {
-                flex: 33%;
+                flex: calc((100% - 24px) / 3);
+                max-width: calc((100% - 24px) / 3);
             }
         }
     }
@@ -1624,6 +1626,8 @@ footer {
         }
 
         .ranking-frame {
+            margin-bottom: 0;
+
             .ranking-header {
                 .title {
                     flex: 100%;
@@ -1789,7 +1793,7 @@ footer {
     }
 
     .team {
-        background-size: 405vw;
+        background-size: 400vw;
 
         &:before {
             height: 200px;
@@ -1825,11 +1829,12 @@ footer {
         }
 
         .coworker-list {
-            gap: 40px 0;
-            margin-bottom: 60px;
+            gap: 0;
+            margin-bottom: 24px;
 
             li {
                 flex: 50%;
+                max-width: 50%;
                 height: auto;
             }
         }

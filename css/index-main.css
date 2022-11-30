@@ -1362,9 +1362,11 @@ footer .copyright {
   .coworker .coworker-list {
     flex-wrap: wrap;
     gap: 12px;
+    justify-content: center;
   }
   .coworker .coworker-list li {
-    flex: 33%;
+    flex: calc((100% - 24px) / 3);
+    max-width: calc((100% - 24px) / 3);
   }
   footer ul {
     margin-top: 16px;
@@ -1552,6 +1554,9 @@ footer .copyright {
   .banner-ranking .banner-frame .banner-content {
     height: 40vw;
   }
+  .banner-ranking .ranking-frame {
+    margin-bottom: 0;
+  }
   .banner-ranking .ranking-frame .ranking-header .title {
     flex: 100%;
     text-align: center;
@@ -1651,7 +1656,7 @@ footer .copyright {
     margin: 0 auto;
   }
   .team {
-    background-size: 405vw;
+    background-size: 400vw;
   }
   .team:before {
     height: 200px;
@@ -1677,11 +1682,12 @@ footer .copyright {
     padding: 28px 0;
   }
   .coworker .coworker-list {
-    gap: 40px 0;
-    margin-bottom: 60px;
+    gap: 0;
+    margin-bottom: 24px;
   }
   .coworker .coworker-list li {
     flex: 50%;
+    max-width: 50%;
     height: auto;
   }
   footer {
