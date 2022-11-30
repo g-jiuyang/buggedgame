@@ -7,7 +7,7 @@ body {
   background-repeat: no-repeat;
   background-position: top -20px center;
   background-size: 100%;
-  height: 95vh;
+  height: 50vw;
   max-height: 900px;
   padding: 0 calc(50vw - 36rem);
   display: flex;
@@ -19,7 +19,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 95vh;
+  height: 50vw;
   left: 0;
   opacity: 0.8;
 }
@@ -124,6 +124,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
 }
 .keyvision .animation-wrap .img-flash img {
   width: 100%;
@@ -323,121 +324,31 @@ body {
 }
 
 .dashboard {
-  width: 90vw;
+  width: 900px;
   max-width: 76rem;
-  margin: 0 auto;
+  margin: 80px auto;
+  position: relative;
+  z-index: 2;
 }
 .dashboard ul {
   display: flex;
   justify-content: space-between;
 }
-.dashboard .updated-time {
-  font-size: 12px;
-  color: #898989;
-  margin: 20px 0 24px;
+.dashboard ul li {
   text-align: center;
 }
-
-.animation-banner {
+.dashboard ul li h2 {
+  color: #AAF3F5;
+}
+.dashboard ul li span {
   display: flex;
   align-items: center;
-  height: 650px;
-  max-width: 100%;
-  padding: 0 calc(50vw - 36rem);
-  margin: 0 auto;
-  position: relative;
-}
-.animation-banner:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: -120px;
-  background-image: url(../images/background/index-bg1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-.animation-banner .animation-wrap {
-  order: 2;
-  position: absolute;
-  margin-top: -96px;
-  top: 96px;
-  right: 0;
-  height: auto;
-  width: 70vw;
-}
-.animation-banner main {
-  width: 440px;
-  padding-top: 100px;
-  color: #ffffff;
-}
-.animation-banner main h2 {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1.4;
-}
-.animation-banner main h2 span {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1.4;
-  background: linear-gradient(to right, #E63EB6, #749FF5);
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.animation-banner main p {
-  margin: 20px 0;
-  font-size: 18px;
-  font-weight: 500;
-}
-.animation-banner main p.updated-time {
-  font-size: 12px;
-  font-weight: 400;
-  color: #898989;
-  margin-top: 24px;
-}
-.animation-banner main .btns {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-}
-.animation-banner main .btns button {
-  width: 150px;
-  height: 40px;
-  font-weight: 700;
-}
-.animation-banner main ul {
-  padding-top: 48px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 24px 56px;
-}
-.animation-banner main ul li {
-  flex: calc(50% - 28px);
-  font-size: 18px;
-  line-height: 1.4;
-  font-weight: 700;
-}
-.animation-banner main ul li span {
-  display: block;
-  font-size: 14px;
+  justify-content: center;
   color: #BDBDBD;
-  display: flex;
-  align-items: center;
+  font-weight: 700;
 }
-.animation-banner main ul li span img {
+.dashboard ul li span img {
   margin-left: 4px;
-}
-.animation-banner main ul li:nth-child(odd) {
-  max-width: 115px;
-}
-.animation-banner main ul li:nth-child(even) {
-  max-width: calc(100% - 171px);
 }
 
 .banner-ranking {
@@ -487,7 +398,7 @@ body {
   position: relative;
   border-radius: 40px;
   padding: 12px 28px;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 .banner-ranking .ranking-frame .ranking-header {
   display: flex;
@@ -689,6 +600,14 @@ body {
   bottom: 0;
   left: 0;
   background: #121212;
+}
+.banner-ranking .updated-time {
+  width: 100%;
+  font-size: 12px;
+  color: #898989;
+  margin-top: -28px;
+  margin-bottom: 24px;
+  text-align: right;
 }
 
 .step {
@@ -1006,7 +925,12 @@ body {
 }
 .coworker h2 {
   text-align: center;
-  margin-bottom: 42px;
+}
+.coworker h3 {
+  text-align: center;
+  font-weight: 700;
+  padding: 80px 0 40px;
+  color: #BDBDBD;
 }
 .coworker .coworker-list {
   display: flex;
@@ -1020,53 +944,6 @@ body {
   max-width: 160px;
 }
 
-#download--popUp .popUp--container {
-  max-height: 90vh;
-}
-#download--popUp .popUp--container .mobile {
-  display: none;
-}
-#download--popUp .popUp--container .desc {
-  text-align: center;
-}
-#download--popUp .popUp--container .desc p {
-  font-size: 14px;
-  color: #BDBDBD;
-}
-#download--popUp .popUp--container .desc img {
-  margin: 16px auto 0;
-  border-radius: 8px;
-}
-#download--popUp .popUp--container .download-show {
-  display: none;
-  gap: 36px;
-  margin-top: 20px;
-}
-#download--popUp .popUp--container .download-show .qrc {
-  flex: 120px;
-  max-width: 120px;
-  align-self: center;
-}
-#download--popUp .popUp--container .download-show .btns {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-#download--popUp .popUp--container .download-show .btns button {
-  flex: 100%;
-  height: 44px;
-  background-color: #8AA3FF;
-  transition: all 0.5s;
-  font-size: 14px;
-  font-weight: 700;
-}
-#download--popUp .popUp--container .download-show .btns button:hover {
-  background-color: #7087D8;
-}
-
 footer {
   margin: 0;
   width: 100%;
@@ -1077,7 +954,7 @@ footer {
 footer:after {
   content: "";
   position: absolute;
-  top: -550px;
+  top: -50vw;
   right: 0;
   bottom: 0;
   left: 0;
@@ -1112,10 +989,6 @@ footer .copyright {
   .keyvision main {
     padding: 220px 60px;
   }
-  .animation-banner .animation-wrap {
-    right: calc(50% - 720px);
-    width: 65vw;
-  }
   .banner-ranking {
     margin: 120px auto 0;
   }
@@ -1142,11 +1015,7 @@ footer .copyright {
     padding: 300px 60px;
   }
   .keyvision .animation-wrap {
-    margin: 52px 0 -60px;
-  }
-  .animation-banner .animation-wrap {
-    right: calc(50% - 800px);
-    width: 55vw;
+    margin: 52px 0 -88px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1168,12 +1037,9 @@ footer .copyright {
     flex: 50%;
     margin: -60px 0 -172px;
   }
-  .animation-banner .animation-wrap {
-    max-width: 110vw;
-    margin: -96px auto 0;
-  }
-  .animation-banner main {
-    margin-left: 2rem;
+  .dashboard {
+    margin: 0 auto 80px;
+    max-width: 90vw;
   }
   .banner-ranking {
     flex-wrap: wrap;
@@ -1289,29 +1155,6 @@ footer .copyright {
   }
   .keyvision .animation-wrap {
     margin: 0;
-  }
-  .animation-banner {
-    display: block;
-    margin-bottom: 28px;
-    height: auto;
-  }
-  .animation-banner:after {
-    background-size: 200vw;
-    bottom: -24px;
-  }
-  .animation-banner .animation-wrap {
-    top: -70vw;
-    left: -200px;
-    right: -120px;
-    width: auto;
-  }
-  .animation-banner main {
-    width: 80vw;
-    margin: 75vw auto 56px;
-    padding-top: 0;
-  }
-  .animation-banner main ul li:nth-child(even) {
-    flex: calc(100% - 171px);
   }
   .banner-ranking .banner-frame {
     flex: 60%;
@@ -1458,10 +1301,6 @@ footer .copyright {
     flex: 100%;
     height: 115vw;
     margin-top: -9vw;
-  }
-  .animation-banner .animation-wrap {
-    right: 84px;
-    left: 28px;
   }
   .banner-ranking .ranking-frame {
     max-width: 90vw;
@@ -1672,52 +1511,6 @@ footer .copyright {
       background-position: top -280px center;
     }
   }
-  .animation-banner {
-    margin-bottom: 56px;
-  }
-  .animation-banner:after {
-    background-size: 400vw;
-    bottom: 0;
-  }
-  .animation-banner .animation-wrap {
-    overflow: hidden;
-    top: -80vw;
-    right: 0;
-    left: 0;
-  }
-  .animation-banner main {
-    width: 100vw;
-    padding: 0 5vw 20px;
-    margin: 0;
-    margin-top: 100vw;
-  }
-  .animation-banner main h2 {
-    font-size: 24px;
-  }
-  .animation-banner main h2 span {
-    font-size: 24px;
-  }
-  .animation-banner main p {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 8px;
-    margin-bottom: 16px;
-  }
-  .animation-banner main .btns {
-    gap: 12px;
-    font-size: 13px;
-    flex-wrap: wrap;
-  }
-  .animation-banner main .btns button {
-    flex: 100%;
-    height: 44px;
-  }
-  .animation-banner main .btns button#download--open {
-    order: 2;
-  }
-  .animation-banner main ul {
-    padding-top: 26px;
-  }
   .banner-ranking {
     gap: 48px;
   }
@@ -1850,15 +1643,6 @@ footer .copyright {
   }
   .coworker h3 {
     margin-bottom: 24px;
-  }
-  #download--popUp .popUp--container {
-    min-width: auto;
-  }
-  #download--popUp .popUp--container .web {
-    display: none;
-  }
-  #download--popUp .popUp--container .mobile {
-    display: inline;
   }
   footer {
     padding-bottom: 16px;

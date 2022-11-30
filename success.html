@@ -313,14 +313,23 @@
         <div class="popUp--container">
             <button id="download--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>下載遊戲</h2>
-            <p class="desc web">馬上拿起手機掃描QR Code下載遊戲吧！</p>
-            <p class="desc mobile">馬上點擊下載遊戲吧！</p>
-            <img class="qrc web" src="images/QRC.png">
-            <div class="btns">
-                <button id="iOS" class="web">iOS 下載</button>
-                <button id="android" class="web">Android 下載</button>
-                <button id="app-store" class="mobile">iOS / Android 下載</button>
-                <button id="apk">APK 下載</button>
+            <div class="desc">
+                <p class="web">馬上拿起手機掃描QR Code下載遊戲吧！<br>* 請確保您在遊戲內以及網站皆連結同一個MetaMask地址，才能開始邊玩邊賺喔！</p>
+                <p class="mobile">馬上點擊下載遊戲吧！<br>* 請確保您在遊戲內以及網站皆連結同一個MetaMask地址，才能開始邊玩邊賺喔！</p>
+                <img src="images/Metamask.jpg">
+                <a href="javascript:void(0)" id="download--confirm" class="button popUp--submit" disabled>
+                    iOS / Android / APK 下載
+                    <span class="count">3s</span>
+                </a>
+            </div>
+            <div class="download-show">
+                <div class="qrc web"><img src="images/QRC.png"></div>
+                <div class="btns">
+                    <button id="iOS" class="web">iOS 下載</button>
+                    <button id="android" class="web">Android 下載</button>
+                    <button id="app-store" class="mobile">iOS / Android 下載</button>
+                    <button id="apk">APK 下載</button>
+                </div>
             </div>
         </div>
     </div>
@@ -398,10 +407,22 @@
 
 
 <script>
-    // pop up 開啟遊戲
+    // pop up 下載遊戲
     $('#download--open').click(function(){
-        if (window.innerWidth > 768) $('#download--popUp').addClass('active')
-        else window.open('#')
+        $('#download--popUp').addClass('active')
+
+        setTimeout(function() { 
+            $("#download--confirm > .count").html('2s');
+        }, 1000);
+
+        setTimeout(function() {
+            $("#download--confirm > .count").html('1s');
+        }, 2000);
+
+        setTimeout(function() {
+            $("#download--confirm").css('display', 'none')
+            $('.download-show').css('display', 'flex')
+        }, 3000);
     })
     $('#download--close').click(function () {
         $('#download--popUp').removeClass('active')

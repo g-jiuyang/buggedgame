@@ -144,6 +144,66 @@
     }
 }
 
+#download--popUp {
+    .popUp--container {
+        max-height: 90vh;
+
+        .mobile {
+            display: none;
+        }
+
+        .desc {
+            text-align: center;
+
+            p {
+                font-size: calc($fontSize * 1.4);
+                color: $lighter;
+            }
+            
+            img {
+                margin: 16px auto 0;
+                border-radius: 8px;
+                width: 320px;
+                max-width: 100%;
+            }
+        }
+
+        .download-show {
+            display: none;
+            gap: 36px;
+            margin-top: 20px;
+
+            .qrc {
+                flex: 120px;
+                max-width: 120px;
+                align-self: center;
+            }
+    
+            .btns {
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+    
+                button {
+                    flex: 100%;
+                    height: 44px;
+                    background-color: $primaryC;
+                    transition: all .5s;
+                    font-size: calc($fontSize * 1.4);
+                    font-weight: $UltraBold;
+    
+                    &:hover {
+                        background-color: #7087D8;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 515px) {
     .popUp {
         .popUp--container {
@@ -175,6 +235,20 @@
                 .popUp--content {
                     max-height: calc(80vh - 216px);
                 }
+            }
+        }
+    }
+
+    #download--popUp {
+        .popUp--container {
+            min-width: auto;
+
+            .web {
+                display: none;
+            }
+
+            .mobile {
+                display: inline;
             }
         }
     }

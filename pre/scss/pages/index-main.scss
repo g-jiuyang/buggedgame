@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-position: top -20px center;
     background-size: 100%;
-    height: 95vh;
+    height: 50vw;
     max-height: 900px;
     padding: 0 calc(50vw - 36rem);
     display: flex;
@@ -22,7 +22,7 @@ body {
         background-size: 100%;
         background-repeat: no-repeat;
         width: 100%;
-        height: 95vh;
+        height: 50vw;
         left: 0;
         opacity: 0.8;
     }
@@ -119,6 +119,7 @@ body {
             right: 0;
             bottom: 0;
             left: 0;
+            z-index: 1;
 
             img {
                 width: 100%;
@@ -220,133 +221,32 @@ body {
 }
 
 .dashboard {
-    width: 90vw;
+    width: 900px;
     max-width: 76rem;
-    margin: 0 auto;
+    margin: 80px auto;
+    position: relative;
+    z-index: 2;
     
     ul {
         display: flex;
         justify-content: space-between;
-    }
 
-    .updated-time {
-        font-size: calc($fontSize * 1.2);
-        color: $gray;
-        margin: 20px 0 24px;
-        text-align: center;
-    }
-}
+        li {
+            text-align: center;
 
-.animation-banner {
-    display: flex;
-    align-items: center;
-    height: 650px;
-    max-width: 100%;
-    padding: 0 calc(50vw - 36rem);
-    margin: 0 auto;
-    position: relative;
-
-    &:after{
-        content: '';
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: -120px;
-        background-image: url(../images/background/index-bg1.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom center;
-    }
-
-    .animation-wrap {
-        order: 2;
-        position: absolute;
-        margin-top: -96px;
-        top: 96px;
-        right: 0;
-        height: auto;
-        width: 70vw;
-    }
-
-    main {
-        width: 440px;
-        padding-top: 100px;
-        color: $white;
-
-        h2 {
-            font-size: calc($fontSize * 4);
-            font-weight: $ExtraBlack;
-            line-height: 1.4;
+            h2 {
+                color: $gamefiPass;
+            }
 
             span {
-                font-size: calc($fontSize * 4);
-                font-weight: $ExtraBlack;
-                line-height: 1.4;
-                background: $gradient;
-                color: transparent;
-                background-clip: text;
-            }
-        }
-
-        p {
-            margin: 20px 0;
-            font-size: calc($fontSize * 1.8);
-            font-weight: $Medium;
-
-            &.updated-time {
-                font-size: calc($fontSize * 1.2);
-                font-weight: $Regular;
-                color: $gray;
-                margin-top: 24px;
-            }
-        }
-
-        .btns {
-            display: flex;
-            gap: 20px;
-            justify-content: flex-start;
-
-            button {
-                width: 150px;
-                height: 40px;
-                font-weight: $UltraBold;
-            }
-        }
-
-        ul {
-            padding-top: 48px;
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            gap: 24px 56px;
-
-            li {
-                flex: calc(50% - 28px);
-                font-size: calc($fontSize * 1.8);
-                line-height: 1.4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $lighter;
                 font-weight: $UltraBold;
 
-                span {
-                    display: block;
-                    font-size: calc($fontSize * 1.4);
-                    color: $lighter;
-                    display: flex;
-                    align-items: center;
-
-                    img {
-                        margin-left: 4px;
-                    }
-                }
-
-                &:nth-child(odd) {
-                    max-width: 115px;
-                }
-
-                &:nth-child(even) {
-                    max-width: calc(100% - 171px);
+                img {
+                    margin-left: 4px;
                 }
             }
         }
@@ -405,7 +305,7 @@ body {
         position: relative;
         border-radius: 40px;
         padding: 12px 28px;
-        margin-bottom: 18px;
+        margin-bottom: 8px;
 
         .ranking-header {
             display: flex;
@@ -661,6 +561,15 @@ body {
             left: 0;
             background: $darkBg;
         }
+    }
+
+    .updated-time {
+        width: 100%;
+        font-size: calc($fontSize * 1.2);
+        color: $gray;
+        margin-top: -28px;
+        margin-bottom: 24px;
+        text-align: right;
     }
 }
 
@@ -1042,7 +951,13 @@ body {
 
     h2 {
         text-align: center;
-        margin-bottom: 42px;
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: $UltraBold;
+        padding: 80px 0 40px;
+        color: $lighter;
     }
 
     .coworker-list {
@@ -1059,64 +974,6 @@ body {
     }
 }
 
-#download--popUp {
-    .popUp--container {
-        max-height: 90vh;
-
-        .mobile {
-            display: none;
-        }
-
-        .desc {
-            text-align: center;
-
-            p {
-                font-size: calc($fontSize * 1.4);
-                color: $lighter;
-            }
-            
-            img {
-                margin: 16px auto 0;
-                border-radius: 8px;
-            }
-        }
-
-        .download-show {
-            display: none;
-            gap: 36px;
-            margin-top: 20px;
-
-            .qrc {
-                flex: 120px;
-                max-width: 120px;
-                align-self: center;
-            }
-    
-            .btns {
-                flex: 1;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                gap: 12px;
-    
-                button {
-                    flex: 100%;
-                    height: 44px;
-                    background-color: $primaryC;
-                    transition: all .5s;
-                    font-size: calc($fontSize * 1.4);
-                    font-weight: $UltraBold;
-    
-                    &:hover {
-                        background-color: #7087D8;
-                    }
-                }
-            }
-        }
-    }
-}
-
 footer {
     margin: 0;
     width: 100%;
@@ -1127,7 +984,7 @@ footer {
     &:after {
         content: '';
         position: absolute;
-        top: -550px;
+        top: -50vw;
         right: 0;
         bottom: 0;
         left: 0;
@@ -1172,13 +1029,6 @@ footer {
         }
     }
 
-    .animation-banner {
-        .animation-wrap {
-            right: calc(50% - 720px);
-            width: 65vw;
-        }
-    }
-
     .banner-ranking {
         margin: 120px auto 0;
 
@@ -1215,14 +1065,7 @@ footer {
         }
 
         .animation-wrap {
-            margin: 52px 0 -60px;
-        }
-    }
-
-    .animation-banner {
-        .animation-wrap {
-            right: calc(50% - 800px);
-            width: 55vw;
+            margin: 52px 0 -88px;
         }
     }
 } // min-width: 1680px
@@ -1250,15 +1093,9 @@ footer {
         }
     }
 
-    .animation-banner {
-        .animation-wrap {
-            max-width: 110vw;
-            margin: -96px auto 0;
-        }
-
-        main {
-            margin-left: 2rem;
-        }
+    .dashboard {
+        margin: 0 auto 80px;
+        max-width: 90vw;
     }
 
     .banner-ranking {
@@ -1378,38 +1215,6 @@ footer {
 
         .animation-wrap {
             margin: 0;
-        }
-    }
-
-    .animation-banner {
-        display: block;
-        margin-bottom: 28px;
-        height: auto;
-
-        &:after {
-            background-size: 200vw;
-            bottom: -24px;
-        }
-
-        .animation-wrap {
-            top: -70vw;
-            left: -200px;
-            right: -120px;
-            width: auto;
-        }
-
-        main {
-            width: 80vw;
-            margin: 75vw auto 56px;
-            padding-top: 0;
-
-            ul {
-                li {
-                    &:nth-child(even) {
-                        flex: calc(100% - 171px);
-                    }
-                }
-            }
         }
     }
 
@@ -1611,13 +1416,6 @@ footer {
         }
     }
 
-    .animation-banner {
-        .animation-wrap {
-            right: 84px;
-            left: 28px;
-        }
-    }
-
     .banner-ranking {
         .ranking-frame {
             max-width: 90vw;
@@ -1761,63 +1559,6 @@ footer {
                 80% { background-position: top 650px center; }
                 90% { background-position: top 650px center; }
                 100% { background-position: top -280px center; }
-            }
-        }
-    }
-
-    .animation-banner {
-        margin-bottom: 56px;
-
-        &:after {
-            background-size: 400vw;
-            bottom: 0;
-        }
-
-        .animation-wrap {
-            overflow: hidden;
-            top: -80vw;
-            right: 0;
-            left: 0;
-        }
-
-        main {
-            width: 100vw;
-            padding: 0 5vw 20px;
-            margin: 0;
-            margin-top: 100vw;
-
-            h2 {
-                font-size: calc($fontSize * 2.4);
-
-                span {
-                    font-size: calc($fontSize * 2.4);
-                }
-            }
-
-            p {
-                font-size: calc($fontSize * 1.6);
-                font-weight: $Regular;
-                margin-top: 8px;
-                margin-bottom: 16px;
-            }
-
-            .btns {
-                gap: 12px;
-                font-size: calc($fontSize * 1.3);
-                flex-wrap: wrap;
-
-                button {
-                    flex: 100%;
-                    height: 44px;
-
-                    &#download--open {
-                        order: 2;
-                    }
-                }
-            }
-
-            ul {
-                padding-top: 26px;
             }
         }
     }
@@ -2032,20 +1773,6 @@ footer {
     .coworker {
         h3 {
             margin-bottom: 24px;
-        }
-    }
-
-    #download--popUp {
-        .popUp--container {
-            min-width: auto;
-
-            .web {
-                display: none;
-            }
-
-            .mobile {
-                display: inline;
-            }
         }
     }
 
