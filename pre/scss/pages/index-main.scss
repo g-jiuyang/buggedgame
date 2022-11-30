@@ -1818,7 +1818,15 @@ footer {
 
     .coworker {
         h3 {
-            margin-bottom: 24px;
+            margin-bottom: 0;
+        }
+
+        .coworker-list {
+            gap: 0;
+
+            li {
+                flex: 50%;
+            }
         }
     }
 

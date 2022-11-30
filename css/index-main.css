@@ -1672,7 +1672,13 @@ footer .copyright {
     font-size: 14px;
   }
   .coworker h3 {
-    margin-bottom: 24px;
+    margin-bottom: 0;
+  }
+  .coworker .coworker-list {
+    gap: 0;
+  }
+  .coworker .coworker-list li {
+    flex: 50%;
   }
   footer {
     padding-bottom: 16px;
