@@ -342,6 +342,7 @@ body {
 .dashboard ul li h2 {
   color: #AAF3F5;
   margin-bottom: 4px;
+  word-break: break-all;
 }
 .dashboard ul li span {
   display: flex;
