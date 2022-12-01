@@ -142,6 +142,8 @@
   flex: 120px;
   max-width: 120px;
   align-self: center;
+  border-radius: 8px;
+  overflow: hidden;
 }
 #download--popUp .popUp--container .download-show .btns {
   flex: 1;
