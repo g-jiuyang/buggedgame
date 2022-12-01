@@ -288,7 +288,7 @@
                     <div class="bugCoin--password"><a href="#">新增BUG到錢包</a></div>
                     <div class="btns">
                         <a href="withdraw.html" class="button btn-outline">提領</a>
-                        <a href="deposit-processing.html" class="button btn-outline">存入</a>
+                        <a id="deposit--open" href="javascript:void(0)" class="button btn-outline">存入</a>
                     </div>
                 </div>
             </li>
@@ -489,6 +489,22 @@
             <button id="bugCoin--submit" class="popUp--submit">確認</button>
         </div>
     </div>
+
+    <!-- pop up 存入 -->
+    <div id="deposit--popUp" class="popUp popUp__button">
+        <div class="popUp--container">
+            <button id="deposit--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>存入BUG幣</h2>
+            <div class="popUp--content">
+                <p>請輸入欲存入的BUG幣數量：</p>
+                <div class="input-group">
+                    <input type="text" class="input-warning">
+                    <span class="warning">* 錢包內之BUG幣不足</span>
+                </div>
+            </div>
+            <button id="deposit--submit" class="popUp--submit">確認</button>
+        </div>
+    </div>
 </body>
 
 
@@ -599,12 +615,10 @@
     let maxColor = '#7EF09E'
     let mediumColor = '#D8B42C'
     let minColor = '#CC47A6'
-
     /* 修復生命值 開啟彈窗 */
     $('#repair--open').click(function () {
         $('#repair--popUp').addClass('active')
     })
-
     /* 生命值-5 */
     $('#btn--minus').click(function () {
         nowLength = $('#bar--new').css('width')
@@ -711,7 +725,6 @@
         $('#cost-bug').css('font-size', '14px')
         $('#repaired').html(0)
     })
-
     /* 修復生命值 關閉彈窗 */
     $('#repair--close').click(function () {
         $('#repair--popUp').removeClass('active')
@@ -725,7 +738,6 @@
         $('#cost-bug').parent().css('font-size', '14px')
         $('#cost-bug').css('font-size', '14px')
     })
-
     /* 修復生命值 送出資料 */
     $('#repair--submit').click(function () {
         $('#repair--popUp').removeClass('active')
@@ -735,8 +747,7 @@
         }, 6000);
     })
 
-
-    // pop up 重重幣說明
+    // pop up 蟲蟲幣說明
     $('#bugCoin--open').click(function () {
         $('#bugCoin--popUp').addClass('active')
     })
@@ -745,6 +756,17 @@
     })
     $('#bugCoin--submit').click(function () {
         $('#bugCoin--popUp').removeClass('active')
+    })
+
+    // pop up 存入
+    $('#deposit--open').click(function () {
+        $('#deposit--popUp').addClass('active')
+    })
+    $('#deposit--close').click(function () {
+        $('#deposit--popUp').removeClass('active')
+    })
+    $('#deposit--submit').click(function () {
+        location.href="deposit-processing.html"
     })
 </script>
 

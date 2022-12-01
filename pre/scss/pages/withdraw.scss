@@ -45,17 +45,6 @@ main.withdraw {
                 border: 1px solid $dark;
                 padding: 0 24px;
 
-                &[type=number] {
-                    padding-right: 5em;
-                    -moz-appearance: textfield;
-
-                    &::-webkit-inner-spin-button,
-                    &::-webkit-outer-spin-button {
-                        -webkit-appearance: none;
-                        margin: 0;
-                    }
-                }
-
                 &[disabled] {
                     background-color: $frameBg !important;
                     color: $lighter !important;

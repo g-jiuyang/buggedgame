@@ -236,7 +236,7 @@
                 <div class="input-group">
                     <label>
                         <span class="bold">欲提領的蟲蟲幣</span>
-                        <input type="number" placeholder="請輸入蟲蟲幣數量" class="input-warning"> <!-- 警告：欲提領的BUG不足時，增加.input-warning，觸發時機為點擊「提領」按鈕時偵測 -->
+                        <input type="text" placeholder="請輸入蟲蟲幣數量" class="input-warning"> <!-- 警告：欲提領的BUG不足時，增加.input-warning，觸發時機為點擊「提領」按鈕時偵測 -->
                         <!-- 超出上限時，自動變成上限的數字「2,000」，低於下限時，自動變成下限的數字「20」 -->
                         <span class="note">*每次提領上限：2,000 BUG，下限：20 BUG</span>
                     </label>
@@ -469,12 +469,12 @@
             <form action="withdraw-processing.html">
                 <div class="flex">
                     <!-- 一格一個數字，且要能連續輸入數字 -->
-                    <input type="number" maxlength="1" class="autotab">
-                    <input type="number" maxlength="1" class="autotab">
-                    <input type="number" maxlength="1" class="autotab">
-                    <input type="number" maxlength="1" class="autotab">
-                    <input type="number" maxlength="1" class="autotab">
-                    <input type="number" maxlength="1" class="autotab">
+                    <input type="text" maxlength="1" class="autotab">
+                    <input type="text" maxlength="1" class="autotab">
+                    <input type="text" maxlength="1" class="autotab">
+                    <input type="text" maxlength="1" class="autotab">
+                    <input type="text" maxlength="1" class="autotab">
+                    <input type="text" maxlength="1" class="autotab">
                 </div>
                 <div class="flex note">
                     <span class="warning">*提領密碼錯誤，請重新輸入（剩餘次數4/5）</span>

@@ -465,6 +465,27 @@
   font-weight: 700;
 }
 
+#deposit--popUp .popUp--container p {
+  color: #BDBDBD;
+  margin-bottom: 12px;
+}
+#deposit--popUp .popUp--container .input-group {
+  position: relative;
+}
+#deposit--popUp .popUp--container .input-group:after {
+  content: "BUG";
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  color: #ffffff;
+  font-weight: 700;
+}
+#deposit--popUp .popUp--container .input-group input {
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
 @media screen and (max-width: 1069px) {
   .dashboard li.bugCoin {
     min-height: 200px;

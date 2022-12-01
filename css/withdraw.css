@@ -39,14 +39,6 @@ main.withdraw form label input {
   border: 1px solid #353535;
   padding: 0 24px;
 }
-main.withdraw form label input[type=number] {
-  padding-right: 5em;
-  -moz-appearance: textfield;
-}
-main.withdraw form label input[type=number]::-webkit-inner-spin-button, main.withdraw form label input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 main.withdraw form label input[disabled] {
   background-color: #1F1F1F !important;
   color: #BDBDBD !important;

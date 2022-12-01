@@ -560,6 +560,34 @@
     }
 }
 
+#deposit--popUp {
+    .popUp--container {
+        p {
+            color: $lighter;
+            margin-bottom: 12px;
+        }
+        
+        .input-group {
+            position: relative;
+    
+            &:after {
+                content: 'BUG';
+                position: absolute;
+                top: 10px;
+                right: 24px;
+                color: $white;
+                font-weight: $UltraBold;
+            }
+
+            input {
+                width: 100%;
+                font-size: calc($fontSize * 1.6);
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:1069px) {
     .dashboard {
         li {
