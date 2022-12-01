@@ -93,6 +93,7 @@
   border: 1px solid #353535;
   transition: all 0.5s;
   position: relative;
+  align-self: stretch;
 }
 .props ul.prop-list li a {
   display: inline-block;
@@ -100,11 +101,16 @@
   width: 100%;
 }
 .props ul.prop-list li a .img {
-  width: calc(100% - 18px);
+  width: calc((68rem - 42px) / 4 - 40px - 32px);
+  height: calc((68rem - 42px) / 4 - 40px - 32px);
   margin: 42px auto 16px;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+}
+.props ul.prop-list li a .img img {
+  width: 100%;
+  margin: 0 auto;
 }
 .props ul.prop-list li a .img .coming_soon, .props ul.prop-list li a .img .sold_out {
   position: absolute;
