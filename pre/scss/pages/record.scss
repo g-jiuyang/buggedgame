@@ -401,6 +401,16 @@
                         flex-wrap: wrap;
                         gap: 0;
 
+                        &.win {
+                            td {
+                                &.title-name, &.title-price, &.title-total {
+                                    &:before {
+                                        color: $lighter;
+                                    }
+                                }
+                            }
+                        }
+
                         td {
                             align-items: center;
                             height: auto;
@@ -540,9 +550,7 @@
             }
         }
     }
-}
-
-// max-width: 767px
+} // max-width: 767px
 
 @media screen and (max-width: 515px) {
     .record {

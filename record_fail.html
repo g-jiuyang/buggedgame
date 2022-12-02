@@ -41,7 +41,7 @@
     <script src="js/popup.js"></script>
 </head>
 
-<body class="font-sans overflow-x-hidden bg-121212" onload="winRibbon();">
+<body class="font-sans overflow-x-hidden bg-121212">
     <!-- 麻煩Ken大大 中獎的時候幫我 onload="winRibbon();" -->
 
     <!-- header -->
@@ -589,7 +589,7 @@
     </div>
 
     <!-- pop up 中獎通知 -->
-    <div id="win--popUp" class="popUp active">
+    <div id="win--popUp" class="popUp">
         <div class="popUp--container">
             <button id="win--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>恭喜獲得免費資格！</h2>
@@ -629,7 +629,7 @@
     </div>
 
     <!-- pop up 槓龜通知 -->
-    <div id="fail--popUp" class="popUp">
+    <div id="fail--popUp" class="popUp active">
         <div class="popUp--container">
             <button id="fail--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
             <h2>和免費資格擦肩而過</h2>
@@ -637,7 +637,7 @@
                 <p class="desc">抱歉通知您和免費試玩資格插肩而過， 別氣餒，我們12/7~12/13都還有機會成為天選之人！快來參加直播抽獎吧！</p>
                 <img src="images/fail.jpg">
             </div>
-            <a href="#" class="button btn-gradient">前往活動</a>
+            <a href="record.html" class="button btn-gradient">前往活動</a>
         </div>
         <div class="fail_ribbon">
             <div class="confetti-99"></div>
