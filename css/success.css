@@ -71,13 +71,20 @@
   font-size: 12px;
   margin-top: 12px;
 }
+.success-page .card p a {
+  color: #8AA3FF;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+.success-page .card p a:hover {
+  color: #718fff;
+}
 .success-page .card p:last-child {
   margin-top: 16px;
   font-weight: 700;
   text-align: right;
 }
 .success-page .card p:last-child a {
-  text-decoration: none;
   color: #EFEFEF;
   transition: color 0.5s;
 }

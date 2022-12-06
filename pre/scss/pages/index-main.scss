@@ -5,7 +5,7 @@ body {
     background-color: #010206 !important;
 }
 
-/*
+/* 新版主視覺
 .keyvision {
     background-image: url(../images/keyvision/key-bg.jpg);
     background-repeat: no-repeat;
@@ -377,6 +377,7 @@ body {
     align-items: stretch;
     gap: 28px;
 
+    /* 舊版 純CSS
     .banner-frame {
         flex: 30vw;
         max-width: 30vw;
@@ -411,6 +412,56 @@ body {
             justify-content: center;
             margin-top: 14px;
             gap: 8px;
+        }
+    } */
+
+    /* 新版 swiper */
+    .banner-frame {
+        flex: 30vw;
+        max-width: 30vw;
+        margin: 0 auto 20px;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        .banner-content {
+            flex: 100%;
+            position: relative;
+            height: 12vw;
+            border-radius: 40px;
+            overflow: hidden;
+            border: 1px solid $gray;
+
+            a {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                img {
+                    position: absolute;
+                    min-width: 100%;
+                    min-height: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        .banner-thumb {
+            flex: 100%;
+            display: flex;
+            justify-content: center;
+            bottom: -14px;
+            gap: 8px;
+
+            span {
+                width: 36px;
+                height: 4px;
+                border-radius: 2px;
+                background-color: $lightGray;
+            }
         }
     }
 
@@ -606,7 +657,7 @@ body {
                 .btns {
                     #ranking-basis {
                         &:before {
-                            left: 92px;
+                            left: 90px;
                         }
                     }
                 }
@@ -641,6 +692,7 @@ body {
                         color: $lighter;
                         min-width: max-content;
                         text-align: center;
+                        margin: 16px auto;
                     }
 
                     &.update-time {

@@ -1,8 +1,9 @@
+@charset "UTF-8";
 body {
   background-color: #010206 !important;
 }
 
-/*
+/* 新版主視覺
 .keyvision {
     background-image: url(../images/keyvision/key-bg.jpg);
     background-repeat: no-repeat;
@@ -358,13 +359,55 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   gap: 28px;
+  /* 舊版 純CSS
+  .banner-frame {
+      flex: 30vw;
+      max-width: 30vw;
+      margin: 0 auto;
+
+      .banner-content {
+          position: relative;
+          height: 12vw;
+          border-radius: 40px;
+          overflow: hidden;
+          border: 1px solid $gray;
+
+          a {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+
+              img {
+                  position: absolute;
+                  min-width: 100%;
+                  min-height: 100%;
+                  top: 50%;
+                  transform: translateY(-50%);
+              }
+          }
+      }
+
+      .banner-thumb {
+          display: flex;
+          justify-content: center;
+          margin-top: 14px;
+          gap: 8px;
+      }
+  } */
+  /* 新版 swiper */
 }
 .banner-ranking .banner-frame {
   flex: 30vw;
   max-width: 30vw;
-  margin: 0 auto;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 .banner-ranking .banner-frame .banner-content {
+  flex: 100%;
   position: relative;
   height: 12vw;
   border-radius: 40px;
@@ -386,10 +429,17 @@ body {
   transform: translateY(-50%);
 }
 .banner-ranking .banner-frame .banner-thumb {
+  flex: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 14px;
+  bottom: -14px;
   gap: 8px;
+}
+.banner-ranking .banner-frame .banner-thumb span {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #EFEFEF;
 }
 .banner-ranking .ranking-frame {
   flex: 100%;
@@ -548,7 +598,7 @@ body {
   display: flex;
 }
 .banner-ranking .ranking-frame.byWeek .ranking-header .btns #ranking-basis:before {
-  left: 92px;
+  left: 90px;
 }
 .banner-ranking .ranking-frame.byWeek .ranking-content .content-switch {
   transform: translateX(-50%);
@@ -572,6 +622,7 @@ body {
   min-width: -moz-max-content;
   min-width: max-content;
   text-align: center;
+  margin: 16px auto;
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-content p.update-time {
   display: none;

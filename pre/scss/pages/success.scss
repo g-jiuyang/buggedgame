@@ -89,13 +89,17 @@
             font-size: calc($fontSize * 1.2);
             margin-top: 12px;
 
+            a {
+                @include a-color($primaryC);
+                text-decoration: none;
+            }
+
             &:last-child {
                 margin-top: 16px;
                 font-weight: $UltraBold;
                 text-align: right;
 
                 a {
-                    text-decoration: none;
                     @include a-color($lightGray, $lighter);
                 }
             }
