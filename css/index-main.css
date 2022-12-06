@@ -2,357 +2,352 @@ body {
   background-color: #010206 !important;
 }
 
+/*
 .keyvision {
-  background-image: url(../images/keyvision/key-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: top -20px center;
-  background-size: 100%;
-  height: 50vw;
-  max-height: 900px;
-  padding: 0 calc(50vw - 36rem);
-  display: flex;
-}
-.keyvision:after {
-  content: "";
-  position: absolute;
-  background-image: url(../images/keyvision/key-star.gif);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 50vw;
-  left: 0;
-  opacity: 0.8;
-}
-.keyvision.hq:after {
-  background-image: url(../images/keyvision/key-star_hq.gif);
-  opacity: 0.6;
-}
-.keyvision main {
-  flex: 45%;
-  position: relative;
-  padding: 200px 60px;
-  z-index: 2;
-}
-.keyvision main p {
-  text-align: center;
-  text-shadow: 0 0 10px #290a4f;
-  margin: 20px;
-}
-.keyvision main .btns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 260px;
-  margin: 0 auto;
-}
-.keyvision main .btns button {
-  flex: 100%;
-  margin: 8px;
-  transition: all 0.3s ease;
-  -webkit-animation: btn-bounce 6s infinite;
-          animation: btn-bounce 6s infinite;
-}
-.keyvision main .btns button:last-child {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-.keyvision main .btns button:hover {
-  -webkit-animation: 0s;
-          animation: 0s;
-  transform: scale(1.05);
-}
-@-webkit-keyframes btn-bounce {
-  40% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.05);
-  }
-  50% {
-    transform: scale(1);
-  }
-  55% {
-    transform: scale(1.05);
-  }
-  60% {
-    transform: scale(1);
-  }
-}
-@keyframes btn-bounce {
-  40% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.05);
-  }
-  50% {
-    transform: scale(1);
-  }
-  55% {
-    transform: scale(1.05);
-  }
-  60% {
-    transform: scale(1);
-  }
-}
-.keyvision main:after {
-  position: absolute;
-  content: "";
-  background-image: url(../images/keyvision/desc-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  mix-blend-mode: multiply;
-  z-index: -1;
-  opacity: 0.5;
-}
-.keyvision .animation-wrap {
-  flex: 55%;
-  position: relative;
-  margin: -20px 0 -120px;
-  z-index: 2;
-}
-.keyvision .animation-wrap .img-flash {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-.keyvision .animation-wrap .img-flash img {
-  width: 100%;
-}
-.keyvision .animation-wrap .img-flash .light {
-  left: 0;
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 120%;
-  -webkit-mask-size: 100%;
-          mask-size: 100%;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  background-image: url(../images/keyvision/flash.png);
-  background-repeat: no-repeat;
-  -webkit-animation: 10s infinite both;
-          animation: 10s infinite both;
-}
-.keyvision .animation-wrap .img-flash:first-child .light {
-  left: 4%;
-  top: -4px;
-  -webkit-animation-name: flash1;
-          animation-name: flash1;
-  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
-          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
-}
-.keyvision .animation-wrap .img-flash:nth-child(2) .light {
-  -webkit-animation-name: flash2;
-          animation-name: flash2;
-  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
-          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
-}
-.keyvision .animation-wrap .img-flash:nth-child(3) .light {
-  -webkit-animation-name: flash3;
-          animation-name: flash3;
-  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
-          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
-}
-.keyvision .animation-wrap .img-flash:nth-child(4) .light {
-  -webkit-animation-name: flash4;
-          animation-name: flash4;
-  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
-          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
-}
-@-webkit-keyframes flash1 {
-  0% {
-    background-position: top -360px center;
-  }
-  10% {
-    background-position: top -360px center;
-  }
-  20% {
-    background-position: top 350px center;
-  }
-  90% {
-    background-position: top 350px center;
-  }
-  100% {
-    background-position: top -360px center;
-  }
-}
-@keyframes flash1 {
-  0% {
-    background-position: top -360px center;
-  }
-  10% {
-    background-position: top -360px center;
-  }
-  20% {
-    background-position: top 350px center;
-  }
-  90% {
-    background-position: top 350px center;
-  }
-  100% {
-    background-position: top -360px center;
-  }
-}
-@-webkit-keyframes flash2 {
-  0% {
-    background-position: top -360px center;
-  }
-  30% {
-    background-position: top -360px center;
-  }
-  40% {
-    background-position: top 500px center;
-  }
-  90% {
-    background-position: top 500px center;
-  }
-  100% {
-    background-position: top -360px center;
-  }
-}
-@keyframes flash2 {
-  0% {
-    background-position: top -360px center;
-  }
-  30% {
-    background-position: top -360px center;
-  }
-  40% {
-    background-position: top 500px center;
-  }
-  90% {
-    background-position: top 500px center;
-  }
-  100% {
-    background-position: top -360px center;
-  }
-}
-@-webkit-keyframes flash3 {
-  0% {
-    background-position: top -220px center;
-  }
-  50% {
-    background-position: top -220px center;
-  }
-  60% {
-    background-position: top 500px center;
-  }
-  90% {
-    background-position: top 500px center;
-  }
-  100% {
-    background-position: top -220px center;
-  }
-}
-@keyframes flash3 {
-  0% {
-    background-position: top -220px center;
-  }
-  50% {
-    background-position: top -220px center;
-  }
-  60% {
-    background-position: top 500px center;
-  }
-  90% {
-    background-position: top 500px center;
-  }
-  100% {
-    background-position: top -220px center;
-  }
-}
-@-webkit-keyframes flash4 {
-  0% {
-    background-position: top -220px center;
-  }
-  70% {
-    background-position: top -220px center;
-  }
-  80% {
-    background-position: top 650px center;
-  }
-  90% {
-    background-position: top 650px center;
-  }
-  100% {
-    background-position: top -220px center;
-  }
-}
-@keyframes flash4 {
-  0% {
-    background-position: top -220px center;
-  }
-  70% {
-    background-position: top -220px center;
-  }
-  80% {
-    background-position: top 650px center;
-  }
-  90% {
-    background-position: top 650px center;
-  }
-  100% {
-    background-position: top -220px center;
-  }
-}
-.keyvision .animation-wrap:after {
-  position: absolute;
-  content: "";
-  background-image: url(../images/keyvision/char-bg.png);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  mix-blend-mode: multiply;
-  opacity: 0.5;
-  z-index: -1;
+    background-image: url(../images/keyvision/key-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top -20px center;
+    background-size: 100%;
+    height: 50vw;
+    max-height: 900px;
+    padding: 0 calc(50vw - 36rem);
+    display: flex;
+
+    &:after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/keyvision/key-star.gif);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 50vw;
+        left: 0;
+        opacity: 0.8;
+    }
+
+    main {
+        flex: 45%;
+        position: relative;
+        padding: 200px 60px;
+        z-index: 2;
+
+        p {
+            text-align: center;
+            text-shadow: 0 0 10px #290a4f;
+            margin: 20px;
+        }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 260px;
+            margin: 0 auto;
+
+            button {
+                flex: 100%;
+                margin: 8px;
+                transition: all .3s ease;
+                animation: btn-bounce 6s infinite;
+
+                &:last-child {
+                    animation-delay: 3s;
+                }
+
+                &:hover {
+                    animation: 0s;
+                    transform: scale(1.05);
+                }
+            }
+
+            @keyframes btn-bounce {
+                40% {
+                    transform: scale(1);
+                }
+                45% {
+                    transform: scale(1.05);
+                }
+                50% {
+                    transform: scale(1);
+                }
+                55% {
+                    transform: scale(1.05);
+                }
+                60% {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            background-image: url(../images/keyvision/desc-bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            mix-blend-mode: multiply;
+            z-index: -1;
+            opacity: .5;
+        }
+    }
+
+    .animation-wrap {
+        flex: 55%;
+        position: relative;
+        margin: -20px 0 -120px;
+        z-index: 2;
+
+        .img-flash {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+
+            img {
+                width: 100%;
+            }
+
+            .light {
+                left: 0;
+                top: 0;
+                position: absolute;
+                width: 100%;
+                height: 120%;
+                mask-size: 100%;
+                mask-repeat: no-repeat;
+                background-image: url(../images/keyvision/flash.png);
+                background-repeat: no-repeat;
+                animation: 10s infinite both;
+            }
+
+            &:first-child {
+                .light {
+                    left: 4%;
+                    top: -4px;
+                    animation-name: flash1;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
+                }
+            }
+
+            &:nth-child(2) {
+                .light {
+                    animation-name: flash2;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
+                }
+            }
+
+            &:nth-child(3) {
+                .light {
+                    animation-name: flash3;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
+                }
+            }
+
+            &:nth-child(4) {
+                .light {
+                    animation-name: flash4;
+                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
+                }
+            }
+        }
+
+        @keyframes flash1 {
+            0% { background-position: top -360px center; }
+            10% { background-position: top -360px center; }
+            20% { background-position: top 350px center; }
+            90% { background-position: top 350px center; }
+            100% { background-position: top -360px center; }
+        }
+
+        @keyframes flash2 {
+            0% { background-position: top -360px center; }
+            30% { background-position: top -360px center; }
+            40% { background-position: top 500px center; }
+            90% { background-position: top 500px center; }
+            100% { background-position: top -360px center; }
+        }
+
+        @keyframes flash3 {
+            0% { background-position: top -220px center; }
+            50% { background-position: top -220px center; }
+            60% { background-position: top 500px center; }
+            90% { background-position: top 500px center; }
+            100% { background-position: top -220px center; }
+        }
+
+        @keyframes flash4 {
+            0% { background-position: top -220px center; }
+            70% { background-position: top -220px center; }
+            80% { background-position: top 650px center; }
+            90% { background-position: top 650px center; }
+            100% { background-position: top -220px center; }
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            background-image: url(../images/keyvision/char-bg.png);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            mix-blend-mode: multiply;
+            opacity: .5;
+            z-index: -1;
+        }
+    }
 }
 
 .dashboard {
-  width: 900px;
-  max-width: 76rem;
-  margin: 80px auto;
-  position: relative;
-  z-index: 2;
+    width: 900px;
+    max-width: 76rem;
+    margin: 80px auto;
+    position: relative;
+    z-index: 2;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+
+        li {
+            flex: 1;
+            text-align: center;
+
+            h2 {
+                color: $gamefiPass;
+                margin-bottom: 4px;
+                word-break: break-all;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $lighter;
+                font-weight: $UltraBold;
+
+                img {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
 }
-.dashboard ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.dashboard ul li {
-  flex: 1;
-  text-align: center;
-}
-.dashboard ul li h2 {
-  color: #AAF3F5;
-  margin-bottom: 4px;
-  word-break: break-all;
-}
-.dashboard ul li span {
+*/
+.animation-banner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #BDBDBD;
+  height: 650px;
+  max-width: 100%;
+  padding: 0 calc(50vw - 36rem);
+  margin: 0 auto;
+  position: relative;
+}
+.animation-banner:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: -120px;
+  background-image: url(../images/background/index-bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+.animation-banner .animation-wrap {
+  order: 2;
+  position: absolute;
+  margin-top: -96px;
+  top: 96px;
+  right: 0;
+  height: auto;
+  width: 70vw;
+}
+.animation-banner main {
+  width: 440px;
+  padding-top: 100px;
+  color: #ffffff;
+}
+.animation-banner main h2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.animation-banner main h2 span {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.4;
+  background: linear-gradient(to right, #E63EB6, #749FF5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.animation-banner main p {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.animation-banner main p.updated-time {
+  font-size: 12px;
+  font-weight: 400;
+  color: #898989;
+  margin-top: 24px;
+}
+.animation-banner main .btns {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.animation-banner main .btns button {
+  width: 150px;
+  height: 40px;
   font-weight: 700;
 }
-.dashboard ul li span img {
+.animation-banner main ul {
+  padding-top: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 24px 56px;
+}
+.animation-banner main ul li {
+  flex: calc(50% - 28px);
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.animation-banner main ul li span {
+  display: block;
+  font-size: 14px;
+  color: #BDBDBD;
+  display: flex;
+  align-items: center;
+}
+.animation-banner main ul li span img {
   margin-left: 4px;
+}
+.animation-banner main ul li:nth-child(odd) {
+  max-width: 115px;
+}
+.animation-banner main ul li:nth-child(even) {
+  max-width: calc(100% - 171px);
 }
 
 .banner-ranking {
@@ -462,7 +457,7 @@ body {
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis {
   float: right;
   display: flex;
-  width: calc(4em + 54px);
+  width: 180px;
   border: 1px solid #353535;
   border-radius: 22px;
   padding: 8px;
@@ -475,19 +470,19 @@ body {
   font-weight: 700;
   padding: 4px 12px;
   z-index: 1;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
+  line-height: 18px;
+  width: 80px;
+  text-align: center;
 }
 .banner-ranking .ranking-frame .ranking-header .btns #ranking-basis:before {
   content: "";
   background-color: #8AA3FF;
-  width: 48px;
+  width: 80px;
   height: 26px;
   border-radius: 16px;
   position: absolute;
   z-index: 0;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-out;
   left: 8px;
 }
 .banner-ranking .ranking-frame .ranking-content {
@@ -553,7 +548,7 @@ body {
   display: flex;
 }
 .banner-ranking .ranking-frame.byWeek .ranking-header .btns #ranking-basis:before {
-  left: 60px;
+  left: 92px;
 }
 .banner-ranking .ranking-frame.byWeek .ranking-content .content-switch {
   transform: translateX(-50%);
@@ -577,7 +572,6 @@ body {
   min-width: -moz-max-content;
   min-width: max-content;
   text-align: center;
-  margin: 32px 0;
 }
 .banner-ranking .ranking-frame.coming-soon .ranking-content p.update-time {
   display: none;
@@ -990,11 +984,18 @@ footer .copyright {
 }
 
 @media screen and (min-width: 1440px) {
+  /*
   .keyvision {
-    padding: 0 calc(50vw - 40rem);
+      padding: 0 calc(50vw - 40rem);
+
+      main {
+          padding: 220px 60px;
+      }
   }
-  .keyvision main {
-    padding: 220px 60px;
+  */
+  .animation-banner .animation-wrap {
+    right: calc(50% - 720px);
+    width: 65vw;
   }
   .banner-ranking .banner-frame {
     flex: 400px;
@@ -1011,39 +1012,60 @@ footer .copyright {
   }
 }
 @media screen and (min-width: 1680px) {
+  /*
   .keyvision {
-    margin-top: -52px;
-    padding: 0 calc(50vw - 43rem);
+      margin-top: -52px;
+      padding: 0 calc(50vw - 43rem);
+
+      main {
+          padding: 300px 60px;
+      }
+
+      .animation-wrap {
+          margin: 52px 0 -88px;
+      }
   }
-  .keyvision main {
-    padding: 300px 60px;
-  }
-  .keyvision .animation-wrap {
-    margin: 52px 0 -88px;
+  */
+  .animation-banner .animation-wrap {
+    right: calc(50% - 800px);
+    width: 55vw;
   }
 }
 @media screen and (max-width: 1200px) {
+  /*
   .keyvision {
-    padding: 60px;
-    height: auto;
-    background-size: cover;
-    margin-bottom: 60px;
+      padding: 60px;
+      height: auto;
+      background-size: cover;
+      margin-bottom: 60px;
+
+      main {
+          flex: 50%;
+          margin-top: 100px;
+          padding: 0;
+
+          > img {
+              padding: 0 60px;
+          }
+      }
+
+      .animation-wrap {
+          flex: 50%;
+          margin: -60px 0 -172px;
+      }
   }
-  .keyvision main {
-    flex: 50%;
-    margin-top: 100px;
-    padding: 0;
-  }
-  .keyvision main > img {
-    padding: 0 60px;
-  }
-  .keyvision .animation-wrap {
-    flex: 50%;
-    margin: -60px 0 -172px;
-  }
+
   .dashboard {
-    margin: 0 auto 80px;
-    max-width: 90vw;
+      margin: 0 auto 80px;
+      max-width: 90vw;
+  }
+  */
+  .animation-banner .animation-wrap {
+    max-width: 110vw;
+    margin: -96px auto 0;
+  }
+  .animation-banner main {
+    margin-left: 2rem;
   }
   .banner-ranking {
     flex-wrap: wrap;
@@ -1152,29 +1174,60 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 831px) {
+  /*
   .keyvision {
-    height: 65vw;
-    background-size: 120%;
-    margin-bottom: -20px;
+      height: 65vw;
+      background-size: 120%;
+      margin-bottom: -20px;
+
+      main {
+          margin-top: 8vw;
+
+          .btns {
+              max-width: 200px;
+          }
+      }
+
+      .animation-wrap {
+          margin: 0;
+      }
   }
-  .keyvision main {
-    margin-top: 8vw;
-  }
-  .keyvision main .btns {
-    max-width: 200px;
-  }
-  .keyvision .animation-wrap {
-    margin: 0;
-  }
+
   .dashboard {
-    margin-bottom: 44px;
+      margin-bottom: 44px;
+
+      ul {
+          flex-wrap: wrap;
+          gap: 24px;
+
+          li {
+              flex: calc(50% - 12px);
+          }
+      }
   }
-  .dashboard ul {
-    flex-wrap: wrap;
-    gap: 24px;
+  */
+  .animation-banner {
+    display: block;
+    margin-bottom: 28px;
+    height: auto;
   }
-  .dashboard ul li {
-    flex: calc(50% - 12px);
+  .animation-banner:after {
+    background-size: 200vw;
+    bottom: -24px;
+  }
+  .animation-banner .animation-wrap {
+    top: -70vw;
+    left: -200px;
+    right: -120px;
+    width: auto;
+  }
+  .animation-banner main {
+    width: 80vw;
+    margin: 75vw auto 56px;
+    padding-top: 0;
+  }
+  .animation-banner main ul li:nth-child(even) {
+    flex: calc(100% - 171px);
   }
   .banner-ranking .banner-frame {
     flex: 60%;
@@ -1299,32 +1352,42 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 767px) {
+  /*
   .keyvision {
-    background-image: url(../images/keyvision/key-bg-m.jpg);
-    height: 150vw;
-    max-height: 150vw;
-    background-size: cover;
-    flex-wrap: wrap;
-    background-position: top center;
-    padding: 20px;
-    margin-bottom: 40px;
+      background-image: url(../images/keyvision/key-bg-m.jpg);
+      height: 150vw;
+      max-height: 150vw;
+      background-size: cover;
+      flex-wrap: wrap;
+      background-position: top center;
+      padding: 20px;
+      margin-bottom: 40px;
+
+      main {
+          flex: 100%;
+          order: 2;
+          margin-top: -45vw;
+          z-index: 5;
+
+          > img {
+              padding: 0 120px;
+          }
+
+          .btns {
+              max-width: 300px;
+          }
+      }
+
+      .animation-wrap {
+          flex: 100%;
+          height: 115vw;
+          margin-top: -9vw;
+      }
   }
-  .keyvision main {
-    flex: 100%;
-    order: 2;
-    margin-top: -45vw;
-    z-index: 5;
-  }
-  .keyvision main > img {
-    padding: 0 120px;
-  }
-  .keyvision main .btns {
-    max-width: 300px;
-  }
-  .keyvision .animation-wrap {
-    flex: 100%;
-    height: 115vw;
-    margin-top: -9vw;
+  */
+  .animation-banner .animation-wrap {
+    right: 84px;
+    left: 28px;
   }
   .banner-ranking .ranking-frame {
     max-width: 90vw;
@@ -1378,171 +1441,125 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 515px) {
+  /*
   .keyvision {
-    height: 220vw;
-    max-height: 200vw;
-    padding: 0;
+      height: 220vw;
+      max-height: 200vw;
+      padding: 0;
+
+      &:after {
+          background-image: url(../images/keyvision/key-star_m.gif);
+      }
+
+      &.hq {
+          &:after {
+              background-image: url(../images/keyvision/key-star_m_hq.gif);
+          }
+      }
+
+      main {
+          margin-top: -55vw;
+
+          > img {
+              padding: 0 10vw;
+          }
+
+          p {
+              margin: 8px 20px;
+          }
+
+          .btns {
+              max-width: 260px;
+              margin-top: 20px;
+
+              button {
+                  margin: 4px;
+              }
+          }
+      }
+
+      .animation-wrap {
+          margin: 5vw 10px;
+
+          @keyframes flash1 {
+              0% { background-position: top -400px center; }
+              10% { background-position: top -400px center; }
+              20% { background-position: top 350px center; }
+              90% { background-position: top 350px center; }
+              100% { background-position: top -400px center; }
+          }
+
+          @keyframes flash2 {
+              0% { background-position: top -420px center; }
+              30% { background-position: top -420px center; }
+              40% { background-position: top 500px center; }
+              90% { background-position: top 500px center; }
+              100% { background-position: top -420px center; }
+          }
+
+          @keyframes flash3 {
+              0% { background-position: top -400px center; }
+              50% { background-position: top -400px center; }
+              60% { background-position: top 500px center; }
+              90% { background-position: top 500px center; }
+              100% { background-position: top -400px center; }
+          }
+
+          @keyframes flash4 {
+              0% { background-position: top -280px center; }
+              70% { background-position: top -280px center; }
+              80% { background-position: top 650px center; }
+              90% { background-position: top 650px center; }
+              100% { background-position: top -280px center; }
+          }
+      }
   }
-  .keyvision:after {
-    background-image: url(../images/keyvision/key-star_m.gif);
+  */
+  .animation-banner {
+    margin-bottom: 56px;
   }
-  .keyvision.hq:after {
-    background-image: url(../images/keyvision/key-star_m_hq.gif);
+  .animation-banner:after {
+    background-size: 400vw;
+    bottom: 0;
   }
-  .keyvision main {
-    margin-top: -55vw;
+  .animation-banner .animation-wrap {
+    overflow: hidden;
+    top: -80vw;
+    right: 0;
+    left: 0;
   }
-  .keyvision main > img {
-    padding: 0 10vw;
+  .animation-banner main {
+    width: 100vw;
+    padding: 0 5vw 20px;
+    margin: 0;
+    margin-top: 100vw;
   }
-  .keyvision main p {
-    margin: 8px 20px;
+  .animation-banner main h2 {
+    font-size: 24px;
   }
-  .keyvision main .btns {
-    max-width: 260px;
-    margin-top: 20px;
+  .animation-banner main h2 span {
+    font-size: 24px;
   }
-  .keyvision main .btns button {
-    margin: 4px;
+  .animation-banner main p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 16px;
   }
-  .keyvision .animation-wrap {
-    margin: 5vw 10px;
+  .animation-banner main .btns {
+    gap: 12px;
+    font-size: 13px;
+    flex-wrap: wrap;
   }
-  @-webkit-keyframes flash1 {
-    0% {
-      background-position: top -400px center;
-    }
-    10% {
-      background-position: top -400px center;
-    }
-    20% {
-      background-position: top 350px center;
-    }
-    90% {
-      background-position: top 350px center;
-    }
-    100% {
-      background-position: top -400px center;
-    }
+  .animation-banner main .btns button {
+    flex: 100%;
+    height: 44px;
   }
-  @keyframes flash1 {
-    0% {
-      background-position: top -400px center;
-    }
-    10% {
-      background-position: top -400px center;
-    }
-    20% {
-      background-position: top 350px center;
-    }
-    90% {
-      background-position: top 350px center;
-    }
-    100% {
-      background-position: top -400px center;
-    }
+  .animation-banner main .btns button#download--open {
+    order: 2;
   }
-  @-webkit-keyframes flash2 {
-    0% {
-      background-position: top -420px center;
-    }
-    30% {
-      background-position: top -420px center;
-    }
-    40% {
-      background-position: top 500px center;
-    }
-    90% {
-      background-position: top 500px center;
-    }
-    100% {
-      background-position: top -420px center;
-    }
-  }
-  @keyframes flash2 {
-    0% {
-      background-position: top -420px center;
-    }
-    30% {
-      background-position: top -420px center;
-    }
-    40% {
-      background-position: top 500px center;
-    }
-    90% {
-      background-position: top 500px center;
-    }
-    100% {
-      background-position: top -420px center;
-    }
-  }
-  @-webkit-keyframes flash3 {
-    0% {
-      background-position: top -400px center;
-    }
-    50% {
-      background-position: top -400px center;
-    }
-    60% {
-      background-position: top 500px center;
-    }
-    90% {
-      background-position: top 500px center;
-    }
-    100% {
-      background-position: top -400px center;
-    }
-  }
-  @keyframes flash3 {
-    0% {
-      background-position: top -400px center;
-    }
-    50% {
-      background-position: top -400px center;
-    }
-    60% {
-      background-position: top 500px center;
-    }
-    90% {
-      background-position: top 500px center;
-    }
-    100% {
-      background-position: top -400px center;
-    }
-  }
-  @-webkit-keyframes flash4 {
-    0% {
-      background-position: top -280px center;
-    }
-    70% {
-      background-position: top -280px center;
-    }
-    80% {
-      background-position: top 650px center;
-    }
-    90% {
-      background-position: top 650px center;
-    }
-    100% {
-      background-position: top -280px center;
-    }
-  }
-  @keyframes flash4 {
-    0% {
-      background-position: top -280px center;
-    }
-    70% {
-      background-position: top -280px center;
-    }
-    80% {
-      background-position: top 650px center;
-    }
-    90% {
-      background-position: top 650px center;
-    }
-    100% {
-      background-position: top -280px center;
-    }
+  .animation-banner main ul {
+    padding-top: 26px;
   }
   .banner-ranking {
     gap: 48px;
