@@ -834,6 +834,7 @@ body {
             display: none;
             gap: 20px;
             justify-content: center;
+            align-items: stretch;
 
             li {
                 flex: 1;
@@ -844,19 +845,28 @@ body {
                 color: $lightGray;
                 text-align: center;
                 background-color: rgba($darkBg, .6);
+                position: relative;
 
                 p.title {
                     font-weight: $UltraBold;
+                    margin-bottom: 206px;
                 }
 
                 img {
                     margin: 24px auto;
                     height: 106px;
+                    position: absolute;
+                    bottom: 76px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
 
                 .btns {
                     display: flex;
                     gap: 8px;
+                    position: absolute;
+                    width: calc(100% - 56px);
+                    bottom: 28px;
 
                     button {
                         flex: 1;

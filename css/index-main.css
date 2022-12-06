@@ -739,6 +739,7 @@ body {
   display: none;
   gap: 20px;
   justify-content: center;
+  align-items: stretch;
 }
 .step .step-contents ul li {
   flex: 1;
@@ -749,17 +750,26 @@ body {
   color: #EFEFEF;
   text-align: center;
   background-color: rgba(18, 18, 18, 0.6);
+  position: relative;
 }
 .step .step-contents ul li p.title {
   font-weight: 700;
+  margin-bottom: 206px;
 }
 .step .step-contents ul li img {
   margin: 24px auto;
   height: 106px;
+  position: absolute;
+  bottom: 76px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .step .step-contents ul li .btns {
   display: flex;
   gap: 8px;
+  position: absolute;
+  width: calc(100% - 56px);
+  bottom: 28px;
 }
 .step .step-contents ul li .btns button {
   flex: 1;
