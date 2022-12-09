@@ -3,354 +3,472 @@ body {
   background-color: #010206 !important;
 }
 
-/* 新版主視覺
+/* 新版主視覺 */
 .keyvision {
-    background-image: url(../images/keyvision/key-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: top -20px center;
-    background-size: 100%;
-    height: 50vw;
-    max-height: 900px;
-    padding: 0 calc(50vw - 36rem);
-    display: flex;
+  background-image: url(../images/keyvision/key-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top -20px center;
+  background-size: 100%;
+  height: 50vw;
+  max-height: 900px;
+  padding: 0 calc(50vw - 36rem);
+  display: flex;
+}
+.keyvision:after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/keyvision/key-star.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vw;
+  left: 0;
+  opacity: 0.8;
+}
+.keyvision main {
+  flex: 45%;
+  position: relative;
+  padding: 200px 60px;
+  z-index: 2;
+}
+.keyvision main p {
+  text-align: center;
+  text-shadow: 0 0 10px #290a4f;
+  margin: 20px;
+}
+.keyvision main .btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 260px;
+  margin: 0 auto;
+}
+.keyvision main .btns button {
+  flex: 100%;
+  margin: 8px;
+  transition: all 0.3s ease;
+  -webkit-animation: btn-bounce 6s infinite;
+          animation: btn-bounce 6s infinite;
+}
+.keyvision main .btns button:last-child {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.keyvision main .btns button:hover {
+  -webkit-animation: 0s;
+          animation: 0s;
+  transform: scale(1.05);
+}
+@-webkit-keyframes btn-bounce {
+  40% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+@keyframes btn-bounce {
+  40% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+.keyvision main:after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/keyvision/desc-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  z-index: -1;
+  opacity: 0.5;
+}
+.keyvision .animation-wrap {
+  flex: 55%;
+  position: relative;
+  margin: -20px 0 -120px;
+  z-index: 2;
+}
+.keyvision .animation-wrap .img-flash {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.keyvision .animation-wrap .img-flash img {
+  width: 100%;
+}
+.keyvision .animation-wrap .img-flash .light {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-image: url(../images/keyvision/flash.png);
+  background-repeat: no-repeat;
+  -webkit-animation: 10s infinite both;
+          animation: 10s infinite both;
+}
+.keyvision .animation-wrap .img-flash:first-child .light {
+  left: 4%;
+  top: -4px;
+  -webkit-animation-name: flash1;
+          animation-name: flash1;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
+}
+.keyvision .animation-wrap .img-flash:nth-child(2) .light {
+  -webkit-animation-name: flash2;
+          animation-name: flash2;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
+}
+.keyvision .animation-wrap .img-flash:nth-child(3) .light {
+  -webkit-animation-name: flash3;
+          animation-name: flash3;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
+}
+.keyvision .animation-wrap .img-flash:nth-child(4) .light {
+  -webkit-animation-name: flash4;
+          animation-name: flash4;
+  -webkit-mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
+          mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
+}
+@-webkit-keyframes flash1 {
+  0% {
+    background-position: top -360px center;
+  }
+  10% {
+    background-position: top -360px center;
+  }
+  20% {
+    background-position: top 350px center;
+  }
+  90% {
+    background-position: top 350px center;
+  }
+  100% {
+    background-position: top -360px center;
+  }
+}
+@keyframes flash1 {
+  0% {
+    background-position: top -360px center;
+  }
+  10% {
+    background-position: top -360px center;
+  }
+  20% {
+    background-position: top 350px center;
+  }
+  90% {
+    background-position: top 350px center;
+  }
+  100% {
+    background-position: top -360px center;
+  }
+}
+@-webkit-keyframes flash2 {
+  0% {
+    background-position: top -360px center;
+  }
+  30% {
+    background-position: top -360px center;
+  }
+  40% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -360px center;
+  }
+}
+@keyframes flash2 {
+  0% {
+    background-position: top -360px center;
+  }
+  30% {
+    background-position: top -360px center;
+  }
+  40% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -360px center;
+  }
+}
+@-webkit-keyframes flash3 {
+  0% {
+    background-position: top -220px center;
+  }
+  50% {
+    background-position: top -220px center;
+  }
+  60% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -220px center;
+  }
+}
+@keyframes flash3 {
+  0% {
+    background-position: top -220px center;
+  }
+  50% {
+    background-position: top -220px center;
+  }
+  60% {
+    background-position: top 500px center;
+  }
+  90% {
+    background-position: top 500px center;
+  }
+  100% {
+    background-position: top -220px center;
+  }
+}
+@-webkit-keyframes flash4 {
+  0% {
+    background-position: top -220px center;
+  }
+  70% {
+    background-position: top -220px center;
+  }
+  80% {
+    background-position: top 650px center;
+  }
+  90% {
+    background-position: top 650px center;
+  }
+  100% {
+    background-position: top -220px center;
+  }
+}
+@keyframes flash4 {
+  0% {
+    background-position: top -220px center;
+  }
+  70% {
+    background-position: top -220px center;
+  }
+  80% {
+    background-position: top 650px center;
+  }
+  90% {
+    background-position: top 650px center;
+  }
+  100% {
+    background-position: top -220px center;
+  }
+}
+.keyvision .animation-wrap:after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/keyvision/char-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  z-index: -1;
+}
 
-    &:after {
-        content: "";
+.dashboard {
+  width: 900px;
+  max-width: 76rem;
+  margin: 80px auto;
+  position: relative;
+  z-index: 2;
+}
+.dashboard ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dashboard ul li {
+  flex: 1;
+  text-align: center;
+}
+.dashboard ul li h2 {
+  color: #AAF3F5;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+.dashboard ul li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #BDBDBD;
+  font-weight: 700;
+}
+.dashboard ul li span img {
+  margin-left: 4px;
+}
+
+/* 舊版主視覺
+.animation-banner {
+    display: flex;
+    align-items: center;
+    height: 650px;
+    max-width: 100%;
+    padding: 0 calc(50vw - 36rem);
+    margin: 0 auto;
+    position: relative;
+
+    &:after{
+        content: '';
         position: absolute;
-        background-image: url(../images/keyvision/key-star.gif);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 50vw;
+        z-index: -1;
+        top: 0;
+        right: 0;
         left: 0;
-        opacity: 0.8;
+        bottom: -120px;
+        background-image: url(../images/background/index-bg1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+
+    .animation-wrap {
+        order: 2;
+        position: absolute;
+        margin-top: -96px;
+        top: 96px;
+        right: 0;
+        height: auto;
+        width: 70vw;
     }
 
     main {
-        flex: 45%;
-        position: relative;
-        padding: 200px 60px;
-        z-index: 2;
+        width: 440px;
+        padding-top: 100px;
+        color: $white;
+
+        h2 {
+            font-size: calc($fontSize * 4);
+            font-weight: $ExtraBlack;
+            line-height: 1.4;
+
+            span {
+                font-size: calc($fontSize * 4);
+                font-weight: $ExtraBlack;
+                line-height: 1.4;
+                background: $gradient;
+                color: transparent;
+                background-clip: text;
+            }
+        }
 
         p {
-            text-align: center;
-            text-shadow: 0 0 10px #290a4f;
-            margin: 20px;
+            margin: 20px 0;
+            font-size: calc($fontSize * 1.8);
+            font-weight: $Medium;
+
+            &.updated-time {
+                font-size: calc($fontSize * 1.2);
+                font-weight: $Regular;
+                color: $gray;
+                margin-top: 24px;
+            }
         }
 
         .btns {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 260px;
-            margin: 0 auto;
+            gap: 20px;
+            justify-content: flex-start;
 
             button {
-                flex: 100%;
-                margin: 8px;
-                transition: all .3s ease;
-                animation: btn-bounce 6s infinite;
-
-                &:last-child {
-                    animation-delay: 3s;
-                }
-
-                &:hover {
-                    animation: 0s;
-                    transform: scale(1.05);
-                }
-            }
-
-            @keyframes btn-bounce {
-                40% {
-                    transform: scale(1);
-                }
-                45% {
-                    transform: scale(1.05);
-                }
-                50% {
-                    transform: scale(1);
-                }
-                55% {
-                    transform: scale(1.05);
-                }
-                60% {
-                    transform: scale(1);
-                }
+                width: 150px;
+                height: 40px;
+                font-weight: $UltraBold;
             }
         }
 
-        &:after {
-            position: absolute;
-            content: '';
-            background-image: url(../images/keyvision/desc-bg.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100%;
+        ul {
+            padding-top: 48px;
             width: 100%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            mix-blend-mode: multiply;
-            z-index: -1;
-            opacity: .5;
-        }
-    }
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 24px 56px;
 
-    .animation-wrap {
-        flex: 55%;
-        position: relative;
-        margin: -20px 0 -120px;
-        z-index: 2;
-
-        .img-flash {
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-
-            img {
-                width: 100%;
-            }
-
-            .light {
-                left: 0;
-                top: 0;
-                position: absolute;
-                width: 100%;
-                height: 120%;
-                mask-size: 100%;
-                mask-repeat: no-repeat;
-                background-image: url(../images/keyvision/flash.png);
-                background-repeat: no-repeat;
-                animation: 10s infinite both;
-            }
-
-            &:first-child {
-                .light {
-                    left: 4%;
-                    top: -4px;
-                    animation-name: flash1;
-                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char1.svg);
-                }
-            }
-
-            &:nth-child(2) {
-                .light {
-                    animation-name: flash2;
-                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char2.svg);
-                }
-            }
-
-            &:nth-child(3) {
-                .light {
-                    animation-name: flash3;
-                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char3.svg);
-                }
-            }
-
-            &:nth-child(4) {
-                .light {
-                    animation-name: flash4;
-                    mask: url(https://raw.githubusercontent.com/g-jiuyang/buggedgame/f439db349a54bbbf629b3b88fc4a60beb33116d4/images/keyvision/char4.svg);
-                }
-            }
-        }
-
-        @keyframes flash1 {
-            0% { background-position: top -360px center; }
-            10% { background-position: top -360px center; }
-            20% { background-position: top 350px center; }
-            90% { background-position: top 350px center; }
-            100% { background-position: top -360px center; }
-        }
-
-        @keyframes flash2 {
-            0% { background-position: top -360px center; }
-            30% { background-position: top -360px center; }
-            40% { background-position: top 500px center; }
-            90% { background-position: top 500px center; }
-            100% { background-position: top -360px center; }
-        }
-
-        @keyframes flash3 {
-            0% { background-position: top -220px center; }
-            50% { background-position: top -220px center; }
-            60% { background-position: top 500px center; }
-            90% { background-position: top 500px center; }
-            100% { background-position: top -220px center; }
-        }
-
-        @keyframes flash4 {
-            0% { background-position: top -220px center; }
-            70% { background-position: top -220px center; }
-            80% { background-position: top 650px center; }
-            90% { background-position: top 650px center; }
-            100% { background-position: top -220px center; }
-        }
-
-        &:after {
-            position: absolute;
-            content: '';
-            background-image: url(../images/keyvision/char-bg.png);
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: 100%;
-            width: 100%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            mix-blend-mode: multiply;
-            opacity: .5;
-            z-index: -1;
-        }
-    }
-}
-
-.dashboard {
-    width: 900px;
-    max-width: 76rem;
-    margin: 80px auto;
-    position: relative;
-    z-index: 2;
-
-    ul {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-
-        li {
-            flex: 1;
-            text-align: center;
-
-            h2 {
-                color: $gamefiPass;
-                margin-bottom: 4px;
-                word-break: break-all;
-            }
-
-            span {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: $lighter;
+            li {
+                flex: calc(50% - 28px);
+                font-size: calc($fontSize * 1.8);
+                line-height: 1.4;
                 font-weight: $UltraBold;
 
-                img {
-                    margin-left: 4px;
+                span {
+                    display: block;
+                    font-size: calc($fontSize * 1.4);
+                    color: $lighter;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-left: 4px;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    max-width: 115px;
+                }
+
+                &:nth-child(even) {
+                    max-width: calc(100% - 171px);
                 }
             }
         }
     }
-}
-*/
-.animation-banner {
-  display: flex;
-  align-items: center;
-  height: 650px;
-  max-width: 100%;
-  padding: 0 calc(50vw - 36rem);
-  margin: 0 auto;
-  position: relative;
-}
-.animation-banner:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: -120px;
-  background-image: url(../images/background/index-bg1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-.animation-banner .animation-wrap {
-  order: 2;
-  position: absolute;
-  margin-top: -96px;
-  top: 96px;
-  right: 0;
-  height: auto;
-  width: 70vw;
-}
-.animation-banner main {
-  width: 440px;
-  padding-top: 100px;
-  color: #ffffff;
-}
-.animation-banner main h2 {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1.4;
-}
-.animation-banner main h2 span {
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 1.4;
-  background: linear-gradient(to right, #E63EB6, #749FF5);
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.animation-banner main p {
-  margin: 20px 0;
-  font-size: 18px;
-  font-weight: 500;
-}
-.animation-banner main p.updated-time {
-  font-size: 12px;
-  font-weight: 400;
-  color: #898989;
-  margin-top: 24px;
-}
-.animation-banner main .btns {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-}
-.animation-banner main .btns button {
-  width: 150px;
-  height: 40px;
-  font-weight: 700;
-}
-.animation-banner main ul {
-  padding-top: 48px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 24px 56px;
-}
-.animation-banner main ul li {
-  flex: calc(50% - 28px);
-  font-size: 18px;
-  line-height: 1.4;
-  font-weight: 700;
-}
-.animation-banner main ul li span {
-  display: block;
-  font-size: 14px;
-  color: #BDBDBD;
-  display: flex;
-  align-items: center;
-}
-.animation-banner main ul li span img {
-  margin-left: 4px;
-}
-.animation-banner main ul li:nth-child(odd) {
-  max-width: 115px;
-}
-.animation-banner main ul li:nth-child(even) {
-  max-width: calc(100% - 171px);
-}
-
+} */
 .banner-ranking {
   width: 90vw;
   max-width: 76rem;
@@ -359,13 +477,18 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   gap: 28px;
-  /* 舊版 純CSS
+  /* 舊版 純CSS */
+  /* 新版 swiper
   .banner-frame {
       flex: 30vw;
       max-width: 30vw;
-      margin: 0 auto;
+      margin: 0 auto 20px;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
 
       .banner-content {
+          flex: 100%;
           position: relative;
           height: 12vw;
           border-radius: 40px;
@@ -390,24 +513,27 @@ body {
       }
 
       .banner-thumb {
+          flex: 100%;
           display: flex;
           justify-content: center;
-          margin-top: 14px;
+          bottom: -14px;
           gap: 8px;
+
+          span {
+              width: 36px;
+              height: 4px;
+              border-radius: 2px;
+              background-color: $lightGray;
+          }
       }
   } */
-  /* 新版 swiper */
 }
 .banner-ranking .banner-frame {
   flex: 30vw;
   max-width: 30vw;
-  margin: 0 auto 20px;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
+  margin: 0 auto;
 }
 .banner-ranking .banner-frame .banner-content {
-  flex: 100%;
   position: relative;
   height: 12vw;
   border-radius: 40px;
@@ -429,17 +555,10 @@ body {
   transform: translateY(-50%);
 }
 .banner-ranking .banner-frame .banner-thumb {
-  flex: 100%;
   display: flex;
   justify-content: center;
-  bottom: -14px;
+  margin-top: 14px;
   gap: 8px;
-}
-.banner-ranking .banner-frame .banner-thumb span {
-  width: 36px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #EFEFEF;
 }
 .banner-ranking .ranking-frame {
   flex: 100%;
@@ -874,10 +993,34 @@ body {
   cursor: pointer;
   transition: all 0.5s;
   background-color: rgba(18, 18, 18, 0.6);
+  position: relative;
 }
-.buy-pass .pass-items li img {
+.buy-pass .pass-items li .img {
   margin-bottom: 16px;
   border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.buy-pass .pass-items li .img img {
+  width: 100%;
+  margin: 0 auto;
+}
+.buy-pass .pass-items li .img .coming_soon, .buy-pass .pass-items li .img .sold_out {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  padding: 4px 12px;
+  border-radius: 8px;
+  transform: translateX(-50%);
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.buy-pass .pass-items li .img .coming_soon {
+  background-color: rgba(138, 163, 255, 0.85);
+}
+.buy-pass .pass-items li .img .sold_out {
+  background-color: rgba(224, 128, 131, 0.85);
 }
 .buy-pass .pass-items li span {
   display: block;
@@ -1045,19 +1188,20 @@ footer .copyright {
 }
 
 @media screen and (min-width: 1440px) {
-  /*
+  /* 新版主視覺 */
   .keyvision {
-      padding: 0 calc(50vw - 40rem);
-
-      main {
-          padding: 220px 60px;
+    padding: 0 calc(50vw - 40rem);
+  }
+  .keyvision main {
+    padding: 220px 60px;
+  }
+  /* 舊版主視覺
+  .animation-banner {
+      .animation-wrap {
+          right: calc(50% - 720px);
+          width: 65vw;
       }
-  }
-  */
-  .animation-banner .animation-wrap {
-    right: calc(50% - 720px);
-    width: 65vw;
-  }
+  } */
   .banner-ranking .banner-frame {
     flex: 400px;
     max-width: 400px;
@@ -1073,61 +1217,60 @@ footer .copyright {
   }
 }
 @media screen and (min-width: 1680px) {
-  /*
+  /* 新版主視覺 */
   .keyvision {
-      margin-top: -52px;
-      padding: 0 calc(50vw - 43rem);
-
-      main {
-          padding: 300px 60px;
-      }
-
+    margin-top: -52px;
+    padding: 0 calc(50vw - 43rem);
+  }
+  .keyvision main {
+    padding: 300px 60px;
+  }
+  .keyvision .animation-wrap {
+    margin: 52px 0 -88px;
+  }
+  /* 舊版主視覺
+  .animation-banner {
       .animation-wrap {
-          margin: 52px 0 -88px;
+          right: calc(50% - 800px);
+          width: 55vw;
       }
-  }
-  */
-  .animation-banner .animation-wrap {
-    right: calc(50% - 800px);
-    width: 55vw;
-  }
+  } */
 }
 @media screen and (max-width: 1200px) {
-  /*
+  /* 新版主視覺 */
   .keyvision {
-      padding: 60px;
-      height: auto;
-      background-size: cover;
-      margin-bottom: 60px;
+    padding: 60px;
+    height: auto;
+    background-size: cover;
+    margin-bottom: 60px;
+  }
+  .keyvision main {
+    flex: 50%;
+    margin-top: 100px;
+    padding: 0;
+  }
+  .keyvision main > img {
+    padding: 0 60px;
+  }
+  .keyvision .animation-wrap {
+    flex: 50%;
+    margin: -60px 0 -172px;
+  }
+  .dashboard {
+    margin: 0 auto 80px;
+    max-width: 90vw;
+  }
+  /* 舊版主視覺
+  .animation-banner {
+      .animation-wrap {
+          max-width: 110vw;
+          margin: -96px auto 0;
+      }
 
       main {
-          flex: 50%;
-          margin-top: 100px;
-          padding: 0;
-
-          > img {
-              padding: 0 60px;
-          }
+          margin-left: 2rem;
       }
-
-      .animation-wrap {
-          flex: 50%;
-          margin: -60px 0 -172px;
-      }
-  }
-
-  .dashboard {
-      margin: 0 auto 80px;
-      max-width: 90vw;
-  }
-  */
-  .animation-banner .animation-wrap {
-    max-width: 110vw;
-    margin: -96px auto 0;
-  }
-  .animation-banner main {
-    margin-left: 2rem;
-  }
+  } */
   .banner-ranking {
     flex-wrap: wrap;
     justify-content: center;
@@ -1173,6 +1316,7 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 1140px) {
+  /* 新版主視覺 */
   .keyvision {
     margin-bottom: 3vw;
   }
@@ -1221,6 +1365,7 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 1024px) {
+  /* 新版主視覺 */
   .keyvision {
     margin-bottom: 3vw;
   }
@@ -1235,61 +1380,63 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 831px) {
-  /*
+  /* 新版主視覺 */
   .keyvision {
-      height: 65vw;
-      background-size: 120%;
-      margin-bottom: -20px;
+    height: 65vw;
+    background-size: 120%;
+    margin-bottom: -20px;
+  }
+  .keyvision main {
+    margin-top: 8vw;
+  }
+  .keyvision main .btns {
+    max-width: 200px;
+  }
+  .keyvision .animation-wrap {
+    margin: 0;
+  }
+  .dashboard {
+    margin-bottom: 44px;
+  }
+  .dashboard ul {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .dashboard ul li {
+    flex: calc(50% - 12px);
+  }
+  /* 舊版主視覺
+  .animation-banner {
+      display: block;
+      margin-bottom: 28px;
+      height: auto;
 
-      main {
-          margin-top: 8vw;
-
-          .btns {
-              max-width: 200px;
-          }
+      &:after {
+          background-size: 200vw;
+          bottom: -24px;
       }
 
       .animation-wrap {
-          margin: 0;
+          top: -70vw;
+          left: -200px;
+          right: -120px;
+          width: auto;
       }
-  }
 
-  .dashboard {
-      margin-bottom: 44px;
+      main {
+          width: 80vw;
+          margin: 75vw auto 56px;
+          padding-top: 0;
 
-      ul {
-          flex-wrap: wrap;
-          gap: 24px;
-
-          li {
-              flex: calc(50% - 12px);
+          ul {
+              li {
+                  &:nth-child(even) {
+                      flex: calc(100% - 171px);
+                  }
+              }
           }
       }
-  }
-  */
-  .animation-banner {
-    display: block;
-    margin-bottom: 28px;
-    height: auto;
-  }
-  .animation-banner:after {
-    background-size: 200vw;
-    bottom: -24px;
-  }
-  .animation-banner .animation-wrap {
-    top: -70vw;
-    left: -200px;
-    right: -120px;
-    width: auto;
-  }
-  .animation-banner main {
-    width: 80vw;
-    margin: 75vw auto 56px;
-    padding-top: 0;
-  }
-  .animation-banner main ul li:nth-child(even) {
-    flex: calc(100% - 171px);
-  }
+  } */
   .banner-ranking .banner-frame {
     flex: 60%;
     max-width: 60%;
@@ -1413,43 +1560,41 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 767px) {
-  /*
+  /* 新版主視覺 */
   .keyvision {
-      background-image: url(../images/keyvision/key-bg-m.jpg);
-      height: 150vw;
-      max-height: 150vw;
-      background-size: cover;
-      flex-wrap: wrap;
-      background-position: top center;
-      padding: 20px;
-      margin-bottom: 40px;
-
-      main {
-          flex: 100%;
-          order: 2;
-          margin-top: -45vw;
-          z-index: 5;
-
-          > img {
-              padding: 0 120px;
-          }
-
-          .btns {
-              max-width: 300px;
-          }
-      }
-
+    background-image: url(../images/keyvision/key-bg-m.jpg);
+    height: 150vw;
+    max-height: 150vw;
+    background-size: cover;
+    flex-wrap: wrap;
+    background-position: top center;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  .keyvision main {
+    flex: 100%;
+    order: 2;
+    margin-top: -45vw;
+    z-index: 5;
+  }
+  .keyvision main > img {
+    padding: 0 120px;
+  }
+  .keyvision main .btns {
+    max-width: 300px;
+  }
+  .keyvision .animation-wrap {
+    flex: 100%;
+    height: 115vw;
+    margin-top: -9vw;
+  }
+  /* 舊版主視覺
+  .animation-banner {
       .animation-wrap {
-          flex: 100%;
-          height: 115vw;
-          margin-top: -9vw;
+          right: 84px;
+          left: 28px;
       }
-  }
-  */
-  .animation-banner .animation-wrap {
-    right: 84px;
-    left: 28px;
-  }
+  } */
   .banner-ranking .ranking-frame {
     max-width: 90vw;
   }
@@ -1502,126 +1647,230 @@ footer .copyright {
   }
 }
 @media screen and (max-width: 515px) {
-  /*
+  /* 新版主視覺 */
   .keyvision {
-      height: 220vw;
-      max-height: 200vw;
-      padding: 0;
+    height: 220vw;
+    max-height: 200vw;
+    padding: 0;
+  }
+  .keyvision:after {
+    background-image: url(../images/keyvision/key-star_m.gif);
+  }
+  .keyvision.hq:after {
+    background-image: url(../images/keyvision/key-star_m_hq.gif);
+  }
+  .keyvision main {
+    margin-top: -55vw;
+  }
+  .keyvision main > img {
+    padding: 0 10vw;
+  }
+  .keyvision main p {
+    margin: 8px 20px;
+  }
+  .keyvision main .btns {
+    max-width: 260px;
+    margin-top: 20px;
+  }
+  .keyvision main .btns button {
+    margin: 4px;
+  }
+  .keyvision .animation-wrap {
+    margin: 5vw 10px;
+  }
+  @-webkit-keyframes flash1 {
+    0% {
+      background-position: top -400px center;
+    }
+    10% {
+      background-position: top -400px center;
+    }
+    20% {
+      background-position: top 350px center;
+    }
+    90% {
+      background-position: top 350px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @keyframes flash1 {
+    0% {
+      background-position: top -400px center;
+    }
+    10% {
+      background-position: top -400px center;
+    }
+    20% {
+      background-position: top 350px center;
+    }
+    90% {
+      background-position: top 350px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @-webkit-keyframes flash2 {
+    0% {
+      background-position: top -420px center;
+    }
+    30% {
+      background-position: top -420px center;
+    }
+    40% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -420px center;
+    }
+  }
+  @keyframes flash2 {
+    0% {
+      background-position: top -420px center;
+    }
+    30% {
+      background-position: top -420px center;
+    }
+    40% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -420px center;
+    }
+  }
+  @-webkit-keyframes flash3 {
+    0% {
+      background-position: top -400px center;
+    }
+    50% {
+      background-position: top -400px center;
+    }
+    60% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @keyframes flash3 {
+    0% {
+      background-position: top -400px center;
+    }
+    50% {
+      background-position: top -400px center;
+    }
+    60% {
+      background-position: top 500px center;
+    }
+    90% {
+      background-position: top 500px center;
+    }
+    100% {
+      background-position: top -400px center;
+    }
+  }
+  @-webkit-keyframes flash4 {
+    0% {
+      background-position: top -280px center;
+    }
+    70% {
+      background-position: top -280px center;
+    }
+    80% {
+      background-position: top 650px center;
+    }
+    90% {
+      background-position: top 650px center;
+    }
+    100% {
+      background-position: top -280px center;
+    }
+  }
+  @keyframes flash4 {
+    0% {
+      background-position: top -280px center;
+    }
+    70% {
+      background-position: top -280px center;
+    }
+    80% {
+      background-position: top 650px center;
+    }
+    90% {
+      background-position: top 650px center;
+    }
+    100% {
+      background-position: top -280px center;
+    }
+  }
+  /* 舊版主視覺
+  .animation-banner {
+      margin-bottom: 56px;
 
       &:after {
-          background-image: url(../images/keyvision/key-star_m.gif);
-      }
-
-      &.hq {
-          &:after {
-              background-image: url(../images/keyvision/key-star_m_hq.gif);
-          }
-      }
-
-      main {
-          margin-top: -55vw;
-
-          > img {
-              padding: 0 10vw;
-          }
-
-          p {
-              margin: 8px 20px;
-          }
-
-          .btns {
-              max-width: 260px;
-              margin-top: 20px;
-
-              button {
-                  margin: 4px;
-              }
-          }
+          background-size: 400vw;
+          bottom: 0;
       }
 
       .animation-wrap {
-          margin: 5vw 10px;
+          overflow: hidden;
+          top: -80vw;
+          right: 0;
+          left: 0;
+      }
 
-          @keyframes flash1 {
-              0% { background-position: top -400px center; }
-              10% { background-position: top -400px center; }
-              20% { background-position: top 350px center; }
-              90% { background-position: top 350px center; }
-              100% { background-position: top -400px center; }
+      main {
+          width: 100vw;
+          padding: 0 5vw 20px;
+          margin: 0;
+          margin-top: 100vw;
+
+          h2 {
+              font-size: calc($fontSize * 2.4);
+
+              span {
+                  font-size: calc($fontSize * 2.4);
+              }
           }
 
-          @keyframes flash2 {
-              0% { background-position: top -420px center; }
-              30% { background-position: top -420px center; }
-              40% { background-position: top 500px center; }
-              90% { background-position: top 500px center; }
-              100% { background-position: top -420px center; }
+          p {
+              font-size: calc($fontSize * 1.6);
+              font-weight: $Regular;
+              margin-top: 8px;
+              margin-bottom: 16px;
           }
 
-          @keyframes flash3 {
-              0% { background-position: top -400px center; }
-              50% { background-position: top -400px center; }
-              60% { background-position: top 500px center; }
-              90% { background-position: top 500px center; }
-              100% { background-position: top -400px center; }
+          .btns {
+              gap: 12px;
+              font-size: calc($fontSize * 1.3);
+              flex-wrap: wrap;
+
+              button {
+                  flex: 100%;
+                  height: 44px;
+
+                  &#download--open {
+                      order: 2;
+                  }
+              }
           }
 
-          @keyframes flash4 {
-              0% { background-position: top -280px center; }
-              70% { background-position: top -280px center; }
-              80% { background-position: top 650px center; }
-              90% { background-position: top 650px center; }
-              100% { background-position: top -280px center; }
+          ul {
+              padding-top: 26px;
           }
       }
-  }
-  */
-  .animation-banner {
-    margin-bottom: 56px;
-  }
-  .animation-banner:after {
-    background-size: 400vw;
-    bottom: 0;
-  }
-  .animation-banner .animation-wrap {
-    overflow: hidden;
-    top: -80vw;
-    right: 0;
-    left: 0;
-  }
-  .animation-banner main {
-    width: 100vw;
-    padding: 0 5vw 20px;
-    margin: 0;
-    margin-top: 100vw;
-  }
-  .animation-banner main h2 {
-    font-size: 24px;
-  }
-  .animation-banner main h2 span {
-    font-size: 24px;
-  }
-  .animation-banner main p {
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 8px;
-    margin-bottom: 16px;
-  }
-  .animation-banner main .btns {
-    gap: 12px;
-    font-size: 13px;
-    flex-wrap: wrap;
-  }
-  .animation-banner main .btns button {
-    flex: 100%;
-    height: 44px;
-  }
-  .animation-banner main .btns button#download--open {
-    order: 2;
-  }
-  .animation-banner main ul {
-    padding-top: 26px;
-  }
+  } */
   .banner-ranking {
     gap: 48px;
   }

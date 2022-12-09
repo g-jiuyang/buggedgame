@@ -7,7 +7,7 @@
 .gamefi-pass ul {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   gap: 24px 14px;
 }
 .gamefi-pass ul li {
@@ -22,10 +22,34 @@
   width: 100%;
   padding: 16px 20px;
 }
-.gamefi-pass ul li a img {
-  width: calc(100% - 32px);
+.gamefi-pass ul li a .img {
+  width: calc((68rem - 42px) / 4 - 40px - 32px);
+  height: calc((68rem - 42px) / 4 - 40px - 32px);
   margin: 40px auto 16px;
   border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.gamefi-pass ul li a .img img {
+  width: 100%;
+  margin: 0 auto;
+}
+.gamefi-pass ul li a .img .coming_soon, .gamefi-pass ul li a .img .sold_out {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  padding: 4px 12px;
+  border-radius: 8px;
+  transform: translateX(-50%);
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.gamefi-pass ul li a .img .coming_soon {
+  background-color: rgba(138, 163, 255, 0.85);
+}
+.gamefi-pass ul li a .img .sold_out {
+  background-color: rgba(224, 128, 131, 0.85);
 }
 .gamefi-pass ul li a span {
   display: block;
@@ -98,7 +122,7 @@
   display: none;
   gap: 24px 14px;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
 }
 .props .prop-list li {
   flex: calc((100% - 42px) / 4);
@@ -107,7 +131,6 @@
   border: 1px solid #353535;
   transition: all 0.5s;
   position: relative;
-  align-self: stretch;
 }
 .props .prop-list li a {
   display: inline-block;
@@ -133,6 +156,9 @@
   padding: 4px 12px;
   border-radius: 8px;
   transform: translateX(-50%);
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 .props .prop-list li a .img .coming_soon {
   background-color: rgba(138, 163, 255, 0.85);
@@ -156,10 +182,9 @@
 .props .prop-list li a span.fee {
   font-size: 16px;
   color: #8AA3FF;
-}
-.props .prop-list li a span.fee img {
-  display: inline-block;
-  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .props .prop-list li a span.usdt {
   font-size: 12px;
@@ -169,9 +194,7 @@
   transform: translateY(-8px);
 }
 .props .prop-list li .limited {
-  display: none;
-}
-.props .prop-list li.pass .limited {
+  visibility: hidden;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -180,8 +203,11 @@
   font-weight: 700;
   color: #898989;
 }
-.props .prop-list li.pass .limited img {
+.props .prop-list li .limited img {
   width: 28px;
+}
+.props .prop-list li.pass .limited {
+  visibility: visible;
 }
 .props .prop-list li.pass a {
   padding-top: 0;

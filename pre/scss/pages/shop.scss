@@ -10,7 +10,7 @@
     ul {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: stretch;
         gap: 24px 14px;
 
         li {
@@ -25,10 +25,36 @@
                 width: 100%;
                 padding: 16px 20px;
 
-                img {
-                    width: calc(100% - 32px);
+                .img {
+                    width: calc((68rem - 42px) / 4 - 40px - 32px);
+                    height: calc((68rem - 42px) / 4 - 40px - 32px);
                     margin: 40px auto 16px;
                     border-radius: 8px;
+                    overflow: hidden;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+
+                    .coming_soon, .sold_out {
+                        position: absolute;
+                        bottom: 16px;
+                        left: 50%;
+                        padding: 4px 12px;
+                        border-radius: 8px;
+                        transform: translateX(-50%);
+                        min-width: max-content;
+                    }
+
+                    .coming_soon {
+                        background-color: rgba($primaryC, .85);
+                    }
+
+                    .sold_out {
+                        background-color: rgba(#E08083, .85);
+                    }
                 }
 
                 span {
@@ -118,7 +144,7 @@
         display: none;
         gap: 24px 14px;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: stretch;
 
         li {
             flex: calc((100% - 42px)/4);
@@ -127,7 +153,6 @@
             border: 1px solid $dark;
             transition: all .5s;
             position: relative;
-            align-self: stretch;
 
             a {
                 display: inline-block;
@@ -135,7 +160,6 @@
                 width: 100%;
 
                 .img {
-                    // width: calc(100% - 18px);
                     width: calc((68rem - 42px) / 4 - 40px - 32px);
                     height: calc((68rem - 42px) / 4 - 40px - 32px);
                     margin: 42px auto 16px;
@@ -155,6 +179,7 @@
                         padding: 4px 12px;
                         border-radius: 8px;
                         transform: translateX(-50%);
+                        min-width: max-content;
                     }
 
                     .coming_soon {
@@ -183,11 +208,9 @@
                     &.fee {
                         font-size: calc($fontSize * 1.6);
                         color: $primaryC;
-
-                        img {
-                            display: inline-block;
-                            margin-right: 6px;
-                        }
+                        display: flex;
+                        align-items: center;
+                        gap:8px;
                     }
 
                     &.usdt {
@@ -202,22 +225,23 @@
             }
 
             .limited {
-                display: none;
+                visibility: hidden;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                padding: 16px 0 0 20px;
+                font-size: calc($fontSize * 1.2);
+                font-weight: $UltraBold;
+                color: $gray;
+
+                img {
+                    width: 28px;
+                }
             }
 
             &.pass {
                 .limited {
-                    display: flex;
-                    gap: 8px;
-                    align-items: center;
-                    padding: 16px 0 0 20px;
-                    font-size: calc($fontSize * 1.2);
-                    font-weight: $UltraBold;
-                    color: $gray;
-
-                    img {
-                        width: 28px;
-                    }
+                    visibility: visible;
                 }
 
                 a {
