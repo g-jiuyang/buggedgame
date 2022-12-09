@@ -477,18 +477,13 @@ body {
   flex-wrap: wrap;
   align-items: stretch;
   gap: 28px;
-  /* 舊版 純CSS */
-  /* 新版 swiper
+  /* 舊版 純CSS
   .banner-frame {
       flex: 30vw;
       max-width: 30vw;
-      margin: 0 auto 20px;
-      display: flex;
-      flex-wrap: wrap;
-      position: relative;
+      margin: 0 auto;
 
       .banner-content {
-          flex: 100%;
           position: relative;
           height: 12vw;
           border-radius: 40px;
@@ -501,6 +496,9 @@ body {
               right: 0;
               bottom: 0;
               left: 0;
+              opacity: 0;
+              z-index: 0;
+              transition: all 5s linear;
 
               img {
                   position: absolute;
@@ -509,31 +507,33 @@ body {
                   top: 50%;
                   transform: translateY(-50%);
               }
+
+              &.banner-active {
+                  opacity: 1;
+                  z-index: 5;
+              }
           }
       }
 
       .banner-thumb {
-          flex: 100%;
           display: flex;
           justify-content: center;
-          bottom: -14px;
+          margin-top: 14px;
           gap: 8px;
-
-          span {
-              width: 36px;
-              height: 4px;
-              border-radius: 2px;
-              background-color: $lightGray;
-          }
       }
   } */
+  /* 新版 swiper */
 }
 .banner-ranking .banner-frame {
   flex: 30vw;
   max-width: 30vw;
-  margin: 0 auto;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 .banner-ranking .banner-frame .banner-content {
+  flex: 100%;
   position: relative;
   height: 12vw;
   border-radius: 40px;
@@ -555,10 +555,17 @@ body {
   transform: translateY(-50%);
 }
 .banner-ranking .banner-frame .banner-thumb {
+  flex: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 14px;
+  bottom: -14px;
   gap: 8px;
+}
+.banner-ranking .banner-frame .banner-thumb span {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #EFEFEF;
 }
 .banner-ranking .ranking-frame {
   flex: 100%;
@@ -1005,7 +1012,8 @@ body {
   width: 100%;
   margin: 0 auto;
 }
-.buy-pass .pass-items li .img .coming_soon, .buy-pass .pass-items li .img .sold_out {
+.buy-pass .pass-items li .img .coming_soon,
+.buy-pass .pass-items li .img .sold_out {
   position: absolute;
   bottom: 16px;
   left: 50%;
@@ -1215,6 +1223,9 @@ footer .copyright {
   .banner-ranking .ranking-frame .ranking-content p.update-time {
     margin-top: 2px;
   }
+  .banner-ranking .updated-time {
+    margin-left: 428px;
+  }
 }
 @media screen and (min-width: 1680px) {
   /* 新版主視覺 */
@@ -1311,7 +1322,8 @@ footer .copyright {
   footer ul {
     margin-top: 100px;
   }
-  footer ul, footer .copyright {
+  footer ul,
+footer .copyright {
     width: calc(100vw - 4rem);
   }
 }
@@ -1541,7 +1553,8 @@ footer .copyright {
     text-align: center;
     font-size: 14px;
   }
-  .step .step-tab, .step .step-contents {
+  .step .step-tab,
+.step .step-contents {
     max-width: 90vw;
   }
   .buy-pass .pass-items {

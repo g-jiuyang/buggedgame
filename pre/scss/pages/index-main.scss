@@ -67,15 +67,19 @@ body {
                 40% {
                     transform: scale(1);
                 }
+
                 45% {
                     transform: scale(1.05);
                 }
+
                 50% {
                     transform: scale(1);
                 }
+
                 55% {
                     transform: scale(1.05);
                 }
+
                 60% {
                     transform: scale(1);
                 }
@@ -164,35 +168,91 @@ body {
         }
 
         @keyframes flash1 {
-            0% { background-position: top -360px center; }
-            10% { background-position: top -360px center; }
-            20% { background-position: top 350px center; }
-            90% { background-position: top 350px center; }
-            100% { background-position: top -360px center; }
+            0% {
+                background-position: top -360px center;
+            }
+
+            10% {
+                background-position: top -360px center;
+            }
+
+            20% {
+                background-position: top 350px center;
+            }
+
+            90% {
+                background-position: top 350px center;
+            }
+
+            100% {
+                background-position: top -360px center;
+            }
         }
 
         @keyframes flash2 {
-            0% { background-position: top -360px center; }
-            30% { background-position: top -360px center; }
-            40% { background-position: top 500px center; }
-            90% { background-position: top 500px center; }
-            100% { background-position: top -360px center; }
+            0% {
+                background-position: top -360px center;
+            }
+
+            30% {
+                background-position: top -360px center;
+            }
+
+            40% {
+                background-position: top 500px center;
+            }
+
+            90% {
+                background-position: top 500px center;
+            }
+
+            100% {
+                background-position: top -360px center;
+            }
         }
 
         @keyframes flash3 {
-            0% { background-position: top -220px center; }
-            50% { background-position: top -220px center; }
-            60% { background-position: top 500px center; }
-            90% { background-position: top 500px center; }
-            100% { background-position: top -220px center; }
+            0% {
+                background-position: top -220px center;
+            }
+
+            50% {
+                background-position: top -220px center;
+            }
+
+            60% {
+                background-position: top 500px center;
+            }
+
+            90% {
+                background-position: top 500px center;
+            }
+
+            100% {
+                background-position: top -220px center;
+            }
         }
 
         @keyframes flash4 {
-            0% { background-position: top -220px center; }
-            70% { background-position: top -220px center; }
-            80% { background-position: top 650px center; }
-            90% { background-position: top 650px center; }
-            100% { background-position: top -220px center; }
+            0% {
+                background-position: top -220px center;
+            }
+
+            70% {
+                background-position: top -220px center;
+            }
+
+            80% {
+                background-position: top 650px center;
+            }
+
+            90% {
+                background-position: top 650px center;
+            }
+
+            100% {
+                background-position: top -220px center;
+            }
         }
 
         &:after {
@@ -221,7 +281,7 @@ body {
     margin: 80px auto;
     position: relative;
     z-index: 2;
-    
+
     ul {
         display: flex;
         justify-content: space-between;
@@ -378,7 +438,7 @@ body {
     align-items: stretch;
     gap: 28px;
 
-    /* 舊版 純CSS */
+    /* 舊版 純CSS
     .banner-frame {
         flex: 30vw;
         max-width: 30vw;
@@ -397,6 +457,9 @@ body {
                 right: 0;
                 bottom: 0;
                 left: 0;
+                opacity: 0;
+                z-index: 0;
+                transition: all 5s linear;
 
                 img {
                     position: absolute;
@@ -404,6 +467,11 @@ body {
                     min-height: 100%;
                     top: 50%;
                     transform: translateY(-50%);
+                }
+
+                &.banner-active {
+                    opacity: 1;
+                    z-index: 5;
                 }
             }
         }
@@ -414,9 +482,9 @@ body {
             margin-top: 14px;
             gap: 8px;
         }
-    }
+    } */
 
-    /* 新版 swiper
+    /* 新版 swiper */
     .banner-frame {
         flex: 30vw;
         max-width: 30vw;
@@ -464,7 +532,7 @@ body {
                 background-color: $lightGray;
             }
         }
-    } */
+    }
 
     .ranking-frame {
         flex: 100%;
@@ -708,7 +776,8 @@ body {
         }
 
         // 漸層邊框
-        &:before, &:after {
+        &:before,
+        &:after {
             content: '';
             position: absolute;
             border-radius: 40px;
@@ -733,6 +802,7 @@ body {
     }
 
     .updated-time {
+        // margin-left: 30vw;
         width: 100%;
         font-size: calc($fontSize * 1.2);
         color: $gray;
@@ -759,7 +829,7 @@ body {
         left: 0;
         height: 100px;
         z-index: -1;
-        background: linear-gradient(to bottom, #010206 0%, rgba(#010206,0) 100%);
+        background: linear-gradient(to bottom, #010206 0%, rgba(#010206, 0) 100%);
     }
 
     h2 {
@@ -969,7 +1039,7 @@ body {
         left: 0;
         height: 100px;
         z-index: -1;
-        background: linear-gradient(to bottom, #010206 0%, rgba(#010206,0) 100%);
+        background: linear-gradient(to bottom, #010206 0%, rgba(#010206, 0) 100%);
     }
 
     h2 {
@@ -1005,7 +1075,8 @@ body {
                     margin: 0 auto;
                 }
 
-                .coming_soon, .sold_out {
+                .coming_soon,
+                .sold_out {
                     position: absolute;
                     bottom: 16px;
                     left: 50%;
@@ -1077,7 +1148,7 @@ body {
         left: 0;
         height: 300px;
         z-index: -1;
-        background: linear-gradient(to bottom, #010206 20%, rgba(#010206,0) 100%);
+        background: linear-gradient(to bottom, #010206 20%, rgba(#010206, 0) 100%);
     }
 
     h2 {
@@ -1229,6 +1300,7 @@ footer {
 }
 
 @media screen and (min-width: 1440px) {
+
     /* 新版主視覺 */
     .keyvision {
         padding: 0 calc(50vw - 40rem);
@@ -1267,10 +1339,17 @@ footer {
                 }
             }
         }
+
+        .updated-time {
+            margin-left: 428px;
+        }
     }
-} // min-width: 1440px
+}
+
+// min-width: 1440px
 
 @media screen and (min-width: 1680px) {
+
     /* 新版主視覺 */
     .keyvision {
         margin-top: -52px;
@@ -1292,9 +1371,12 @@ footer {
             width: 55vw;
         }
     } */
-} // min-width: 1680px
+}
+
+// min-width: 1680px
 
 @media screen and (max-width: 1200px) {
+
     /* 新版主視覺 */
     .keyvision {
         padding: 60px;
@@ -1307,7 +1389,7 @@ footer {
             margin-top: 100px;
             padding: 0;
 
-            > img {
+            >img {
                 padding: 0 60px;
             }
         }
@@ -1400,13 +1482,17 @@ footer {
             margin-top: 100px;
         }
 
-        ul, .copyright {
+        ul,
+        .copyright {
             width: calc(100vw - 4rem);
         }
     }
-} // max-width: 1200px
+}
+
+// max-width: 1200px
 
 @media screen and (max-width: 1140px) {
+
     /* 新版主視覺 */
     .keyvision {
         margin-bottom: 3vw;
@@ -1414,26 +1500,43 @@ footer {
         main {
             margin-top: 9vw;
 
-            > img {
+            >img {
                 padding: 0 5vw;
             }
         }
 
         .animation-wrap {
             margin: -5vw 0 -5vw;
-            
+
             @keyframes flash3 {
-                0% { background-position: top -300px center; }
-                50% { background-position: top -300px center; }
-                60% { background-position: top 500px center; }
-                90% { background-position: top 500px center; }
-                100% { background-position: top -300px center; }
+                0% {
+                    background-position: top -300px center;
+                }
+
+                50% {
+                    background-position: top -300px center;
+                }
+
+                60% {
+                    background-position: top 500px center;
+                }
+
+                90% {
+                    background-position: top 500px center;
+                }
+
+                100% {
+                    background-position: top -300px center;
+                }
             }
         }
     }
-} // max-width: 1140px
+}
+
+// max-width: 1140px
 
 @media screen and (max-width: 1024px) {
+
     /* 新版主視覺 */
     .keyvision {
         margin-bottom: 3vw;
@@ -1441,7 +1544,7 @@ footer {
         main {
             margin-top: 7vw;
 
-            > img {
+            >img {
                 padding: 0 6vw;
             }
 
@@ -1450,9 +1553,12 @@ footer {
             }
         }
     }
-} // max-width: 1024px
+}
+
+// max-width: 1024px
 
 @media screen and (max-width: 831px) {
+
     /* 新版主視覺 */
     .keyvision {
         height: 65vw;
@@ -1660,7 +1766,9 @@ footer {
     }
 
     .step {
-        .step-tab, .step-contents {
+
+        .step-tab,
+        .step-contents {
             max-width: 90vw;
         }
     }
@@ -1680,15 +1788,19 @@ footer {
                 flex: calc((100% - 48px)/4);
                 max-width: calc((100% - 48px)/4);
 
-                &.col-4, &.col-3 {
+                &.col-4,
+                &.col-3 {
                     margin-left: 0;
                 }
             }
         }
     }
-} // max-width: 831px
+}
+
+// max-width: 831px
 
 @media screen and(max-width: 767px) {
+
     /* 新版主視覺 */
     .keyvision {
         background-image: url(../images/keyvision/key-bg-m.jpg);
@@ -1699,14 +1811,14 @@ footer {
         background-position: top center;
         padding: 20px;
         margin-bottom: 40px;
-        
+
         main {
             flex: 100%;
             order: 2;
             margin-top: -45vw;
             z-index: 5;
 
-            > img {
+            >img {
                 padding: 0 120px;
             }
 
@@ -1814,9 +1926,12 @@ footer {
             width: calc(100vw - 3.5rem);
         }
     }
-} // max-width: 767px
+}
+
+// max-width: 767px
 
 @media screen and (max-width: 515px) {
+
     /* 新版主視覺 */
     .keyvision {
         height: 220vw;
@@ -1832,11 +1947,11 @@ footer {
                 background-image: url(../images/keyvision/key-star_m_hq.gif);
             }
         }
-        
+
         main {
             margin-top: -55vw;
 
-            > img {
+            >img {
                 padding: 0 10vw;
             }
 
@@ -1858,35 +1973,91 @@ footer {
             margin: 5vw 10px;
 
             @keyframes flash1 {
-                0% { background-position: top -400px center; }
-                10% { background-position: top -400px center; }
-                20% { background-position: top 350px center; }
-                90% { background-position: top 350px center; }
-                100% { background-position: top -400px center; }
+                0% {
+                    background-position: top -400px center;
+                }
+
+                10% {
+                    background-position: top -400px center;
+                }
+
+                20% {
+                    background-position: top 350px center;
+                }
+
+                90% {
+                    background-position: top 350px center;
+                }
+
+                100% {
+                    background-position: top -400px center;
+                }
             }
 
             @keyframes flash2 {
-                0% { background-position: top -420px center; }
-                30% { background-position: top -420px center; }
-                40% { background-position: top 500px center; }
-                90% { background-position: top 500px center; }
-                100% { background-position: top -420px center; }
+                0% {
+                    background-position: top -420px center;
+                }
+
+                30% {
+                    background-position: top -420px center;
+                }
+
+                40% {
+                    background-position: top 500px center;
+                }
+
+                90% {
+                    background-position: top 500px center;
+                }
+
+                100% {
+                    background-position: top -420px center;
+                }
             }
 
             @keyframes flash3 {
-                0% { background-position: top -400px center; }
-                50% { background-position: top -400px center; }
-                60% { background-position: top 500px center; }
-                90% { background-position: top 500px center; }
-                100% { background-position: top -400px center; }
+                0% {
+                    background-position: top -400px center;
+                }
+
+                50% {
+                    background-position: top -400px center;
+                }
+
+                60% {
+                    background-position: top 500px center;
+                }
+
+                90% {
+                    background-position: top 500px center;
+                }
+
+                100% {
+                    background-position: top -400px center;
+                }
             }
 
             @keyframes flash4 {
-                0% { background-position: top -280px center; }
-                70% { background-position: top -280px center; }
-                80% { background-position: top 650px center; }
-                90% { background-position: top 650px center; }
-                100% { background-position: top -280px center; }
+                0% {
+                    background-position: top -280px center;
+                }
+
+                70% {
+                    background-position: top -280px center;
+                }
+
+                80% {
+                    background-position: top 650px center;
+                }
+
+                90% {
+                    background-position: top 650px center;
+                }
+
+                100% {
+                    background-position: top -280px center;
+                }
             }
         }
     }
@@ -2182,7 +2353,7 @@ footer {
         &:after {
             background-position: bottom left;
         }
-        
+
         ul {
             width: calc(100vw - 2.5rem);
             margin: 20px auto;
@@ -2199,4 +2370,6 @@ footer {
             width: calc(100vw - 2.5rem);
         }
     }
-} // mobile
+}
+
+// mobile
