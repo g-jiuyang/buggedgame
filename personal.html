@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>遊戲完蛋了</title>
-    <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
-    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico"/>
-    
+    <link rel="icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="images/icon/favicon.ico" />
+
     <!-- tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
-    
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/custom-style.css">
     <link rel="stylesheet" href="css/custom-animation.css">
@@ -22,10 +23,10 @@
 
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
-    
+
     <!-- tailwind js -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
-    
+
     <script src="js/cookie.js"></script>
     <script src="js/step.js"></script>
     <script src="js/tabs.js"></script>
@@ -39,6 +40,7 @@
     <script src="js/nav-blur.js"></script>
     <script src="js/popup.js"></script>
 </head>
+
 <body class="font-sans overflow-x-hidden bg-121212">
 
     <!-- header -->
@@ -72,11 +74,12 @@
                                 </li>
                                 <li class="relative font-bold">
                                     <a href="##" class="px-5 flex items-center space-x-1 btn-language">
-                                        <img src="images/icon/icon-language.svg" alt=""> 
+                                        <img src="images/icon/icon-language.svg" alt="">
                                         <span class="text-sm">繁體中文</span>
                                         <img src="images/icon/icon-arrow-bottom.svg" alt="" class="icon-arrow-bottom">
                                     </a>
-                                    <ul class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
+                                    <ul
+                                        class="hidden w-40 py-6 text-center font-bold mt-3 border border-solid text-sm absolute top-9 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 color-898989 language-menu">
                                         <li>
                                             <a href="##" class="block p-2 text-white">繁體中文</a>
                                         </li>
@@ -96,9 +99,14 @@
                                         <span><img src="images/icon/icon-coin.svg" alt=""></span>
                                         <span class="coin">300,000.00</span>
                                     </span>
-                                    <div class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
-                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle"></div>
-                                        <div class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html" class="font-bold color-7e97f0">我想賺幣！</a></div>
+                                    <div
+                                        class="hidden absolute left-1/2 top-9 transform -translate-x-1/2 z-20 coin-info">
+                                        <div class="relative left-1/2 top-px transform -translate-x-1/2 z-30 triangle">
+                                        </div>
+                                        <div
+                                            class="w-56 px-6 py-5 text-sm font-normal rounded-xl absolute left-1/2 transform -translate-x-1/2 z-20 bg-1f1f1f border border-solid border-color-353535">
+                                            唉呀~您已少賺了6,666顆蛋幣，趕快來 Play and Earn! <a href="shop.html"
+                                                class="font-bold color-7e97f0">我想賺幣！</a></div>
                                     </div>
                                 </li>
                             </ul>
@@ -123,22 +131,27 @@
                             </ul>
                             <!-- pc btn wallet -->
                             <div class="relative">
-                                <a href="##" id="btn-change" class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
-                                <ul class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
+                                <a href="##" id="btn-change"
+                                    class="hidden text-sm rounded-full py-3 px-6 text-white font-bold whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-wallet sm:block lg:text-xs">連接錢包</a>
+                                <ul
+                                    class="hidden w-40 py-6 text-center mt-3 border border-solid absolute top-11 left-1/2 transform -translate-x-1/2 rounded-xl text-sm font-bold color-898989 hover:color-white bg-1f1f1f border-color-353535 panel-wallet">
                                     <li class="">
-                                        <a href="personal.html" onclick="textChange1()" class="block p-2 text-white whitespace-nowrap">個人資產</a>
+                                        <a href="personal.html" onclick="textChange1()"
+                                            class="block p-2 text-white whitespace-nowrap">個人資產</a>
                                     </li>
                                     <li class="">
                                         <a href="record.html" class="block p-2 text-white whitespace-nowrap">歷史紀錄</a>
                                     </li>
                                     <li class="">
-                                        <a href="##" onclick="textChange2()" class="block p-2 hover:text-white whitespace-nowrap">登出</a>
+                                        <a href="##" onclick="textChange2()"
+                                            class="block p-2 hover:text-white whitespace-nowrap">登出</a>
                                     </li>
                                 </ul>
                             </div>
                             <!-- mobile btn wallet -->
                             <div>
-                                <a href="javascript:void(0)" class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
+                                <a href="javascript:void(0)"
+                                    class="mr-0 text-sm font-bold rounded-full py-3 px-5 mx-1 text-white whitespace-nowrap bg-from-e63eb6-to-749ff5 btn-m-wallet sm:hidden">連接錢包</a>
                             </div>
                         </div>
                     </div>
@@ -163,11 +176,12 @@
                 </li>
                 <li class="py-4 relative top-60">
                     <a href="##" class="block space-x-1  btn-m-language">
-                        <img src="images/icon/icon-language.svg" alt="" class="inline-block align-middle"> 
+                        <img src="images/icon/icon-language.svg" alt="" class="inline-block align-middle">
                         <span class="inline-block align-middle text-sm">繁體中文</span>
                         <img src="images/icon/icon-arrow-top.svg" alt="" class="inline-block align-middle">
                     </a>
-                    <ul class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
+                    <ul
+                        class="hidden w-40 py-6 text-sm font-bold text-center border border-solid absolute -top-48 left-1/2 transform -translate-x-1/2 rounded-xl bg-1f1f1f border-color-353535 m-language-menu">
                         <li class="">
                             <a href="##" class="block p-2 color-898989 focus:text-white">繁體中文</a>
                         </li>
@@ -191,7 +205,8 @@
         <!-- mobile wallet -->
         <div class="hidden w-full h-full fixed top-0 left-0 z-30 bg-353535 bg-353535-80 m-bg-wallet lg:hidden">
             <div class="w-full p-6 absolute bottom-0 z-20 rounded-t-2xl bg-1f1f1f m-panel-wallet">
-                <div class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
+                <div
+                    class="flex flex-col items-center justify-between px-5 py-4 mt-11 mb-7 border border-solid rounded-3xl bg-5e5e5e-30 color-efefef border-color-353535">
                     <div class="w-full flex items-center space-x-3 mb-2">
                         <div><img src="images/icon/icon-account.svg" alt=""></div>
                         <div class="text-base font-bold">0x130...123D</div>
@@ -203,13 +218,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
-                    <a href="personal.html" class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="personal.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">個人資產</a>
                 </div>
-                <div class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
-                    <a href="record.html" class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
+                <div
+                    class="mb-3 rounded-full border border-solid border-transparent text-sm text-center border-linear-gradient-1f1f1f-e63eb6-749ff5">
+                    <a href="record.html"
+                        class="w-full flex items-center justify-center py-3 px-6 border-transparent font-bold color-efefef">歷史紀錄</a>
                 </div>
-                <div class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
+                <div
+                    class="text-center border border-solid rounded-full text-sm font-bold color-efefef border-color-353535">
                     <a href="##" class="w-full flex items-center justify-center py-3 px-6">登出</a>
                 </div>
                 <button class="absolute top-4 right-4 btn-wallet-close">
@@ -248,7 +268,8 @@
                         <a id="gamepass--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
                     </div>
                     <div class="account__gamepass--repair">
-                        <a href="javascript:void(0)" id="repair--open" class="button"><img src="images/icon/icon-gear.svg"> 修復</a> <!-- 生命值100%時不可點選，設定為disable -->
+                        <a href="javascript:void(0)" id="repair--open" class="button"><img
+                                src="images/icon/icon-gear.svg"> 修復</a> <!-- 生命值100%時不可點選，設定為disable -->
                         <!-- <a href="#" class="button btn-gradient"><img src="images/icon/icon-enable.svg"> 購買</a> 未購買GameFi Pass時，修復按鈕改為此按鈕 -->
                     </div>
                 </div>
@@ -262,19 +283,19 @@
                         <!-- 11~50 時 backgroung-color:「#D8B42C」 -->
                         <!-- 1~10 時 backgroung-color:「#CC47A6」 -->
                     </div>
-                    <p>* 少拿了 60% 回饋，該修復囉！</p> 
+                    <p>* 少拿了 60% 回饋，該修復囉！</p>
                     <!-- 51~100% 時顯示「* 很棒，你現在是獎勵完全體！」 -->
                     <!-- 11~50% 時顯示「* 少拿了 40% 回饋，該修復囉！」 -->
                     <!-- 1~10% 時顯示「* 少拿了 60% 回饋，該修復囉！」 -->
                     <!-- 0% 時顯示「* 已失去回饋資格，快修復囉！」 -->
                     <!-- 未購買GAMEPASS時顯示「* 目前無GAMEFI PASS，已少賺好多蟲蟲幣拉！快去購買啟用！」 -->
-                </div> 
+                </div>
             </li>
 
             <li class="bugCoin">
                 <div class="info">
                     <p>
-                        <img src="images/icon/icon-coin.svg"> 
+                        <img src="images/icon/icon-coin.svg">
                         <span>蟲蟲幣</span>
                         <a id="bugCoin--open" href="javascript:void(0)"><img src="images/icon/icon-info.svg"></a>
                     </p>
@@ -392,7 +413,7 @@
             <img src="images/icon/icon-dioscord-pc.svg">
         </a>
     </div>
-    
+
 
     <!-- pop up 生命值說明 -->
     <div id="gamepass--popUp" class="popUp">
@@ -468,7 +489,9 @@
             </div>
             <div class="desc">
                 已選取的修復量： <span id="repaired">0</span>%<br>
-                修復成本：<span class="color"><span id="cost-bug">0</span> BUG</span> (目前擁有BUG: <span id="own-bug">8.00</span>) <!-- span內文字色彩預設為#7EF09E，BUG不足時，改為#E08083 -->
+                修復成本：<span class="color"><span id="cost-bug">0</span> BUG</span> (目前擁有BUG: <span
+                    id="own-bug">8.00</span>)
+                <!-- span內文字色彩預設為#7EF09E，BUG不足時，改為#E08083 -->
             </div>
             <span id="warning">* 您的 BUG 不足，無法修復，請減少修復數值</span> <!-- BUG不足時顯示此訊息 -->
             <a href="javascript:void(0)" id="repair--submit" class="button btn-gradient" disabled>修復</a>
@@ -483,7 +506,13 @@
             <h2>蟲蟲幣說明</h2>
             <div class="popUp--content">
                 <p>蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明蟲蟲幣相關說明。</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consectetur nisi repudiandae sit tenetur, magni et asperiores nihil possimus porro consequuntur corporis, excepturi, aperiam cum officiis delectus obcaecati quaerat pariatur? ipsum dolor sit amet consectetur adipisicing elit. Error id doloribus qui, enim temporibus ipsa minima dolorem natus modi quisquam distinctio fugiat pariatur est repellat aliquam earum perferendis impedit. Temporibus. ipsum dolor sit amet consectetur adipisicing elit. Inventore, sed aperiam, quam aspernatur tenetur vitae commodi nostrum totam, doloremque ducimus eveniet? Ex minus est eaque unde numquam culpa laudantium fugiat?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt consectetur nisi repudiandae sit
+                    tenetur, magni et asperiores nihil possimus porro consequuntur corporis, excepturi, aperiam cum
+                    officiis delectus obcaecati quaerat pariatur? ipsum dolor sit amet consectetur adipisicing elit.
+                    Error id doloribus qui, enim temporibus ipsa minima dolorem natus modi quisquam distinctio fugiat
+                    pariatur est repellat aliquam earum perferendis impedit. Temporibus. ipsum dolor sit amet
+                    consectetur adipisicing elit. Inventore, sed aperiam, quam aspernatur tenetur vitae commodi nostrum
+                    totam, doloremque ducimus eveniet? Ex minus est eaque unde numquam culpa laudantium fugiat?</p>
                 <p class="warning">一些比較重要的說明可以是紅色。</p>
             </div>
             <button id="bugCoin--submit" class="popUp--submit">確認</button>
@@ -513,11 +542,14 @@
 <div class="hidden w-full h-full fixed top-0 left-0 z-40 opacity-88 bg-121212 popup-bg"></div>
 
 <!-- 連接錢包 8-1 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">連接錢包</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">請先連結MetaMask錢包。</div>
-        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            請先連結MetaMask錢包。</div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">連接錢包</a>
     </div>
     <button class="absolute top-5 right-5 btn-close">
         <img src="images/icon/icon-close.svg" alt="">
@@ -525,49 +557,67 @@
 </div>
 
 <!-- 功能維護中 8-2-11 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">功能維護中</div>
         <div class="mb-7 text-sm font-noraml text-left color-efefef">功能維護中，暫時關閉。</div>
-        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
     </div>
 </div>
 
 <!-- 系統發生問題 8-2-13 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">系統發生問題</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##" target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
-        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef">錯誤代碼(ERRXXXXXXX)，請重新嘗試或 <a href="##"
+                target="_blank" class="font-bold color-7e97f0">洽客服</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
     </div>
 </div>
 
 <!-- 功能建置中 8-2-16 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap coming-soon-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">功能建置中</div>
         <div class="mb-7 text-sm font-noraml text-left color-efefef">功能建置中，敬請期待！</div>
-        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 btn-confirm">確認</a>
     </div>
 </div>
 
 <!-- 等待確認中 8-3-1 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">等待確認中</div>
         <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
-        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank" class="font-bold color-7e97f0">前往下載</a></div>
+        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank"
+                class="font-bold color-7e97f0">前往下載</a></div>
     </div>
 </div>
 
 <!-- 個人資產的table 3-1-2-->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">狀態說明</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>成功 - Are you sure you want to deactivate your account</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>失敗 - Are you sure you want to deactivate your account</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>提領中 - Are you sure you want to deactivate your account</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>存入中 - Are you sure you want to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-7ef09e"></span>成功 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-cc47a6"></span>失敗 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>提領中 - Are you sure you want
+            to deactivate your account</div>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style"><span
+                class="inline-block w-1 h-1 mx-1 align-middle rounded-full bg-d8b42c"></span>存入中 - Are you sure you want
+            to deactivate your account</div>
     </div>
     <button class="absolute top-5 right-5 btn-close">
         <img src="images/icon/icon-close.svg" alt="">
@@ -575,16 +625,20 @@
 </div>
 
 <!-- 右邊蟲蟲幣的提領按鈕 8-2-15 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">提醒</div>
-        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">免費試玩等級不開放提領功能。<a href="##" target="_blank" class="font-bold color-7e97f0">購買入場券</a></div>
-        <a href="##" class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
+        <div class="mb-7 text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">
+            免費試玩等級不開放提領功能。<a href="##" target="_blank" class="font-bold color-7e97f0">購買入場券</a></div>
+        <a href="##"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5">確認</a>
     </div>
 </div>
 
 <!-- 入場券等級 8-2-12 -->
-<div class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
     <div>
         <div class="mb-7 text-lg font-bold">入場券等級</div>
         <div class="text-sm font-noraml text-left color-efefef max-h-64 overflow-y-auto scroll-style">待營運確認中</div>
@@ -625,7 +679,7 @@
         nowText = parseInt($('#level span').html())
         costBug = parseFloat($('#cost-bug').html())
         ownBug = parseFloat($('#own-bug').html())
-        
+
         if (nowText > originText) {
             $('#bar--new').css('width', 'calc(' + nowLength + ' - 5%)')
             $('#level span').html(nowText - 5)
@@ -766,7 +820,7 @@
         $('#deposit--popUp').removeClass('active')
     })
     $('#deposit--submit').click(function () {
-        location.href="deposit-processing.html"
+        location.href = "deposit-processing.html"
     })
 </script>
 

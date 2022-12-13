@@ -75,7 +75,8 @@
             font-size: calc($fontSize * 1.2);
             margin: 16px 0;
 
-            .days, .pages {
+            .days,
+            .pages {
                 position: relative;
 
                 button {
@@ -238,7 +239,10 @@
                 tr {
                     &.win {
                         td {
-                            &.title-name, &.title-price, &.title-total {
+
+                            &.title-name,
+                            &.title-price,
+                            &.title-total {
                                 color: $gamefiPass;
                             }
                         }
@@ -273,7 +277,12 @@
                         }
 
                         &.title- {
-                            &price, &price-plus, &fee, &total, &benefit {
+
+                            &price,
+                            &price-plus,
+                            &fee,
+                            &total,
+                            &benefit {
                                 width: 120px;
                                 word-break: break-all;
                             }
@@ -307,7 +316,8 @@
     }
 }
 
-#win--popUp, #fail--popUp {
+#win--popUp,
+#fail--popUp {
     .popUp--content {
         img {
             border-radius: 8px;
@@ -351,31 +361,35 @@
         position: absolute;
     }
 
-    $colors: ($dark, $gray, $lighter);
+    $colors: (
+        $dark,
+        $gray,
+        $lighter
+    );
 
-    @for $i from 0 through 100 {
-        $w: random(8);
-        $l: random(100);
+@for $i from 0 through 100 {
+    $w: random(8);
+    $l: random(100);
 
-        .confetti-#{$i} {
-            width: #{$w}px;
-            height: #{$w*0.4}px;
-            background-color: nth($colors, random(3));
-            top: -10%;
-            left: unquote($l+"%");
-            opacity: random() + 0.5;
-            transform: rotate(#{random()*360}deg);
-            animation: drop-#{$i} unquote(4+random()+"s") unquote(random()+"s");
-        }
+    .confetti-#{$i} {
+        width: #{$w}px;
+        height: #{$w*0.4}px;
+        background-color: nth($colors, random(3));
+        top: -10%;
+        left: unquote($l+"%");
+        opacity: random() + 0.5;
+        transform: rotate(#{random()*360}deg);
+        animation: drop-#{$i} unquote(4+random()+"s") unquote(random()+"s");
+    }
 
-        @keyframes drop-#{$i} {
-            100% {
-                top: 110%;
-                left: unquote($l+random(15)+"%");
-                opacity: 0;
-            }
+    @keyframes drop-#{$i} {
+        100% {
+            top: 110%;
+            left: unquote($l+random(15)+"%");
+            opacity: 0;
         }
     }
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -403,7 +417,10 @@
 
                         &.win {
                             td {
-                                &.title-name, &.title-price, &.title-total {
+
+                                &.title-name,
+                                &.title-price,
+                                &.title-total {
                                     &:before {
                                         color: $lighter;
                                     }
@@ -550,7 +567,9 @@
             }
         }
     }
-} // max-width: 767px
+}
+
+// max-width: 767px
 
 @media screen and (max-width: 515px) {
     .record {

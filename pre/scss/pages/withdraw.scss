@@ -186,6 +186,7 @@ main.withdraw {
             }
 
             &.note {
+
                 .warning,
                 .forgot {
                     font-size: calc($fontSize * 1.2);
@@ -276,4 +277,6 @@ main.withdraw {
             }
         }
     }
-} // mobile
+}
+
+// mobile

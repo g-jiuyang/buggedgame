@@ -1,20 +1,21 @@
 // hover動畫
-.-ty-3:hover{
+.-ty-3:hover {
     transform: translateY(-3px);
     transition: all .3s;
 }
-.-ty-8:hover{
+
+.-ty-8:hover {
     transform: translateY(-8px) !important;
     transition: all .3s;
 }
 
-.bg-from-e63eb6-to-749ff5:hover{
+.bg-from-e63eb6-to-749ff5:hover {
     background-image: -webkit-linear-gradient(90deg, rgb(207, 54, 163), rgb(101, 138, 214));
     background-image: linear-gradient(90deg, rgb(207, 54, 163), rgb(101, 138, 214));
     transition: all .3s;
 }
 
-.border-linear-gradient-121212-e63eb6-749ff5:hover{
+.border-linear-gradient-121212-e63eb6-749ff5:hover {
     content: "";
     display: block;
     border-radius: 9999px;
@@ -22,39 +23,40 @@
     background-color: #1F1F1F;
 }
 
-.bg-7e97f0:hover{
+.bg-7e97f0:hover {
     background-color: #7087D8;
 }
 
-.border-color-7e97f0{
+.border-color-7e97f0 {
     background-color: #1F1F1F;
 }
 
 // menu 下拉選項樣式
-.language-menu li:hover{
+.language-menu li:hover {
     margin: 0 10px;
 }
 
-.language-menu li:hover a{
+.language-menu li:hover a {
     background-color: #353535;
     border-radius: 4px;
 }
 
-.scroll-style button:hover{
+.scroll-style button:hover {
     background-color: #353535;
     border-radius: 4px;
 }
 
-.filter-menu button:hover{
+.filter-menu button:hover {
     background-color: #353535;
     border-radius: 4px;
 }
 
-.invoice-sub-select li:hover, .invoice-sub-select2 li:hover{
+.invoice-sub-select li:hover,
+.invoice-sub-select2 li:hover {
     background-color: #353535;
 }
 
-.footer-small:hover{
+.footer-small:hover {
     color: #7e97f0;
 }
 

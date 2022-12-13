@@ -64,11 +64,11 @@
                 font-size: calc($fontSize * 1.4);
                 color: $lighter;
                 margin-bottom: 8px;
-        
+
                 li {
                     margin-bottom: 8px;
                 }
-        
+
                 a {
                     font-weight: $UltraBold;
                     color: $primaryC;
@@ -156,7 +156,7 @@
             p {
                 font-size: calc($fontSize * 1.4);
             }
-            
+
             img {
                 margin: 16px auto 0;
                 border-radius: 8px;
@@ -177,7 +177,7 @@
                 border-radius: 8px;
                 overflow: hidden;
             }
-    
+
             .btns {
                 flex: 1;
                 display: flex;
@@ -185,7 +185,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 12px;
-    
+
                 button {
                     flex: 100%;
                     height: 44px;
@@ -193,7 +193,7 @@
                     transition: all .5s;
                     font-size: calc($fontSize * 1.4);
                     font-weight: $UltraBold;
-    
+
                     &:hover {
                         background-color: #7087D8;
                     }
@@ -251,4 +251,6 @@
             }
         }
     }
-} // mobile
+}
+
+// mobile
