@@ -48,7 +48,8 @@
   border-radius: 4px;
 }
 
-.invoice-sub-select li:hover, .invoice-sub-select2 li:hover {
+.invoice-sub-select li:hover,
+.invoice-sub-select2 li:hover {
   background-color: #353535;
 }
 

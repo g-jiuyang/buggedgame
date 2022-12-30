@@ -391,7 +391,8 @@ input::placeholder {
     width: auto;
     height: 176px;
   }
-  .rank-border-linear-gradient-121212-e63eb6-749ff5:before, .rank-border-linear-gradient-121212-e63eb6-749ff5:after {
+  .rank-border-linear-gradient-121212-e63eb6-749ff5:before,
+.rank-border-linear-gradient-121212-e63eb6-749ff5:after {
     border-radius: 24px;
   }
 }

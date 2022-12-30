@@ -29,27 +29,33 @@ h4 {
   line-height: 1.6em;
 }
 
-p, span {
+p,
+span {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.6em;
 }
-p.title, span.title {
+p.title,
+span.title {
   font-size: 16px;
 }
-p.note, span.note {
+p.note,
+span.note {
   font-size: 12px;
   color: #BDBDBD;
 }
-p.bold, span.bold {
+p.bold,
+span.bold {
   font-weight: 700;
 }
-p a, span a {
+p a,
+span a {
   color: #BDBDBD;
   text-decoration: underline;
   transition: color 0.3s;
 }
-p a:hover, span a:hover {
+p a:hover,
+span a:hover {
   color: #898989;
 }
 
@@ -111,26 +117,36 @@ p a:hover, span a:hover {
 }
 
 /* 按鈕設定 */
-button, input[type=submit], a.button {
+button,
+input[type=submit],
+a.button {
   cursor: pointer;
   border-radius: 24px;
   font-size: 12px;
   text-align: center;
 }
-button.btn-gradient, input[type=submit].btn-gradient, a.button.btn-gradient {
+button.btn-gradient,
+input[type=submit].btn-gradient,
+a.button.btn-gradient {
   background: linear-gradient(to right, #E63EB6, #749FF5);
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   font-weight: 700;
   min-height: 40px;
 }
-button.btn-gradient:hover, input[type=submit].btn-gradient:hover, a.button.btn-gradient:hover {
+button.btn-gradient:hover,
+input[type=submit].btn-gradient:hover,
+a.button.btn-gradient:hover {
   background: linear-gradient(to right, #cf36a3, #658ad6);
 }
-button.btn-outline, input[type=submit].btn-outline, a.button.btn-outline {
+button.btn-outline,
+input[type=submit].btn-outline,
+a.button.btn-outline {
   position: relative;
   min-height: 40px;
 }
-button.btn-outline:before, input[type=submit].btn-outline:before, a.button.btn-outline:before {
+button.btn-outline:before,
+input[type=submit].btn-outline:before,
+a.button.btn-outline:before {
   content: "";
   position: absolute;
   display: block;
@@ -142,7 +158,9 @@ button.btn-outline:before, input[type=submit].btn-outline:before, a.button.btn-o
   border-radius: 9999px;
   background-color: #121212;
 }
-button.btn-outline:after, input[type=submit].btn-outline:after, a.button.btn-outline:after {
+button.btn-outline:after,
+input[type=submit].btn-outline:after,
+a.button.btn-outline:after {
   content: "";
   position: absolute;
   display: block;
@@ -154,16 +172,22 @@ button.btn-outline:after, input[type=submit].btn-outline:after, a.button.btn-out
   border-radius: 9999px;
   background-image: linear-gradient(to right, #E63EB6, #749FF5);
 }
-button.btn-outline:hover:before, input[type=submit].btn-outline:hover:before, a.button.btn-outline:hover:before {
+button.btn-outline:hover:before,
+input[type=submit].btn-outline:hover:before,
+a.button.btn-outline:hover:before {
   background-color: #1F1F1F;
 }
-button[disabled], input[type=submit][disabled], a.button[disabled] {
+button[disabled],
+input[type=submit][disabled],
+a.button[disabled] {
   cursor: default !important;
   background-color: #353535 !important;
   background: #353535 !important;
   color: #BDBDBD !important;
 }
-button[disabled]:hover, input[type=submit][disabled]:hover, a.button[disabled]:hover {
+button[disabled]:hover,
+input[type=submit][disabled]:hover,
+a.button[disabled]:hover {
   background-color: #353535 !important;
   background: #353535 !important;
   color: #BDBDBD !important;
@@ -406,13 +430,16 @@ footer .copyright div img {
   h4 {
     font-size: 14px;
   }
-  p, span {
+  p,
+span {
     font-size: 16px;
   }
-  p.title, span.title {
+  p.title,
+span.title {
     font-size: 18px;
   }
-  p.note, span.note {
+  p.note,
+span.note {
     font-size: 14px;
   }
   .checkout-step {
@@ -424,7 +451,9 @@ footer .copyright div img {
   .checkout-step span {
     font-size: 14px;
   }
-  button, input[type=submit], a.button {
+  button,
+input[type=submit],
+a.button {
     font-size: 14px;
   }
   input[type=checkbox] + span, input[type=radio] + span {

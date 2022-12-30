@@ -34,7 +34,8 @@
   width: 100%;
   margin: 0 auto;
 }
-.gamefi-pass ul li a .img .coming_soon, .gamefi-pass ul li a .img .sold_out {
+.gamefi-pass ul li a .img .coming_soon,
+.gamefi-pass ul li a .img .sold_out {
   position: absolute;
   bottom: 16px;
   left: 50%;
@@ -149,7 +150,8 @@
   width: 100%;
   margin: 0 auto;
 }
-.props .prop-list li a .img .coming_soon, .props .prop-list li a .img .sold_out {
+.props .prop-list li a .img .coming_soon,
+.props .prop-list li a .img .sold_out {
   position: absolute;
   bottom: 16px;
   left: 50%;

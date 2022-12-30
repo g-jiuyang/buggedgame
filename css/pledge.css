@@ -59,9 +59,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  gap: 20px;
 }
 .project .borderCard .project__info__item {
-  flex: 1;
   list-style-type: none;
   text-align: left;
   align-items: flex-start;
@@ -70,6 +70,10 @@
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  flex: 1;
 }
 .project .borderCard .project__info__item li:last-child {
   margin-right: 0;
@@ -114,6 +118,10 @@
 .project .borderCard .project__info__item div span {
   font-size: 16px;
 }
+.project .borderCard .project__info__item.title {
+  flex: 300px;
+  max-width: 300px;
+}
 .project .borderCard .project__info__item.title img {
   max-width: 41px;
 }
@@ -121,8 +129,12 @@
   font-size: 16px;
   font-weight: 700;
 }
-.project .borderCard .project__info__item:nth-child(3) {
+.project .borderCard .project__info__item:nth-child(2) {
+  flex: calc(100% - 320px);
   padding-right: 24px;
+  display: flex;
+  gap: 16px 12px;
+  flex-wrap: wrap;
 }
 .project .borderCard .project__info .notice {
   position: absolute;
@@ -165,7 +177,8 @@
   height: 44px;
   width: 295px;
 }
-.project .borderCard .flex #relieve, .project .borderCard .flex #recieve {
+.project .borderCard .flex #relieve,
+.project .borderCard .flex #recieve {
   flex: 1;
   margin-left: 16px;
   height: 44px;
@@ -399,11 +412,6 @@
   margin-top: 12px !important;
 }
 
-@media screen and (max-width: 1160px) {
-  .project .borderCard .project__info__item.title {
-    max-width: 195px;
-  }
-}
 @media screen and (max-width: 991px) {
   .project .borderCard .project__info {
     flex-wrap: wrap;
@@ -419,6 +427,7 @@
   }
   .project .borderCard .project__info__item li {
     flex: calc(50% - 6px);
+    min-width: calc(50% - 6px);
   }
   .project .borderCard .project__info__item:nth-child(3) {
     padding-right: 0;
@@ -440,7 +449,9 @@
     width: 100%;
     margin: 24px auto;
   }
-  .project .borderCard .flex #submit, .project .borderCard .flex #relieve, .project .borderCard .flex #recieve {
+  .project .borderCard .flex #submit,
+.project .borderCard .flex #relieve,
+.project .borderCard .flex #recieve {
     width: 100%;
     margin: 16px auto;
     line-height: 44px;
