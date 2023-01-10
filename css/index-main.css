@@ -330,11 +330,12 @@ body {
 }
 .dashboard ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 12px;
 }
 .dashboard ul li {
   flex: 1;
+  max-width: calc((100% - 36px) / 4);
   text-align: center;
 }
 .dashboard ul li h2 {
@@ -1339,7 +1340,7 @@ footer .copyright {
     padding: 0 5vw;
   }
   .keyvision .animation-wrap {
-    margin: -5vw 0 -5vw;
+    margin: -5vw 0 -10vw;
   }
   @-webkit-keyframes flash3 {
     0% {
@@ -1390,6 +1391,9 @@ footer .copyright {
   .keyvision main .btns {
     max-width: 200px;
   }
+  .keyvision .animation-wrap {
+    margin: -5vw 0 -12vw;
+  }
 }
 @media screen and (max-width: 831px) {
   /* 新版主視覺 */
@@ -1416,6 +1420,7 @@ footer .copyright {
   }
   .dashboard ul li {
     flex: calc(50% - 12px);
+    max-width: calc(50% - 12px);
   }
   /* 舊版主視覺
   .animation-banner {

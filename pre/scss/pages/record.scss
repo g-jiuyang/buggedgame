@@ -283,20 +283,38 @@
                             &fee,
                             &total,
                             &benefit {
-                                width: 120px;
+                                min-width: 120px;
                                 word-break: break-all;
+                            }
+
+                            &time {
+                                min-width: 120px;
+                                max-width: 172px;
+                            }
+
+                            &trackno {
+                                width: 216px;
+                                min-width: 216px;
+                                word-break: break-all;
+                            }
+
+                            &name {
+                                width: 100%;
                             }
 
                             &number {
                                 width: 48px;
+                                min-width: 48px;
                             }
 
                             &fee {
+                                width: 86px;
                                 min-width: 86px;
                             }
 
                             &status {
-                                min-width: 76px;
+                                width: 98px;
+                                min-width: 98px;
                             }
                         }
 

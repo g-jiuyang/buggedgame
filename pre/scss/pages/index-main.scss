@@ -284,11 +284,12 @@ body {
 
     ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         gap: 12px;
 
         li {
             flex: 1;
+            max-width: calc((100% - 36px)/4);
             text-align: center;
 
             h2 {
@@ -1506,7 +1507,7 @@ footer {
         }
 
         .animation-wrap {
-            margin: -5vw 0 -5vw;
+            margin: -5vw 0 -10vw;
 
             @keyframes flash3 {
                 0% {
@@ -1552,6 +1553,10 @@ footer {
                 max-width: 200px;
             }
         }
+
+        .animation-wrap {
+            margin: -5vw 0 -12vw;
+        }
     }
 }
 
@@ -1587,6 +1592,7 @@ footer {
 
             li {
                 flex: calc(50% - 12px);
+                max-width: calc(50% - 12px);
             }
         }
     }

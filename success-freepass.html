@@ -13,23 +13,18 @@
     <!-- tailwind css -->
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
 
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/shop.css">
-
-    <!-- aos css -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom-style.css">
+    <!-- custom css -->
     <link rel="stylesheet" href="css/custom-animation.css">
+    <link rel="stylesheet" href="css/custom-style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/success.css">
+    <link rel="stylesheet" href="css/pop-up.css">
 
     <!-- jQuery -->
     <script src="js/jquery-3.4.1.min.js"></script>
 
     <!-- tailwind js -->
     <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script> -->
-
-    <!-- aos js -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="js/cookie.js"></script>
     <script src="js/step.js"></script>
@@ -42,7 +37,6 @@
     <script src="js/faq.js"></script>
     <script src="js/table-show.js"></script>
     <script src="js/nav-blur.js"></script>
-
 </head>
 
 <body class="font-sans overflow-x-hidden bg-121212">
@@ -248,295 +242,66 @@
         <img src="images/product/bg-gradient.svg" class="w-full">
     </div>
 
-    <div class="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
-        <!-- 麵包屑 -->
-        <div class="flex items-center space-x-1 pt-24 mb-5 sm:mb-11">
-            <a href="index.html" class="text-sm font-normal sm:text-xs color-898989">首頁</a>
-            <span><img src="images/icon/icon-arrow-right.svg"></span>
-            <a href="##" class="text-sm font-bold sm:text-xs color-898989">商城</a>
+    <div class="max-w-6xl mx-auto mb-20 px-5 sm:px-6 lg:px-8">
+        <!-- 結帳步驟 -->
+        <div class="checkout-step">
+            1 填寫付款資料
+            <img src="images/icon/icon-arrow-right.svg">
+            2 信用卡付款
+            <img src="images/icon/icon-arrow-right.svg">
+            <span>3 交易完成</span>
         </div>
 
-        <!-- GameFi Pass -->
-        <div class="gamefi-pass">
-            <h2>GAMEFI PASS</h2>
-            <ul>
-                <li>
-                    <a href="product-pass.html">
-                        <div class="img">
-                            <img src="images/product/gamefi-pass-01.png">
-                            <span class="coming_soon">Coming Soon</span>
-                        </div>
-                        <span class="name">GAMEFI PASS - 移動式</span>
-                        <span class="fee">TWD 10,000 / BNB 3,300</span>
-                        <span class="usdt">(≈3,300 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="product-pass.html">
-                        <div class="img">
-                            <img src="images/product/gamefi-pass-02.png">
-                            <span class="coming_soon">敬請期待</span>
-                        </div>
-                        <span class="name">GAMEFI PASS - 阿謝</span>
-                        <span class="fee">TWD 10,000 / BNB 3,300</span>
-                        <span class="usdt">(≈3,300 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="product-pass.html">
-                        <div class="img">
-                            <img src="images/product/gamefi-pass-03.png">
-                            <span class="coming_soon">敬請期待</span>
-                        </div>
-                        <span class="name">GAMEFI PASS - 米海爾</span>
-                        <span class="fee">TWD 10,000 / BNB 3,300</span>
-                        <span class="usdt">(≈3,300 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="product-pass.html">
-                        <div class="img">
-                            <img src="images/product/gamefi-pass-04.png">
-                            <span class="coming_soon">敬請期待</span>
-                        </div>
-                        <span class="name">GAMEFI PASS - 希克斯</span>
-                        <span class="fee">TWD 10,000 / BNB 3,300</span>
-                        <span class="usdt">(≈3,300 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="product-pass.html">
-                        <div class="img">
-                            <img src="images/product/gamefi-pass-05.png">
-                            <span class="coming_soon">敬請期待</span>
-                        </div>
-                        <span class="name">GAMEFI PASS - 紅領巾</span>
-                        <span class="fee">TWD 10,000 / BNB 3,300</span>
-                        <span class="usdt">(≈3,300 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="product-pass.html">
-                        <div class="img">
-                            <img src="images/product/gamefi-pass-06.png">
-                            <span class="coming_soon">敬請期待</span>
-                        </div>
-                        <span class="name">GAMEFI PASS - Pepi</span>
-                        <span class="fee">TWD 10,000 / BNB 3,300</span>
-                        <span class="usdt">(≈3,300 USDT)</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <main class="success-page">
+            <div class="message">
+                <!-- ↓↓GameFi Pass 時有兩種顯示狀態↓↓ 
+                1. 信用卡交易時：
+                <img src="images/icon/icon-success-check.svg">
+                <p>購買成功</p>
 
-        <!-- Free Pass -->
-        <div class="gamefi-pass">
-            <h2>FREE PASS</h2>
-            <ul>
-                <li>
-                    <a href="product-freepass.html">
-                        <div class="img">
-                            <img src="images/product/gamefi-pass-01.png">
-                            <!-- <span class="coming_soon">Coming Soon</span> -->
-                        </div>
-                        <span class="name">FREE PASS 免費試玩！</span>
-                        <span class="fee">TWD 0</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                2. BNB交易時：
+                <img src="images/icon/icon-processing.svg">
+                <p>兌換進行中</p>  -->
 
-        <!-- 道具 -->
-        <div class="props">
-            <h2>道具</h2>
-            <div class="prop-tab">
+                <!-- ↓↓道具時顯示↓↓ -->
+                <img src="images/icon/icon-success-check.svg">
+                <p>兌換成功</p>
+            </div>
+            <div class="product">
+                <div class="pic"><img src="images/product/gamefi-pass-01.png"></div>
+                <div class="info">
+                    <p class="title">商品名稱可以好長好長依據寬度超過會點點點但這裡會有全部會有全部</p>
+                    <ul>
+                        <li>訂單編號：TGB210602L0001825</li>
+                        <li>交易時間：2022/03/03 23:56:00</li>
+                        <li>交易方式：FREE</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="calculate">
                 <ul>
-                    <li id="prop-tab-1" class="active"><a href="javascript:void(0)">全部</a></li>
-                    <li id="prop-tab-2"><a href="javascript:void(0)">貨幣</a></li>
-                    <li id="prop-tab-3"><a href="javascript:void(0)">強化</a></li>
-                    <li id="prop-tab-4"><a href="javascript:void(0)">可擴充裝備</a></li>
-                    <li id="prop-tab-5"><a href="javascript:void(0)">其他</a></li>
+                    <li>總價：<span>0 TWD</span></li>
                 </ul>
             </div>
-            <ul id="prop-list-1" class="prop-list active">
-                <li class="pass">
-                    <!-- pass限定的商品增加class="pass" -->
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop01.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點商品名稱可以好長超過會點點點...</span> <!-- ...效果已做在css -->
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img">
-                            <img src="images/product/prop07.png">
-                            <span class="coming_soon">敬請期待</span>
-                        </div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img">
-                            <span class="coming_soon">敬請期待</span>
-                        </div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop07.jpg"></div>
-                        <span class="name">商品名稱可以好長超過會點點點商品名稱可以好長超過會點點點...</span> <!-- ...效果已做在css -->
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img">
-                            <img src="images/product/prop03.png">
-                            <span class="sold_out">已售完</span>
-                        </div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop04.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop05.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop06.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop01.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop02.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop03.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop04.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-            </ul>
-            <ul id="prop-list-2" class="prop-list">
-                <li>
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop04.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop05.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-            </ul>
-            <ul id="prop-list-3" class="prop-list">
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop06.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-            </ul>
-            <ul id="prop-list-4" class="prop-list">
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop01.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop02.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-                <li class="pass">
-                    <span class="limited"><img src="images/icon/icon-pass.svg"> 限定</span>
-                    <a href="product.html">
-                        <div class="img"><img src="images/product/prop03.png"></div>
-                        <span class="name">商品名稱可以好長超過會點點點...</span>
-                        <span class="fee"><img src="images/icon/icon-bug.svg"> 300,000</span>
-                        <span class="usdt">(≈30 USDT)</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <div class="card">
+                <!-- ↓↓GameFi Pass時有兩種顯示狀態↓↓
+                1. 信用卡交易時： -->
+                <p>立即進入遊戲遊玩吧！</p>
+
+                <!-- 2. BNB交易時：
+                <p>購買的商品將於5分鐘內寄送至遊戲內！</p> -->
+
+                <!-- ↓↓道具時顯示↓↓
+                <p>兌換的商品已寄送至遊戲內！</p> -->
+
+                <!-- ↓↓點選時：電腦版開啟pop up，行動裝置直接導向遊戲（或商店）↓↓ -->
+                <p><a id="download--open" href="javascript:void(0)">前往遊戲查看 ></a></p>
+            </div>
+            <div class="btns">
+                <a href="record.html" class="button btn-outline">查看紀錄</a>
+                <a href="shop.html" class="button btn-gradient">繼續購買</a>
+            </div>
+        </main>
     </div>
 
 
@@ -552,7 +317,6 @@
         </div>
     </footer>
 
-
     <!-- social link -->
     <div class="hidden fixed right-16 bottom-11 sm:hidden lg:block">
         <a href="##" class="block" target="_blank">
@@ -561,6 +325,22 @@
     </div>
 
 
+    <!-- pop up 下載遊戲 -->
+    <div id="download--popUp" class="popUp">
+        <div class="popUp--container">
+            <button id="download--close" class="popUp--close"><img src="images/icon/icon-minus.svg"></button>
+            <h2>下載遊戲</h2>
+            <p class="desc web">馬上拿起手機掃描QR Code下載遊戲吧！</p>
+            <p class="desc mobile">馬上點擊下載遊戲吧！</p>
+            <img class="qrc web" src="images/QRC.png">
+            <div class="btns">
+                <button id="iOS" class="web">iOS 下載</button>
+                <button id="android" class="web">Android 下載</button>
+                <button id="app-store" class="mobile">iOS / Android 下載</button>
+                <button id="apk">APK 下載</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 
@@ -624,25 +404,42 @@
     <div>
         <div class="mb-7 text-lg font-bold">等待確認中</div>
         <div class="mb-7 text-sm font-noraml text-center color-efefef">等待MetaMask錢包確認中，請稍候。</div>
-        <div class="text-sm font-noraml text-center color-efefef">還沒下載MetaMask錢包? <a href="##" target="_blank"
+        <div class="text-sm font-noraml text-center color-bdbdbd">還沒下載MetaMask錢包? <a href="##" target="_blank"
                 class="font-bold color-7e97f0">前往下載</a></div>
     </div>
 </div>
 
+<!-- 點擊立即前往遊戲查看 8-2-10 -->
+<div
+    class="hidden w-11/12 p-10 mx-auto fixed top-1/4 left-1/2 z-40 transform -translate-x-1/2 rounded-3xl text-center text-xs tracking-wider z-20 border border-solid bg-1f1f1f color-efefef border-color-353535 popup-wrap w-469px">
+    <div>
+        <div class="mb-7 text-lg font-bold">打開遊戲</div>
+        <div class="mb-7 text-sm font-noraml text-center color-efefef hidden lg:block">馬上拿起手機掃描QR Code下載遊戲吧！</div>
+        <div class="mb-7 text-lg font-noraml text-left color-efefef lg:hidden">馬上點擊下載遊戲吧！</div>
+        <div class="hidden lg:block">
+            <img src="images/product/QRC.png" class="mx-auto">
+        </div>
+        <a href="##" target="_blank"
+            class="block w-full py-3 px-6 border-transparent rounded-full text-sm font-bold color-efefef bg-from-e63eb6-to-749ff5 lg:hidden">下載遊戲</a>
+    </div>
+    <button class="absolute top-5 right-5 btn-close">
+        <img src="images/icon/icon-close.svg">
+    </button>
+</div>
+
+
 <script>
-    // 道具 tab
-    $(function () {
-        for (let i = 1; i <= 4; i++) {
-            let propTab = $('#prop-tab-' + i)
-            let propList = $('#prop-list-' + i)
-            $(propTab).click(function () {
-                $('.prop-tab li').removeClass('active')
-                $(this).addClass('active')
-                $('.prop-list').removeClass('active')
-                $(propList).addClass('active')
-            })
-        }
+    // pop up 開啟遊戲
+    $('#download--open').click(function () {
+        if (window.innerWidth > 768) $('#download--popUp').addClass('active')
+        else window.open('#')
     })
+    $('#download--close').click(function () {
+        $('#download--popUp').removeClass('active')
+    })
+
+
 </script>
+
 
 </html>
