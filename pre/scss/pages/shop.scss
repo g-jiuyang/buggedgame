@@ -157,7 +157,7 @@
 
             a {
                 display: inline-block;
-                padding: 16px 20px;
+                padding: 0 20px 16px;
                 width: 100%;
 
                 .img {
@@ -244,10 +244,6 @@
             &.pass {
                 .limited {
                     visibility: visible;
-                }
-
-                a {
-                    padding-top: 0;
                 }
             }
         }

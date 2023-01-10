@@ -135,7 +135,7 @@
 }
 .props .prop-list li a {
   display: inline-block;
-  padding: 16px 20px;
+  padding: 0 20px 16px;
   width: 100%;
 }
 .props .prop-list li a .img {
@@ -210,9 +210,6 @@
 }
 .props .prop-list li.pass .limited {
   visibility: visible;
-}
-.props .prop-list li.pass a {
-  padding-top: 0;
 }
 .props .prop-list.active {
   display: flex;
