@@ -302,6 +302,10 @@
                                     text-decoration: none;
                                     @include a-color($grey);
                                     transition: color .3s ease;
+
+                                    img {
+                                        width: 16px;
+                                    }
                                 }
                             }
 
@@ -475,10 +479,6 @@
 
                                 &trackno {
                                     text-align: right;
-
-                                    img {
-                                        width: 16px;
-                                    }
                                 }
 
                                 &name {
