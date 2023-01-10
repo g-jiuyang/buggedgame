@@ -416,7 +416,7 @@ body {
             &.updated-time {
                 font-size: calc($fontSize * 1.2);
                 font-weight: $Regular;
-                color: $gray;
+                color: $grey;
                 margin-top: 24px;
             }
         }
@@ -489,7 +489,7 @@ body {
           height: 12vw;
           border-radius: 40px;
           overflow: hidden;
-          border: 1px solid $gray;
+          border: 1px solid $grey;
 
           a {
               position: absolute;

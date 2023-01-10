@@ -104,7 +104,7 @@ main.withdraw {
         color: $lighter;
 
         h2 {
-            color: $lightGray;
+            color: $lightGrey;
         }
 
         .content--scroll {
@@ -165,7 +165,7 @@ main.withdraw {
                 width: 56px;
                 height: 56px;
                 border-radius: 12px;
-                border: 1px solid $gray;
+                border: 1px solid $grey;
                 margin-right: 16px;
                 padding: 0;
                 background-color: transparent;
@@ -200,7 +200,7 @@ main.withdraw {
                 .forgot {
                     text-decoration: underline;
                     text-align: right;
-                    @include a-color($lighter, $gray);
+                    @include a-color($lighter, $grey);
                 }
             }
         }

@@ -23,7 +23,7 @@
             >p {
                 display: flex;
                 align-items: center;
-                color: $lightGray;
+                color: $lightGrey;
                 margin-top: 4px;
 
                 img {
@@ -85,7 +85,7 @@
                         display: inline-block;
                         vertical-align: middle;
                         margin-right: 12px;
-                        color: $lightGray;
+                        color: $lightGrey;
                         font-size: calc($fontSize * 1.6);
                         font-weight: $UltraBold;
                     }
@@ -177,7 +177,7 @@
 
                 a {
                     text-decoration: underline;
-                    @include a-color($lighter, $gray);
+                    @include a-color($lighter, $grey);
                 }
             }
         }
@@ -211,13 +211,13 @@
                 overflow: hidden;
 
                 .nft--name {
-                    color: $lightGray;
+                    color: $lightGrey;
                     font-weight: $UltraBold;
                     font-size: calc($fontSize * 1.6);
                 }
 
                 .nft--id {
-                    color: $gray;
+                    color: $grey;
                 }
             }
 
@@ -233,7 +233,7 @@
                         padding: 4px 12px;
                         border-radius: 8px;
                         background-color: rgba(#7E97F0, .85);
-                        color: $lightGray;
+                        color: $lightGrey;
                         font-weight: $UltraBold;
                     }
                 }
@@ -244,7 +244,7 @@
 
 #gamepass--popUp {
     h2 {
-        color: $lightGray;
+        color: $lightGrey;
     }
 
     .content {
@@ -362,7 +362,7 @@
 
                     &:before {
                         content: '0';
-                        color: $gray;
+                        color: $grey;
                     }
 
                     &:after {
@@ -506,14 +506,14 @@
                 flex: 1;
                 height: 38px;
                 border-radius: 20px;
-                border: 1px solid $lightGray;
+                border: 1px solid $lightGrey;
                 font-weight: $UltraBold;
-                color: $lightGray;
+                color: $lightGrey;
                 font-size: calc($fontSize * 1.4);
                 transition: all .15s ease;
 
                 &:hover {
-                    background-color: $lightGray;
+                    background-color: $lightGrey;
                     color: $dark;
                 }
             }
@@ -524,7 +524,7 @@
         background-color: $dark;
         border-radius: 16px;
         padding: 16px 20px;
-        color: $lightGray;
+        color: $lightGrey;
         font-size: calc($fontSize * 1.4);
         text-align: left;
         margin-bottom: 8px;

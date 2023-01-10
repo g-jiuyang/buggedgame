@@ -32,7 +32,7 @@
 
                 &.title {
                     font-size: calc($fontSize * 1.8);
-                    color: $lightGray;
+                    color: $lightGrey;
                 }
 
                 a {
@@ -107,7 +107,7 @@
                         }
 
                         &.bug {
-                            color: $lightGray;
+                            color: $lightGrey;
                         }
 
                         span {
@@ -133,7 +133,7 @@
                             }
 
                             +p {
-                                color: $lightGray;
+                                color: $lightGrey;
                             }
                         }
                     }
@@ -200,7 +200,7 @@
                     margin-right: 24px;
 
                     a {
-                        color: $gray;
+                        color: $grey;
                         transition: all .15s ease;
 
                         &:hover {
@@ -270,7 +270,7 @@
 
                 .nft--id {
                     font-weight: $Regular;
-                    color: $gray;
+                    color: $grey;
                     font-size: calc($fontSize * 1.4);
                 }
             }
@@ -377,7 +377,7 @@
                 }
 
                 .nft--id {
-                    color: $gray;
+                    color: $grey;
                 }
             }
 
@@ -393,7 +393,7 @@
                         padding: 4px 12px;
                         border-radius: 8px;
                         background-color: rgba(#7E97F0, .85);
-                        color: $lightGray;
+                        color: $lightGrey;
                         font-weight: $UltraBold;
                     }
                 }
@@ -406,7 +406,7 @@
                         padding: 4px 8px;
                         border-radius: 8px;
                         background-color: rgba(#E08083, .85);
-                        color: $lightGray;
+                        color: $lightGrey;
                         font-size: calc($fontSize * 1.2);
                         font-weight: $UltraBold;
                         bottom: 8px;
@@ -462,7 +462,7 @@
 
             &.open {
                 padding: 12px;
-                border-color: $gray;
+                border-color: $grey;
                 background-color: $dark;
                 height: auto;
                 max-height: 100px;
@@ -476,7 +476,7 @@
                 }
 
                 &::-webkit-scrollbar-thumb {
-                    background-color: $gray;
+                    background-color: $grey;
                     border-radius: 5px;
                 }
             }

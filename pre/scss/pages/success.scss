@@ -24,7 +24,7 @@
         gap: 20px;
         padding-bottom: 20px;
         margin-bottom: 36px;
-        border-bottom: solid 0.5px $gray;
+        border-bottom: solid 0.5px $grey;
 
         .pic {
             flex: 100px;
@@ -100,7 +100,7 @@
                 text-align: right;
 
                 a {
-                    @include a-color($lightGray, $lighter);
+                    @include a-color($lightGrey, $lighter);
                 }
             }
         }

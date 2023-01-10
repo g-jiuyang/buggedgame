@@ -55,7 +55,7 @@ span {
         transition: color .3s;
 
         &:hover {
-            color: $gray;
+            color: $grey;
         }
     }
 }
@@ -66,7 +66,7 @@ span {
 }
 
 .lightGray {
-    color: $lightGray;
+    color: $lightGrey;
 }
 
 .lighter {
@@ -74,7 +74,7 @@ span {
 }
 
 .gray {
-    color: $gray;
+    color: $grey;
 }
 
 .dark {
@@ -238,7 +238,7 @@ input {
 
     span {
         flex: 100%;
-        color: $gray;
+        color: $grey;
         padding: 8px 24px;
         margin-bottom: 12px;
         border: 1px solid $dark;
@@ -298,7 +298,7 @@ input {
             }
 
             &::-webkit-scrollbar-thumb {
-                background-color: $gray;
+                background-color: $grey;
                 border-radius: 2px;
             }
         }
@@ -329,7 +329,7 @@ img[src="images/icon/icon-info.svg"] {
 }
 
 body {
-    color: $lightGray;
+    color: $lightGrey;
     font-family: 'Roboto', sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
@@ -337,7 +337,7 @@ body {
 .breadcrumb {
     a {
         font-weight: $Regular;
-        color: $gray;
+        color: $grey;
 
         &:last-child {
             font-weight: $UltraBold;
@@ -353,7 +353,7 @@ body {
 .checkout-step {
     margin: 96px auto 20px;
     font-size: calc($fontSize * 1.2);
-    color: $gray;
+    color: $grey;
 
     img {
         display: inline-block;
@@ -386,7 +386,7 @@ footer {
         justify-content: space-between;
         margin-top: 30px;
         padding-top: 28px;
-        border-top: 0.5px solid $gray;
+        border-top: 0.5px solid $grey;
         font-size: calc($fontSize * 1.2);
 
         dl {

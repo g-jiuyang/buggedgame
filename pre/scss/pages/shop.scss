@@ -64,7 +64,7 @@
 
                     &.name {
                         font-size: calc($fontSize * 1.6);
-                        color: $lightGray;
+                        color: $lightGrey;
                         margin-bottom: 12px;
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
@@ -79,7 +79,7 @@
 
                     &.usdt {
                         font-size: calc($fontSize * 1.2);
-                        color: $gray;
+                        color: $grey;
                     }
                 }
             }
@@ -120,7 +120,7 @@
             li {
                 font-size: calc($fontSize * 1.2);
                 font-weight: $UltraBold;
-                color: $gray;
+                color: $grey;
                 border-bottom: 3px solid transparent;
                 transition: all .5s;
 
@@ -130,12 +130,12 @@
                 }
 
                 &.active {
-                    color: $lightGray;
+                    color: $lightGrey;
                     border-color: $primaryC;
                 }
 
                 &:hover {
-                    color: $lightGray;
+                    color: $lightGrey;
                 }
             }
         }
@@ -199,7 +199,7 @@
 
                     &.name {
                         font-size: calc($fontSize * 1.6);
-                        color: $lightGray;
+                        color: $lightGrey;
                         margin-bottom: 12px;
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
@@ -217,7 +217,7 @@
 
                     &.usdt {
                         font-size: calc($fontSize * 1.2);
-                        color: $gray;
+                        color: $grey;
                     }
                 }
             }
@@ -234,7 +234,7 @@
                 padding: 16px 0 0 20px;
                 font-size: calc($fontSize * 1.2);
                 font-weight: $UltraBold;
-                color: $gray;
+                color: $grey;
 
                 img {
                     width: 28px;

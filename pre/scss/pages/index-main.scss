@@ -375,7 +375,7 @@ body {
             &.updated-time {
                 font-size: calc($fontSize * 1.2);
                 font-weight: $Regular;
-                color: $gray;
+                color: $grey;
                 margin-top: 24px;
             }
         }
@@ -450,7 +450,7 @@ body {
             height: 12vw;
             border-radius: 40px;
             overflow: hidden;
-            border: 1px solid $gray;
+            border: 1px solid $grey;
 
             a {
                 position: absolute;
@@ -500,7 +500,7 @@ body {
             height: 12vw;
             border-radius: 40px;
             overflow: hidden;
-            border: 1px solid $gray;
+            border: 1px solid $grey;
 
             a {
                 position: absolute;
@@ -530,7 +530,7 @@ body {
                 width: 36px;
                 height: 4px;
                 border-radius: 2px;
-                background-color: $lightGray;
+                background-color: $lightGrey;
             }
         }
     }
@@ -553,7 +553,7 @@ body {
                 flex-shrink: 0;
                 font-size: calc($fontSize * 1.4);
                 font-weight: $UltraBold;
-                color: $lightGray;
+                color: $lightGrey;
 
                 img {
                     display: inline;
@@ -572,7 +572,7 @@ body {
                         gap: 12px;
                         text-align: center;
                         font-size: calc($fontSize * 1.2);
-                        color: $lightGray;
+                        color: $lightGrey;
                         padding: 6px 12px;
                         height: 32px;
                         min-width: max-content;
@@ -614,7 +614,7 @@ body {
                     cursor: pointer;
 
                     button {
-                        color: $lightGray;
+                        color: $lightGrey;
                         font-weight: $UltraBold;
                         padding: 4px 12px;
                         z-index: 1;
@@ -651,7 +651,7 @@ body {
                     flex: 100%;
                     text-align: center;
                     font-size: calc($fontSize * 1);
-                    color: $gray;
+                    color: $grey;
                     margin-top: 0;
 
                     span {
@@ -685,13 +685,13 @@ body {
                             flex: 16px;
                             width: 16px;
                             text-align: center;
-                            color: $gray;
+                            color: $grey;
                             font-size: calc($fontSize * 1.2);
                             font-weight: $UltraBold;
                         }
 
                         .id {
-                            color: $lightGray;
+                            color: $lightGrey;
                             width: 93px;
                             font-size: calc($fontSize * 1.2);
                             font-weight: $UltraBold;
@@ -806,7 +806,7 @@ body {
         // margin-left: 30vw;
         width: 100%;
         font-size: calc($fontSize * 1.2);
-        color: $gray;
+        color: $grey;
         margin-top: -38px;
         margin-bottom: 24px;
         text-align: right;
@@ -849,7 +849,7 @@ body {
             flex: 1;
             position: relative;
             text-align: center;
-            color: $gray;
+            color: $grey;
             cursor: pointer;
             transition: all .5s;
 
@@ -862,7 +862,7 @@ body {
                 font-size: calc($fontSize * 1.6);
                 font-weight: $UltraBold;
                 margin-bottom: 12px;
-                background-color: $gray;
+                background-color: $grey;
                 color: $darkBg;
                 transition: all .5s;
             }
@@ -914,7 +914,7 @@ body {
                 padding: 28px;
                 border: 1px solid $dark;
                 border-radius: 40px;
-                color: $lightGray;
+                color: $lightGrey;
                 text-align: center;
                 background-color: rgba($darkBg, .6);
                 position: relative;
@@ -972,7 +972,7 @@ body {
         li {
             padding: 20px;
             border-bottom: 1px solid $dark;
-            color: $lightGray;
+            color: $lightGrey;
 
             .question {
                 position: relative;
@@ -1109,7 +1109,7 @@ body {
                 }
 
                 &.usdt {
-                    color: $gray;
+                    color: $grey;
                     font-size: calc($fontSize * 1.2);
                 }
             }
@@ -1198,12 +1198,12 @@ body {
 
                 &.name {
                     font-weight: $UltraBold;
-                    color: $lightGray;
+                    color: $lightGrey;
                 }
 
                 &.occupation {
                     font-size: calc($fontSize * 1.2);
-                    color: $gray;
+                    color: $grey;
                 }
             }
         }
@@ -1214,7 +1214,7 @@ body {
         border-radius: 0;
         margin: 28px auto;
         text-align: center;
-        color: $gray;
+        color: $grey;
         cursor: pointer;
 
         img {

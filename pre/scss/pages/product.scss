@@ -33,9 +33,8 @@ main.product {
                     padding: 0 4px;
                     font-size: calc($fontSize * 1.2);
                     font-weight: $UltraBold;
-                    color: $gray;
+                    color: $grey;
                 }
-
             }
         }
     }
@@ -48,14 +47,14 @@ main.product {
             margin-bottom: 12px;
             font-size: calc($fontSize * 1.6);
             font-weight: $UltraBold;
-            color: $lightGray;
+            color: $lightGrey;
         }
 
         .product-name {
             margin-bottom: 32px;
             font-size: calc($fontSize * 1.8);
             font-weight: $UltraBold;
-            color: $lightGray;
+            color: $lightGrey;
         }
 
         .product-txt {
@@ -103,7 +102,7 @@ main.product {
                         align-items: center;
                         font-size: calc($fontSize * 1.4);
                         font-weight: $UltraBold;
-                        color: $lightGray;
+                        color: $lightGrey;
                         text-align: center;
                         line-height: 1.6;
                         border: 1px $dark solid;
@@ -144,7 +143,7 @@ main.product {
                     margin: 12px 0;
                     padding: 12px 24px;
                     border-radius: 24px;
-                    border: 1px solid $gray;
+                    border: 1px solid $grey;
                     cursor: pointer;
                     transition: all .5s;
 
@@ -217,13 +216,13 @@ main.product {
                     padding: 0;
                     height: 24px;
                     font-size: calc($fontSize * 1.4);
-                    color: $lightGray;
+                    color: $lightGrey;
                     text-align: center;
                     background-color: transparent;
                     border: none;
 
                     &[disabled] {
-                        color: $gray;
+                        color: $grey;
                     }
                 }
             }
@@ -237,14 +236,14 @@ main.product {
                 width: 100%;
                 padding: 11px 24px;
                 font-size: calc($fontSize * 1.4);
-                color: $lightGray;
+                color: $lightGrey;
                 line-height: 1.6;
                 border: 1px $dark solid;
                 border-radius: 24px;
                 background-color: transparent;
 
                 &::placeholder {
-                    color: $gray;
+                    color: $grey;
                 }
             }
         }
@@ -285,7 +284,7 @@ main.product {
                 align-items: center;
                 margin-bottom: 16px;
                 font-size: calc($fontSize * 1.4);
-                color: $lightGray;
+                color: $lightGrey;
 
                 span {
                     display: flex;
@@ -317,7 +316,7 @@ main.product {
                 padding: 11px 24px;
                 font-size: calc($fontSize * 1.2);
                 font-weight: $UltraBold;
-                color: $lightGray;
+                color: $lightGrey;
                 text-align: center;
                 border-radius: 24px;
             }
@@ -476,7 +475,7 @@ main.product {
                     padding: 12px 24px;
                     font-size: calc($fontSize * 1.2);
                     font-weight: $UltraBold;
-                    color: $lightGray;
+                    color: $lightGrey;
                     text-align: center;
                     border-radius: 24px;
                 }
